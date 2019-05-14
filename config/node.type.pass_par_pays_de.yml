@@ -1,0 +1,17 @@
+uuid: c9ff93e7-438d-4274-b7ab-b1d902eec2e7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Pass par pays (Depuis l''étranger)'
+type: pass_par_pays_de
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,28 @@
+uuid: 73e5e0de-0a2a-480a-8b0e-4abec3af063c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comment_souscrire_keurgui_
+    - node.type.page_keurgui_box
+    - node.type.souscrire_keurgui_box
+id: node.page_keurgui_box.field_comment_souscrire_keurgui_
+field_name: field_comment_souscrire_keurgui_
+entity_type: node
+bundle: page_keurgui_box
+label: 'Comment Souscrire Keurgui Box'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      souscrire_keurgui_box: souscrire_keurgui_box
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,38 @@
+links:
+  -
+    path: /
+    priority: '1.0'
+    changefreq: daily
+  -
+    path: /offres-mobiles
+    priority: '1.0'
+    changefreq: hourly
+  -
+    path: /offres-mobiles/jamono-max-13
+  -
+    path: /offres-mobiles/jamono-allo-14
+  -
+    path: /offres-mobiles/jamono-new-s-cool-15
+  -
+    path: /offres-mobiles/family
+  -
+    path: /offres-mobiles/roaming-et-international
+  -
+    path: /pass-internet
+  -
+    path: /offres-mobiles/illimix
+  -
+    path: /internet-adsl-fibre
+  -
+    path: /internet-adsl-fibre/home-fibre
+  -
+    path: /internet-adsl-fibre/keurgui-box-63
+  -
+    path: /internet-adsl-fibre/keurgui-60
+  -
+    path: /internet-adsl-fibre/home-61
+  -
+    path: /internet-adsl-fibre/home-62
+  -
+    path: /internet-adsl-fibre/tv-orange
+langcode: fr

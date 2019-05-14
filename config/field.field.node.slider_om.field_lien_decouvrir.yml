@@ -1,0 +1,19 @@
+uuid: 4893ffff-0eee-43d6-9464-438a22edc74f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lien_decouvrir
+    - node.type.slider_om
+id: node.slider_om.field_lien_decouvrir
+field_name: field_lien_decouvrir
+entity_type: node
+bundle: slider_om
+label: 'Lien Découvrir'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

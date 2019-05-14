@@ -1,0 +1,24 @@
+uuid: aac7eae6-dc62-4398-92ec-6359fc74cc56
+langcode: fr
+status: true
+dependencies:
+  config:
+    - views.view.banniere_menu
+  module:
+    - views
+  theme:
+    - orange
+id: views_block__banniere_menu_block_1
+theme: orange
+region: banniere
+weight: -2
+provider: null
+plugin: 'views_block:banniere_menu-block_1'
+settings:
+  id: 'views_block:banniere_menu-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

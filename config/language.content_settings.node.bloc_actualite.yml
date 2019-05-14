@@ -1,0 +1,11 @@
+uuid: 38c63dce-5f69-4093-9892-30c154bbc988
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bloc_actualite
+id: node.bloc_actualite
+target_entity_type_id: node
+target_bundle: bloc_actualite
+default_langcode: site_default
+language_alterable: false

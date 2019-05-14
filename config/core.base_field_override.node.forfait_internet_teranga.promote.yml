@@ -1,0 +1,22 @@
+uuid: 163dd822-545e-4582-848c-88b48ff4b193
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.forfait_internet_teranga
+id: node.forfait_internet_teranga.promote
+field_name: promote
+entity_type: node
+bundle: forfait_internet_teranga
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

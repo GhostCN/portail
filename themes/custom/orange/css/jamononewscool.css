@@ -1,0 +1,944 @@
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff");
+}
+
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff");
+}
+
+@media screen and (min-width: 1560px) {
+    .contentS {
+        width: 1360px;
+        margin: auto !important;
+    }
+    .img-height {
+        height: 300px;
+        overflow: hidden;
+    }
+}
+
+a:focus {
+    color: #f16e00;
+    outline: none !important;
+}
+
+.o-tab-container .o-tab-heading[aria-expanded="false"] {
+    color: #7a7777;
+    font-size: 17px;
+}
+
+.o-tab-container .o-tab-heading[aria-expanded="true"] {
+    font-size: 20px;
+}
+
+.btn-link[aria-expanded="true"] {
+    color: #f16e00;
+}
+
+.deuxcont {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.imgSmall {
+    width: 100%;
+    display: block;
+    height: auto;
+    max-height: 368px;
+}
+
+body {
+    font-family: HelvNeueOrange;
+    font-size: 16px;
+    background-color: #eeeeee !important;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-container-new-plan {
+    overflow: hidden;
+}
+
+.icone {
+    width: 40px;
+}
+
+html {
+    font-family: HelvNeueOrange;
+}
+
+.accueil {
+    margin-bottom: 28px;
+}
+
+.debut {
+    display: flex;
+    list-style: none;
+    margin-left: -35px;
+}
+
+.dropb {
+    margin-top: -11px;
+    margin-left: -18px;
+    height: 0;
+}
+
+.dropdow-menu-prinicepale {
+    top: 28px !important;
+    left: 16px !important;
+    width: 100%;
+}
+
+.iconee-card {
+    width: 55px;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+#fleche {
+    margin-top: -17px;
+    margin-left: 75px;
+}
+
+#fleche1 {
+    margin-top: -17px;
+    margin-left: 165px;
+}
+
+#fleche2 {
+    margin-top: -14px;
+    margin-left: 180px;
+}
+
+.Rectangle-12 {
+    height: 80px;
+}
+
+.card-header {
+    height: auto;
+}
+
+.titreJamono {
+    margin-top: -234px !important;
+    margin-bottom: 70px !important;
+}
+
+#jamono {
+    color: #ff7900;
+    font-size: 30px;
+}
+
+#newScool {
+    font-size: 50px;
+    color: #ffffff;
+    margin-top: 0px;
+}
+
+.sec {
+    margin-bottom: 40px !important;
+}
+
+.sece {
+    margin-bottom: 24px !important;
+}
+
+#passnewSc {
+    margin-bottom: 35px !important;
+}
+
+Group-11 {
+    position: relative;
+}
+
+.debutli {
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+.space2 {
+    margin-top: 150px;
+}
+
+h6 {
+    margin-bottom: 10px !important;
+}
+
+.etoileOrange {
+    max-width: 5% !important;
+}
+
+#phone {
+    width: 68px;
+    margin-top: 10px;
+}
+
+.p-img {
+    position: relative;
+}
+
+.test {
+    padding-top: 35px;
+}
+
+.tab-content-border {
+    border-top: 2px solid black !important;
+    background-color: #fff;
+}
+
+.Prix-des-appels {
+    margin-left: 33px;
+}
+
+.space {
+    padding-top: 40px;
+    padding-left: 4em !important;
+}
+
+.Rectangle-29 {
+    background-color: #fb7900;
+}
+
+.Les-illimix-Jamono-N {
+  height: 0px;
+  padding-top: 0px !important;
+  margin-top: 9.5px;
+  font-size: 13px;
+  margin-left: -3px;
+}
+
+#etoileOrange img{
+  margin-top: 2px;
+}
+
+.Sece {
+    margin-bottom: 11px;
+    letter-spacing: 1.3px;
+    color: #fb7900;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#second {
+    /*margin-top: -22px;*/
+    margin-top: -80px;
+}
+
+.Vers-Orange-et-autre {
+    letter-spacing: 0.5px;
+    color: #8f8f8f;
+}
+
+.Valable-30-jours-ds {
+    font-size: 14px;
+    color: #8f8f8f;
+    float: inline-end;
+    margin-bottom: 0;
+}
+
+.row3 {
+    padding-bottom: 40px;
+}
+
+.-mine {
+    color: black;
+}
+
+.-min {
+    letter-spacing: 0.5px;
+    color: #999999;
+}
+
+.-FCFA {
+    margin-left: 62px;
+    color: #fb7900;
+}
+
+.mar {
+    margin-top: 16px;
+}
+
+.cardcomplet {
+    width: 146px;
+    height: 74px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.09);
+    background: url('/sites/default/files/icones/background-pass.svg');
+    background-repeat: no-repeat;
+}
+
+.max {
+    /* max-width: 15.667% !important; */
+    margin-bottom: 15px;
+}
+
+.tabe1 {
+    width: 100%;
+    padding-left: 12px;
+    border-bottom: none;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    text-align: center;
+}
+
+.nav .nav-link {
+    color: #00000080;
+    padding-bottom: 20px !important;
+}
+
+.rowcarbody {
+    margin-top: -20px;
+}
+
+.blockavantage {
+    margin: 29px !important;
+}
+
+.Tarifs {
+    display: flex;
+}
+
+.Tarifs-rduits-entre {
+    font-size: 20px;
+    margin-left: 13px;
+    padding-top: 14px;
+}
+
+#imageLoren {
+    width: 31px;
+}
+
+.imageLoren1 {
+    width: 41px;
+}
+
+#imageLoren2 {
+    width: 43px;
+}
+
+#imageLoren3 {
+    width: 34px;
+}
+
+#image-orange-et-moi-black {
+    width: 27px;
+    /* margin-left: 53px; */
+}
+
+.Lorem-ipsum-dolor-si {
+    width: 100%;
+    line-height: 1.25;
+    margin-top: 10px;
+    color: #666666;
+}
+
+.Lorem-ipsum-d {
+    color: #666666;
+    line-height: 1.25;
+    width: 301px;
+}
+
+.-Moo {
+    color: #ff7900;
+    margin-left: -6px;
+}
+
+.coll {
+    margin-top: 12px;
+    height: 33px;
+}
+
+.Rectangle-77 {
+    width: 112px;
+    background-color: #fb7900;
+    height: 40px;
+    border: solid 0px;
+    margin-left: -18px;
+}
+
+.Promo-Puce {
+    margin-bottom: 0px;
+}
+
+.decouvrir {
+    color: #ffffff;
+}
+
+.p8 {
+    padding-top: 8px;
+}
+
+.shad {
+    border: none !important;
+}
+
+.ima {
+    margin-top: 38px;
+}
+
+.car {
+    width: 505px;
+    height: 200px;
+}
+
+.Sriracha-tattooed-po {
+    width: 387px;
+    font-size: 18px;
+    line-height: 1.11;
+}
+
+.En-savoir-plus {
+    font-size: 18px;
+    letter-spacing: 0.6px;
+    color: #fb7900;
+}
+
+.icones {
+    color: #fb7900;
+    margin-left: 9px;
+    font-size: 20px;
+}
+
+#image-Option {
+    width: 24px;
+    /* margin-left: 46px; */
+}
+
+#image-phone-black {
+    width: 40px;
+}
+
+.option {
+    padding-top: 13px;
+    margin-left: 19px;
+}
+
+.card-question-frequent {
+    padding-left: 28px;
+}
+
+.text-loren {
+    width: 100%;
+    font-size: 18px;
+    color: #666666;
+}
+
+.avantage {
+    margin-bottom: 23px !important;
+}
+
+.element-promo {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0px;
+    padding-top: 6px !important;
+    height: 56px !important;
+}
+
+.card1 {
+    border: none !important;
+    width: 100%;
+}
+
+.card1-body {
+    padding-left: 11px !important;
+    border-left: 2px solid #ff7900 !important;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.09);
+    height: 136.5px;
+}
+
+.card1-cardtitle {
+    display: flex;
+}
+
+.F {
+    font-size: 30px;
+}
+
+.color-orange-style {
+    color: #ff7900;
+}
+
+.sepa {
+    margin-top: 0.35rem !important;
+    margin-bottom: 0.35rem !important;
+    border-top: 3px solid #eeeeee;
+}
+
+.Valable-24h-pour-les {
+    color: #666666;
+    font-size: 10px;
+}
+
+.pass-style {
+    font-size: 14px;
+    color: #666666;
+}
+
+.pass-Mo {
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: -5px;
+    color: #666666;
+}
+
+.card1-footer {
+    background-color: #4bb4e7 !important;
+    padding-top: 0px !important;
+    padding-bottom: 3px !important;
+    border-top: none !important;
+}
+
+.Go-gratuit {
+    font-size: 10px;
+    color: black;
+}
+
+.rowspeace {
+    padding-top: 25px !important;
+}
+
+.block-mobile {
+    display: none;
+}
+
+.block-desktop {
+    display: block;
+}
+
+.promo-et-bon-desktop {
+    display: block;
+}
+
+.promo-et-bon-mobile {
+    display: none;
+}
+
+.illimix-mobile {
+    display: none;
+}
+
+.illimix-desktop {
+    display: block;
+}
+
+@media screen and (max-width: 739px) {
+    .block-mobile {
+        display: block;
+    }
+    .swiper-container-new-plan {
+        width: 100%;
+    }
+    .block-desktop {
+        display: none;
+    }
+    .promo-et-bon-desktop {
+        display: none;
+    }
+    .promo-et-bon-mobile {
+        display: block;
+    }
+    .illimix-mobile {
+        display: block;
+    }
+    .illimix-desktop {
+        display: none;
+    }
+    .o-tab-container .o-tab-heading[aria-expanded="true"] {
+        font-size: 16px;
+    }
+    .o-tab-container .o-tab-heading[aria-expanded="false"] {
+        font-size: 16px;
+    }
+    .debutli {
+        margin-left: unset;
+        font-size: unset;
+    }
+    .card1-body {
+        padding-bottom: 11px !important;
+        box-shadow: 1px 1px 1px 1px aliceblue;
+        height: 110px !important;
+        padding-right: 0px !important;
+        padding-top: 12px !important;
+        margin-bottom: 0 !important;
+    }
+    .pass-style {
+        font-size: 14px;
+        color: #666666;
+    }
+    .pass-Mo {
+        font-size: 14px;
+        margin-top: unset;
+    }
+    .debut {
+        height: 10px;
+        margin-left: 0px !important;
+    }
+    .F {
+        font-size: 20px;
+    }
+    .sepa {
+        margin-top: 0.35rem !important;
+        margin-bottom: 0.35rem !important;
+        border-top: 3px solid #eeeeee;
+    }
+    .card1-body {
+        padding-bottom: 11px !important;
+        height: 95px;
+    }
+    .Valable-24h-pour-les {
+        font-size: 8px;
+    }
+    #fleche {
+        margin-left: unset;
+        padding-left: 65px;
+    }
+    #debutli1 {
+        padding-left: 10px;
+    }
+    .titreJamono {
+        margin-top: -117px !important;
+        margin-bottom: unset !important;
+    }
+    #jamono {
+        font-size: unset;
+    }
+    #newScool {
+        font-size: 24px;
+    }
+    #appel {
+        margin-top: unset;
+    }
+    .padding-mobile-swiper2 {
+        padding-top: 172px;
+    }
+    .margeblock {
+        padding: 15px !important;
+    }
+    .Rectangle-12 {
+        height: 58px;
+    }
+    .Rectangle-27 {
+        margin-left: unset;
+    }
+    .max {
+        max-width: unset !important;
+    }
+    .cardcomplet {
+        width: 135px !important;
+        height: 74px !important;
+        background: url('/sites/default/files/icones/background-pass-mobile.svg');
+        background-repeat: no-repeat;
+    }
+    .Data_Services {
+        margin-top: -4px;
+    }
+    .rowcarbody {
+        margin-top: 0px !important;
+        padding-left: 10px;
+    }
+    .space {
+        padding-top: 20px;
+    }
+    .icone-mob {
+        width: 40px;
+    }
+    .pda {
+        font-size: 20px;
+        margin-right: -7px;
+    }
+    .collicones {
+        margin-bottom: 22px;
+    }
+    .Sec {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    .Vers-Orange-et-autre {
+        font-size: 12px;
+    }
+    .swiper-slide {
+        font-size: 18px;
+        width: 80% !important;
+        margin-right: 10px !important;
+        max-width: 229px;
+    }
+    .sec {
+        margin-bottom: unset !important;
+    }
+    .deuxcont {
+        padding-left: unset;
+        padding-right: unset;
+    }
+    .secmobile {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .Sece {
+        margin-bottom: 5px;
+        font-size: 30px;
+    }
+    .Les-illimix-Jamono-N {
+        height: 0px;
+        padding-top: 0 !important;
+        font-size: 13px;
+        margin-left: -3px;
+        margin-top: 10px;
+    }
+    .icone {
+        width: 30px;
+    }
+    .width-ic {
+        width: 27px;
+    }
+    .-FCFA {
+        margin-left: -11px;
+        font-size: 16px;
+    }
+    .-min {
+        font-size: 12px;
+    }
+    .cardcomplet {
+        width: 145px;
+        height: 77px;
+    }
+    .rowspeace {
+        width: 119%;
+    }
+    .element-promo {
+        height: unset !important;
+        display: unset !important;
+    }
+    .Rectangle-26 {
+        margin-bottom: 30px;
+        height: 375px;
+    }
+    .-mine {
+        font-size: 14px;
+    }
+    .card-space {
+        margin-left: -17px;
+    }
+    #imageLoren {
+        width: 35px !important;
+    }
+    .p-2 {
+        margin-left: -22px;
+        margin-top: -13px;
+    }
+    .swiper-slide .card-body {
+        position: absolute !important;
+        bottom: 0px !important;
+        left: 0px !important;
+        background-color: #fff;
+        padding-top: 10px !important;
+        padding-bottom: 10px;
+    }
+    .Rectangle-33 {
+        width: 100%;
+        height: 125px;
+        background-color: #ffffff;
+        position: relative;
+    }
+    .imageAvion {
+        width: 48px;
+    }
+    .Tarifs-rduits {
+        font-size: 14px;
+        text-align: center;
+    }
+    .Les-avantages-New-S {
+        margin-top: 0%;
+        margin-bottom: 3%;
+    }
+    #icon-devenir-ns {
+        width: 19px;
+    }
+    #icon-devenir-ns-1 {
+        width: 23px;
+    }
+    #icon-devenir-ns-2 {
+        width: 30px;
+    }
+    .Rectangle-13 {
+        background-color: #ffffff;
+    }
+    .option-mobile {
+        font-size: 13px;
+    }
+    .mt {
+        margin-top: -8px;
+    }
+    .text-loren {
+        font-size: 14px;
+    }
+    .swiper-container {
+        margin-bottom: 24px !important;
+    }
+    .swiper-container-new-plan {
+        margin-bottom: 24px !important;
+        padding-left: 10px;
+    }
+    .shad {
+        width: 100%;
+        text-align: center;
+    }
+    .swipe2 {
+        width: 60% !important;
+    }
+    .cardcompletmarginleft {
+        margin-left: 10px;
+    }
+    .cole {
+        max-width: 16.667% !important;
+    }
+    .card-question-frequent {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .swipeSlideWidth {
+        width: 100% !important;
+    }
+    .swipe3 {
+        width: 64% !important;
+    }
+    .pb-icone-swiper {
+        padding-bottom: 27px;
+    }
+    .car {
+        width: 199px;
+    }
+}
+
+@media only screen and (max-width: 739px) and (min-width: 490px) {
+    .block-mobile {
+        display: none;
+    }
+    .block-desktop {
+        display: block;
+    }
+    .Group-11 {
+        height: 147px;
+        overflow: hidden;
+    }
+    .space {
+        padding-top: 40px;
+        padding-left: 2em !important;
+    }
+    .icone-mob {
+        display: block;
+    }
+    .block-col {
+        width: 50% !important;
+    }
+    .dispa {
+        display: flex !important;
+        justify-content: space-between !important;
+        flex-wrap: wrap;
+    }
+    #second {
+        margin-top: unset;
+    }
+    .space2 {
+        margin-top: unset;
+    }
+    .Valable-30-jours-ds {
+        position: absolute;
+        bottom: 0;
+        float: right !important;
+        right: 0;
+    }
+    .space {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 739px) {
+    .promo-et-bon-desktop {
+        display: block;
+    }
+    .promo-et-bon-mobile {
+        display: none;
+    }
+    .block-mobile {
+        display: none;
+    }
+    .block-desktop {
+        display: block;
+    }
+    .illimix-mobile {
+        display: none;
+    }
+    .illimix-desktop {
+        display: block;
+    }
+    .space {
+        padding-top: 40px;
+        padding-left: 2em !important;
+    }
+    .icone-mob {
+        display: block;
+    }
+    .block-col {
+        width: 50% !important;
+    }
+    .dispa {
+        display: flex !important;
+        justify-content: space-between !important;
+        flex-wrap: wrap;
+    }
+    #second {
+        margin-top: unset;
+    }
+    .space2 {
+        margin-top: unset;
+    }
+    .Valable-30-jours-ds {
+        position: absolute;
+        bottom: 0;
+        float: right !important;
+        right: 0;
+    }
+    .space {
+        margin-bottom: 10px;
+    }
+    .row3 {
+        display: flex !important;
+        justify-content: space-between !important;
+    }
+    .col-w-2 {
+        width: 24.5%;
+    }
+    .Group-11 {
+        height: 150px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1320px) {
+    .deuxcont {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .contentS {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    body {
+        font-size: 14px !important;
+    }
+}
+
+.dropdown-menu.dropdow-menu-prinicepale.show {
+    min-width: 225px;
+}

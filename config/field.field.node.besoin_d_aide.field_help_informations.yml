@@ -1,0 +1,19 @@
+uuid: 406b1dd2-2aad-418b-97c0-47c450f26236
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_help_informations
+    - node.type.besoin_d_aide
+id: node.besoin_d_aide.field_help_informations
+field_name: field_help_informations
+entity_type: node
+bundle: besoin_d_aide
+label: Informations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

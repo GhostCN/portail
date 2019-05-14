@@ -1,0 +1,27 @@
+uuid: f83470ba-359b-49df-aa66-03406a2df537
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.faq_orange_money.body
+    - node.type.faq_orange_money
+  module:
+    - text
+    - user
+id: node.faq_orange_money.default
+targetEntityType: node
+bundle: faq_orange_money
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

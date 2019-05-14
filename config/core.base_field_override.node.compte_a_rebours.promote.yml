@@ -1,0 +1,22 @@
+uuid: 0994de30-4a10-4f18-a5b9-cb85cda4a038
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.compte_a_rebours
+id: node.compte_a_rebours.promote
+field_name: promote
+entity_type: node
+bundle: compte_a_rebours
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

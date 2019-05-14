@@ -1,0 +1,19 @@
+uuid: cbf1eda0-8189-4014-b92f-10a867ea5b0d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pays_chp
+    - node.type.pays
+id: node.pays.field_pays_chp
+field_name: field_pays_chp
+entity_type: node
+bundle: pays
+label: Pays
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

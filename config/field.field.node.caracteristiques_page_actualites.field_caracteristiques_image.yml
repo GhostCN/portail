@@ -1,0 +1,38 @@
+uuid: 1aefe33a-b207-4d93-8ebb-ef1fa7219c9a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_caracteristiques_image
+    - node.type.caracteristiques_page_actualites
+  module:
+    - image
+id: node.caracteristiques_page_actualites.field_caracteristiques_image
+field_name: field_caracteristiques_image
+entity_type: node
+bundle: caracteristiques_page_actualites
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

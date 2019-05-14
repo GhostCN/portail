@@ -1,0 +1,22 @@
+uuid: 2f229376-e636-44a2-9362-f90e3b6f0ae9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.enregistrement
+id: node.enregistrement.promote
+field_name: promote
+entity_type: node
+bundle: enregistrement
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

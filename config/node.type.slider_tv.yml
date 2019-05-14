@@ -1,0 +1,17 @@
+uuid: beea75b8-5459-459d-8cbb-5cf268ba779b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Slider TV'
+type: slider_tv
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

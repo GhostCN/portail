@@ -1,0 +1,31 @@
+uuid: 37036012-a4c7-49e8-9df6-57047879f80f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.avantage_offre.field_avantage_description
+    - field.field.node.avantage_offre.field_avantage_icon
+    - node.type.avantage_offre
+  module:
+    - user
+id: node.avantage_offre.teaser
+targetEntityType: node
+bundle: avantage_offre
+mode: teaser
+content:
+  field_avantage_description:
+    type: basic_string
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_avantage_icon: true
+  langcode: true

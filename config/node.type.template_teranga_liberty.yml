@@ -1,0 +1,17 @@
+uuid: 7915ff3a-4af6-43e1-b855-44a780099a02
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Template Teranga Liberty'
+type: template_teranga_liberty
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

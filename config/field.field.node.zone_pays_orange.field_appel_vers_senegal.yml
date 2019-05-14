@@ -1,0 +1,19 @@
+uuid: ea21b37c-4d38-427a-828d-2340b3b7208d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_appel_vers_senegal
+    - node.type.zone_pays_orange
+id: node.zone_pays_orange.field_appel_vers_senegal
+field_name: field_appel_vers_senegal
+entity_type: node
+bundle: zone_pays_orange
+label: 'Appel vers sénégal (Ex : 300 F)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

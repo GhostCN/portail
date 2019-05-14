@@ -1,0 +1,19 @@
+uuid: d4a11340-84f4-4d8c-982b-5079e2636b9a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pays
+    - node.type.pass_internationaux
+id: node.pass_internationaux.field_pays
+field_name: field_pays
+entity_type: node
+bundle: pass_internationaux
+label: Pays
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 0c0d87a8-c31b-4bac-83d0-02506052c5c3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarif_ht
+    - node.type.premium_avec_tel
+id: node.premium_avec_tel.field_tarif_ht
+field_name: field_tarif_ht
+entity_type: node
+bundle: premium_avec_tel
+label: 'Tarif HT'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

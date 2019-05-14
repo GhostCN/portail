@@ -1,0 +1,19 @@
+uuid: 40bdd5b6-b12a-4a14-bea2-dee5830c6469
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume_description
+    - node.type.template_teranga_liberty
+id: node.template_teranga_liberty.field_resume_description
+field_name: field_resume_description
+entity_type: node
+bundle: template_teranga_liberty
+label: 'Resumé description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

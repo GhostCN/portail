@@ -1,0 +1,46 @@
+uuid: 5505d564-2a89-4b4e-9a55-91c79995c1e1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pass_data_org.field_connexion
+    - field.field.node.pass_data_org.field_valabilite_data
+    - node.type.pass_data_org
+id: node.pass_data_org.default
+targetEntityType: node
+bundle: pass_data_org
+mode: default
+content:
+  field_connexion:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_valabilite_data:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

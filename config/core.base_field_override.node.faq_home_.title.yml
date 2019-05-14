@@ -1,0 +1,18 @@
+uuid: b4076931-4169-40c5-9872-c6fe033e6f3d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.faq_home_
+id: node.faq_home_.title
+field_name: title
+entity_type: node
+bundle: faq_home_
+label: Question
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

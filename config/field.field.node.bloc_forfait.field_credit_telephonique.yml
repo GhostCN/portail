@@ -1,0 +1,19 @@
+uuid: 1dea5efc-7ffc-4087-9e78-b52df79259e0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_credit_telephonique
+    - node.type.bloc_forfait
+id: node.bloc_forfait.field_credit_telephonique
+field_name: field_credit_telephonique
+entity_type: node
+bundle: bloc_forfait
+label: 'Crédit téléphonique (Ex: 2 500 F)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

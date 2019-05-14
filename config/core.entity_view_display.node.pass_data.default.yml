@@ -1,0 +1,45 @@
+uuid: 4508b84a-7543-4fb2-b9ba-f3debfc2d356
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pass_data.field_appel
+    - field.field.node.pass_data.field_sms
+    - field.field.node.pass_data.field_valabilite
+    - node.type.pass_data
+  module:
+    - user
+id: node.pass_data.default
+targetEntityType: node
+bundle: pass_data
+mode: default
+content:
+  field_appel:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sms:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_valabilite:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

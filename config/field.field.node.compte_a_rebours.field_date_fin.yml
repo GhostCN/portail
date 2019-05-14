@@ -1,0 +1,21 @@
+uuid: 98724246-a01b-40af-bb00-fd90d02be9f6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_fin
+    - node.type.compte_a_rebours
+  module:
+    - datetime
+id: node.compte_a_rebours.field_date_fin
+field_name: field_date_fin
+entity_type: node
+bundle: compte_a_rebours
+label: 'Date fin'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

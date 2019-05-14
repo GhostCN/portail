@@ -1,0 +1,22 @@
+uuid: f6af30d1-bea1-4593-95e7-7b82dd6fff3e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.attributs_de_produit
+  module:
+    - text
+id: node.attributs_de_produit.body
+field_name: body
+entity_type: node
+bundle: attributs_de_produit
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

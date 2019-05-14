@@ -1,0 +1,21 @@
+uuid: 73b0a2b3-d4cc-4094-89bb-73734c11f357
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_soustitre_actu
+    - node.type.page_actualite
+  module:
+    - text
+id: node.page_actualite.field_soustitre_actu
+field_name: field_soustitre_actu
+entity_type: node
+bundle: page_actualite
+label: 'Sous titre de l''actualité'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

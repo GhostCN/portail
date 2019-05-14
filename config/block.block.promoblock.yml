@@ -1,0 +1,21 @@
+uuid: 08060645-c4cc-4967-93e0-95e6ae76ffd2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - portail
+  theme:
+    - orange
+id: promoblock
+theme: orange
+region: breadcrumb
+weight: 0
+provider: null
+plugin: promo_block
+settings:
+  id: promo_block
+  label: 'Promo block'
+  provider: portail
+  label_display: '0'
+  promo_block_settings: null
+visibility: {  }

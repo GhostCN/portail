@@ -1,0 +1,28 @@
+uuid: c618e75c-0035-4724-9278-dd98754d5c3a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_b
+    - node.type.bouquet_orange
+    - node.type.page_tv_orange
+id: node.page_tv_orange.field_b
+field_name: field_b
+entity_type: node
+bundle: page_tv_orange
+label: 'Bouquet TV'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bouquet_orange: bouquet_orange
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: 3c08b315-9c5d-4657-8309-6da3f67708b2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'FAQ Keurgui'
+type: faq_keurgui
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

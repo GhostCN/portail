@@ -1,0 +1,9 @@
+uuid: 1502ff76-1d27-4252-9534-15f0147365d0
+langcode: fr
+status: true
+dependencies: {  }
+name: Actualité
+vid: actualite_1
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,28 @@
+uuid: 8e266899-85b0-413e-ae21-88f4d94b9a3b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider
+    - node.type.orange_money
+    - node.type.slider_om
+id: node.orange_money.field_slider
+field_name: field_slider
+entity_type: node
+bundle: orange_money
+label: Slider
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      slider_om: slider_om
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

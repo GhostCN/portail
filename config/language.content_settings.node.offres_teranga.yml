@@ -1,0 +1,11 @@
+uuid: fdf0feeb-35e2-4ed4-aa96-7c99b89b8f26
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.offres_teranga
+id: node.offres_teranga
+target_entity_type_id: node
+target_bundle: offres_teranga
+default_langcode: site_default
+language_alterable: false

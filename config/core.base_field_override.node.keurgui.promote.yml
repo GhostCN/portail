@@ -1,0 +1,22 @@
+uuid: 2a23d1e8-0b56-4558-868b-820f0bd3507b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.keurgui
+id: node.keurgui.promote
+field_name: promote
+entity_type: node
+bundle: keurgui
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

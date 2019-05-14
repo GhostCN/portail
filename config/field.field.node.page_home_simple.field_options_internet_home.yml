@@ -1,0 +1,19 @@
+uuid: 9f6a3fa6-4158-47d7-8f49-a59b13741232
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_options_internet_home
+    - node.type.page_home_simple
+id: node.page_home_simple.field_options_internet_home
+field_name: field_options_internet_home
+entity_type: node
+bundle: page_home_simple
+label: 'Options Internet Inclus offre'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

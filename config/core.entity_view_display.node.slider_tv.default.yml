@@ -1,0 +1,42 @@
+uuid: 90b928be-7108-4cc4-9568-d1565868c8be
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.slider_tv.field_c
+    - field.field.node.slider_tv.field_image_slider
+    - node.type.slider_tv
+  module:
+    - options
+    - svg_image
+    - user
+id: node.slider_tv.default
+targetEntityType: node
+bundle: slider_tv
+mode: default
+content:
+  field_c:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_image_slider:
+    weight: 102
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

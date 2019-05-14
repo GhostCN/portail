@@ -1,0 +1,21 @@
+uuid: b7cf79f8-8d1a-42a5-8385-c672d377566f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_titre_fibre
+field_name: field_titre_fibre
+entity_type: node
+type: string
+settings:
+  max_length: 1000
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

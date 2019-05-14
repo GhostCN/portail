@@ -1,0 +1,22 @@
+uuid: 850be41f-edac-4318-9dab-667b9e22fcfb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.zone_pays_orange
+id: node.zone_pays_orange.promote
+field_name: promote
+entity_type: node
+bundle: zone_pays_orange
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: d26b5690-13a8-4f80-afb4-a8861e492303
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_options_keurgui_box
+    - node.type.page_keurgui_box
+id: node.page_keurgui_box.field_options_keurgui_box
+field_name: field_options_keurgui_box
+entity_type: node
+bundle: page_keurgui_box
+label: 'Options Keurgui Box'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

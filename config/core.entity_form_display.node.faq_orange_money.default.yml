@@ -1,0 +1,40 @@
+uuid: 9590a0b3-3eca-47c2-9933-75a00c30edb4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.faq_orange_money.body
+    - node.type.faq_orange_money
+  module:
+    - text
+id: node.faq_orange_money.default
+targetEntityType: node
+bundle: faq_orange_money
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

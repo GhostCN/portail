@@ -1,0 +1,17 @@
+uuid: 8a4117c3-cc4d-41aa-ba76-5605e923eeea
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Orange Sargal'
+type: orange_sargal
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

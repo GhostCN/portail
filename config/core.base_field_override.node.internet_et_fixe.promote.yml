@@ -1,0 +1,22 @@
+uuid: 6a6a160b-d891-45ea-8d96-1a993a66d11f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.internet_et_fixe
+id: node.internet_et_fixe.promote
+field_name: promote
+entity_type: node
+bundle: internet_et_fixe
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

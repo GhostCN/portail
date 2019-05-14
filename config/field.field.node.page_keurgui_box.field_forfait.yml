@@ -1,0 +1,28 @@
+uuid: 3242924c-6656-48cd-87d2-035864f04c72
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_forfait
+    - node.type.bloc_forfait
+    - node.type.page_keurgui_box
+id: node.page_keurgui_box.field_forfait
+field_name: field_forfait
+entity_type: node
+bundle: page_keurgui_box
+label: Forfait
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bloc_forfait: bloc_forfait
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

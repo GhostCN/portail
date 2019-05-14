@@ -1,0 +1,503 @@
+{{ attach_library('orange/global-teranga-liberty-css')}}
+{{ attach_library('orange/global-teranga-liberty-js')}}
+
+    <div class="contentS">
+        <ul class="sac-nav-ul mb-0">
+            <li class="debutlii">
+                <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/images/liberty/keyboard-arrow-up.svg" alt="" id="fleche">
+            </li>
+            <li class="debutlii">
+                <a href="{{ path('teranga') }}">Nos offres teranga</a><img class="px-2" src="/sites/default/files/images/liberty/keyboard-arrow-up.svg" alt="" id="fleche">
+            </li>
+            <li class="debutlii">
+                <a href="#"> <b> Teranga liberty </b></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content-page">
+        <div class="header-bandeau">
+            <img src="{{ file_url(content.bandeau) }}" class="bnd_desk" alt="">
+            <img src="images/bandeau-mobile.png" class="bnd_mobile" alt="">
+        </div>
+
+        <div class="main-content">
+            <div class="contentS">
+                <div class="card card-bandeau">
+                    <div>Teranga</div>
+                    <div class="active">Liberty</div>
+                </div>
+
+                <div class="card card-content-page">
+                <div class="prt-mobile">
+                    A partir de <span>{{ content.tarif }}</span>
+                </div>
+                    <div class="desc-offr">
+                        <img src="{{ file_url(content.image) }}" alt="">
+                    </div>
+                    <div class="desc-offr">
+                        <div class="prt">A partir de</div>
+
+                        <div class="title-l">
+                            <div>Teranga Liberty</div>
+                            <div>{{ content.tarif }}</div>
+                        </div>
+
+                        <div class="descr">
+                            <div class="desc">
+                                <div>
+                                    {{ content.resume }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentS">
+                <div class="liberty-descriptif">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-expanded="true" aria-current="page">Descriptif</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile">Avantages</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab" aria-current="page">
+                            {{ content.descriptif | raw }}
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            {{ content.avantages | raw }}
+                        </div>
+                    </div>
+
+                    <div class="desc-liberty-mobile">
+                        <div class="card border-0">
+                            <div class="card-body card-acc">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card" style="border-top: none;">
+                                        <div class="card-header my-2" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn-accordeon btn btn-link font20" type="button" data-toggle="collapse" data-target="#collapseOneS" aria-expanded="true" aria-controls="collapseOne">
+                                                    Descriptif
+                                                </button>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseOneS" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>
+                                                    Teranga Liberty est une ligne mobile ouverte qui permet de communiquer sans limitation et sans contrainte vers toutes les destinations (nationales, internationales et en roaming) : appels voix, SMS/MMS, Internet mobile... La facturation des communications passées se fait en fin de mois.
+                                                </p>
+                                                <p>
+                                                    Avec votre ligne Mobile Teranga Liberty, bénéficiez d’un ensemble de services :
+
+                                                    <ul>
+                                                    <li>Services de base : présentation du n°, messagerie vocale, double appel, appel en instance …</li>
+                                                        <li>Services de base : présentation du n°, messagerie vocale, double appel, appel en instance …</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border-0">
+                                        <div class="card-header my-2" id="headingHeight">
+                                            <h5 class="mb-0">
+                                                <button class="btn-accordeon btn btn-link collapsed font20" type="button" data-toggle="collapse" data-target="#collapseHeight" aria-expanded="false" aria-controls="collapseOne">
+                                                    Avantages
+                                                </button>
+                                            </h5>
+                                        </div>
+
+                                        <div id="collapseHeight" class="collapse" aria-labelledby="headingHeight" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                <p>
+                                                    Teranga Liberty est une ligne mobile ouverte qui permet de communiquer sans limitation et sans contrainte vers toutes les destinations (nationales, internationales et en roaming) : appels voix, SMS/MMS, Internet mobile... La facturation des communications passées se fait en fin de mois.
+                                                </p>
+                                                <p>
+                                                    Avec votre ligne Mobile Teranga Liberty, bénéficiez d’un ensemble de services :
+
+                                                    <ul>
+                                                    <li>Services de base : présentation du n°, messagerie vocale, double appel, appel en instance …</li>
+                                                        <li>Services de base : présentation du n°, messagerie vocale, double appel, appel en instance …</li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="liberty-pass">
+                    <div class="list-pass-liberty">
+                        <div class="passL appel">
+                            <div class="blc-appel">
+                                <div class="block-tt">
+                                    <div class="title-Pa">
+                                        <img src="/sites/default/files/images/liberty/icones-phone-black-line.svg" alt="">
+                                        <span>Prix des appels</span>
+                                    </div>
+
+                                    <div class="prix-Pas">
+                                        <div class="active">{{ content.pass.appel[0].prix }}</div>
+                                        <div>{{ content.pass.appel[0].destination }}</div>
+                                    </div>
+                                </div>
+
+                                <div class="blc-tarif">
+                                    {% for app in content.pass.autre_app  %}
+                                    <div class="tarif">
+                                        <div class="active">{{app.prix}}</div>
+                                        <div>{{app.destination}}</div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="passM">
+                            <div class="title-Pa">
+                                <img src="/sites/default/files/images/liberty/message-black-line.svg" alt="">
+                                <span>Prix des SMS</span>
+                            </div>
+
+                            <div class="desc-prix-passM">
+                                <div class="vers-S">
+                                    <div class="active">{{ content.pass.sms[0].prix }}</div>
+                                    <div>{{ content.pass.sms[0].destination }}</div>
+                                </div>
+
+                                <div class="ver-o">
+                                    {% for sms in content.pass.autre_sms  %}
+                                    <div class="active">{{sms.prix}}</div>
+                                    <div>{{sms.destination}}</div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <div class="title-Pa">
+                                <img src="/sites/default/files/images/liberty/group-3.svg" alt="">
+                                <span>Prix Data</span>
+                            </div>
+
+                            <div class="prix-data">
+                                {{ content.pass.data }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="liberty-pass-mobile">
+                    <div style="overflow: hidden;" class="swiper-container-passL">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="desc-swp-pass">
+                                    <div class="title-Pa">
+                                        <img src="/sites/default/files/images/liberty/icones-phone-black-line.svg" alt="">
+                                        <span>Prix des appels</span>
+                                    </div>
+
+                                    <div class="blc-tarif">
+
+                                      {% for app in content.pass.autre_app  %}
+                                      <div class="tarif">
+                                          <div class="active">{{app.prix}}</div>
+                                          <div>{{app.destination}}</div>
+                                      </div>
+                                      {% endfor %}
+                                    </div>
+
+                                    <div class="prix-Pas">
+                                        <div class="active">{{ content.pass.appel[0].prix }}</div>
+                                        <div>{{ content.pass.appel[0].destination }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="desc-swp-pass">
+                                    <div class="title-Pa">
+                                        <img src="/sites/default/files/images/liberty/message-black-line.svg" alt="">
+                                        <span>Prix des SMS</span>
+                                    </div>
+
+                                    <div class="blc-tarif">
+                                        {% for sms in content.pass.autre_sms  %}
+                                        <div class="tarif">
+                                            <div class="active">{{sms.prix}}</div>
+                                            <div>{{sms.destination}}</div>
+                                        </div>
+                                        {% endfor %}
+
+                                    </div>
+
+                                    <div class="prix-Pas">
+                                        <div class="active">{{ content.pass.sms[0].prix }}</div>
+                                        <div>{{ content.pass.sms[0].destination }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="desc-swp-pass">
+                                    <div class="title-Pa">
+                                        <img src="/sites/default/files/images/liberty/group-3.svg" alt="">
+                                        <span>Prix Data</span>
+                                    </div>
+
+
+
+                                    <div class="prix-Pas">
+                                        <div class="active">{{ content.pass.data }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block-forfait">
+                    <h2 class="title-forfait mt-0">
+                        Forfaits Internet mobiles compatibles avec la gamme Teranga
+                    </h2>
+
+                    <div class="option-ff">
+                        <div class="select-orange">
+                            <div class="oval"></div>
+                        </div>
+                        <div>Avec ou sans engagement</div>
+                    </div>
+
+                    <div class="avec-eng eng">
+                        <div class="list-forfaits">
+                        {% for forfait in forfaits.avec %}
+                            <div class="forfait">
+                                <div class="item-forfait">
+                                    <div class="title-itemF">
+                                        <div class="tt-forf">
+                                            <div>Forfait</div>
+                                            <div class="mo">{{ forfait.data }}</div>
+                                        </div>
+                                        <div class="tx">{{ forfait.prix }}</div>
+                                    </div>
+                                    <div>Valable {{ forfait.validite }}</div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                    <div class="sans-eng eng">
+                        <div class="list-forfaits">
+                        {% for forfait in forfaits.sans %}
+                            <div class="forfait">
+                                <div class="item-forfait">
+                                    <div class="title-itemF">
+                                        <div class="tt-forf">
+                                            <div>Forfait</div>
+                                            <div class="mo">{{ forfait.data }}</div>
+                                        </div>
+                                        <div class="tx">{{ forfait.prix }}</div>
+                                    </div>
+                                    <div>Valable {{ forfait.validite }}</div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="list-sociaux-liberty">
+                    <div class="socio souscr">
+                        <img src="/sites/default/files/images/liberty/group-269.svg" alt="">
+                        <div>Soucrivez à Teranga Premium</div>
+                        <a href="" class="btn btn-inverse btn-dark">Se connecter</a>
+                    </div>
+                    <div class="socio suiv">
+                        <img src="/sites/default/files/images/liberty/group-108.svg" alt="">
+                        <div>Suivez vos factures depuis l’espace client</div>
+                        <a href="" class="btn btn-inverse btn-dark">Trouver une agence</a>
+                    </div>
+                </div>
+
+                <div class="list-sociaux-liberty-mobile">
+                    <div class="socio suiv">
+                        <img src="/sites/default/files/images/liberty/group-108-copy-mobile.svg" alt="">
+                        <div class="desc-soc">
+                            <div>Suivez vos factures depuis l’espace client</div>
+                            <a href="" class="btn btn-block btn-inverse btn-dark">Se connecter</a>
+                        </div>
+                    </div>
+
+                    <div class="socio souscr">
+                        <img src="/sites/default/files/images/liberty/group-269-mobile.svg" alt="">
+                        <div class="desc-soc">
+                            <div>Soucrivez à Teranga Premium</div>
+                            <a href="" class="btn btn-block btn-inverse btn-dark">Trouver une agence</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

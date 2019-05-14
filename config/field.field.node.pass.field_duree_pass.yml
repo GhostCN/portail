@@ -1,0 +1,19 @@
+uuid: 3be39812-23e3-426e-9e71-bb7a57a06bad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duree_pass
+    - node.type.pass
+id: node.pass.field_duree_pass
+field_name: field_duree_pass
+entity_type: node
+bundle: pass
+label: 'Durée (Ex : Valable 24 heures)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

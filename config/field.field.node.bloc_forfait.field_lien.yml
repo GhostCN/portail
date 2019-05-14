@@ -1,0 +1,21 @@
+uuid: e1c5d6ff-3768-475b-8462-ef1324aad148
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lien
+    - node.type.bloc_forfait
+id: node.bloc_forfait.field_lien
+field_name: field_lien
+entity_type: node
+bundle: bloc_forfait
+label: 'Lien forfait'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '#'
+default_value_callback: ''
+settings: {  }
+field_type: string

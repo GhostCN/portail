@@ -1,0 +1,19 @@
+uuid: 29db266f-3997-4d54-b40a-07199f986764
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarif_pass
+    - node.type.bloc_pass
+id: node.bloc_pass.field_tarif_pass
+field_name: field_tarif_pass
+entity_type: node
+bundle: bloc_pass
+label: 'Tarif Pass (1.000F)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

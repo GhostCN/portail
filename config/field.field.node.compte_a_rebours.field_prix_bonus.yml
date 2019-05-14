@@ -1,0 +1,19 @@
+uuid: 304f31c2-a986-4916-8f8f-60a2465bd3dc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prix_bonus
+    - node.type.compte_a_rebours
+id: node.compte_a_rebours.field_prix_bonus
+field_name: field_prix_bonus
+entity_type: node
+bundle: compte_a_rebours
+label: 'Prix Bonus (Ex : à partir de 1.000FCFA)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

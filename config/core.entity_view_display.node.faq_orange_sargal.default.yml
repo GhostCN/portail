@@ -1,0 +1,27 @@
+uuid: 43a7903e-37f5-4794-a683-cf21556a62b5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.faq_orange_sargal.body
+    - node.type.faq_orange_sargal
+  module:
+    - text
+    - user
+id: node.faq_orange_sargal.default
+targetEntityType: node
+bundle: faq_orange_sargal
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

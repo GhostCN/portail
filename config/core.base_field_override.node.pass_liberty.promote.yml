@@ -1,0 +1,22 @@
+uuid: f4a3686a-303a-4e2f-9959-881a3377a7c1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_liberty
+id: node.pass_liberty.promote
+field_name: promote
+entity_type: node
+bundle: pass_liberty
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

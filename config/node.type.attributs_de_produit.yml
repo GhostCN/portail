@@ -1,0 +1,17 @@
+uuid: 6e84fc02-fb3e-407b-acd5-89b15f98ba3b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Attributs de produit'
+type: attributs_de_produit
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

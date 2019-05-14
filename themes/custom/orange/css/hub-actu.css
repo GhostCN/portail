@@ -1,0 +1,374 @@
+@media screen and (min-width: 1460px) {
+    .contentS{
+        width: 1360px !important;
+        margin: auto !important;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .contentS{
+        padding-right: 100px;
+        padding-left: 100px;
+        position: relative;
+    }
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+.hub-header{
+    height: 390px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hub-header .img-header{
+    width: 100%;
+    position: absolute;
+}
+
+.hub-header-desc{
+    height: 390px;
+}
+
+.hub-areane{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.hub-areane a{
+    color: #666666;
+}
+
+.hub-areane .active{
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.hub-areane .img-areane{
+    margin-right: 12px;
+    margin-left: 12px;
+    margin-top: -2px;
+}
+
+.new{
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    font-weight: bold;
+}
+
+.actu-hub-desc{
+    color: #666666;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.hub-header-desc.card.border-0{
+    background-color: transparent;
+}
+
+h1.hub-header-title{
+    color: #ff7900;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+h2.hub-header-subtitle{
+    width: 480px;
+    font-size: 35px;
+    color: #ffffff;
+}
+
+.space50{
+    margin-bottom: 50px;
+}
+
+.list-actu, .list-theme{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.list-actu .actu{
+    width: 32%;
+    margin-bottom: 35px;
+}
+
+.list-actu .actu img.title{
+    width: 100%;
+}
+
+.list-actu .actu .actu-body{
+    padding: 20px;
+    font-weight: bold;
+}
+
+.list-actu .actu .actu-body .actu-title{
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #000000;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.list-actu .actu .actu-body .actu-link{
+    font-size: 16px;
+    color: #ff7900;
+}
+
+.icone-arrow{
+    margin-left: 12px;
+    margin-top: -2px;
+}
+
+.share{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -15px;
+}
+
+.share img{
+    margin-left: 10px;
+}
+
+.scndShare{
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.scndShare .facebookS, .scndShare .gmailShare{
+    height: 80px;
+    font-size: 20px;
+    width: 49%;
+}
+
+.scndShare .facebookS{
+    background-color: #4bb4e7;
+
+}
+
+.scndShare .gmailShare{
+    background-color: #a885d8;
+
+}
+
+.faImg{
+    float: left;
+    margin-top: 10px;
+    margin-right: 10%;
+}
+
+.faImg.mail{
+    margin-left: 20px;
+}
+
+.desc-share{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+
+    margin-right: 20px;
+}
+
+h2.hub-title{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.list-theme .theme{
+    width: 32%;
+}
+
+.list-theme .theme img{
+    width: 100%;
+}
+
+.theme .theme-desc{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.hide-reverse-hub{
+    display: none;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px)  {
+    .list-actu .actu .actu-body {
+        padding: 15px;
+    }
+
+    .list-actu .actu .actu-body .actu-link {
+        font-size: 15px;
+    }
+
+    .list-actu .actu .actu-body .actu-title {
+        font-size: 19px;
+    }
+
+    .icone-arrow {
+        margin-left: 8px;
+    }
+
+    .list-actu .actu .actu-body .actu-title {
+        font-size: 19px;
+    }
+
+    .faImg {
+        margin-right: 7%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1300px)  {
+    .contentS{
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+}
+
+@media screen and (max-width: 767px)  {
+    .contentS{
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    .new{
+        font-size: 25px;
+    }
+
+    .actu-hub-desc{
+        display: none;
+    }
+
+    .hide-hub{
+        display: none;
+    }
+
+    .hide-reverse-hub{
+        display: block;
+    }
+
+    .space50{
+        margin-bottom: 35px;
+    }
+
+    .hub-header, .hub-header-desc{
+        height: 275px;
+    }
+
+    .hub-areane {
+        margin-top: 15px;
+        margin-bottom: 40px;
+    }
+
+    .hub-header .img-header{
+        width: 100%;
+        height: auto;
+        right: 0;
+    }
+
+    .list-actu .actu .actu-body .actu-title {
+        font-size: 16px;
+        margin-bottom: 0px;
+    }
+
+    .share {
+        margin-top: 10px;
+    }
+
+    h1.hub-header-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    h2.hub-header-subtitle {
+        width: 280px;
+        font-size: 20px;
+    }
+
+    .list-actu .actu{
+        width: 49%;
+        margin-bottom: 10px;
+    }
+
+    .swiper-container-hub-actu .swiper-slide{
+        width: 80%;
+        max-width: 330px;
+    }
+
+    .swiper-wrapper{
+        margin-bottom: 0px !important;
+    }
+
+    .theme-desc{
+        padding: 10px;
+    }
+
+    .swiper-container-hub-actu .card img{
+        width: 100%;
+    }
+
+    .theme-desc div{
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .scndShare .facebookS, .scndShare .gmailShare {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px)  {
+
+    .hub-header .img-header{
+        width: auto;
+        height: 100%;
+    }
+
+    .list-actu .actu{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .scndShare .facebookS, .scndShare .gmailShare {
+        width: 100%;
+    }
+
+    .scndShare {
+        flex-wrap: wrap;
+    }
+
+    .scndShare .facebookS{
+        margin-bottom: 10px;
+    }
+
+    .faImg {
+        margin-right: 15px;
+    }
+
+    .share {
+        margin-top: 10px;
+        width: 223px;
+    }
+
+    .share img {
+        margin-left: 0px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+}

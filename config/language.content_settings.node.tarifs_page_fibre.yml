@@ -1,0 +1,11 @@
+uuid: 307b68a2-b21f-490b-be5a-475c6f728269
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tarifs_page_fibre
+id: node.tarifs_page_fibre
+target_entity_type_id: node
+target_bundle: tarifs_page_fibre
+default_langcode: site_default
+language_alterable: false

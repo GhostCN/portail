@@ -1,0 +1,30 @@
+uuid: e379cf78-db59-4f8e-a9ab-d58853f19bf9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.souscrire_keurgui_box.body
+    - node.type.souscrire_keurgui_box
+  module:
+    - text
+    - user
+id: node.souscrire_keurgui_box.teaser
+targetEntityType: node
+bundle: souscrire_keurgui_box
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_icone_souscription_keurgui: true
+  langcode: true

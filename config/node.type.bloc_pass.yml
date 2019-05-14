@@ -1,0 +1,17 @@
+uuid: e6fc1f89-6450-4853-a43e-b9af4ac1d526
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Bloc Pass'
+type: bloc_pass
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

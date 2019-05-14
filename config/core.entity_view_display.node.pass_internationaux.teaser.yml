@@ -1,0 +1,23 @@
+uuid: 7f750873-2c82-49c1-bbfc-0d8191ede76f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.pass_internationaux
+  module:
+    - user
+id: node.pass_internationaux.teaser
+targetEntityType: node
+bundle: pass_internationaux
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_pay: true
+  field_pays: true
+  field_prix_appel: true
+  field_prix_sms: true
+  langcode: true

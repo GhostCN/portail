@@ -1,0 +1,48 @@
+uuid: 2f586422-6b17-446a-aced-6a35fea35e84
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pays.field_chp_pass
+    - field.field.node.pays.field_pays_chp
+    - node.type.pays
+  module:
+    - inline_entity_form
+id: node.pays.default
+targetEntityType: node
+bundle: pays
+mode: default
+content:
+  field_chp_pass:
+    weight: 1
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_pays_chp: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

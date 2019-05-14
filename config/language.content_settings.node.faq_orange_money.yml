@@ -1,0 +1,11 @@
+uuid: 449bd68c-9695-4b16-b2c9-25ce14fd9471
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.faq_orange_money
+id: node.faq_orange_money
+target_entity_type_id: node
+target_bundle: faq_orange_money
+default_langcode: site_default
+language_alterable: false

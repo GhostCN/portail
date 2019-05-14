@@ -1,0 +1,11 @@
+uuid: c5821bfe-1e80-4955-9609-1a927b242aa4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.teranga_telephone
+id: node.teranga_telephone
+target_entity_type_id: node
+target_bundle: teranga_telephone
+default_langcode: site_default
+language_alterable: false

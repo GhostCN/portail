@@ -1,0 +1,22 @@
+name: Orange
+description: Thème Portail.
+type: theme
+core: 8.x
+project: orange
+package: custom
+
+#libraries
+libraries:
+  - orange/global-css
+  - orange/global-js
+#  - orange/global-jamono-css
+
+#regions
+regions:
+  content: "Contenu"
+  primary_menu: "Menu Principal"
+  breadcrumb: "Fil d'ariane"
+  header: "En-tête"
+  banniere: "banniere menu"
+  footer: "Pied de page"
+  highlighted: "Mise en évidence"

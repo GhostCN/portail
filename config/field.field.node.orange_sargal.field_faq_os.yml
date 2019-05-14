@@ -1,0 +1,28 @@
+uuid: 9fa12456-9e2f-4163-9690-aac2c9f9af45
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq_os
+    - node.type.faq_orange_sargal
+    - node.type.orange_sargal
+id: node.orange_sargal.field_faq_os
+field_name: field_faq_os
+entity_type: node
+bundle: orange_sargal
+label: 'Faq OS'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      faq_orange_sargal: faq_orange_sargal
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: 167ae639-f6c7-48ff-8d3a-d62874008d13
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.attributs_de_produit.body
+    - node.type.attributs_de_produit
+  module:
+    - text
+    - user
+id: node.attributs_de_produit.teaser
+targetEntityType: node
+bundle: attributs_de_produit
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_attribut_produit_icone: true
+  langcode: true

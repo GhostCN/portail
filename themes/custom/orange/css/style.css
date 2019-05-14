@@ -1,0 +1,34 @@
+
+.swiper-container-offre .swiper-slide {
+  width: 85%;
+  max-width: 260px;
+}
+
+.sw-aff .swiper-slide {
+  width: 60%;
+  max-width: 183px;
+}
+
+.swiper-container-index .swiper-slide {
+  width: 40%;
+  max-width: 230px;
+}
+.accordion .card-header button::after, .accordion .card-header a::after{
+  background-image: url(/sites/default/files/icones/keyboard-arrow-right-faq.svg) !important;
+  background-repeat:no-repeat;
+  width: 17px;
+  height: 15px;
+  background-size: contain;
+}
+
+.accordion .card-header button[aria-expanded="true"]::after, .accordion .card-header a[aria-expanded="true"]::after {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  top: 25px;
+  right: 10px;
+  background-image: url(/sites/default/files/icones/keyboard-arrow-up-orange.svg) !important;
+}
+
+.accordion .card-header button[aria-expanded="true"]{
+  color: #f16e00;
+}

@@ -1,0 +1,18 @@
+uuid: 26fac4d4-a53a-4fcf-858d-5ca334132681
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pays
+id: node.pays.title
+field_name: title
+entity_type: node
+bundle: pays
+label: 'Pays (Ex : France)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

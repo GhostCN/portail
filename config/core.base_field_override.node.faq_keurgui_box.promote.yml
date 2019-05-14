@@ -1,0 +1,22 @@
+uuid: 76c239f5-493a-4478-afcc-67097c50790d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.faq_keurgui_box
+id: node.faq_keurgui_box.promote
+field_name: promote
+entity_type: node
+bundle: faq_keurgui_box
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

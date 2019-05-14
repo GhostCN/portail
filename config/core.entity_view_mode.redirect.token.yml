@@ -1,0 +1,10 @@
+uuid: cfd5887f-dfdb-42ae-a282-71d21c2b37ec
+langcode: fr
+status: true
+dependencies:
+  module:
+    - redirect
+id: redirect.token
+label: 'Jeton (token)'
+targetEntityType: redirect
+cache: true

@@ -1,0 +1,19 @@
+uuid: 2e1d794f-fb7f-49ed-9bfa-89be607d1bd7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_batterie
+    - node.type.teranga_telephone
+id: node.teranga_telephone.field_batterie
+field_name: field_batterie
+entity_type: node
+bundle: teranga_telephone
+label: Batterie
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

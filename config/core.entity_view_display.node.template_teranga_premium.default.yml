@@ -1,0 +1,51 @@
+uuid: 45c80277-445a-45c5-97d2-b529f5002ae8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.template_teranga_premium.field_bandeau
+    - field.field.node.template_teranga_premium.field_offre_avec_tel
+    - field.field.node.template_teranga_premium.field_offre_sans_tel
+    - node.type.template_teranga_premium
+  module:
+    - svg_image
+    - user
+id: node.template_teranga_premium.default
+targetEntityType: node
+bundle: template_teranga_premium
+mode: default
+content:
+  field_bandeau:
+    weight: 101
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_offre_avec_tel:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_offre_sans_tel:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

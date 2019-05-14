@@ -1,0 +1,465 @@
+@media screen and (min-width: 1360px) {
+    .header-bandeau .bandeau{
+        right: 0;
+        width: 1350px !important;
+    }
+}
+
+.contentS{
+    position: relative;
+}
+
+.etoile{
+    position: absolute;
+    top: 0;
+    right: 130px;
+}
+
+.rond-vert{
+    position: absolute;
+    top: 10px;
+    left: 52%;
+}
+
+.header-bandeau{
+    height: 393px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.header-bandeau .bandeau{
+    position: absolute;
+    width: 100%;
+}
+
+.header-bandeau .bandeau-mobile{
+    display: none;
+}
+
+.fil-aicha{
+    display: flex;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.fil-aicha a{
+    color: #666666;
+    margin-right: 12px;
+}
+
+.fil-aicha a:hover{
+    color: #ff7900;
+}
+
+.fil-aicha img{
+    width: 7px;
+    margin-right: 12px;
+}
+
+.fil-aicha span{
+    font-weight: bold;
+}
+
+.page-title-aicha{
+    margin-top: 70px;
+    font-size: 35px;
+    font-weight: bold;
+    width: 270px;
+}
+
+.card-header-aicha{
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.card-programme{
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.frst-block{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.frst-block .frst-block-item:first-child{
+    margin-right: 50px;
+    width: 352px;
+}
+
+.frst-block .frst-block-item:nth-child(2){
+    flex: 1;
+}
+
+
+.frst-block-item img{
+    width: 100%;
+}
+
+.desc-pl .title-pl{
+    font-size: 30px;
+    color: #ff7900;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.desc-pl .sub-pl{
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.desc-pl .text-desc-pl{
+    font-size: 16px;
+    color: #333333;
+}
+
+.statut{
+    width: 100%;
+    height: 113px;
+    background-color: #ff7900;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.statut div{
+    margin-right: 10px;
+}
+
+.statut img{
+    margin-left: 20px;
+}
+
+.card-avantage{
+    padding-top: 50px;
+}
+
+.title-aicha{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.list-av{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.list-av .av{
+    width: 32%;
+}
+
+.list-av img{
+    width: 100%;
+}
+
+.av-body{
+    background-color: #000;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 30px;
+}
+
+.av-title{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff7900;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.av-desc{
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.autre-av{
+    width: 24%;
+    text-align: center;
+}
+
+.autre-av img{
+    width: 97px;
+    margin-bottom: 20px;
+}
+
+.autre-av .autre-desc{
+    width: 100%;
+    font-size: 16px;
+    color: #333333;
+}
+
+.contact-aicha{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #ffe8f7;
+}
+
+.list-contact{
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-contact .item-contact{
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.item-contact img{
+    margin-right: 20px;
+}
+
+.desc-itm{
+    font-size: 16px;
+}
+
+.desc-itm .link, .desc-itm .link a{
+    color: #ff7900;
+    font-weight: bold;
+}
+
+.list-av-mobile{
+    display: none;
+}
+
+.statut-img{
+    margin-top: 4px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1153px){
+    .av-desc {
+        height: 60px;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .frst-block .frst-block-item:first-child {
+        margin-right: 20px;
+        width: 320px;
+    }
+
+    .desc-pl .title-pl {
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
+
+    .desc-pl .sub-pl {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .av-body {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+    }
+
+    .av-title{
+        margin-bottom: 10px;
+    }
+
+    .header-bandeau{
+        height: 270px;
+    }
+
+    .header-bandeau .bandeau{
+        height: 270px;
+        right: 0;
+    }
+
+    .page-title-aicha {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contentS{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .card-programme {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .statut img {
+        margin-left: 5px;
+    }
+
+    .list-av{
+        display: none;
+    }
+
+    .list-av-mobile{
+        display: block;
+    }
+
+    .swiper-container-aicha .swiper-slide{
+        width: 80%;
+        max-width: 230px;
+    }
+
+    .av img{
+        width: 100%;
+    }
+
+    .av-title {
+        font-size: 16px;
+        margin-top: -15px;
+        margin-bottom: 10px;
+        white-space: unset;
+        overflow: hidden;
+        text-overflow: unset;
+    }
+
+    .av-desc {
+        font-size: 14px;
+    }
+
+    .av-body {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 20px;
+    }
+
+    .swiper-container-aicha .swiper-wrapper {
+        margin-bottom: 35px;
+    }
+
+    .autre-av {
+        width: 100%;
+        background-color: #fff;
+        padding: 35px 25px;
+    }
+
+    .header-bandeau{
+        height: 215px;
+    }
+
+    .header-bandeau .bandeau-mobile{
+        position: absolute;
+        display: block;
+        width: 320px;
+        right: 0;
+    }
+
+    .header-bandeau .bandeau{
+        display: none;
+    }
+
+    .fil-aicha {
+        display: flex;
+        margin-top: 11px;
+        font-size: 14px;
+    }
+
+    .page-title-aicha {
+        margin-top: 15px;
+        font-size: 20px;
+        width: 155px;
+    }
+
+    .frst-block .frst-block-item:first-child {
+        margin-right: 15px;
+        width: 280px;
+    }
+
+    .desc-pl .title-pl {
+        font-size: 20px;
+    }
+
+    .desc-pl .sub-pl {
+        font-size: 18px;
+    }
+
+    .desc-pl .text-desc-pl {
+        font-size: 14px;
+    }
+
+    .title-aicha {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    .hide-aicha{
+        display: none;
+    }
+
+    .autresMobile{
+        background-color: #eeeeee;
+        padding-top: 35px;
+    }
+
+    .statut{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .statut img{
+        height: 48px;
+    }
+
+    .list-contact{
+        flex-wrap: wrap;
+    }
+
+    .list-contact .item-contact{
+        width: 100%;
+    }
+
+    .list-contact .item-contact:nth-child(1), .list-contact .item-contact:nth-child(2){
+        margin-bottom: 20px;
+    }
+
+    .card-avantage{
+        padding-top: 35px;
+    }
+
+    .etoile, .rond-vert{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .frst-block .frst-block-item {
+        width: 100%;
+    }
+
+    .frst-block .frst-block-item:first-child {
+        width: 100%;
+        margin-right: 0px;
+        padding-bottom: 15px;
+    }
+
+    .statut div {
+        margin-right: 0px;
+        width: 100%;
+    }
+
+    .statut div:nth-child(2){
+        margin-top: -40px;
+    }
+
+    .contact-aicha {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .title-aicha {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+}
+

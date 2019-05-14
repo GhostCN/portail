@@ -1,0 +1,38 @@
+uuid: 0bd5b17e-163c-4e53-b609-578ba2848917
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_teranga
+    - node.type.teranga
+  module:
+    - image
+id: node.teranga.field_image_teranga
+field_name: field_image_teranga
+entity_type: node
+bundle: teranga
+label: 'Image Teranga'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

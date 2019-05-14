@@ -1,0 +1,16 @@
+uuid: 9590c73f-2afe-4ba0-bf8d-d4424d670111
+langcode: fr
+status: true
+dependencies: {  }
+name: style_840x570
+label: 'style 840x570'
+effects:
+  14cc0e74-ba99-4348-b3ac-5c04c2d7e9c5:
+    uuid: 14cc0e74-ba99-4348-b3ac-5c04c2d7e9c5
+    id: image_scale
+    weight: 1
+    data:
+      width: 840
+      height: 570
+      upscale: true
+pipeline: __default__

@@ -1,0 +1,14 @@
+uuid: d710289e-d0d0-4b13-8896-df2b95b87567
+name: 'Portail Orange SN'
+mail: papemor.coundoul@orange-sonatel.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: fr
+default_langcode: fr
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

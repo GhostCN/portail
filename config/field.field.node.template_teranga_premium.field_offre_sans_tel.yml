@@ -1,0 +1,28 @@
+uuid: f5beb7bd-d28e-44c0-a387-c9388aabf8b8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_sans_tel
+    - node.type.premium_avec_tel
+    - node.type.template_teranga_premium
+id: node.template_teranga_premium.field_offre_sans_tel
+field_name: field_offre_sans_tel
+entity_type: node
+bundle: template_teranga_premium
+label: 'Offre Sans Tel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      premium_avec_tel: premium_avec_tel
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

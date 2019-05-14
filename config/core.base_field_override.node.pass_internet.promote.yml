@@ -1,0 +1,22 @@
+uuid: 4c8384d6-d8c7-4095-8da7-7c374db9881b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_internet
+id: node.pass_internet.promote
+field_name: promote
+entity_type: node
+bundle: pass_internet
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

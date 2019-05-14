@@ -1,0 +1,22 @@
+uuid: f579eac7-bdcc-45e7-b953-adc5e0a700bf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bouquet_orange
+id: node.bouquet_orange.promote
+field_name: promote
+entity_type: node
+bundle: bouquet_orange
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

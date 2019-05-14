@@ -1,0 +1,17 @@
+uuid: 6f4f314e-e7b0-4cb5-85b4-9d8ec24eebc4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Faq Orange Sargal'
+type: faq_orange_sargal
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

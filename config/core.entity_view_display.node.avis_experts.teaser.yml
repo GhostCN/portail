@@ -1,0 +1,30 @@
+uuid: b8bd4cc1-4a03-40a3-86c4-2539513fcfe4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.avis_experts.body
+    - node.type.avis_experts
+  module:
+    - text
+    - user
+id: node.avis_experts.teaser
+targetEntityType: node
+bundle: avis_experts
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_avis_expert_image: true
+  langcode: true

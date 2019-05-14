@@ -1,0 +1,18 @@
+uuid: 1c7516ba-c625-4032-8ac9-107b2cd5af72
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.etapes_souscrire
+id: node.etapes_souscrire.title
+field_name: title
+entity_type: node
+bundle: etapes_souscrire
+label: Option
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,812 @@
+{#
+/**
+ * @file
+ * Bartik's theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template normally located in the
+ * core/modules/system directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.highlighted: Items for the highlighted region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.featured_top: Items for the featured top region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.featured_bottom_first: Items for the first featured bottom region.
+ * - page.featured_bottom_second: Items for the second featured bottom region.
+ * - page.featured_bottom_third: Items for the third featured bottom region.
+ * - page.footer_first: Items for the first footer column.
+ * - page.footer_second: Items for the second footer column.
+ * - page.footer_third: Items for the third footer column.
+ * - page.footer_fourth: Items for the fourth footer column.
+ * - page.footer_fifth: Items for the fifth footer column.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+
+
+{# Début header #}
+{% include directory ~ '/templates/includes/header.html.twig' %}
+{# Fin header #}
+
+{# Début content #}
+<div class="contentS">
+  <div class="space40"></div>
+  {{ page.breadcrumb }}
+  <div class="row hide-screen showLandscape space20">
+    <div class="col-lg-6">
+      <div class="title-page">
+        <h1>Dalal ak Jamm ci Orange</h1>
+      </div>
+    </div>
+  </div>
+  {# Début fenetres principales #}
+
+  <div class="row hide-screen space">
+    {% for win in windows %}
+    {#% set links = win.resume | split(',') %#}
+      <div class="col-lg-3 col-3">
+        <a href="{{ path(win.url) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Fenêtres Principales', 'eventAction':'button_click','eventLabel':'{{ win.title }}'});" class="lien-direct">
+          <div class="card bg-white border-0">
+            <img class="card-img-top card-imageS" src="{{ file_url(win.image) }}" alt="Card image cap">
+            <div class="card-body">
+              <div class="card-title text-center">
+                <B class="card-titleS">{{ win.title }} </B><img src="/sites/default/files/icones/keyboard-arrow-up.svg" class="icone-lien-direct" alt="" style="margin-top: -2px;">
+              </div>
+              <div class="text-center desc-pages">
+                {{ win.resume }}
+                {#
+                <a href="#">{{ links[0] }}</a>,
+                <a href="#">{{ links[1] }}</a>,
+                <a href="#">{{ links[2] }}</a>,
+                <a href="#">{{ links[3] }}</a>,
+                #}
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+  {# in fenetres principales #}
+
+  <!-- Partie mobile -->
+
+  <div class="row hide-reverse">
+    <div class="swiper-container-index swin" style="overflow: hidden">
+      <div class="swiper-wrapper" id="wr">
+        {% for win in windows %}
+          <div class="swiper-slide" id="">
+            <a href="{{ path(win.url) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Fenêtres Principales', 'eventAction':'button_click','eventLabel':'{{ win.title }}'});">
+              <div class="card bg-white border-0">
+                <img class="card-img-top card-imageS" src="{{ file_url(win.image) }}" alt="Card image cap">
+                <div class="card-body card-bodyS">
+                  <div class="card-title text-center card-titleS">
+                    <B>{{ win.title }}</B>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+        <div class="swiper-slide" id="">
+          <a href="/services-portail-magik" onclick="dataLayer.push({'event':'click','eventCategory':'Fenêtres Principales', 'eventAction':'button_click','eventLabel':'Portail Magik'});">
+            <div class="card bg-white border-0">
+              <img class="card-img-top card-imageS" src="/sites/default/files/images/amour-et-vie.png" style="height: 96px;" alt="Card image cap">
+              <div class="card-body card-bodyS">
+                <div class="card-title text-center card-titleS">
+                  <B>Portail Magik</B>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row space20 r-space">
+    <div class="col-lg-6">
+      <div class="hide-screen">
+        <div id="caroussel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            {% for i in 0..sliders|length - 1 %}
+              <li data-target="#caroussel" data-slide-to="{{ i }}" class="{% if loop.index == 1 %}active{% endif %}"></li>
+            {% endfor %}
+          </ol>
+          <div class="carousel-inner">
+            {% for slide in sliders %}
+              <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+                <!--<img src="{{ slide.image|image_style('style_1740x720') }}" alt="" style="position: absolute; height: 100%;">-->
+                <img src="{{ slide.image|image_style('style_1740x720') }}" alt="" style="position: absolute; height: 100%;">
+                <div class="carousel-img-blue">
+                  <div class="container marge-fun">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="slide-otitle">
+                          <!--div class="otilteY">Yo.</div>
+                          <div class="otitle">Bul xàddi</div-->
+                          {{ slide.titre_principal | raw }}
+                        </div>
+                        <div class="text-white">
+                          <div class="text-white" style="font-size: 15px; font-weight: bold; width: 220px; height: 48px; margin-bottom: 20px;">
+                              {{ slide.title }}
+                          </div>
+                        </div>
+                        <div class="">
+                          <a href="{{ slide.lien }}" onclick="dataLayer.push({'event':'click','eventCategory':'Slider', 'eventAction':'button_click','eventLabel':'{{ slide.title }}'});" class="text-center btn btn-inverse btn-primary btn-slide px-3">{{ slide.texte_lien }}</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <a class="carousel-control-prev d-none d-sm-block carousel-control-S" onclick="dataLayer.push({'event':'click','eventCategory':'Slider', 'eventAction':'button_click','eventLabel':'Précédent'});"  href="#caroussel" role="button" data-slide="prev">
+            <img src="/sites/default/files/images/keyboard-arrow-left.svg" alt="" class="img-nav-slide">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next d-none d-sm-block carousel-control-S" onclick="dataLayer.push({'event':'click','eventCategory':'Slider', 'eventAction':'button_click','eventLabel':'Suivant'});" href="#caroussel" role="button" data-slide="next">
+            <img src="/sites/default/files/images/keyboard-arrow-right.svg" alt="" class="img-nav-slide">
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Partie mobile -->
+
+      <div class="hide-reverse">
+        <div class="swiper-container swper">
+          <div class="swiper-wrapper">
+            {% for slide in sliders %}
+              <div class="swiper-slide spL" id="slide{{ loop.index }}" >
+                <div class="swpdp">
+                  <div class="swp-blockImg">
+                    {#<!--<img src="{{ slide.image|image_style('style_1740x720') }}" alt="" style="position: absolute; height: 100%; opacity: 0.6;">-->#}
+                    {#<img src="{{ file_url(slide.image)|image_style('style_1740x720') }}" alt="" style="position: absolute; height: 100%;">#}
+                    <img src="{{ file_url(slide.image) }}" alt="" style="position: absolute; right: 0; height: 100%;">
+                    <div class="card border-0 slide-otitle">
+                      <!-- div class="otilteY">Yo.</div>
+                      <div class="otitle">Bul xàddi</div-->
+                      {{ slide.titre_principal | raw }}
+                    </div>
+                    <div class="descL card border-0">
+                      <div class="text-white" style="font-size: 15px; font-weight: bold; width: 220px; height: 48px; margin-bottom: 20px;">
+                          {{ slide.title }}
+                        de secours
+                      </div>
+                      <div class="">
+                        <a href="{{ slide.lien }}" onclick="dataLayer.push({'event':'click','eventCategory':'Slider', 'eventAction':'button_click','eventLabel':'{{ slide.title }}'});" class="text-center btn btn-inverse btn-primary btn-slide px-3">{{ slide.texte_lien }}</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--<div class="carousel-img-blue">
+                    <div class="marge-fun">
+                      <div class="row">
+                        <div class="slide-otitle">
+                          <div class="otilteY">Yo.</div>
+                          <div class="otitle">Bul xàddi</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>-->
+                  <div class="block-desc">
+                    <div class="text-white desc-frame">
+                        {{ slide.title }}
+                    </div>
+                    <div class="text-right">
+                      <a href="{{ slide.lien }}" onclick="dataLayer.push({'event':'click','eventCategory':'Slider', 'eventAction':'button_click','eventLabel':'{{ slide.title }}'});" class="text-center btn btn-inverse btn-dark btn-slide px-2">{{ slide.texte_lien }}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="swiper-pagination" id="swpager"></div>
+          <a style="z-index: 1; top: 90px;" class="carousel-control-prev d-sm-block carousel-control-S" href="#carouselExampleIndicatorsON" role="button" data-slide="prev">
+            <img src="/sites/default/files/images/keyboard-arrow-left.svg" alt="" class="img-nav-slide">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a style="z-index: 1; top: 90px;" class="carousel-control-next d-sm-block carousel-control-S" href="#carouselExampleIndicatorsON" role="button" data-slide="next">
+            <img src="/sites/default/files/images/keyboard-arrow-right.svg" alt="" class="img-nav-slide">
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+      <div class="mb-2"></div>
+    </div>
+
+    <div class="col-lg-6 space-resp rs">
+      <div class="title-page m-aide"><h2>Besoin d'aide ?</h2></div>
+      <div class="flaide">
+        <div class="index-aide">
+          {% for a in aides %}
+          <div class="wh-aide">
+            <a href="{{a.lien}}" onclick="dataLayer.push({'event':'click','eventCategory':'Besoin d\'aide', 'eventAction':'button_click','eventLabel':'{{ a.title }}'});" target="_blank">
+              <div class="card bg-white border-0">
+                <div class="card-body-aide">
+                  <div class="media hide-screen">
+                    <img class="mr-2" src="{{ file_url(a.image) }}" alt="">
+                    <div class="media-body">
+                      <div class="title-icone"><B>{{ a.title }}</B></div>
+                      <div class="desc-sim mb-1">{{ a.info }}</div>
+                    </div>
+                  </div>
+
+                  <div class="hide-reverse text-center">
+                    <center>
+                      <img class="" src="{{ file_url(a.image) }}" alt="" style="height: 70px;">
+                    </center>
+                    <div class="title-icone mt-2">
+                      <B>{{ a.title }}</B>
+                    </div>
+                    <div class="desc-sim">{{ a.info }}</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          {% if loop.index == 2 %}
+        </div>
+        <p></p>
+        <div class="index-aide">
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row space20 space-resp">
+    <div class="col-lg-6">
+      <div class="title-page text-dark"><h2>En ce moment chez Orange</h2></div>
+    </div>
+  </div>
+
+  <!-- Partie Web -->
+
+  <div class="row hide-screen space40">
+    {% for i in 0..3 %}
+
+    {% if  actu[0]['titre'][i]%}
+
+    <div class="col-lg-3 mb-2 col-6">
+      <div class="card bg-white border-0 flou" style="width: 100%;">
+        {% set titre = actu[0]['titre'][i] %}
+        <a href="{{ path('actualite', {'id':actu[0]['uri'][i]}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Actualités', 'eventAction':'button_click','eventLabel':'{{ titre }}'});">
+          <img class="card-img-top card-imageS" src="{{file_url(actu[0]['image'][i])}}" alt="Card image cap">
+        </a>
+        <div class="card-body">
+          <div class="card-title card-titleS"><B>{{actu[0]['titre'][i]}}</B></div>
+          <p class="card-text hide-screen mb-2 desc-card">{{actu[0]['desc'][i]|striptags}}</p>
+          <B><a href="{{ path('actualite', {'id':actu[0]['uri'][i]}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Actualités', 'eventAction':'button_click','eventLabel':'{{ titre }}'});" class="card-link color-orange sm-text "><span class="mr-1">{{actu[0]['lien'][i]}}</span> <img src="/sites/default/files/images/keyboard-arrow-up-orange.svg" alt=""></a></B>
+        </div>
+      </div>
+    </div>
+
+    {% endif %}
+
+    {% endfor %}
+  </div>
+
+  <!-- Partie mobile -->
+
+  <div class="hide-reverse">
+    <div class="row">
+      <div class="col-12">
+        <div class="swiper-container-offre" style="overflow: hidden">
+          <div class="swiper-wrapper">
+              {% for i in 0..3 %}
+              {% if  actu[0]['titre'][i]%}
+                {% set titre = actu[0]['titre'][i] %}
+            <div class="swiper-slide" id="slide1">
+              <div class="card bg-white border-0" style="width: 100%;">
+                <a href="{{ path('actualite', {'id':actu[0]['uri'][i]}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Actualités', 'eventAction':'button_click','eventLabel':'{{ titre }}'});">
+                  <img class="card-img-top card-imageS" src="{{file_url(actu[0]['image'][i])}}" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <div class="card-title card-Resp"><B>{{actu[0]['titre'][i]}}</B></div>
+                  <p class="card-text mb-2 desc-card">{{actu[0]['desc'][i]|striptags}}</p>
+                  <B><a href="{{ path('actualite', {'id':actu[0]['uri'][i]}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Actualités', 'eventAction':'button_click','eventLabel':'{{ titre }}'});" class="card-link color-orange sm-text "><span class="mr-1">{{actu[0]['lien'][i]}}</span> <img src="/sites/default/files/images/keyboard-arrow-up-orange.svg" alt=""></a></B>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+              {% endfor %}
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row space20">
+    <div class="col-lg-6 col-11">
+      <div class="title-page text-dark space-resp"><h2>Les bonnes affaires du jour</h2></div>
+    </div>
+    <div class="col-lg-6 col-2 text-right hide-screen">
+      <!--<a target="_blank" href="http://e-shopb2c.di" class="btn btn-outline-dark border border-dark">Voir tout</a>-->
+    </div>
+  </div>
+
+  <div class="row space20">
+    <div class="col-lg-6">
+      <div id="carouselExampleControls" class="carousel slide carousel-fade bg-white slide-promo" data-ride="carousel">
+        <div class="carousel-inner">
+          {% for phone in phones %}
+            {% if phone.flash == "1" %}
+              <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
+                <div class="container px-4 pt-3">
+                  <div class="hide-screen" style="border-bottom: solid 2px #cccccc;">
+                    <div class="color-orange title-flash">Les stars du moment</div>
+                    <p>Ne manquez pas ces occasions</p>
+                  </div>
+                  <div class="row flash-space">
+                    <div class="col-lg-7 col-sm-7 col-12 mb-2">
+                      <img class="slide-image-promo" src="{{ file_url(phone.image) }}" style="width: 247px; height: 215px;">
+                    </div>
+                    <div class="col-lg-5 col-sm-5 col-12">
+                      <B class="title-offre-flash">{{ phone.title }}</B>
+                      <p>{{ phone.prix }}</p>
+                      <p class="text-muted">
+                        <del>{{ phone.prix_ancien }}</del>
+                      </p>
+                      <p class="mt-1">
+                        {{ phone.reduction | raw }}
+                      </p>
+                      <p class="pt-1 bt-bottom">
+                        <a href="{{ path('actualite-smartphone',{'id': phone.id}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Eshop', 'eventAction':'button_click','eventLabel':'{{ phone.title }}'});" class="btn btn-primary"> <span class="font-btn">Voir détails</span></a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <a class="carousel-control-prev pager-slide" href="#carouselExampleControls" role="button" data-slide="prev">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next pager-slide" href="#carouselExampleControls" role="button" data-slide="next">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6 slide-promo">
+
+      <!-- Partie Web -->
+      <div class="prod-eshop hide-screen">
+        {% for phone in phones %}
+          {% if phone.flash == "0" %}
+            <div class="prod zoom-part">
+              <div class="card bg-white border-0">
+                <p></p>
+                <div class="card-title text-center">
+                  <div class="color-orange categorie-affaire mb-1 mt-1"><B>{{ phone.title }}</B></div>
+                  <div><B>{{ phone.title }}</B></div>
+                </div>
+                <div class="img-center">
+                  <img class="d-block w-50 mt-1" src="{{ file_url(phone.image) }}" alt="SamSung">
+                </div>
+
+                <div class="card-body">
+                  <div class="text-center">
+                    <div class="color-orange prix-affaire">{{ phone.prix }}</div>
+                    <div class="text-center color-orange m-star">
+                      <img src="/sites/default/files/icones/star-full.svg" alt="">
+                      <img src="/sites/default/files/icones/star-full.svg" alt="">
+                      <img src="/sites/default/files/icones/star-full.svg" alt="">
+                      <img src="/sites/default/files/icones/star-empty.svg" alt="">
+                    </div>
+                    <div class="text-muted text-center m-dispo">
+                      Disponible
+                    </div>
+                  </div>
+                  <p class="text-center">
+                    <a href="{{ path('actualite-smartphone',{'id': phone.id}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Eshop', 'eventAction':'button_click','eventLabel':'{{ phone.title }}'});" class="btn btn-primary"> <span class="font-btn">Voir détails</span></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- Parite mobile -->
+
+      <div class="hide-reverse">
+        <div class="swiper-container-offre sw-aff content-mobile-swiper" style="overflow: hidden">
+          <div class="swiper-wrapper">
+            {% for phone in phones %}
+              {% if phone.flash == "0" %}
+                <div class="swiper-slide" id="slide1">
+                  <div class="card bg-white border-0" style="width: 100%;">
+                    <p></p>
+                    <div class="card-title text-center">
+                      <div class="color-orange categorie-affaire mb-1"><B>{{ phone.title }}</B></div>
+                      <p><B>{{ phone.title }}</B></p>
+                    </div>
+                    <center>
+                      <img class="d-block w-50" src="{{ file_url(phone.image) }}" alt="SamSung">
+                    </center>
+
+                    <div class="card-body">
+                      <div class="text-center">
+                        <div class="color-orange prix-affaire">{{ phone.prix }}</div>
+                        <div class="text-center color-orange m-star">
+                          <img src="/sites/default/files/icones/star-full.svg" alt="">
+                          <img src="/sites/default/files/icones/star-full.svg" alt="">
+                          <img src="/sites/default/files/icones/star-full.svg" alt="">
+                          <img src="/sites/default/files/icones/star-empty.svg" alt="">
+                        </div>
+                        <div class="text-muted text-center m-dispo">
+                          Disponible
+                        </div>
+                      </div>
+                      <p class="text-center">
+                        <a href="{{ path('actualite-smartphone',{'id': phone.id}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Eshop', 'eventAction':'button_click','eventLabel':'{{ phone.title }}'});" class="btn btn-primary">Voir détails</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row space20">
+    <div class="col-lg-10 col-12">
+      <div  class="title-page text-dark"><h2>Nos apps vous facilitent la vie</h2></div>
+    </div>
+  </div>
+
+  <div class="row space40">
+    <div class="col-lg-6 mb-2">
+      <div class="app-OMw pt-3" style="padding: 10px;">
+        <a class="link-app" onclick="dataLayer.push({'event':'click','eventCategory':'Apps', 'eventAction':'button_click','eventLabel':'Orange et moi'});" href="https://play.google.com/store/apps/details?id=com.orange.myorange.osn&hl=fr" target="_blank">
+          <img class="img-app px-3" src="/sites/default/files/images/Orange_et_Moi_desktop.svg" alt="">
+          <div class="row pl-2">
+            <div class="col-lg-9">
+              <div class="media">
+                <img class="mr-2" style="height: 40px;" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                <div class="media-body" style="padding-top: 5px;">
+                  <h5 class="mt-1 hide-screen">Orange et moi</h5>
+                  <div class="hide-reverse">
+                    <p class="hide-reverse">Télécharger l'application</p><br>
+                    <B>Orange et moi</B>
+                    <div class="mb-3"></div>
+                  </div>
+                </div>
+              </div>
+              <p class="desc-app hide-screen">
+                Gérez vos services mobiles depuis votre smartphone. Achat de pass internet, rechargement de crédit, consultation de factures, assistance, suivi de votre consommation..etc              </p>
+              <p class="hide-screen">
+                <a href="https://play.google.com/store/apps/details?id=com.orange.myorange.osn&hl=fr" target="_blank" class="btn btn-outline-dark border border-dark">Voir détails</a>
+              </p>
+            </div>
+
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-6 mb-2">
+      <div class="app-OM pt-3" style="padding: 10px;">
+        <a class="link-app" onclick="dataLayer.push({'event':'click','eventCategory':'Apps', 'eventAction':'button_click','eventLabel':'Orange Money'});" href="https://play.google.com/store/apps/details?id=com.orange.mobile.orangemoney&hl=fr" target="_blank">
+          <img class="img-app px-3" src="/sites/default/files/images/Orange_Money_desktop.svg" alt="">
+          <div class="row pl-2">
+            <div class="col-lg-9">
+              <div class="media">
+                <img class="mr-2" style="height: 40px;" src="/sites/default/files/images/orange-money-black.svg" alt="Generic placeholder image">
+                <div class="media-body" style="padding-top: 5px;">
+                  <h5 class="mt-1 hide-screen">Orange Money</h5>
+                  <div class="hide-reverse">
+                    <p class="hide-reverse">Télécharger l'application</p><br>
+                    <B>Orange Money</B>
+                    <div class="mb-3"></div>
+                  </div>
+                </div>
+              </div>
+              <p class="desc-app hide-screen">
+               Notre offre mobile banking. Payez vos achats, transferez de l'argent, achetez du crédit, règlez vos factures  Sénélec,SDE,…etc depuis votre téléphone mobile.               </p>
+              <p class="hide-screen">
+                <a href="https://play.google.com/store/apps/details?id=com.orange.mobile.orangemoney&hl=fr" target="_blank" class="btn btn-outline-dark border border-dark">Voir détails</a>
+              </p>
+            </div>
+
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div class="row hide-screen space20">
+    <div class="col-lg-10 col-10">
+      <div class="title-page"><h2>Mes services préférés</h2></div>
+    </div>
+    <div class="col-lg-2 col-10 text-right hide-screen">
+      <a href="" class="btn btn-outline-dark border border-dark" data-toggle="modal" data-target="#exampleModalCenter-2">Voir tout</a>
+    </div>
+    <div class="col-lg-2 col-2 text-right icon-left-view">
+      <a href="#"><i class="fa fa-angle-right fa-2x" data-toggle="modal" data-target="#exampleModalCenter-2"></i></a>
+    </div>
+  </div>
+
+  <div class="row hide-screen">
+    <div class="col-lg-3 col-6">
+      <a href="" data-toggle="modal" data-target="#exampleModalCenter-2">
+        <div class="card bg-white border-0" style="width: 100%;">
+          <img class="card-img-top card-imageS" src=" {{  'images/astuces-de-karel@3x.png' | image_style('style_840x570') }}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title text-center">
+              <B>Astuces de karelle</B>
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-lg-3">
+      <a href="" data-toggle="modal" data-target="#exampleModalCenter-2">
+        <div class="card bg-white border-0" style="width: 100%;">
+          <img class="card-img-top card-imageS" src="{{  'images/facebook-ussd@3x.png' | image_style('style_840x570') }}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title text-center">
+              <B>Facebook USSD</B>
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-lg-3 col-6">
+      <a href="" data-toggle="modal" data-target="#exampleModalCenter-2">
+        <div class="card bg-white border-0" style="width: 100%;">
+          <img class="card-img-top card-imageS" src="{{  'images/dalat-tones@3x.png' | image_style('style_840x570') }}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title text-center">
+              <B>Dalal Tones</B>
+            </h5>
+
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-lg-3 hide-screen col-6">
+      <a href="" data-toggle="modal" data-target="#exampleModalCenter-2">
+        <div class="card bg-white border-0" style="width: 100%;">
+          <img class="card-img-top card-imageS" src="{{  'images/video-demande@3x.png' | image_style('style_840x570') }}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title text-center">
+              <B>Vidéo à la demande</B>
+            </h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  -->
+  <p class="mb-3"></p>
+  {# <div class="row">
+    <div class="col-lg-12 text-right">
+      <button class="btn btn-rounded text-center rounded-circle btn-primary rond scrollToTop-btn" id="scrollToTop">
+        <i class="fas fa-angle-up fa-2x"></i>
+      </button>
+    </div>
+  </div> #}
+
+
+</div>
+
+{# Fin content #}
+
+{# Footer body #}
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {# Fin footer-body#}
+
+  {# Footer #}
+  {% include directory ~ '/templates/includes/footer.html.twig' %}
+  {# Fin footer #}
+
+  {# <div class="row">
+    <div class="col-lg-12 text-right">
+      <button class="btn btn-rounded text-center rounded-circle btn-primary rond scrollToTop-btn" id="scrollToTop">
+        <i class="fas fa-angle-up fa-2x"></i>
+      </button>
+    </div>
+  </div> #}

@@ -1,0 +1,19 @@
+uuid: 6e5d37de-d176-423d-8522-bae4949e09ac
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.forfait_internet_teranga
+  module:
+    - user
+id: node.forfait_internet_teranga.teaser
+targetEntityType: node
+bundle: forfait_internet_teranga
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

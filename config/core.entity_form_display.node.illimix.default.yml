@@ -1,0 +1,80 @@
+uuid: 7be84b22-9be9-47cd-a71b-9d96ee4db9f7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.illimix.field_illimix_cout
+    - field.field.node.illimix.field_illimix_duree_appel
+    - field.field.node.illimix.field_illimix_nombre_sms
+    - field.field.node.illimix.field_illimix_period_utilisation
+    - field.field.node.illimix.field_illimix_validite_jours
+    - field.field.node.illimix.field_illimix_volume_data
+    - node.type.illimix
+id: node.illimix.default
+targetEntityType: node
+bundle: illimix
+mode: default
+content:
+  field_illimix_cout:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_illimix_duree_appel:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_illimix_nombre_sms:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_illimix_period_utilisation:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_illimix_validite_jours:
+    weight: 29
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_illimix_volume_data:
+    weight: 30
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

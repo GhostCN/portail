@@ -1,0 +1,22 @@
+uuid: 5669e3e2-dedf-4dfa-863d-b2a83ea9002a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.faq_orange_money
+  module:
+    - text
+id: node.faq_orange_money.body
+field_name: body
+entity_type: node
+bundle: faq_orange_money
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

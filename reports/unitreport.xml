@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="20" assertions="82" errors="0" failures="0" skipped="1" time="0.842241">
+    <testsuite name="unit" tests="20" assertions="82" errors="0" failures="0" skipped="1" time="0.842241">
+      <testsuite name="Drupal\Tests\portail\Unit\AssistanceTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/AssistanceTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.012857">
+        <testcase name="testGetAll" class="Drupal\Tests\portail\Unit\AssistanceTest" classname="Drupal.Tests.portail.Unit.AssistanceTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/AssistanceTest.php" line="23" assertions="1" time="0.010640"/>
+        <testcase name="testConstruct" class="Drupal\Tests\portail\Unit\AssistanceTest" classname="Drupal.Tests.portail.Unit.AssistanceTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/AssistanceTest.php" line="32" assertions="1" time="0.002217"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\CompteReboursTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/CompteReboursTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.189772">
+        <testcase name="testGetEvent" class="Drupal\Tests\portail\Unit\CompteReboursTest" classname="Drupal.Tests.portail.Unit.CompteReboursTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/CompteReboursTest.php" line="31" assertions="4" time="0.189772"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\DetailOffreFamilyTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/DetailOffreFamilyTest.php" tests="1" assertions="11" errors="0" failures="0" skipped="0" time="0.048177">
+        <testcase name="testGetDetailFamily" class="Drupal\Tests\portail\Unit\DetailOffreFamilyTest" classname="Drupal.Tests.portail.Unit.DetailOffreFamilyTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/DetailOffreFamilyTest.php" line="31" assertions="11" time="0.048177"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\EtapeDeploiementTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/EtapeDeploiementTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.035411">
+        <testcase name="testGetEtapeDeploiement" class="Drupal\Tests\portail\Unit\EtapeDeploiementTest" classname="Drupal.Tests.portail.Unit.EtapeDeploiementTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/EtapeDeploiementTest.php" line="28" assertions="3" time="0.035411"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\FaqFamilyTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/FaqFamilyTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.048843">
+        <testcase name="testFaqFamily" class="Drupal\Tests\portail\Unit\FaqFamilyTest" classname="Drupal.Tests.portail.Unit.FaqFamilyTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/FaqFamilyTest.php" line="31" assertions="3" time="0.048843"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\FaqTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/FaqTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.049117">
+        <testcase name="testGetFaq" class="Drupal\Tests\portail\Unit\FaqTest" classname="Drupal.Tests.portail.Unit.FaqTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/FaqTest.php" line="28" assertions="3" time="0.049117"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\FondamentauxFamilyTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/FondamentauxFamilyTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.040011">
+        <testcase name="testGetFondamentauxFamily" class="Drupal\Tests\portail\Unit\FondamentauxFamilyTest" classname="Drupal.Tests.portail.Unit.FondamentauxFamilyTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/FondamentauxFamilyTest.php" line="31" assertions="3" time="0.040011"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\HelpTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/HelpTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.038824">
+        <testcase name="testGetAllHelp" class="Drupal\Tests\portail\Unit\HelpTest" classname="Drupal.Tests.portail.Unit.HelpTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/HelpTest.php" line="27" assertions="4" time="0.038824"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\MainWindowTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/MainWindowTest.php" tests="1" assertions="7" errors="0" failures="0" skipped="0" time="0.038677">
+        <testcase name="testGetAllMainWindow" class="Drupal\Tests\portail\Unit\MainWindowTest" classname="Drupal.Tests.portail.Unit.MainWindowTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/MainWindowTest.php" line="29" assertions="7" time="0.038677"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\OffreFibreTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/OffreFibreTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.036229">
+        <testcase name="testGetOffreFibre" class="Drupal\Tests\portail\Unit\OffreFibreTest" classname="Drupal.Tests.portail.Unit.OffreFibreTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/OffreFibreTest.php" line="28" assertions="3" time="0.036229"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\OffreTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/OffreTest.php" tests="1" assertions="0" errors="0" failures="0" skipped="1" time="0.000000">
+        <testcase name="testGetAllOffre" class="Drupal\Tests\portail\Unit\OffreTest" classname="Drupal.Tests.portail.Unit.OffreTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/OffreTest.php" line="28" assertions="0" time="0.000000">
+          <skipped/>
+        </testcase>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\OptionsInclusTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/OptionsInclusTest.php" tests="1" assertions="3" errors="0" failures="0" skipped="0" time="0.037700">
+        <testcase name="testGetOptionsInclus" class="Drupal\Tests\portail\Unit\OptionsInclusTest" classname="Drupal.Tests.portail.Unit.OptionsInclusTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/OptionsInclusTest.php" line="28" assertions="3" time="0.037700"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\OrangeMoneyTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/OrangeMoneyTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.036616">
+        <testcase name="testGetAll" class="Drupal\Tests\portail\Unit\OrangeMoneyTest" classname="Drupal.Tests.portail.Unit.OrangeMoneyTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/OrangeMoneyTest.php" line="29" assertions="4" time="0.036616"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\SargalTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/OrangeSargalTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.033128">
+        <testcase name="testGetAll" class="Drupal\Tests\portail\Unit\SargalTest" classname="Drupal.Tests.portail.Unit.SargalTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/OrangeSargalTest.php" line="28" assertions="4" time="0.033128"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\PassTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/PassTest.php" tests="1" assertions="11" errors="0" failures="0" skipped="0" time="0.049706">
+        <testcase name="testGetAllPassInternet" class="Drupal\Tests\portail\Unit\PassTest" classname="Drupal.Tests.portail.Unit.PassTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/PassTest.php" line="28" assertions="11" time="0.049706"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\PromoTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/PromoTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.037441">
+        <testcase name="testGetAllPromo" class="Drupal\Tests\portail\Unit\PromoTest" classname="Drupal.Tests.portail.Unit.PromoTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/PromoTest.php" line="27" assertions="4" time="0.037441"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\SliderTestTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/SliderTest.php" tests="1" assertions="5" errors="0" failures="0" skipped="0" time="0.041665">
+        <testcase name="testGetSliders" class="Drupal\Tests\portail\Unit\SliderTestTest" classname="Drupal.Tests.portail.Unit.SliderTestTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/SliderTest.php" line="29" assertions="5" time="0.041665"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\SouscrireFamilyTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/SouscrireFamilyTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.033737">
+        <testcase name="testGetSouscrireFamily" class="Drupal\Tests\portail\Unit\SouscrireFamilyTest" classname="Drupal.Tests.portail.Unit.SouscrireFamilyTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/SouscrireFamilyTest.php" line="31" assertions="4" time="0.033737"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\TerangaTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/TerangaTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.034330">
+        <testcase name="testGetAll" class="Drupal\Tests\portail\Unit\TerangaTest" classname="Drupal.Tests.portail.Unit.TerangaTest" file="/home/jenkins/workspace/portail-temp7/modules/custom/portail/Tests/src/Unit/TerangaTest.php" line="29" assertions="4" time="0.034330"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

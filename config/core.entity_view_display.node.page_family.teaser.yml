@@ -1,0 +1,33 @@
+uuid: e572b92c-3571-4815-a433-f42387cc95b7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.page_family
+  module:
+    - user
+id: node.page_family.teaser
+targetEntityType: node
+bundle: page_family
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_description_phone: true
+  field_faq_family: true
+  field_image_phone: true
+  field_les_fondamentaux_de_l_offr: true
+  field_lien_achat: true
+  field_lien_detail: true
+  field_nom_phone: true
+  field_prix_appels: true
+  field_prix_des_sms: true
+  field_prix_phone: true
+  field_seddo_bonus: true
+  field_seddo_pass_internet: true
+  field_souscrire_offre_family: true
+  field_type_phone: true
+  langcode: true

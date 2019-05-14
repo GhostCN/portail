@@ -1,0 +1,56 @@
+
+<section class="contentA">
+
+  <div class="card card-sumilateur">
+    <section>
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="nav-item ab1">
+          <a href="#step1" data-lestep="step1" class="nav-link ab nav-link-pr active show a-prec" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+            <span class="cercle-numb active cercle-numb-prec">1</span> <span class="text-numb active text-numb-prec">Test d’éligibilité</span>
+          </a>
+        </li>
+        <li role="presentation" class="nav-item ab1">
+          <a href="#step2" data-lestep="step2" class="nav-link ab nav-link-pr active encours" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+            <span class="cercle-numb active">2</span> <span class="text-numb active">Résultats Test</span>
+          </a>
+        </li>
+        <li role="presentation" class="nav-item disabled ab1">
+          <a href="#step3" data-lestep="step3" class="nav-link ab nav-link-pr" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+            <span class="cercle-numb">3</span> <span class="text-numb">Formulaire</span>
+          </a>
+        </li>
+        <li role="presentation" class="nav-item disabled ab1">
+          <a href="#complete" data-lestep="step4" class="nav-link ab nav-link-pr" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+            <span class="cercle-numb">4</span> <span class="text-numb">Confirmation</span>
+          </a>
+        </li>
+      </ul>
+      <form role="form" method="post">
+        <div class="tab-content">
+
+          <div class="tab-pane active" role="tabpanel" id="step2">
+            <div class="row row1-1">
+              <div class="col-lg-2">
+                <img class="image-box-lo-non" src="/sites/default/files/icones/group-6.svg" alt="" id="fleche">
+              </div>
+              <div class="col-lg-10 ">
+                <p class="elig">Désolé, vous n’êtes pas encore éligible !</p>
+                <p class="bnficier no pb-4">Nous vous invitions à remplir la fiche de manifestation d’intérêt pour rester informé de l’arrivée de la Fibre dans votre zone. Nous avons <b class="orange"> d’autres solutions </b> pour profiter de l’internet à
+                  la maison et au bureau.</p>
+                <input type="hidden" name="eligible" value="non">
+                <input type="hidden" name="code_gps" value="{{ code_gps }}">
+                <input type="hidden" name="type_client" value="{{ type_client }}">
+                <div class="displa deux-btt">
+                  <a href=" {{path ('internet-fixe') }}" class="btn btn-secondary voir-offr-no">Voir les autres offres</a>
+                  <button type="submit" onclick="dataLayer.push({'event':'click','eventCategory':'Souscription Fibre', 'eventAction':'button_click','eventLabel':'Formulaire de Manifestation'});" class="btn btn-warning remp-for-no next-step">Remplir le formulaire de manifestation</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </form>
+    </section>
+  </div>
+</section>

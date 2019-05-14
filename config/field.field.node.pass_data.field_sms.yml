@@ -1,0 +1,19 @@
+uuid: c885cd05-972f-45fb-bc33-055748093db7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sms
+    - node.type.pass_data
+id: node.pass_data.field_sms
+field_name: field_sms
+entity_type: node
+bundle: pass_data
+label: 'SMS ( Ex : 10 SMS )'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

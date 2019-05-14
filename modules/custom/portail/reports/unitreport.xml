@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="5" assertions="31" errors="0" failures="0" skipped="0" time="0.328096">
+    <testsuite name="unit" tests="5" assertions="31" errors="0" failures="0" skipped="0" time="0.328096">
+      <testsuite name="Drupal\Tests\portail\Unit\HelpTest" file="/home/jenkins/workspace/Portail/modules/custom/portail/Tests/src/Unit/HelpTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.169256">
+        <testcase name="testGetAllHelp" class="Drupal\Tests\portail\Unit\HelpTest" classname="Drupal.Tests.portail.Unit.HelpTest" file="/home/jenkins/workspace/Portail/modules/custom/portail/Tests/src/Unit/HelpTest.php" line="27" assertions="4" time="0.169256"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\MainWindowTest" file="/home/jenkins/workspace/Portail/modules/custom/portail/Tests/src/Unit/MainWindowTest.php" tests="1" assertions="7" errors="0" failures="0" skipped="0" time="0.039036">
+        <testcase name="testGetAllMainWindow" class="Drupal\Tests\portail\Unit\MainWindowTest" classname="Drupal.Tests.portail.Unit.MainWindowTest" file="/home/jenkins/workspace/Portail/modules/custom/portail/Tests/src/Unit/MainWindowTest.php" line="29" assertions="7" time="0.039036"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\PassTest" file="/home/jenkins/workspace/Portail/modules/custom/portail/Tests/src/Unit/PassTest.php" tests="1" assertions="11" errors="0" failures="0" skipped="0" time="0.046629">
+        <testcase name="testGetAllPassInternet" class="Drupal\Tests\portail\Unit\PassTest" classname="Drupal.Tests.portail.Unit.PassTest" file="/home/jenkins/workspace/Portail/modules/custom/portail/Tests/src/Unit/PassTest.php" line="28" assertions="11" time="0.046629"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\PromoTest" file="/home/jenkins/workspace/Portail/modules/custom/portail/Tests/src/Unit/PromoTest.php" tests="1" assertions="4" errors="0" failures="0" skipped="0" time="0.036628">
+        <testcase name="testGetAllPromo" class="Drupal\Tests\portail\Unit\PromoTest" classname="Drupal.Tests.portail.Unit.PromoTest" file="/home/jenkins/workspace/Portail/modules/custom/portail/Tests/src/Unit/PromoTest.php" line="27" assertions="4" time="0.036628"/>
+      </testsuite>
+      <testsuite name="Drupal\Tests\portail\Unit\SliderTestTest" file="/home/jenkins/workspace/Portail/modules/custom/portail/Tests/src/Unit/SliderTest.php" tests="1" assertions="5" errors="0" failures="0" skipped="0" time="0.036547">
+        <testcase name="testGetSliders" class="Drupal\Tests\portail\Unit\SliderTestTest" classname="Drupal.Tests.portail.Unit.SliderTestTest" file="/home/jenkins/workspace/Portail/modules/custom/portail/Tests/src/Unit/SliderTest.php" line="29" assertions="5" time="0.036547"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

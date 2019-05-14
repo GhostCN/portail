@@ -1,0 +1,20 @@
+uuid: e6e860cc-9fdd-4e19-8b93-2aecfb65816f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_matricule
+  module:
+    - user
+id: user.user.field_matricule
+field_name: field_matricule
+entity_type: user
+bundle: user
+label: Matricule
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

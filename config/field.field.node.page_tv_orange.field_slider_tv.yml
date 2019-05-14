@@ -1,0 +1,28 @@
+uuid: dc617646-2c19-43ae-b85b-8975a6652a73
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slider_tv
+    - node.type.page_tv_orange
+    - node.type.slider_tv
+id: node.page_tv_orange.field_slider_tv
+field_name: field_slider_tv
+entity_type: node
+bundle: page_tv_orange
+label: 'Slider TV'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      slider_tv: slider_tv
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: 86fe63ab-1080-4da1-8eef-a2ed0b9d7850
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Orange Money'
+type: orange_money
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

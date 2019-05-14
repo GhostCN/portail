@@ -1,0 +1,160 @@
+uuid: 860c9f45-1716-44d1-a9df-e86cc67e9d9c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.tarifs_page_fibre.field_etapes_de_deploiement
+    - field.field.node.tarifs_page_fibre.field_faq
+    - field.field.node.tarifs_page_fibre.field_options_bouquet
+    - field.field.node.tarifs_page_fibre.field_options_fibre
+    - field.field.node.tarifs_page_fibre.field_options_internet
+    - field.field.node.tarifs_page_fibre.field_options_telephone
+    - field.field.node.tarifs_page_fibre.field_tarif_fibre
+    - field.field.node.tarifs_page_fibre.field_titre_fibre
+    - node.type.tarifs_page_fibre
+  module:
+    - inline_entity_form
+    - path
+id: node.tarifs_page_fibre.default
+targetEntityType: node
+bundle: tarifs_page_fibre
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_etapes_de_deploiement:
+    weight: 127
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_faq:
+    weight: 128
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_options_bouquet:
+    weight: 126
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_options_fibre:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_options_internet:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_options_telephone:
+    weight: 125
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tarif_fibre:
+    weight: 122
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_titre_fibre:
+    weight: 121
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

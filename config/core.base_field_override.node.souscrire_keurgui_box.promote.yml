@@ -1,0 +1,22 @@
+uuid: 72ff78c5-5b27-4018-99e7-38c4097b2c07
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.souscrire_keurgui_box
+id: node.souscrire_keurgui_box.promote
+field_name: promote
+entity_type: node
+bundle: souscrire_keurgui_box
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

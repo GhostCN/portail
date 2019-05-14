@@ -1,0 +1,1067 @@
+{{ attach_library('orange/global-tv-orange-css')}}
+{{ attach_library('orange/global-tv-orange-js')}}
+{{ attach_library('orange/global-offre-home-css') }}
+
+<div class="contentS">
+  <ul class="sac-nav-ul mb-0">
+    <li class="debutlii">
+      <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+    </li>
+    <li class="debutlii d-none d-sm-block">
+      <a href="{{ path('internet-fixe') }}">Internet ADSL - Fibre</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+    </li>
+    <li class="debutlii">
+      <a href="#"> <b> TV d’Orange </b></a>
+    </li>
+  </ul>
+</div>
+
+<div class="bg-head-title">
+  <img src="/sites/default/files/images/tv-orange/tv-or-backg-desktop-low.jpg" class="img-title-home hide-mobile-fibre">
+  <img src="/sites/default/files/images/tv-orange/tv-or-backg-mobile.jpg" class="img-title-home hide-fibre">
+</div>
+
+<div class="contentS ">
+  <div class="title-text card border-0">
+    <span class="color-orange title-1"><B>La TV</B></span>
+    <span class="text-white"><h1>d'Orange</h1></span>
+  </div>
+  <div class="card border-0 after-title">
+    <div class="card-body-tv">
+      <div class="row">
+        <div class="hide-fibre">
+          <img class="chaine30" src="/sites/default/files/images/tv-orange/title@3x.png" alt="">
+        </div>
+        <div class="col-lg-5 col-md-5">
+          <img src="/sites/default/files/images/tv-orange/header-tv-orange@3x-Low.png" class="img-tele" alt="">
+        </div>
+        <div class="col-lg-7 col-md-7 pl-5 pt-2">
+          <img class="chaine30 hide-mobile-fibre" src="/sites/default/files/images/tv-orange/title@3x.png" alt="">
+          <div class="space30 sp"></div>
+          <div class="intitule-offre">
+            <div class="media">
+              <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+              <div class="media-body">
+                <span class="offre-desc-tv">Un accés aux bouquets Canal +</span>
+              </div>
+            </div>
+          </div>
+          <div class="intitule-offre">
+            <div class="media">
+              <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+              <div class="media-body">
+                <span class="offre-desc-tv">Profitez de la VOD (Vidéo à la demande) sur vos écrans</span>
+              </div>
+            </div>
+          </div>
+          <div class="intitule-offre">
+            <div class="media">
+              <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+              <div class="media-body">
+                <span class="offre-desc-tv">Contrôlez le direct et ne ratez plus un instant de vos programmes</span>
+              </div>
+            </div>
+          </div>
+          <div class="intitule-offre">
+            <div class="media">
+              <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+              <div class="media-body">
+                <span class="offre-desc-tv">Enregistrer vos programmes préférés à tout moment</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="space50"></div>
+
+  <h2 class="title-block">
+    En ce moment
+  </h2>
+{% set len = slider_tv[0]['images_slider']|length %}
+  <div class="space15"></div>
+
+  <div class="super-slide hide-mobile-fibre">
+    <div class="row">
+      <div class="col-9">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            {% for i in 0..len-2 %}
+            <li data-target="#carouselExampleIndicators" data-slide-to="{{i}}" {% if i == 0 %} class="active" {% endif %}></li>
+            {% endfor %}
+          </ol>
+          <div class="carousel-inner">
+            {% for i in 0..len-2 %}
+            <div class="carousel-item {% if i == 0 %}active{% endif %}">
+              <div class="desc-car-tv">
+                <div class="title-card-tv">
+                  <div class="card-desc-{{slider_tv[0]['categories_slider'][i]|lower}} py-1 mb-2">
+                    {{slider_tv[0]['categories_slider'][i]}}
+                  </div>
+                </div>
+                <div class="car-tv-title">
+                  {{slider_tv[0]['titres_slider'][i]}}
+                </div>
+              </div>
+              <img class="d-block img-slide-tv" src="{{file_url(slider_tv[0]['images_slider'][i])}}" alt="{{slider_tv[0]['titres_slider'][i]}}">
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="indicators-slide">
+           {% for i in 0..len-2 %}
+          <div class="card slide-to border-0" data-target="#carouselExampleIndicators" data-slide-to="{{i}}" style="margin-bottom: 10px;">
+            <div class="card-desc-{{slider_tv[0]['categories_slider'][i]|lower}} desc-indicator {% if i != 0 %}anactive{% endif %}">
+              <div class="div-txt">{{slider_tv[0]['titres_slider'][i]}}</div>
+            </div>
+            <div class="card-image">
+              <img src="{{file_url(slider_tv[0]['images_slider'][i])}}" style="width: 100%; height: 127px;" alt="">
+            </div>
+          </div>
+          {#<div class="space20"></div>#}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hide-fibre">
+    {#<div class="swiper-container" style="overflow: hidden">
+      <div class="swiper-wrapper">
+        {% set ordre = {0: 'First', 1: 'Second', 2: 'Third', 3: 'Third', 4: 'Fourth'} %}
+        {% for i in 0..len-1 %}
+        <div class="swiper-slide">
+          <div class="desc-car-tv">
+            <div class="title-card-tv">
+              <div class="card-desc-{{slider_tv[0]['categories_slider'][i]|lower}} py-1 mb-2">
+                {{slider_tv[0]['categories_slider'][i]}}
+              </div>
+            </div>
+            <div class="car-tv-title">
+             {{slider_tv[0]['titres_slider'][i]}}
+            </div>
+          </div>
+          <img class="d-block img-slide-tv" src="{{file_url(slider_tv[0]['images_slider'][i])}}" alt="{{ordre[i]}} slide">
+        </div>
+        {% endfor %}
+      </div>
+      <a class="carousel-control-prev d-sm-block carousel-control-S" href="#carouselExampleIndicators" role="button" data-slide="prev" style="z-index: 1;">
+        <img src="/sites/default/files/images/keyboard-arrow-left.svg" alt="" class="img-nav-slide">
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next d-sm-block carousel-control-S" href="#carouselExampleIndicators" role="button" data-slide="next" style="z-index: 1;">
+        <img src="/sites/default/files/images/keyboard-arrow-right.svg" alt="" class="img-nav-slide">
+        <span class="sr-only">Next</span>
+      </a>
+
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>#}
+
+    <div id="carouselExampleIndicatorsON" class="carousel slide" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        {% for i in 0..len-1 %}
+          <li data-target="#carouselExampleIndicators" data-slide-to="{{i}}" {% if i == 0 %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+
+      <div class="carousel-inner">
+        {% for i in 0..len-1 %}
+          <div class="carousel-item {% if i == 0 %}active{% endif %}">
+            <img src="{{file_url(slider_tv[0]['images_slider'][i])}}" class="imgSmall" alt="{{ordre[i]}} slide">
+          </div>
+        {% endfor %}
+
+      </div>
+      {#<a class="carousel-control-prev" href="#carouselExampleIndicatorsON" role="button" data-slide="prev">
+        <img src="/sites/default/files/images/keyboard-arrow-left.svg" class="imgfle" alt="">
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicatorsON" role="button" data-slide="next">
+        <img src="/sites/default/files/images/keyboard-arrow-right.svg" class="imgfle" alt="">
+      </a>#}
+
+      <a class="carousel-control-prev d-sm-block carousel-control-S" href="#carouselExampleIndicatorsON" role="button" data-slide="prev">
+        <img src="/sites/default/files/images/keyboard-arrow-left.svg" alt="" class="img-nav-slide">
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next d-sm-block carousel-control-S" href="#carouselExampleIndicatorsON" role="button" data-slide="next">
+        <img src="/sites/default/files/images/keyboard-arrow-right.svg" alt="" class="img-nav-slide">
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="space50"></div>
+
+  <h2 class="title-block">
+    Le bouquet d’Orange
+  </h2>
+
+  <div class="space30 sp"></div>
+
+  <div class="hide-mobile-fibre">
+    <div class="d-flex galleryF">
+      <div data-filter="*" class="current">Tout</div>
+      <div data-filter=".local">Locale</div>
+      <div data-filter=".general">Généraliste</div>
+      <div data-filter=".divert">Divertissement</div>
+      <div data-filter=".cinema">Cinéma</div>
+      <div data-filter=".decouverte">Découverte</div>
+      <div data-filter=".jeuness">Jeunesse</div>
+      <div data-filter=".info">Infos</div>
+      <div data-filter=".africaine">Africaine</div>
+      <div data-filter=".musique">Musique</div>
+      <div data-filter=".sport">Sport</div>
+    </div>
+
+    <div class="space30 sp"></div>
+  </div>
+
+  <div class="hide-fibre">
+    <div class="swiper-container-bq" style="overflow: hidden;">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" id="slide1">
+          <div data-filter="*" class="current">Tout</div>
+        </div>
+        <div class="swiper-slide" id="slide2">
+          <div data-filter=".local">Locale</div>
+        </div>
+        <div class="swiper-slide" id="slide3">
+          <div data-filter=".general">Généraliste</div>
+        </div>
+        <div class="swiper-slide" id="slide4">
+          <div data-filter=".divert">Divertissement</div>
+        </div>
+        <div class="swiper-slide" id="slide5">
+          <div data-filter=".cinema">Cinéma</div>
+        </div>
+        <div class="swiper-slide" id="slide6">
+          <div data-filter=".decouverte">Découverte</div>
+        </div>
+        <div class="swiper-slide" id="slide7">
+          <div data-filter=".jeuness">Jeunesse</div>
+        </div>
+        <div class="swiper-slide" id="slide8">
+          <div data-filter=".info">Infos</div>
+        </div>
+        <div class="swiper-slide" id="slide9">
+          <div data-filter=".africaine">Africaine</div>
+        </div>
+        <div class="swiper-slide" id="slide10">
+          <div data-filter=".musique">Musique</div>
+        </div>
+        <div class="swiper-slide" id="slide11">
+          <div data-filter=".sport">Sport</div>
+        </div>
+      </div>
+    </div>
+    <div class="space15"></div>
+  </div>
+  <div class="row gallery">
+  {% set len = bouquets_orange[0]['logo_bouquet']|length %}
+   {% for i in 0..len-1 %}
+    <div class="{{bouquets_orange[0]['categories_bouquet'][i]}} col-lg-2 col-sm-3 col-4 mb-3">
+      <div class="card border-0 zoom-part">
+        <div class="card-image">
+          <img src="{{file_url(bouquets_orange[0]['logo_bouquet'][i])}}" class="d-block w-100">
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="space15"></div>
+
+  <div class="title-block">
+    <B>Le bouquet <img src="/sites/default/files/images/home-fibre/Canal+.svg" class="canal-title"> accessible depuis la Livebox </B>
+  </div>
+
+  <div class="space20"></div>
+
+  <div class="hide-mobile-fibre">
+    <div class="row">
+      <div class="col-4">
+        <div class="block-canalP">
+          <div class="right-el">
+            <img src="/sites/default/files/images/tv-orange/bitmap@3x.png" class="bitmap-img">
+            <div class="color-orange bitmap-lib text-right">Inclus</div>
+          </div>
+          <div class="block-canal-title">
+            Tout Canal+
+          </div>
+          <div class="sub-block-canal-title">
+            224 chaînes, radios et services
+          </div>
+
+          <div class="border-gris"></div>
+
+          <div class="price">
+            <div class="right-el">
+              <!--<button class="btn btn-inverse btn-dark mt-3 px-4 disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+            </div>
+            <div class="price-offre-tv">
+              40 000
+            </div>
+            <div class="sub-block-canal-title">
+              FCFA /MOIS (1)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 ">
+        <div class="block-canalP">
+          <div class="right-el">
+            <img src="/sites/default/files/images/tv-orange/bitmap@3x.png" class="bitmap-img">
+            <div class="color-orange bitmap-lib text-right">Inclus</div>
+          </div>
+          <div class="block-canal-title">
+            Evasion+
+          </div>
+          <div class="sub-block-canal-title">
+            207 chaînes, radios et services
+          </div>
+
+          <div class="border-gris"></div>
+
+          <div class="price">
+            <div class="right-el">
+              <!--<button class="btn btn-inverse btn-dark mt-3 px-4 disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+            </div>
+            <div class="price-offre-tv">
+              20 000
+            </div>
+            <div class="sub-block-canal-title">
+              FCFA /MOIS (1)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="block-canalP">
+          <div class="right-el">
+            <img src="/sites/default/files/images/tv-orange/bitmap@3x.png" class="bitmap-img">
+            <div class="color-orange bitmap-lib text-right">Inclus</div>
+          </div>
+          <div class="block-canal-title">
+            Access+
+          </div>
+          <div class="sub-block-canal-title">
+            169 chaînes, radios et services
+          </div>
+
+          <div class="border-gris"></div>
+
+          <div class="price">
+            <div class="right-el">
+              <!--<button class="btn btn-inverse btn-dark mt-3 px-4 disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+            </div>
+            <div class="price-offre-tv">
+              15 000
+            </div>
+            <div class="sub-block-canal-title">
+              FCFA /MOIS (1)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space20"></div>
+
+    <div class="row">
+      <div class="col-4">
+        <div class="block-canalP">
+          <div class="right-el">
+            <img src="/sites/default/files/images/tv-orange/bitmap@3x.png" class="bitmap-img">
+            <div class="color-orange bitmap-lib text-right">Inclus</div>
+          </div>
+          <div class="block-canal-title">
+            Essentiel+
+          </div>
+          <div class="sub-block-canal-title">
+            130 chaînes, radios et services
+          </div>
+
+          <div class="border-gris"></div>
+
+          <div class="price">
+            <div class="right-el">
+              <!--<button class="btn btn-inverse btn-dark mt-3 px-4 disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+            </div>
+            <div class="price-offre-tv">
+              12 000
+            </div>
+            <div class="sub-block-canal-title">
+              FCFA /MOIS (1)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="block-canal">
+          <div class="right-el">
+            <img src="/sites/default/files/images/tv-orange/bitmapN@3x.png" class="bitmap-img">
+            <div class="color-orange bitmap-lib text-right">Non inclus</div>
+          </div>
+          <div class="block-canal-title">
+            Evasion
+          </div>
+          <div class="sub-block-canal-title">
+            184 chaînes, radios et services
+          </div>
+
+          <div class="border-gris2"></div>
+
+          <div class="price">
+            <div class="right-el">
+              <!--<button class="btn  mt-3 px-4 disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+            </div>
+            <div class="price-offre-tv">
+              10 000
+            </div>
+            <div class="sub-block-canal-title">
+              FCFA /MOIS (1)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="block-canal">
+          <div class="right-el">
+            <img src="/sites/default/files/images/tv-orange/bitmapN@3x.png" class="bitmap-img">
+            <div class="color-orange bitmap-lib text-right">Non inclus</div>
+          </div>
+          <div class="block-canal-title">
+            Access
+          </div>
+          <div class="sub-block-canal-title">
+            150 chaînes, radios et services
+          </div>
+
+          <div class="border-gris2"></div>
+
+          <div class="price">
+            <div class="right-el">
+              <!--<button class="btn  mt-3 px-4 disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+            </div>
+            <div class="price-offre-tv">
+              5 000
+            </div>
+            <div class="sub-block-canal-title">
+              FCFA /MOIS (1)
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lexique-tv">
+      <div>(1) Tarifs TTC en vigueur au 1er janvier 2017, hors coûts liés au décodeur, aux matériels de réception et à l’installation. Voir tarifs et conditions auprès de votre distributeur agréé.</div>
+      <div>≥ Sous réserve d’être équipé(e) d’une TV compatible, avec une connectique HDMI.</div>
+      <div>≥≥ Sous réserve d&apos;être équipé d&apos;un disque dur compatible.</div>
+    </div>
+  </div>
+
+  <div class="hide-fibre">
+    <div class="row" style="overflow: hidden">
+      <div class="col-12">
+        <div class="swiper-container-offre-fibre" style="overflow: hidden;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="slide1">
+              <div class="block-canalP">
+                <div class="right-el">
+                  <img src="/sites/default/files/images/tv-orange/bitmap@3x.png" class="bitmap-img">
+                  <div class="color-orange bitmap-lib text-right">Inclus</div>
+                </div>
+                <div class="block-canal-title">
+                  Tout Canal+
+                </div>
+                <div class="sub-block-canal-title">
+                  224 chaînes, radios et services
+                </div>
+
+                <div class="border-gris"></div>
+
+                <div class="price">
+                  <div class="price-offre-tv">
+                    40 000
+                  </div>
+                  <div class="sub-block-canal-title">
+                    FCFA /MOIS (1)
+                  </div>
+                </div>
+                <!--<button class="btn btn-inverse btn-dark mt-3 px-4 btn-block disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+              </div>
+            </div>
+            <div class="swiper-slide" id="slide2">
+              <div class="block-canalP">
+                <div class="right-el">
+                  <img src="/sites/default/files/images/tv-orange/bitmap@3x.png" class="bitmap-img">
+                  <div class="color-orange bitmap-lib text-right">Inclus</div>
+                </div>
+                <div class="block-canal-title">
+                  Evasion+
+                </div>
+                <div class="sub-block-canal-title">
+                  207 chaînes, radios et services
+                </div>
+
+                <div class="border-gris"></div>
+
+                <div class="price">
+                  <div class="price-offre-tv">
+                    20 000
+                  </div>
+                  <div class="sub-block-canal-title">
+                    FCFA /MOIS (1)
+                  </div>
+                </div>
+                <!--<button class="btn btn-inverse btn-dark mt-3 px-4 btn-block disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+              </div>
+            </div>
+            <div class="swiper-slide" id="slide3">
+              <div class="block-canalP">
+                <div class="right-el">
+                  <img src="/sites/default/files/images/tv-orange/bitmap@3x.png" class="bitmap-img">
+                  <div class="color-orange bitmap-lib text-right">Inclus</div>
+                </div>
+                <div class="block-canal-title">
+                  Access+
+                </div>
+                <div class="sub-block-canal-title">
+                  169 chaînes, radios et services
+                </div>
+
+                <div class="border-gris"></div>
+
+                <div class="price">
+                  <div class="price-offre-tv">
+                    15 000
+                  </div>
+                  <div class="sub-block-canal-title">
+                    FCFA /MOIS (1)
+                  </div>
+                </div>
+                <!--<button class="btn btn-inverse btn-dark mt-3 px-4 btn-block disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+              </div>
+            </div>
+            <div class="swiper-slide" id="slide4">
+              <div class="block-canalP">
+                <div class="right-el">
+                  <img src="/sites/default/files/images/tv-orange/bitmap@3x.png" class="bitmap-img">
+                  <div class="color-orange bitmap-lib text-right">Inclus</div>
+                </div>
+                <div class="block-canal-title">
+                  Essentiel+
+                </div>
+                <div class="sub-block-canal-title">
+                  130 chaînes, radios et services
+                </div>
+
+                <div class="border-gris"></div>
+
+                <div class="price">
+                  <div class="price-offre-tv">
+                    12 000
+                  </div>
+                  <div class="sub-block-canal-title">
+                    FCFA /MOIS (1)
+                  </div>
+                </div>
+                <!--<button class="btn btn-inverse btn-dark mt-3 px-4 btn-block disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+              </div>
+            </div>
+            <div class="swiper-slide" id="slide5">
+              <div class="block-canal">
+                <div class="right-el">
+                  <img src="/sites/default/files/images/tv-orange/bitmapN@3x.png" class="bitmap-img">
+                  <div class="color-orange bitmap-lib text-right">Non inclus</div>
+                </div>
+                <div class="block-canal-title">
+                  Evasion
+                </div>
+                <div class="sub-block-canal-title">
+                  184 chaînes, radios et services
+                </div>
+
+                <div class="border-gris2"></div>
+
+                <div class="price">
+                  <div class="price-offre-tv">
+                    10 000
+                  </div>
+                  <div class="sub-block-canal-title">
+                    FCFA /MOIS (1)
+                  </div>
+                </div>
+                <!--<button class="btn  mt-3 px-4 btn-block disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+              </div>
+            </div>
+            <div class="swiper-slide" id="slide6">
+              <div class="block-canal">
+                <div class="right-el">
+                  <img src="/sites/default/files/images/tv-orange/bitmapN@3x.png" class="bitmap-img">
+                  <div class="color-orange bitmap-lib text-right">Non inclus</div>
+                </div>
+                <div class="block-canal-title">
+                  Access
+                </div>
+                <div class="sub-block-canal-title">
+                  150 chaînes, radios et services
+                </div>
+
+                <div class="border-gris2"></div>
+
+                <div class="price">
+                  <div class="price-offre-tv">
+                    5 000
+                  </div>
+                  <div class="sub-block-canal-title">
+                    FCFA /MOIS (1)
+                  </div>
+                </div>
+                <!--<button class="btn  mt-3 px-4 btn-block disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Découvrir</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="space50"></div>
+
+  <h2 class="title-block">
+    Vidéo à la demande (VOD)
+  </h2>
+
+  <div class="space15"></div>
+</div>
+
+<div class="card bg-white border-0  hide-mobile-fibre">
+  <div class="contentS">
+    <div class="vod-tv">
+      <div class="vod-tv-img">
+        <img src="/sites/default/files/images/tv-orange/keneen.png">
+      </div>
+      <div class="vod-tv-img">
+        <div class="prop">
+          <div class="prop-triangle"></div>
+          <div class="title">
+            L’amitié en musique
+          </div>
+
+          <div class="prop-star">
+            <img src="/sites/default/files/images/tv-orange/star-full.svg" alt="">
+            <img src="/sites/default/files/images/tv-orange/star-full.svg" alt="">
+            <img src="/sites/default/files/images/tv-orange/star-full.svg" alt="">
+            <img src="/sites/default/files/images/tv-orange/star-full.svg" alt="">
+            <img src="/sites/default/files/images/tv-orange/star-empty.svg" alt="">
+          </div>
+
+          <div class="prop-aut">
+            <div class="row">
+              <div class="col-lg-3">
+                <span>De:</span>
+              </div>
+              <div class="col-lg-9">
+                <B>Daara J Family</B>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-3">
+                <span>Avec:</span>
+              </div>
+              <div class="col-lg-9">
+                <B>Awadi, CarlouD, Viviane</B>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-3">
+                <span>Genre:</span>
+              </div>
+              <div class="col-lg-9">
+                <B>Musique</B>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-3">
+                <span>Année:</span>
+              </div>
+              <div class="col-lg-9">
+                <B>2018</B>
+              </div>
+            </div>
+          </div>
+
+          <div class="prop-border"></div>
+
+          <div class="prop-text">
+            Daara- J Family, c’est avant tout une amitié de plus de plus d’un quart de siècle entre Mamadou Lamine Seck (Ndongo D)…
+          </div>
+
+        </div>
+        <img src="/sites/default/files/images/tv-orange/daaraJ.png">
+
+
+      </div>
+      <div class="vod-tv-img">
+        <div class="prop">
+          <div class="prop-triangle"></div>
+          <div class="title">
+            Diamond House
+          </div>
+
+          <div class="prop-star">
+            <img src="/sites/default/files/images/tv-orange/star-full.svg" alt="">
+            <img src="/sites/default/files/images/tv-orange/star-full.svg" alt="">
+            <img src="/sites/default/files/images/tv-orange/star-full.svg" alt="">
+            <img src="/sites/default/files/images/tv-orange/star-full.svg" alt="">
+            <img src="/sites/default/files/images/tv-orange/star-empty.svg" alt="">
+          </div>
+
+          <div class="prop-aut">
+            <div class="row">
+              <div class="col-lg-3">
+                <span>De:</span>
+              </div>
+              <div class="col-lg-9">
+                <B>Soleil Levant</B>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-3">
+                <span>Avec:</span>
+              </div>
+              <div class="col-lg-9">
+                <B>Cheikh Ndiaye </B>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-3">
+                <span>Genre:</span>
+              </div>
+              <div class="col-lg-9">
+                <B>Film</B>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-3">
+                <span>Année:</span>
+              </div>
+              <div class="col-lg-9">
+                <B>2018</B>
+              </div>
+            </div>
+          </div>
+
+          <div class="prop-border"></div>
+
+          <div class="prop-text">
+            Diamond House, c’est avant tout une amitié de plus de plus d’un quart de siècle entre Mamadou Lamine Seck (Ndongo D)…
+          </div>
+
+        </div>
+        <img src="/sites/default/files/images/tv-orange/diamond.png">
+      </div>
+      <div class="vod-tv-img">
+        <img src="/sites/default/files/images/tv-orange/tundu.png">
+      </div>
+      <div class="vod-tv-img">
+        <img src="/sites/default/files/images/tv-orange/pmchou.png">
+      </div>
+      <div class="vod-tv-img">
+        <img src="/sites/default/files/images/tv-orange/daraJ2.png">
+      </div>
+      <div class="vod-tv-img">
+        <img src="/sites/default/files/images/tv-orange/keneen.png">
+      </div>
+      <div class="vod-tv-img">
+        <img src="/sites/default/files/images/tv-orange/daaraJ.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card bg-white border-0 hide-fibre">
+  <div class="">
+    <div class="swiper-container-vod" style="overflow: hidden;">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" id="slide1">
+          <div class="vod-tv-img" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">
+            <img src="/sites/default/files/images/tv-orange/keneen.png">
+          </div>
+        </div>
+        <div class="swiper-slide" id="slide2">
+          <div class="vod-tv-img">
+            <img src="/sites/default/files/images/tv-orange/daaraJ.png">
+          </div>
+        </div>
+        <div class="swiper-slide" id="slide3">
+          <div class="vod-tv-img">
+            <img src="/sites/default/files/images/tv-orange/diamond.png">
+          </div>
+        </div>
+        <div class="swiper-slide" id="slide4">
+          <div class="vod-tv-img">
+            <img src="/sites/default/files/images/tv-orange/tundu.png">
+          </div>
+        </div>
+        <div class="swiper-slide" id="slide5">
+          <div class="vod-tv-img">
+            <img src="/sites/default/files/images/tv-orange/pmchou.png">
+          </div>
+        </div>
+        <div class="swiper-slide" id="slide6">
+          <div class="vod-tv-img">
+            <img src="/sites/default/files/images/tv-orange/daraJ2.png">
+          </div>
+        </div>
+        <div class="swiper-slide" id="slide7">
+          <div class="vod-tv-img">
+            <img src="/sites/default/files/images/tv-orange/keneen.png">
+          </div>
+        </div>
+        <div class="swiper-slide" id="slide8">
+          <div class="vod-tv-img">
+            <img src="/sites/default/files/images/tv-orange/daaraJ.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="space50"></div>
+<div class="contentS ">
+  <h2 class="title-block">
+    Questions fréquentes
+  </h2>
+</div>
+<div class="contentS">
+  <div class="card border-0">
+    <div class="card-body card-acc">
+      <div class="accordion" id="accordionExample">
+        <div class="card" style="border-top: none;">
+          <div class="card-header my-2" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn-accordeon btn btn-link collapsed font20" type="button" data-toggle="collapse" data-target="#collapseOneS" aria-expanded="false" aria-controls="collapseOne">
+                Ma TVO est en dérangement. Que faire ?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapseOneS" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              Dans un premier temps tenter de debrancher et rebrancher l'ensemble de vos appareils ( décodeurs, modem,etc) si le probléme persiste vous pouvez parler à un conseiller en ligne sur notre page Facebook ou via twitter au compte @supportorange. Votre problème sera pris en charge rapidement.
+            </div>
+          </div>
+        </div>
+        <div class="card ">
+          <div class="card-header my-2" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn-accordeon btn btn-link collapsed font20" type="button" data-toggle="collapse" data-target="#collapseTwoS" aria-expanded="false" aria-controls="collapseTwo">
+                Pour quoi certaines chaines Canal + ont disparu ?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwoS" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              Une nouvelle formule «Essentiel+» remplace la formule les chaines Canal. Avec ce nouveau bouquet, des chaines seront supprimées: 3 chaines CINE+ (CINE + Frisson, Emotion et Cinéma), des chaines A+ SPORT et A+ OUEST.
+              Et désormais vous pourrez bénéficier des nouvelles chaines: Canal+Sport, Canal+Comedie Centre, Canal+Action Centre en plus de vos chaines habituelles.
+            </div>
+          </div>
+        </div>
+        <div class="card border-0">
+          <div class="card-header my-2" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn-accordeon btn btn-link collapsed font20" type="button" data-toggle="collapse" data-target="#collapseThreeS" aria-expanded="false" aria-controls="collapseThree">
+                Comment souscrire à l'Essentiel Canal + ?
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThreeS" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              Pour les clients qui ont la formule les chaines Canal, il n’y a pas de nouvelle souscription. La migration se fera à partir du 1er Novembre 2018, et c’est seulement à partir de la prochaine facture que la nouvelle tarification entrera en vigueur. Pour tous les nouveaux clients à cette formule, la souscription se fera en agence.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="space50"></div>
+
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

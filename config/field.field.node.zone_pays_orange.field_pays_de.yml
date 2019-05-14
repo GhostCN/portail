@@ -1,0 +1,28 @@
+uuid: d7c37d94-0346-472d-9424-140d12f8f567
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pays_de
+    - node.type.pass_par_pays_de
+    - node.type.zone_pays_orange
+id: node.zone_pays_orange.field_pays_de
+field_name: field_pays_de
+entity_type: node
+bundle: zone_pays_orange
+label: Pays
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      pass_par_pays_de: pass_par_pays_de
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

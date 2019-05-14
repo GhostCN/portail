@@ -1,0 +1,729 @@
+{{ attach_library('orange/global-home-fibre-css') }}
+{{ attach_library('orange/global-home-fibre-js') }}
+<div class="contentS ">
+  <ul class="sac-nav-ul mb-0">
+    <li class="debutlii">
+      <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="">
+    </li>
+    <li class="debutlii">
+      <a href="{{ path('internet-fixe') }}">Internet ADSL - Fibre</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="">
+    </li>
+    <li class="debutlii">
+      <a href="#"> <b> Home Fibre </b></a>
+    </li>
+  </ul>
+</div>
+<div class="bg-head-title">
+  <img src="/sites/default/files/images/home-fibre/home-fibre-background.jpg" class="img-title-home hide-mobile-fibre">
+  <img src="/sites/default/files/images/home-fibre/home-fibre-mobile-background.jpg" class="img-title-home hide-fibre">
+</div>
+
+<div class="contentS ">
+  <div class="title-text card border-0">
+    <span class="color-orange title-1"><B>Offre</B></span>
+    <span class="text-white"><h1>Home Fibre</h1></span>
+  </div>
+  <div class="card border-0 after-title">
+    <div class="card-body-home">
+      <div class="row blok-desc-tarif">
+        <div class="desc-tarif-fibre border-action">
+          <div class="title-tarif">
+            Tarifs et caractéristiques de l’offre
+          </div>
+          <div class="sub-title-tarif hide-mobile-fibre">
+            {{tarifs_fibre.0.titre_fibre}}
+          </div>
+          <div class="sub-title-tarif hide-fibre">
+             {{tarifs_fibre.0.titre_fibre}}
+          </div>
+          <div class="price-tarif color-orange">
+             {{tarifs_fibre.0.tarif_fibre}}
+          </div>
+        </div>
+        <div class="all-offres-fibre border-action">
+        {% set icones = { 1: "check-green.svg" ,  2: "check-purple.svg" , 3: "check-blue.svg" } %}
+        {% set i=1%}
+        {% for option in tarifs_fibre.0.options_fibre %}
+          <div class="intitule-tarif">
+            <div class="media">
+              <img src="/sites/default/files/images/home-fibre/{{icones[i]}}" class="img-select-fibre">
+              <div class="media-body offre-desc-tarif">
+                {{option}}
+              </div>
+            </div>
+          </div>
+          {% set i = i+1 %}
+          {% endfor %}
+        </div>
+        <div class="action-test-fibre">
+          <div class="action-tarif">
+            <div class="row">
+              <div class="col-lg-12 text-right">
+                <button class="btn btn-outline-dark btn-block btn-test" id="testDow">Tester mon éligibilité <img src="/sites/default/files/images/home-fibre/keyboard-arrow-down.svg" class="ml-2"></button>
+                <button class="btn btn-dark btn-block btn-test" id="testUp">Tester mon éligibilité <img src="/sites/default/files/images/home-fibre/keyboard-arrow-up.svg" class="ml-2"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form method="post" action="{{ path('test-eligibbilte') }}">
+      <div class="row form-test-fibre">
+        <div class="sub-title-tarif">
+          Tester mon éligibilité à la Fibre
+        </div>
+        <div class="space30"></div>
+        <div class="row">
+          <div class="col-lg-3 col-sm-3">
+            <div class="test-select">
+              <select class="custom-select select-mat border-1" name="type_client" required="required">
+                <option selected>Type de client <img src="/sites/default/files/images/internet-fixe/asterix.svg" class="img-asterix-internet"></option>
+                <option value="b2c">Particulier</option>
+                <option value="pro">Pro PME-PMI</option>
+                <option value="b2b">Grande Entreprise</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-3 pr-3">
+            <div class="mat-div" data-toggle="modal" data-target="#exampleModalCenter">
+              <div for="first-name" class="mat-label">Mes coordonnées : <img src="/sites/default/files/images/internet-fixe/asterix.svg" class="img-asterix-internet"></div>
+              <input type="text" pattern="^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$" class="mat-input" id="first-name" name="code_gps" required="required">
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-3 pr-3">
+            <div class="mat-div">
+              <div for="first-name" class="mat-label">N° téléphone fixe : </div>
+              <input type="number" name="num_client" class="mat-input" id="first-name">
+            </div>
+          </div>
+          <input type="hidden" name="test_eligibilite" value="ok">
+          <div class="col-lg-3 col-sm-3">
+            <div class="test-btn">
+              <button  type="submit" class="btn btn-primary btn-block">Lancer le test</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="space50"></div>
+
+  <h2 class="title-block">
+    Inclus dans l'offre Fibre
+  </h2>
+
+  <div class="space15"></div>
+  <div class="hide-mobile-fibre">
+    <div class="row">
+      <div class="col-lg-4 col-sm-4">
+        <div class="internet ekipement">
+          <div class="title-equipements">
+            Internet
+          </div>
+          <div class="desc-equipement">
+            {% for option in options_inclus.0.options_internet %}
+            <div class="intitule-offre">
+              <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+              <span class="offre-desc-img"> {{option}}</span>
+            </div>
+            {% endfor %}
+
+            <!--<button class="btn btn-primary btn-equipement">Voir détails</button>-->
+            <img src="/sites/default/files/images/home-fibre/box-2@3x.png" class="box-img">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-4">
+        <div class="telephone ekipement">
+          <div class="title-equipements">
+            Téléphone
+          </div>
+          <div class="desc-equipement">
+             {% for option in options_inclus.0.options_telephone %}
+            <div class="intitule-offre">
+              <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+              <span class="offre-desc-img">{{option}}</span>
+            </div>
+            {% endfor %}
+          </div>
+          <!--<button class="btn btn-primary btn-equipement">Voir détails</button>-->
+          <img src="/sites/default/files/images/home-fibre/bitmap@3x.png" class="tel-img">
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-4">
+        <div class="bouquet ekipement">
+          <div class="title-equipements">
+            Bouquet TV
+          </div>
+          <div class="desc-equipement">
+            {% for option in options_inclus.0.options_bouquet %}
+            <div class="intitule-offre">
+              <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+              <span class="offre-desc-img">{{option}}</span>
+            </div>
+           {% endfor %}
+          </div>
+          <!--<button class="btn btn-primary btn-equipement">Voir détails</button>-->
+          <img src="/sites/default/files/images/home-fibre/bitmap-2@3x.png" class="bquet-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hide-fibre">
+    <div class="row" style="overflow: hidden">
+      <div class="col-12">
+        <div class="swiper-container-offre-fibre">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="slide1">
+              <div class="internet ekipement">
+                <div class="title-equipements">
+                  Internet
+                </div>
+                <div class="desc-equipement">
+                  <div class="intitule-offre">
+                    <div class="media">
+                      <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+                      <div class="media-body">
+                        <span class="offre-desc-img">Funbox</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="intitule-offre">
+                    <div class="media">
+                      <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+                      <div class="media-body">
+                        <span class="offre-desc-img">30 MégaMax</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--<button class="btn btn-primary btn-equipement">Voir détails</button>-->
+                  <img src="/sites/default/files/images/home-fibre/box-2@3x.png" class="box-img">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" id="slide2">
+              <div class="telephone ekipement">
+                <div class="title-equipements">
+                  Téléphone
+                </div>
+                <div class="desc-equipement">
+                  <div class="intitule-offre">
+                    <div class="media">
+                      <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+                      <div class="media-body">
+                        <span class="offre-desc-img">Illimité 24h/24 et 7j/7 vers fixes</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="intitule-offre">
+                    <div class="media">
+                      <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+                      <div class="media-body">
+                        <span class="offre-desc-img">Illimité vers 1 Mobile Orange</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="intitule-offre">
+                    <div class="media">
+                      <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+                      <div class="media-body">
+                        <span class="offre-desc-img">Forfait bloqué voix de 20.000 CFA</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="intitule-offre">
+                    <div class="media">
+                      <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+                      <div class="media-body">
+                        <span class="offre-desc-img">2 Numéros fixes illimités 24/7</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--<button class="btn btn-primary btn-equipement">Voir détails</button>-->
+                <img src="/sites/default/files/images/home-fibre/bitmap@3x.png" class="tel-img">
+              </div>
+            </div>
+            <div class="swiper-slide" id="slide3">
+              <div class="bouquet ekipement">
+                <div class="title-equipements">
+                  Bouquet TV
+                </div>
+                <div class="desc-equipement">
+                  <div class="intitule-offre">
+                    <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+                    <span class="offre-desc-img">Bouquet TV Orange</span>
+                  </div>
+                  <div class="intitule-offre">
+                    <img src="/sites/default/files/images/home-fibre/check-orange.svg" class="img-offre-fibre">
+                    <span class="offre-desc-img">Contrôle du direct</span>
+                  </div>
+                </div>
+                <!--<button class="btn btn-primary btn-equipement">Voir détails</button>-->
+                <img src="/sites/default/files/images/home-fibre/bitmap-2@3x.png" class="bquet-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="space50"></div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="debit-yellow">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6">
+            <div class="debit-title">
+              <span><B>La Fibre d’Orange :</B></span><br>
+              une vitesse inégalée
+            </div>
+
+            <div class="desc-debit">
+              Jusqu'à <B>50 Mégabits par seconde</B> constant en téléchargements à la réception et <B>2 Mégabits par seconde</B> en débit constant à l’envoi. <br>
+              La fibre optique est <B> beaucoup plus rapide</B> que l’ADSL
+            </div>
+            <div class="space30"></div>
+            <a href="http://www.senefibre.orange.sn/" target="_blank" class="btn btn-outline-dark hide-mobile-fibre"><span class="px-4">En savoir plus</span></a>
+          </div>
+
+          <div class="col-lg-6 col-sm-6">
+            <div class="row">
+              <div class="col-lg-6 col-6 border-other active test-fast" data-vfbr="30000" data-vadsl="450000" data-tfibre="00:30 <br> <B class='own-vit'>Fibre</B>" data-tadsl="15:00 <br> <B class='own-vit'>Adsl</B>">
+                <div>
+                  <div class="media">
+                    <img src="/sites/default/files/images/home-fibre/media.svg" class="img-test-icone">
+                    <div class="media-body">
+                      Télécharger un film
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-6 border-other test-fast" data-vfbr="60000" data-vadsl="1800000" data-tfibre="01:00 <br> <B class='own-vit'>Fibre</B>" data-tadsl="30:00 <br> <B class='own-vit'>Adsl</B>">
+                <div class="media">
+                  <img src="/sites/default/files/images/home-fibre/image.svg" class="img-test-icone">
+                  <div class="media-body">
+                    Partager des photos
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row" id="bar-S">
+              <div class="col-lg-6 bar-S col-6 text-center">
+                <div class="progress-bar position vfibre" data-percent="100" data-duration="30000" data-text="00:30 <br> <B class='own-vit'>Fibre</B>" data-color="#eeeeee,#a885d8"></div>
+              </div>
+              <div class="col-lg-6 bar-S col-6 text-center">
+                <div class="progress-bar position vadsl" data-percent="100" data-duration="450000" data-text="15:00 <br> <B class='own-vit'>Adsl</B>" data-color="#eeeeee,#a885d8"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space50"></div>
+
+        <div class="boder-dashed"></div>
+
+        <div class="space30"></div>
+
+        <div class="title-blockC">
+          ….pour un <B>confort d’utilisation</B> révolutionnaire.
+        </div>
+
+        <div class="space30"></div>
+        <div class="row">
+          <div class="block-20">
+            <div class="text-center">
+              <img src="/sites/default/files/images/home-fibre/telechargement.svg" class="img-round-dep">
+            </div>
+            <div class="text-center mt-2">
+              <B class="media-title-fibre">Téléchargement</B>
+              <div>de fichier volumineux</div>
+            </div>
+          </div>
+          <div class="block-20">
+            <div class="text-center">
+              <img src="/sites/default/files/images/home-fibre/divertissement.svg" class="img-round-dep">
+            </div>
+            <div class="text-center mt-2">
+              <B class="media-title-fibre">Jeux en ligne</B>
+              <div>Consoles, mobiles, ...</div>
+            </div>
+          </div>
+          <div class="block-20">
+            <div class="text-center">
+              <img src="/sites/default/files/images/home-fibre/streaming.svg" class="img-round-dep">
+            </div>
+            <div class="text-center mt-2">
+              <B class="media-title-fibre">Streaming HD</B>
+              <div>Youtube, Vimeo, …</div>
+            </div>
+          </div>
+          <div class="block-20">
+            <div class="text-center">
+              <img src="/sites/default/files/images/home-fibre/bouquet-tv.svg" class="img-round-dep">
+            </div>
+            <div class="text-center mt-2">
+              <B class="media-title-fibre">Télévision</B>
+              <div>Canal, Netflix, …</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hide-mobile-fibre">
+    <div class="space50"></div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        {#<a href="{{ path('tv-orange', {'offre':offre}) }}" class="title-block text-dark">#}
+          <h2 class="title-block">Découvrez notre bouquet TV</h2>
+        {#</a>#}
+      </div>
+      <div class="col-lg-6 text-right">
+        <a href="{{ path('tv-orange') }}"> <button class="btn btn-outline-dark">Voir tout</button></a>
+      </div>
+    </div>
+
+    <div class="space15"></div>
+    {% set len = slider_tv[0]['images_slider']|length %}
+    <div class="row block-extend">
+      <div class="col-6">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            {% for i in 0..len-1 %}
+              <li data-target="#carouselExampleIndicators" data-slide-to="{{i}}" {% if i == 0 %}class="active"{% endif %}></li>
+            {% endfor %}
+          </ol>
+          {% set ordre = {0: 'First', 1: 'Second', 2: 'Third', 3: 'Third', 4: 'Fourth'} %}
+          <div class="carousel-inner">
+            {% for i in 0..len-1 %}
+            <div class="carousel-item {% if i == 0 %}active{% endif %}">
+              <img class="img-carousel-fibre" src="{{file_url(slider_tv[0]['images_slider'][i])}}" alt="{{ordre[i]}} slide">
+            </div>
+            {% endfor %}
+          </div>
+          <a class="carousel-control-prev carousel-controlS" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <img src="/sites/default/files/images/keyboard-arrow-left.svg" alt="" class="img-nav-Sl">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next carousel-controlS" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <img src="/sites/default/files/images/keyboard-arrow-right.svg" alt="" class="img-nav-Sl">
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="row rm-pl">
+         {% for i in 0..2 %}
+          <div class="col-4 mb20">
+            <div class="card border-0">
+              <img class="card-img-top img-TVF" src="{{file_url(bouquets_orange[0]['logo_bouquet'][i])}}" alt="Card image cap">
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="row rm-pl">
+         {% for i in 3..5 %}
+          <div class="col-4 mb20">
+            <div class="card border-0">
+              <img class="card-img-top img-TVF" src="{{file_url(bouquets_orange[0]['logo_bouquet'][i])}}" alt="Card image cap">
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="canal">
+          <b>Bouquet <img src="/sites/default/files/images/home-fibre/Canal+.svg" class="img-canal"> <img src="/sites/default/files/images/keyboard-arrow-right.svg" class="img-lft"> disponible en option payante</b>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  <div class="space50"></div>
+
+  <h2 class="title-block">
+
+    Le déploiement de la Fibre en 4 étapes
+  </h2>
+
+
+  <div class="space15"></div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="card border-0 card-deploiment">
+        <div class="hide-mobile-fibre">
+          <div class="row">
+             {% for i in 0..3 %}
+            <div class="col-lg-3 col-sm-3 pr-2">
+              <div class="media">
+                <img class="mr-3 phone-605" src="{{file_url(etapes_deploiement['icons'][i])}}" >
+                <div class="media-body">
+
+                  <div class="mt-0 color-orange option-dep">{{etapes_deploiement['etapes'][i]}}</div>
+                  <div class="font20"><B>{{etapes_deploiement['titres'][i]}} <br>{{etapes_deploiement['titres_2'][i]}}</B></div>
+                </div>
+              </div>
+              <div class="card-body-dep">
+                {{etapes_deploiement['descriptions'][i]|striptags}}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="hide-fibre">
+          <div class="row" style="overflow: hidden">
+            <div class="col-12">
+              <div class="swiper-container-offre-fibre-op">
+                <div class="swiper-wrapper">
+                  {% set j = 1 %}
+                 {% for i in 0..3 %}
+                  <div class="swiper-slide" id="slide{{j}}">
+                    <div>
+                      <div class="media">
+                        <img class="mr-3 phone-605" src="{{file_url(etapes_deploiement['icons'][i])}}" >
+                        <div class="">
+                          <div class="mt-0 color-orange option-dep">{{etapes_deploiement['etapes'][i]}}</div>
+                          <div class="font20"><B>{{etapes_deploiement['titres'][i]}}<br>{{etapes_deploiement['titres_2'][i]}}</B></div>
+                        </div>
+                      </div>
+                      <div class="card-body-dep">
+                        {{etapes_deploiement['descriptions'][i]|striptags}}
+                      </div>
+                    </div>
+                  </div>
+                   {% set j = j + 1 %}
+                   {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="space50"></div>
+
+  <div class="hide-fibre">
+    <div class="row">
+      <a class="col-12" href="https://play.google.com/store/apps/details?id=com.orange.mobile.orangemoney&hl=fr" target="_blank">
+        <div class="telech-OM">
+          <div class="media">
+            <img class="mr-2" src="/sites/default/files/images/home-fibre/orange-money-black.svg" alt="Generic placeholder image">
+            <div class="media-body">
+              Télécharger l’application <br><B>Orange money</B>
+            </div>
+            <img src="/sites/default/files/images/home-fibre/group-52-mob@3x.png" style="width: 50px;">
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="space50"></div>
+
+
+  <h2 class="title-block">
+    Questions fréquentes
+  </h2>
+
+</div>
+<div class="contentS">
+  <div class="card border-0">
+    {% set valeur = faq['questions']|length %}
+    <div class="card-body card-acc">
+      <div class="accordion" id="accordionExample">
+        {% set key = 1 %}
+        {% for i in 0..valeur-1 %}
+        <div class="card {% if valeur == key %}border-0{% endif %}" {% if key == 1 %} style="border-top: none;"{% endif %}>
+          <div class="card-header my-2" id="heading{{key}}">
+            <h5 class="mb-0">
+              <button class="btn-accordeon btn btn-link collapsed font20" type="button" data-toggle="collapse" data-target="#collapse{{key}}S" aria-expanded="{% if key == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{key}}">
+                {{faq['questions'][i]}}
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse{{key}}S" class="collapse {% if key == 1 %}show{% endif %}" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              {{faq['reponses'][i]|raw}}
+            </div>
+          </div>
+        </div>
+          {% set key= key + 1 %}
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="space50"></div>
+
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include directory ~ '/templates/includes/googlemap-modal.html.twig' %}

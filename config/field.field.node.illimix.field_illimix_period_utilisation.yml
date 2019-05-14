@@ -1,0 +1,19 @@
+uuid: 15617063-142b-449a-bb81-b0942c1e353a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_illimix_period_utilisation
+    - node.type.illimix
+id: node.illimix.field_illimix_period_utilisation
+field_name: field_illimix_period_utilisation
+entity_type: node
+bundle: illimix
+label: 'Période d''utilisation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

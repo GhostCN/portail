@@ -1,0 +1,21 @@
+uuid: c7bd96a4-921b-4a73-a802-dd8b24ba2d32
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_reception_appel
+field_name: field_reception_appel
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

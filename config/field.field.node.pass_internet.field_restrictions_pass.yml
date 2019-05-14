@@ -1,0 +1,19 @@
+uuid: 2f49466d-cfb1-4c1f-9912-1faba0747830
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_restrictions_pass
+    - node.type.pass_internet
+id: node.pass_internet.field_restrictions_pass
+field_name: field_restrictions_pass
+entity_type: node
+bundle: pass_internet
+label: Restrictions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

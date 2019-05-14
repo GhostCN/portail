@@ -1,0 +1,17 @@
+uuid: 07940696-740f-4724-b1c3-50e1f9abfee8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Enregistrement Magik'
+type: enregistrement
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

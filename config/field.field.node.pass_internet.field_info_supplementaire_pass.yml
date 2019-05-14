@@ -1,0 +1,19 @@
+uuid: 85965ecb-30f4-45ac-92fb-70fc80682352
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_info_supplementaire_pass
+    - node.type.pass_internet
+id: node.pass_internet.field_info_supplementaire_pass
+field_name: field_info_supplementaire_pass
+entity_type: node
+bundle: pass_internet
+label: 'Infos supplémentaires'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

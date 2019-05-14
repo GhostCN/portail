@@ -1,0 +1,23 @@
+uuid: 13831f31-e5bc-425c-b9c6-8bb860cf1c08
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.slider_om.field_image_slider_om
+    - node.type.slider_om
+  module:
+    - user
+id: node.slider_om.teaser
+targetEntityType: node
+bundle: slider_om
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_astuce: true
+  field_image_slider_om: true
+  field_slider_min_image: true
+  langcode: true

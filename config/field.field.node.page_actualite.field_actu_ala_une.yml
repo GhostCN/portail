@@ -1,0 +1,21 @@
+uuid: 2e37c1f8-de04-4b4c-a066-c4c6885fc609
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_actu_ala_une
+    - node.type.page_actualite
+  module:
+    - options
+id: node.page_actualite.field_actu_ala_une
+field_name: field_actu_ala_une
+entity_type: node
+bundle: page_actualite
+label: 'A la une'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

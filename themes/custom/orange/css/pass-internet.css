@@ -1,0 +1,609 @@
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff");
+}
+
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff");
+}
+
+body {
+    font-family: HelvNeueOrange;
+    font-size: 16px;
+    width: 100%;
+    height: auto;
+}
+
+html {
+    font-family: HelvNeueOrange;
+}
+
+body {
+    background-color: #eeeeee !important;
+}
+
+.header-tt{
+    position: absolute;
+    top: 125px;
+    z-index: 1;
+}
+
+.contentA {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.modal .modal-footer {
+    align-self: center;
+}
+
+@media screen and (min-width: 1560px) {
+    .contentA {
+        width: 1360px;
+        margin: auto !important;
+    }
+    .img-height {
+        height: 350px;
+        overflow: hidden;
+    }
+    .text-style {
+        position: absolute;
+        top: 155px !important;
+        left: 95px !important;
+    }
+}
+
+.sac-nav-ul {
+    display: flex;
+    list-style: none;
+    margin-left: -35px;
+    font-size: 18px;
+    line-height: 1.22;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.color-orange-style {
+    color: #ff7900;
+}
+
+.imgSmall {
+    width: 100%;
+}
+
+.Group-7 {
+    position: relative;
+}
+
+.Les-Pass-Internet-Jourr {
+    padding-top: 30px;
+}
+
+
+/* .filter {
+    display: flex;
+    justify-content: end;
+    padding-right: 50px;
+    padding-top: 40px;
+} */
+
+
+/*
+.trie {
+    font-size: 18px;
+} */
+
+.text-style {
+    position: absolute;
+    z-index: 1;
+    top: 50px;
+    left: 15px;
+}
+
+.text-style-1 {
+    font-size: 30px;
+}
+
+.text-style-2 {
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.card1 {
+    border: none !important;
+    width: 100%;
+}
+
+.card1-body {
+    padding-left: 11px !important;
+    border-left: 2px solid #ff7900 !important;
+    padding-right: 0px !important;
+}
+
+.card1:hover {
+    -ms-transform: scale(1.2);
+    /*IE9*/
+    -webkit-transform: scale(1.2);
+    /*Safari3-8*/
+    transform: scale(0.5);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.card1-cardtitle {
+    display: flex;
+}
+
+.pass-style {
+    font-size: 14px;
+    color: #666666;
+}
+
+.pass-Mo {
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: -5px;
+    color: #666666;
+}
+
+.F {
+    font-size: 30px;
+}
+
+.sepa {
+    margin-top: 0.35rem !important;
+    margin-bottom: 0.35rem !important;
+    border-top: 3px solid #eeeeee;
+}
+
+.Valable-24h-pour-les {
+    color: #666666;
+    font-size: 10px;
+}
+
+.card1-footer {
+    background-color: #4bb4e7 !important;
+    padding-top: 0px !important;
+    padding-bottom: 3px !important;
+    border-top: none !important;
+}
+
+.Go-gratuit {
+    font-size: 10px;
+    color: white;
+    line-height: normal;
+    padding: 5px;
+}
+
+.Valable-24h-pour-les-pup {
+    color: #666666;
+    letter-spacing: -0.1px;
+    font-size: 14px;
+}
+
+.modale-widt {
+    width: 580px !important;
+    margin-top: 0px !important;
+}
+
+.hre {
+    background-color: #cccccc;
+    height: 2px;
+    margin-top: 15px;
+}
+
+.Nous-activerons-le {
+    font-size: 14px;
+    color: #666666;
+}
+
+.but-pup {
+    width: 186px;
+}
+
+
+/* .Rectangle-modal {
+    height: 345px !important;
+} */
+
+.Rectangle-footer {
+    width: 100%;
+    margin-top: 233px !important;
+    margin-right: -40px;
+    padding-top: 14px !important;
+    background-color: #4bb4e7;
+    position: fixed;
+}
+
+.Rectangle-footer-text {
+    padding-right: 300px;
+    margin-top: -5px;
+    margin-bottom: 8px;
+    font-size: 16px !important;
+}
+
+.content {
+    background-color: white;
+}
+
+
+/* .image-etoile-card {
+    padding-left: 45px;
+    margin-top: -17px;
+} */
+
+.image-etoile-card-1 {
+    padding-left: 80px;
+    margin-top: -17px;
+}
+
+.image-etoile-card-2 {
+    padding-left: 13px;
+    margin-top: -17px;
+}
+
+.partage-avec {
+    display: flex;
+}
+
+.Partager-avec-vos-amii {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.image-etoile-card {
+    padding-left: 50px;
+    margin-top: -15px;
+}
+
+.image-etoile-card-text {
+    padding-left: 23px;
+    margin-top: -15px;
+}
+
+.partage {
+    padding-bottom: 35px;
+}
+
+.Comment-activer-un-pp {
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+.Rectangle-Copyy {
+    padding-top: 25px;
+    padding-bottom: 56px;
+}
+
+.Black-space {
+    display: flex;
+}
+
+.ime-car-socio {
+    max-width: 55px;
+    max-height: 61px;
+    padding-left: 15px;
+}
+
+#black-id-w {
+    width: 24px;
+    margin-top: -18px;
+}
+
+.option1 {
+    padding-left: 20px;
+}
+
+.lore {
+    color: #666666;
+    width: 80%;
+}
+
+#black-orange {
+    width: 27px;
+}
+
+.align-text-etoile {
+    display: flex;
+    margin-left: -25px;
+}
+
+.Profitez-de-10Mo-off-text {
+    padding-left: 4px;
+}
+
+.modal-con-2 {
+    border-left: 3px solid #fb7900 !important;
+}
+
+.block-2pass {
+    display: none;
+}
+
+@media screen and (max-width: 784px) {
+    .header-tt{
+        top: 75px;
+    }
+    .contentA {
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+    .block-2pass {
+        display: block;
+    }
+    .block-1pass {
+        display: none;
+    }
+    .sac-nav-ul {
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    .text-style-1 {
+        font-size: 14px;
+    }
+    .text-style-2 {
+        font-size: 30px;
+        color: #ffffff;
+    }
+    .text-style {
+        margin-top: 10px;
+        margin-bottom: unset;
+    }
+    .debutlii {
+        font-size: 14px;
+    }
+    .pass-Mo {
+        font-size: 14px;
+        margin-top: unset;
+    }
+    .F {
+        font-size: 20px;
+    }
+    .Valable-24h-pour-les {
+        font-size: 8px;
+    }
+    .card1 {
+        margin-bottom: 10px;
+        padding-bottom: 0px !important;
+        margin-bottom: 15px !important;
+    }
+    .card1-body {
+        padding-bottom: 0px !important;
+        box-shadow: 1px 1px 1px 1px aliceblue;
+        height: 95px;
+        padding-right: 0px !important;
+        padding-top: 12px !important;
+        margin-bottom: 0 !important;
+    }
+    .body-Interne {
+        background-color: #ffffff !important;
+    }
+    .card1:hover {
+        -ms-transform: unset;
+        /*IE9*/
+        -webkit-transform: unset;
+        /*Safari3-8*/
+        transform: scale(0.5);
+        -webkit-transform: unset;
+        -moz-transform: unset;
+        -o-transform: unset;
+    }
+    .Les-Pass-Internet-Jo {
+        font-size: 16px;
+        margin-bottom: 5px;
+        padding-top: 2px;
+    }
+    .spac-arc-pass {
+        padding-left: 3px !important;
+        padding-right: 3px !important;
+    }
+    #card-sl-1 {
+        border-top: none;
+        background-color: #eee;
+    }
+    .accordion .card-header.cd,
+    .card .cd,
+    .card-header .cd,
+    .card-body .cd {
+        background-color: #eee;
+        margin-bottom: 0 !important;
+    }
+    .rowbod {
+        padding-left: 3px;
+        padding-right: 0px;
+    }
+    .etoile-etoile-text {
+        padding-left: 10px;
+        padding-top: 38px;
+        padding-bottom: 10px;
+    }
+    .partage-avec {
+        display: unset;
+    }
+    .partage {
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+    .Partager-avec-vos-amii {
+        font-size: 16px;
+        padding-top: 16px;
+    }
+    .image-etoile-card {
+        padding-left: 28px !important;
+        margin-top: -11px !important;
+    }
+    .image-etoile-card-1 {
+        padding-left: 54px;
+        margin-top: -11px;
+    }
+    .Profitez-de-10Mo-off-text {
+        font-size: 14px;
+        padding-left: unset;
+    }
+    .im-card-mob {
+        width: 55px;
+        margin-top: -64px !important;
+    }
+    #Face {
+        padding-left: 0px !important;
+    }
+    .Rectangle-Copyy {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0px;
+        padding-bottom: 0;
+    }
+    .Comment-activer-un-pp {
+        font-size: 20px;
+        background-color: #eeeeee;
+        width: 107%;
+        padding-left: 10px;
+        margin-left: -10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        font-weight: bold;
+    }
+    .row-mob-space {
+        padding: 15px;
+    }
+    #black-id-int {
+        width: 36px;
+        margin-left: -9px;
+        margin-top: -13px;
+    }
+    #black-orange {
+        margin-top: -17px;
+    }
+    .Black-space {
+        padding-top: 7px;
+    }
+    .modale-widt {
+        width: 267px !important;
+        margin-left: 25px !important;
+    }
+    .modal .modal-content {
+        padding: 1.25rem;
+    }
+    .modal .modal-content {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 2.5rem;
+        border: 0;
+        border-left-color: currentcolor;
+        border-left-style: none;
+        border-left-width: 0px;
+    }
+    .modal-content {
+        position: relative;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        pointer-events: auto;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 2px solid #000;
+        outline: 0;
+    }
+    .modal-con-2 {
+        padding: 33px !important;
+    }
+    .tiltle-mo {
+        font-size: 24px;
+    }
+    .Valable-24h-pour-les-pup {
+        font-size: 12px;
+    }
+    .pup-F {
+        font-size: 35px;
+    }
+    .hre-pup {
+        margin-bottom: 15px !important;
+        margin-top: 10px;
+    }
+    .Nous-activerons-le {
+        font-size: 12px;
+    }
+    .Rectangle-footer {
+        margin-top: 313px !important;
+        margin-right: unset;
+        padding-top: unset !important;
+        padding-right: 27px !important;
+        padding-top: 3px !important;
+    }
+    .Rectangle-footer-text {
+        padding-right: unset;
+        margin-top: unset;
+        font-size: 14px !important;
+    }
+    .pup-mod {
+        margin-top: -27px;
+    }
+    .Rectangle-modal {
+        height: auto !important;
+    }
+    /* .im-card-mob {
+        padding-left: 0px;
+        padding-right: 10px;
+    } */
+}
+
+@media only screen and (max-width: 599px) and (min-width: 500px) {
+    .witdh-pass {
+        max-width: 33% !important;
+    }
+}
+
+@media only screen and (max-width: 784px) and (min-width: 600px) {
+    .witdh-pass {
+        max-width: 25% !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 785px) {
+    .contentA {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .witdh-pass {
+        max-width: 33% !important;
+    }
+    .Les-Pass-Internet-Jo {
+        font-size: 26px;
+    }
+    .text-style-1 {
+        font-size: 26px;
+    }
+    pass-Mo {
+        font-size: 18px;
+    }
+    .F {
+        font-size: 28px;
+    }
+    .card1 {
+        height: 131px;
+    }
+    .Comment-activer-un-pp {
+        font-size: 26px;
+    }
+    .option1 {
+        padding-left: 16px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1230px) {
+    .contentA {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

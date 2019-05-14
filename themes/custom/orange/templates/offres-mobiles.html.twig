@@ -1,0 +1,452 @@
+<div class="contentS">
+  <div class="row">
+    <div class="col-lg-5">
+      <div class="">
+        <ul class="sac-nav-ul mb-0">
+          <li class="debutlii">
+            <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+          </li>
+          <li class="debutlii">
+            <a href="#"> <b> Nos offres mobiles </b></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <h2 class="respo">
+        <B>Nos offres mobiles</B>
+      </h2>
+    </div>
+  </div>
+  <p class="mb-1"></p>
+  <!--Premiere partie-Desktop-->
+  <div class="d-none d-sm-block">
+    <div class="row">
+      {% for offre in offres|slice(0, 3) %}
+      <a href="{{ path('details-offre-mobile',{'id': offre.id}) }}">
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card shadow-sm bg-white border-0 mb-2">
+            <img class="card-img-top card-imageA" src="{{ file_url(offre.image) }}" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title">
+                <span class="titre"><a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('details-offre-mobile',{'id': offre.id}) }}">{{ offre.title }}</a></span>
+                <!--span class="titre d-block d-sm-none  pr-5" style="color:#f16e00">Jamono Max<img class="icone-First-Card-Mobil pl-5" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt=""></span>
+                <p class="sous-titre-2 d-block d-sm-none">Une vie où l’on veut tout réussir…</p-->
+              </h3>
+              <div class="">
+                <span class="sous-titre">{{ offre.resume }}</span><br><br>
+                <p class="borderCard"></p>
+                <ul class="premierBlockCard">
+                  {% for desc in offre.descriptions %}
+                    <li class="demo ">
+                      <i class="fa fa-check pl-1"></i>{{ desc }}
+                    </li><br>
+                  {% endfor %}
+                </ul>
+                <div>
+                  <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('details-offre-mobile',{'id': offre.id}) }}" ><span class="href-card">{{ offre.details }}</span><i class="fa fa-angle-right  pl-1" style="color:#f16e00"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </a>
+      {% endfor %}
+
+    </div>
+  </div>
+  <!--Premiere partie-Mobile-->
+  <div class="d-block d-sm-none">
+    <div class="row">
+      {% for offre in offres|slice(0, 3) %}
+      <a href="{{ path('details-offre-mobile',{'id': offre.id}) }}">
+        <div class="col-12 col-sm-12 col-md-12">
+          <div class="card shadow-sm bg-white border-0 mb-2">
+            <img class="card-img-top card-imageA" src="{{ file_url(offre.image) }}" alt="Card image cap">
+            <div class="card-body cardBody">
+              <div class="media">
+                <div class="media-body">
+                  <h3 class="mt-0 mb-1">
+                    <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('details-offre-mobile',{'id': offre.id}) }}"><span class="titre" style="color:#f16e00">{{ offre.title }}</span></a>
+                  </h3>
+                  <p class="sous-titre-2">{{ offre.resume }}</p>
+                </div>
+                <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('details-offre-mobile',{'id': offre.id}) }}" ><img class="icone-First-Card-Mobil pb-2" src="/sites/default/files/icones/fleche-orange.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </a>
+      {% endfor %}
+
+    </div>
+  </div>
+  <!--DEUXIÈME PARTIE-Desktop-->
+  <div class="d-none d-sm-block">
+    <p class="mb-2"></p>
+    <div class="row">
+      {% for offre in offres|slice(3, 3) %}
+      {% set href = '' %}
+      {% if loop.index == 1 %}
+       {% set href = path('offre-family') %}
+       {% elseif loop.index == 3 %}
+       {% set href = path('hub-pass-internationaux') %}
+       {% else %}
+       {% set href = path('details-offre-mobile',{'id': offre.id}) %}
+       {% endif %}
+        <div class="col-lg-4 col-4">
+        <a href= {{ href }} >
+          <div class="card shadow-sm bg-white border-0 mb-2">
+            <img class="card-img-top card-imageA" src="{{ file_url(offre.image) }}" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title">
+                <span class="titre">
+                  {% if loop.index == 1 %}<!-- Family temporary-->
+                    <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('offre-family') }}">{{ offre.title }}</a>
+                  {% elseif loop.index == 3 %} <!-- International temporary-->
+                    <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('hub-pass-internationaux') }}">{{ offre.title }}</a>
+                  {% else %}
+                    <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('details-offre-mobile',{'id': offre.id}) }}" data-toggle="modal" data-target="#exampleModalCenter-2">{{ offre.title }}</a>
+                  {% endif %}
+                </span>
+              </h3>
+              <span class="sous-titre demo">{{ offre.resume }}</span><br>
+              <br>
+              <p class="borderCard"></p>
+              <ul class="premierBlockCard">
+                {% for desc in offre.descriptions %}
+                  <li class="demo ">
+                    <i class="fa fa-check pl-1"></i>{{ desc }}
+                  </li><br>
+                {% endfor %}
+              </ul>
+              <div>
+                {% if loop.index == 1 %}<!-- Family temporary-->
+                  <a  onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('offre-family') }}"><span class="href-card">{{ offre.details }}</span><i class="fa fa-angle-right  pl-1" style="color:#f16e00"></i></a>
+                {% elseif loop.index == 3 %} <!-- International temporary-->
+                  <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('hub-pass-internationaux') }}"><span class="href-card">{{ offre.details }}</span><i class="fa fa-angle-right  pl-1" style="color:#f16e00"></i></a>
+                {% else %}
+                  <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('details-offre-mobile',{'id': offre.id}) }}" data-toggle="modal" data-target="#exampleModalCenter-2"><span class="href-card">{{ offre.details }}</span><i class="fa fa-angle-right  pl-1" style="color:#f16e00"></i></a>
+                {% endif %}
+                  </div>
+            </div>
+          </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="d-block d-sm-none mr-1">
+    {% for offre in offres|slice(3, 3) %}
+      <p class="mb-2"></p>
+      <div class="col-12 col-sm-12 col-md-12 mb-2" style="background:#ffffff" >
+        <div class="row rSg">
+          <div class="col-5 col-sm-5 col-md-5 mSg">
+            {% if loop.index == 1 %}<!-- Family temporary-->
+              <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('offre-family') }}">
+                <img class="ImgBlog" src="{{ file_url(offre.image) }}" alt="">
+              </a>
+            {% elseif loop.index == 3 %} <!-- International temporary-->
+              <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('hub-pass-internationaux') }}">
+                <img class="ImgBlog" src="{{ file_url(offre.image) }}" alt="">
+              </a>
+            {% else %}
+              <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('details-offre-mobile',{'id': offre.id}) }}" data-toggle="modal" data-target="#exampleModalCenter-2">
+                <img class="ImgBlog" src="{{ file_url(offre.image) }}" alt="">
+              </a>
+            {% endif %}
+          </div>
+          <div class="col-sm-5 col-5 pt-block">
+            {% if loop.index == 1 %}<!-- Family temporary-->
+              <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('offre-family') }}" class="blog-couleur blog">{{ offre.title }}</a>
+            {% elseif loop.index == 3 %} <!-- International temporary-->
+              <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('hub-pass-internationaux') }}" class="blog-couleur blog">{{ offre.title }}</a>
+            {% else %}
+              <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" href="{{ path('details-offre-mobile',{'id': offre.id}) }}" class="blog-couleur blog" data-toggle="modal" data-target="#exampleModalCenter-2">{{ offre.title }}</a>
+            {% endif %}
+          </div>
+
+          <div class="col-2 pt-3">
+            {% if loop.index == 1 %}<!-- Family temporary-->
+              <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" class="pl-3" href="{{ path('offre-family') }}"><img class="icone-First-Card-Mobil" style="height: 48px;" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt=""></a>
+            {% elseif loop.index == 3 %} <!-- International temporary-->
+              <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" class="pl-3" href="{{ path('hub-pass-internationaux') }}"><img class="icone-First-Card-Mobil" style="height: 48px;" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt=""></a>
+            {% else %}
+              <a onclick="dataLayer.push({'event':'click','eventCategory':'Offres Mobiles', 'eventAction':'button_click','eventLabel':'{{ offre.title }}'});" class="pl-3" href="{{ path('details-offre-mobile',{'id': offre.id}) }}" data-toggle="modal" data-target="#exampleModalCenter-2"><img class="icone-First-Card-Mobil" style="height: 48px;" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt=""></a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+  <!--TROISIÈME PARTIE-->
+
+  <div class="d-none d-sm-block">
+    <p class="mb-4"></p>
+    <div class="row">
+      <div class="col-lg-12 titre-Annonce">
+        Promos et bon plans
+      </div>
+    </div>
+    <p class="mb-3"></p>
+    <div class="row">
+      {% for promo in promos %}
+        <div class="col-lg-4 col-4">
+          <div class="card shadow-sm bg-white border-0 mb-2">
+            <img class="card-img-top card-image card-imageAp" src="{{ file_url(promo.image) }}" alt="Card image cap">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-lg-6 pt-2 titre_Promo">
+                  {{ promo.title }}
+                </div>
+                <div class="col-lg-6 text-right">
+                  <a onclick="dataLayer.push({'event':'click','eventCategory':'Promos et Bons Plans', 'eventAction':'button_click','eventLabel':'{{ promo.title }}'});" href="{{ promo.lien }}" target="_blank"><button class="btn btn-warning" type="submit">{{ promo.texte }}</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <p class="mb-1"></p>
+  <!--TROISIÈME PARTIE-Mobile-->
+  <div class="hide-reverse">
+    <div class="row">
+      <div class="col-12 col-md-12 col-sm-12" style="font-size:20px; font-weight:bold; margin-top: 25px;">
+        Promos et bon plans
+      </div>
+    </div>
+    {#<p class="mb-1"></p>#}
+    <div class="row" style="overflow: hidden">
+      <div class="swiper-container-offre">
+        <div class="swiper-wrapper">
+          {% for promo in promos %}
+            <div class="swiper-slide" id="">
+              <div class="card shadow-sm bg-white border-0 mb-2">
+                <a onclick="dataLayer.push({'event':'click','eventCategory':'Promos et Bons Plans', 'eventAction':'button_click','eventLabel':'{{ promo.title }}'});" href="{{ promo.lien }}">
+                  <img class="card-img-top card--image" src="{{ file_url(promo.image) }}" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 titre_Promo">
+                      <a onclick="dataLayer.push({'event':'click','eventCategory':'Promos et Bons Plans', 'eventAction':'button_click','eventLabel':'{{ promo.title }}'});" href="{{ promo.lien }}">{{ promo.title }}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--QUATRIÈME PARTIE-->
+
+  <p class="mb-4 rsO"></p>
+  <div class="row">
+    <div class="col-lg-12 d-none d-sm-block titre-Annonce">
+      Besoin d'aide pour choisir une offre ?
+    </div>
+    <div class="col-12 d-block d-sm-none" style="font-size:20px; font-weight:bold; margin-bottom: 10px;">
+      Vous voulez chosir une offre ?
+    </div>
+  </div>
+  <p class="d-none d-sm-block mb-3"></p>
+  <p class="d-block d-sm-none mb-1"></p>
+  <div class="row text-white">
+    <div class="col-lg-4 mb-2 blog-color">
+      <div style="background:#50be87">
+        <div class="row">
+          <div class="col-lg-3 col-3 pt-2">
+            <a onclick="dataLayer.push({'event':'click','eventCategory':'Liens externes', 'eventAction':'button_click','eventLabel':'Tann sa diamono'});" href="http://www.tannsajamono.sn/" target="_blank"><img class="text-left" src="/sites/default/files/images/Lancer_le_sumilateur-01.svg" alt=""></a>
+          </div>
+          <div class="col-lg-9 col-8 description-ch"><a href="http://www.tannsajamono.sn/" onclick="dataLayer.push({'event':'click','eventCategory':'Liens externes', 'eventAction':'button_click','eventLabel':'Tann sa diamono'});" target="_blank" class="blog-couleur text-white">Lancer le simulateur<img class="pl-2" src="/sites/default/files/icones/fleche-white.svg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+      <div class="col-lg-4 mb-2 blog-color">
+      <div style="background:#a885d8">
+        <div class="row">
+          <div class="col-lg-3 col-3 pt-2">
+            <img class="text-left" src="/sites/default/files/images/Parler_a_un_Conseiller.svg" alt="">
+          </div>
+          <div class="col-lg-9 col-8 description-ch"><a onclick="dataLayer.push({'event':'click','eventCategory':'Liens externes', 'eventAction':'button_click','eventLabel':'Orange Assistance'});" href="https://assistance.orange.sn/" target="_blank" class="blog-couleur text-white">Parler à un conseiller<img class="pl-2" src="/sites/default/files/icones/fleche-white.svg" alt=""></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 blog-color">
+      <div style="background:#4bb4e6">
+        <div class="row">
+          <div class="col-lg-3 col-3 pt-2">
+            <img class="text-left" src="/sites/default/files/images/Trouver_une_Agence-01.svg" alt="">
+          </div>
+          <div class="col-lg-9 col-8 description-ch">
+            <a onclick="dataLayer.push({'event':'click','eventCategory':'Liens externes', 'eventAction':'button_click','eventLabel':'Store Locator'});" href="http://agence.orange.sn"  target="_blank" class="blog-couleur text-white">Trouver une agence<img class="pl-2" src="/sites/default/files/icones/fleche-white.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="mb-5 d-none d-sm-block"></p>
+  <p class="mb-4 d-block d-sm-none"></p>
+</div>
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

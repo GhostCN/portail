@@ -1,0 +1,17 @@
+uuid: 7295f4e1-9ed4-4421-84b3-2a85f6fa3b9b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Offre Premium Simple'
+type: premium_avec_tel
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

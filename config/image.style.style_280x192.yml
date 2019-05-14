@@ -1,0 +1,15 @@
+uuid: 21abfd2b-b8b2-4db5-994e-9aed7a6d394f
+langcode: fr
+status: true
+dependencies: {  }
+name: style_280x192
+label: 'Style 280x192'
+effects:
+  5644939e-8bdc-47c9-be3a-3d660b99e2d3:
+    uuid: 5644939e-8bdc-47c9-be3a-3d660b99e2d3
+    id: image_scale
+    weight: 1
+    data:
+      width: 280
+      height: 192
+      upscale: true

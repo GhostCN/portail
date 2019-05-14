@@ -1,0 +1,1729 @@
+ @font-face {
+     font-family: HelvNeueOrange;
+     font-style: normal;
+     font-weight: 400;
+     src: url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff");
+ }
+ 
+ @font-face {
+     font-family: HelvNeueOrange;
+     font-style: normal;
+     font-weight: 700;
+     src: url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff");
+ }
+ 
+ @media screen and (min-width: 1000px) and (max-width: 1200px) {
+     .contentA {
+         padding-left: 10px !important;
+         padding-right: 10px !important;
+     }
+ }
+ 
+ @media screen and (min-width: 1560px) {
+     .contentA {
+         width: 1360px;
+         margin: auto !important;
+         padding-left: 100px !important;
+         padding-right: 100px !important;
+     }
+     .titreJamono {
+         margin-top: 50px !important;
+         left: 0;
+         right: 0;
+     }
+     .img-height {
+         max-height: 320px;
+         overflow: hidden;
+     }
+     .Rectangle-26-ent {
+         margin-top: -100px;
+     }
+     /* .btn-off {
+
+                    position: absolute;
+                    margin-bottom: 25px !important;
+                }
+                .bt-test {
+                    padding-top: 15px !important;
+                } */
+ }
+ 
+ .contentA {
+     padding-left: 100px;
+     padding-right: 100px;
+ }
+ 
+ body {
+     background-color: #eeeeee !important;
+ }
+ 
+ .debut {
+     display: flex;
+     list-style: none;
+     margin-left: -35px;
+     padding-top: 3px;
+     padding-bottom: 7px;
+ }
+ 
+ .debutli-etran {
+     margin-left: 11px;
+     font-size: 18px;
+ }
+ 
+ .imgSmall {
+     max-width: 100%;
+     display: block;
+     height: auto;
+ }
+ 
+ .titreJamono {
+     position: absolute;
+     margin-top: 60px;
+     z-index: 1;
+ }
+ 
+ #jamono {
+     color: #ff7900;
+     font-size: 30px;
+ }
+ 
+ .img-height {
+     max-height: 320px;
+ }
+ 
+ #newScool {
+     font-size: 50px;
+     color: #ffffff;
+     margin-top: 0px;
+ }
+ 
+ .Les-illimix-Jamono-N {
+     margin-top: 16px;
+     padding-left: 10px;
+     font-size: 20px;
+ }
+ 
+ .Rectangle-12 {
+     height: 81px;
+     display: flex;
+ }
+ 
+ .etoileOrange {
+     max-width: 5%;
+ }
+ 
+ #fleche {
+     margin-top: -17px;
+     margin-left: 75px;
+ }
+ 
+ #fleche1 {
+     margin-top: -17px;
+     margin-left: 165px;
+ }
+ 
+ #fleche2 {
+     margin-top: -14px;
+     margin-left: 180px;
+ }
+ 
+ .img-client-desk {
+     width: 224px;
+ }
+ 
+ .style-col {
+     color: #666666;
+ }
+ 
+ #fleche3 {
+     margin-left: 135px;
+     margin-top: -17px;
+ }
+ 
+ .Vers-quel-payss {
+     font-size: 30px;
+     font-weight: bold;
+ }
+ 
+ .Rectangle-26-ent {
+     padding-top: 45px;
+     padding-left: 40px;
+     padding-right: 40px;
+     margin-top: -100px;
+ }
+ 
+ .diss-disp {
+     display: flex;
+ }
+ 
+ .dropdown-toggle::after {
+     position: absolute;
+     right: 20px;
+     bottom: 16px;
+ }
+ 
+ .drop-etrang {
+     width: 100%;
+     text-align: left !important;
+ }
+ 
+ .fillt {
+     width: 70%;
+ }
+ 
+ .payss {
+     width: 30%;
+ }
+ 
+ .dropdown-menu.show {
+     width: 100%;
+ }
+ 
+ .div-space-pb {
+     padding-bottom: 40px;
+ }
+ 
+ .div-space-pb-1 {
+     padding-bottom: 65px;
+ }
+ 
+ .apel-etr {
+     font-size: 20px;
+     font-weight: bold;
+     padding-left: 15px;
+ }
+ 
+ .sec-appel-etrang {
+     font-size: 40px;
+     color: #fb7900;
+     font-weight: bold;
+ }
+ 
+ .appe {
+     width: 48%;
+ }
+ 
+ .sec-appel-etrang {
+     width: 50%;
+ }
+ 
+ .block-div-sp {
+     display: block;
+ }
+ 
+ .mess {
+     width: 50%;
+     padding-left: 140px;
+ }
+ 
+ .icone-appel-etr {
+     width: 40px;
+ }
+ 
+ .-minutes5 {
+     font-size: 25px;
+     font-weight: bold;
+     display: block;
+ }
+ 
+ .Valable-24-heures24 {
+     color: #666666;
+ }
+ 
+ .-F90 {
+     color: #fb7900;
+     font-size: 30px;
+     font-weight: bold;
+ }
+ 
+ .icone-appel-etrang {
+     width: 40px;
+     height: 40px;
+ }
+ 
+ .-minute-valab {
+     padding-left: 33px;
+     width: 80%;
+ }
+ 
+ .img-appel-etr {
+     padding-top: 6px;
+ }
+ 
+ .-miut-apel-etran-block {
+     padding-bottom: 10px;
+     border-bottom: 1px solid #eeeeee;
+     margin-bottom: 8px;
+ }
+ 
+ .block90 {
+     width: 33.33%;
+ }
+ 
+ .blockheader80 {
+     padding-bottom: 50px !important;
+ }
+ 
+ .blockheader90 {
+     margin-bottom: 50px !important;
+ }
+ 
+ .orange {
+     color: #fb7900;
+ }
+ 
+ .-Souscription-605 {
+     font-weight: bold;
+     font-size: 20px;
+     padding-bottom: 16px;
+ }
+ 
+ .card-ww {
+     width: 49%;
+ }
+ 
+ .aider-nn {
+     font-size: 20px;
+     padding-right: 105px;
+ }
+ 
+ .vdetail {
+     margin-bottom: 10px;
+     margin-top: 5px;
+     position: absolute;
+     right: 25px;
+ }
+ 
+ .vdetaillle-2 {
+     margin-bottom: 10px;
+     margin-top: 5px;
+ }
+ 
+ .imgwi {
+     width: 100%;
+ }
+ 
+ .diss-ju {
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .margin-car {
+     margin-bottom: 50px;
+ }
+ 
+ #demander-text {
+     width: 400px;
+ }
+ 
+ .Inscription-eespace-c {
+     font-size: 30px;
+     color: #ffffff;
+     font-weight: bold;
+     padding-top: 18px;
+ }
+ 
+ #first-crd-mov {
+     background-color: #a885d8 !important;
+ }
+ 
+ #secon-crd-ver {
+     background-color: #50be87 !important;
+ }
+ 
+ .card-mv10 {
+     padding-top: 20px;
+     padding-left: 50px;
+     padding-right: 40px;
+ }
+ 
+ .img-div-space {
+     margin-left: -40px;
+     margin-right: -30px;
+ }
+ 
+ .pass-seront-bien {
+     font-size: 30px;
+     color: #fb7900;
+     font-weight: bold;
+     position: absolute;
+     bottom: 178px;
+     left: 48px;
+ }
+ 
+ .div-marg-bottom {
+     margin-bottom: 50px;
+ }
+ 
+ .Group-11-12 {
+     display: none;
+ }
+ 
+ .sous-mobb {
+     display: none;
+ }
+ 
+ .img-client-mob {
+     display: none;
+ }
+ 
+ .Group-11-13 {
+     display: none;
+ }
+ 
+ .swiper-block-div {
+     display: none;
+ }
+ 
+ .inscription-client-block-500 {
+     display: none;
+ }
+ 
+ .illustration-block-1 {
+     display: none;
+ }
+ 
+ .illustration-block-2 {
+     display: none
+ }
+
+ .list-pays{
+     width: 100%;
+     border: 2px solid #666666 !important;
+ }
+
+ .select2-container--default .select2-selection--single {
+     border: 2px solid #666666 !important;
+     border-radius: 0px !important;
+     height: 50px !important;
+     font-weight: bold;
+     font-size: 16px;
+     color: #000 !important;
+     padding-top: 9px;
+ }
+
+ .select2-container--default .select2-selection--single .select2-selection__arrow b {
+     border-color: #000 transparent transparent transparent !important;
+     height: 8px !important;
+     left: 2px !important;
+     top: 24px !important;
+     width: 0 !important;
+ }
+
+ .select2-container--default .select2-results__option[aria-selected="true"] {
+     background-color: #000 !important;
+     color: #fff !important;
+ }
+
+ .select2-container--default .select2-results__option:hover {
+     background-color: #000 !important;
+ }
+
+ .select2-container--default .select2-selection--single .select2-selection__rendered {
+     color: #000 !important;
+ }
+
+ .select2-container--default .select2-results__option--highlighted[aria-selected]{
+     background-color: #ff7900 !important;
+ }
+
+ .select2-container--default .select2-selection--single .select2-selection__arrow b {
+     border-width: 9px 8px 0 8px !important;
+     margin-left: -13px !important;
+ }
+ 
+ @media screen and (max-width: 499px) {
+     .illustration-block {
+         display: none;
+     }
+     .illustration-block-1 {
+         display: flex;
+     }
+     .illustration-block-2 {
+         display: none
+     }
+     .img-div-space {
+         margin-left: -20px;
+         margin-right: -17px;
+     }
+     .pass-seront-bien {
+         display: none;
+     }
+     .Group-11-11 {
+         display: none;
+     }
+     .swiper-block-div {
+         display: block;
+     }
+     .swiper-block-div-12 {
+         display: flex;
+     }
+     .Group-11-12 {
+         display: block;
+         width: 100%;
+         height: 199px;
+     }
+     .contentA {
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+     .debut {
+         margin-left: -22px;
+     }
+     #newScool {
+         font-size: 25px;
+     }
+     #jamono {
+         font-size: 14px;
+     }
+     .titreJamono {
+         margin-top: 10px;
+     }
+     .diss-disp {
+         display: block;
+     }
+     .height-text-div {
+         height: 80px;
+     }
+     .Rectangle-26-ent {
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-right: 20px;
+         margin-top: -120px;
+     }
+     .payss {
+         width: 100%;
+         padding-bottom: 15px;
+     }
+     .Vers-quel-payss {
+         font-size: 25px;
+     }
+     .dropdown-toggle::after {
+         position: absolute;
+         right: 20px;
+         top: 22px;
+     }
+     .fillt {
+         width: 100%;
+     }
+     .drop-etrang {
+         padding-top: 13px !important;
+         padding-bottom: 13px !important;
+     }
+     .appe {
+         width: 100%;
+         border-right: unset;
+         padding-bottom: 35px;
+     }
+     .div-block-mob-div {
+         display: flex !important;
+         padding-bottom: 25px !important;
+     }
+     .div-flex-mob {
+         width: 100%;
+         padding-left: unset;
+     }
+     .apel-etr {
+         padding-top: 5px;
+     }
+     .sec-appel-etrang {
+         width: unset;
+         font-size: 30px;
+     }
+     .div-space-pb {
+         padding-bottom: 30px;
+     }
+     .div-space-pb-1 {
+         padding-bottom: 40px;
+     }
+     .icone-appel-etr {
+         width: 27px;
+         height: 28px;
+     }
+     .Rectangle-12 {
+         height: 50px;
+         padding-left: 10px !important;
+         padding-top: unset !important;
+         padding-right: unset !important;
+     }
+     .Les-illimix-Jamono-N {
+         font-size: 18px;
+         margin-top: 13px;
+     }
+     .block90 {
+         width: 100%;
+         display: flex !important;
+     }
+     .-minute-valab {
+         padding-left: 15px;
+         width: 100%;
+         display: flex;
+     }
+     .icone-appel-etrang {
+         width: 27px;
+         height: 27px;
+     }
+     .-minutes5 {
+         font-size: 16px;
+     }
+     .Valable-24-heures24 {
+         font-size: 14px;
+     }
+     .-F90 {
+         font-size: 25px;
+         margin-left: 25px;
+     }
+     .blockheader80 {
+         padding-bottom: 10px !important;
+     }
+     .sous-dek {
+         display: none;
+     }
+     .sous-mobb {
+         display: block;
+         font-size: 16px;
+     }
+     .-Souscription-605 {
+         padding-bottom: unset;
+     }
+     .blockheader90 {
+         margin-bottom: 30px !important;
+     }
+     .card-ww {
+         width: 100%;
+     }
+     .swipe-slide-div {
+         width: 85% !important;
+         text-align: left !important;
+         max-width: 255px;
+     }
+     .card-body-space-div {
+         padding: 12px !important;
+         height: 340px;
+     }
+     .aider-nn {
+         font-size: 15px;
+         padding-right: unset;
+     }
+     .div-pb-rect {
+         padding-bottom: 18px;
+     }
+     .div-pb-recte {
+         padding-bottom: 14px;
+     }
+     /* .vdetail-swipe {
+                position: absolute;
+                bottom: 25px;
+                left: 10px;
+                margin-bottom: unset;
+                margin-top: unset;
+            } */
+     .diss-ju {
+         display: block;
+     }
+     .img-client-desk {
+         display: none;
+     }
+     .img-client-mob {
+         display: block;
+         padding-top: 3px;
+         margin-bottom: -1px;
+         width: 126px;
+     }
+     .div-mob-disp {
+         display: flex !important;
+     }
+     .Inscription-eespace-c {
+         font-size: 20px;
+         padding-top: unset;
+     }
+     .card-mv10 {
+         padding-top: 15px;
+         padding-left: 18px;
+         padding-right: 10px;
+     }
+     .vdetail {
+         margin-bottom: 0px;
+         margin-top: -8px;
+         width: 112px;
+         padding-left: 13px !important;
+         position: unset;
+         right: unset;
+     }
+     .vdetaillle-2 {
+         margin-bottom: 0px;
+         margin-top: -8px;
+         width: 112px;
+         padding-left: 13px !important;
+     }
+     .margin-car {
+         margin-bottom: 30px;
+     }
+     .div-content-dispa {
+         display: none;
+     }
+ }
+ 
+ @media screen and (min-width: 500px) and (max-width: 799px) {
+     .contentA {
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+     .illustration-block {
+         display: none;
+     }
+     .illustration-block-1 {
+         display: flex;
+     }
+     .illustration-block-2 {
+         display: none
+     }
+     .pass-seront-bien {
+         display: none;
+     }
+     .img-div-space {
+         margin-left: -20px;
+         margin-right: -17px;
+     }
+     .div-content-dispa {
+         display: none !important;
+     }
+     .swiper-block-div {
+         display: block !important;
+     }
+     .Group-11-11 {
+         display: none !important;
+     }
+     .Group-11-12 {
+         display: none;
+     }
+     .Group-11-13 {
+         display: block;
+         width: 100%;
+         height: 199px;
+     }
+     #jamono {
+         font-size: 14px;
+     }
+     #newScool {
+         font-size: 25px;
+     }
+     .titreJamono {
+         margin-top: 10px;
+     }
+     .diss-disp {
+         display: block;
+     }
+     .payss {
+         width: 70%;
+         padding-bottom: 15px;
+     }
+     .fillt {
+         width: 100%;
+     }
+     .dropdown-toggle::after {
+         position: absolute;
+         right: 20px;
+         top: 17px;
+     }
+     .Rectangle-26-ent {
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-right: 20px;
+         margin-top: -120px;
+     }
+     .div-space-pb {
+         display: flex !important;
+     }
+     .div-space-pb-1 {
+         display: flex !important;
+     }
+     .mess {
+         padding-left: 20px;
+     }
+     .appe {
+         width: 50%;
+     }
+     .sec-appel-etrang {
+         font-size: 30px;
+     }
+     .Rectangle-28-28 {
+         width: 1px;
+         height: 119px;
+         background-color: #d6d6d6;
+         margin-right: 20px;
+     }
+     .Les-illimix-Jamono-N {
+         font-size: 20px;
+         margin-top: 13px;
+     }
+     .Rectangle-12 {
+         height: 65px;
+         display: flex;
+     }
+     .etoileOrange-appel-etra {
+         margin-top: -5px !important;
+     }
+     .block90 {
+         width: 33.33%;
+     }
+     .diss-disp {
+         display: flex;
+     }
+     .-minutes5 {
+         font-size: 16px;
+     }
+     .Valable-24-heures24 {
+         font-size: 14px;
+     }
+     .-F90 {
+         font-size: 25px;
+     }
+     .-minute-valab {
+         padding-left: 15px;
+     }
+     .-Souscription-605 {
+         font-weight: bold;
+         font-size: 16px;
+         padding-bottom: 3px;
+     }
+     .blockheader80 {
+         padding-bottom: 30px !important;
+         padding-top: 15px !important;
+     }
+     .-vos-proches- {
+         font-size: 15px;
+     }
+     .div-width {
+         width: 49%;
+         margin-bottom: 35px;
+     }
+     .vvdetail {
+         width: 112px;
+         height: 40px;
+     }
+     .swiper-block-div-12 {
+         display: none;
+     }
+     .card-ww {
+         width: 100%;
+     }
+     .swipe-slide-div {
+         width: 85% !important;
+         text-align: left !important;
+         max-width: 385px;
+     }
+     .card-body-space-div {
+         padding: 12px !important;
+         height: 407px;
+     }
+     .aider-nn {
+         font-size: 15px;
+         height: 70px;
+         padding-top: 17px;
+         padding-right: unset;
+     }
+     .diss-ju {
+         display: block;
+     }
+     .Inscription-eespace-c {
+         font-size: 20px;
+         padding-top: unset;
+     }
+     .div-pb-recte {
+         padding-bottom: 14px;
+     }
+     .div-mob-disp {
+         display: flex !important;
+     }
+     .width-img-client {
+         width: 165px;
+     }
+     .vdetail {
+         margin-top: -4px;
+         position: unset;
+         right: unset;
+     }
+     .vdetaillle-2 {
+         margin-top: -4px;
+     }
+     .inscription-client-block-500 {
+         display: flex;
+     }
+     .inscription-client-block-400 {
+         display: none;
+     }
+ }
+ 
+ @media screen and (min-width: 500px) and (max-width: 679px) {
+     .pass-seront-bien {
+         display: none;
+     }
+     .contentA {
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+     .illustration-block {
+         display: none;
+     }
+     .illustration-block-1 {
+         display: flex;
+     }
+     .illustration-block-2 {
+         display: none
+     }
+     .debut {
+         margin-left: -17px;
+     }
+     .div-content-dispa {
+         display: none !important;
+     }
+     .swiper-block-div {
+         display: block !important;
+     }
+     .Group-11-11 {
+         display: none !important;
+     }
+     .Group-11-12 {
+         display: none;
+     }
+     .Group-11-13 {
+         display: block;
+         width: 100%;
+         height: 199px;
+     }
+     #jamono {
+         font-size: 14px;
+     }
+     #newScool {
+         font-size: 25px;
+     }
+     .titreJamono {
+         margin-top: 10px;
+     }
+     .diss-disp {
+         display: block;
+     }
+     .payss {
+         width: 70%;
+         padding-bottom: 15px;
+     }
+     .fillt {
+         width: 100%;
+     }
+     .dropdown-toggle::after {
+         position: absolute;
+         right: 20px;
+         top: 17px;
+     }
+     .Rectangle-26-ent {
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-right: 20px;
+         margin-top: -120px;
+     }
+     .div-space-pb {
+         display: flex !important;
+     }
+     .div-space-pb-1 {
+         display: flex !important;
+     }
+     .mess {
+         padding-left: 20px;
+     }
+     .appe {
+         width: 50%;
+     }
+     .sec-appel-etrang {
+         font-size: 30px;
+     }
+     .Rectangle-28-28 {
+         width: 1px;
+         height: 119px;
+         background-color: #d6d6d6;
+         margin-right: 20px;
+     }
+     .Les-illimix-Jamono-N {
+         font-size: 20px;
+         margin-top: 13px;
+     }
+     .Rectangle-12 {
+         height: 65px;
+         display: flex;
+     }
+     .etoileOrange-appel-etra {
+         margin-top: -5px !important;
+     }
+     .block90 {
+         width: 33.33%;
+     }
+     .diss-disp {
+         display: flex;
+     }
+     .-minutes5 {
+         font-size: 16px;
+     }
+     .Valable-24-heures24 {
+         font-size: 14px;
+     }
+     .-F90 {
+         font-size: 25px;
+     }
+     .-minute-valab {
+         padding-left: 15px;
+     }
+     .-Souscription-605 {
+         font-weight: bold;
+         font-size: 16px;
+         padding-bottom: 3px;
+     }
+     .blockheader80 {
+         padding-bottom: 30px !important;
+         padding-top: 15px !important;
+     }
+     .-vos-proches- {
+         font-size: 15px;
+     }
+     .div-width {
+         width: 49%;
+         margin-bottom: 35px;
+     }
+     .vvdetail {
+         width: 112px;
+         height: 40px;
+     }
+     .swiper-block-div-12 {
+         display: none;
+     }
+     .card-ww {
+         width: 100%;
+     }
+     .swipe-slide-div {
+         width: 85% !important;
+         text-align: left !important;
+         max-width: 385px;
+     }
+     .card-body-space-div {
+         padding: 12px !important;
+         height: 407px;
+     }
+     .aider-nn {
+         font-size: 15px;
+         height: 70px;
+         padding-top: 17px;
+         padding-right: unset;
+     }
+     .diss-ju {
+         display: block;
+     }
+     .Inscription-eespace-c {
+         font-size: 20px;
+         padding-top: unset;
+         padding-top: 31px;
+     }
+     .div-pb-recte {
+         padding-bottom: 14px;
+     }
+     .div-mob-disp {
+         display: flex !important;
+     }
+     .width-img-client {
+         width: 165px;
+     }
+     .vdetail {
+         margin-top: -4px;
+         position: unset;
+         right: unset;
+     }
+     .vdetaillle-2 {
+         margin-top: -4px;
+     }
+     .inscription-client-block-500 {
+         display: flex;
+     }
+     .inscription-client-block-400 {
+         display: none;
+     }
+     .card-mv10 {
+         padding-top: 20px;
+         padding-left: 40px;
+         padding-right: 40px;
+     }
+ }
+ 
+ @media screen and (min-width: 680px) and (max-width: 799px) {
+     .contentA {
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+     .illustration-block {
+         display: none;
+     }
+     .illustration-block-2 {
+         display: flex;
+     }
+     .illustration-block-1 {
+         display: none
+     }
+     .pass-seront-bien {
+         display: none;
+     }
+     .debut {
+         margin-left: -17px;
+     }
+     .div-content-dispa {
+         display: none !important;
+     }
+     .swiper-block-div {
+         display: block !important;
+     }
+     .Group-11-11 {
+         display: none !important;
+     }
+     .Group-11-12 {
+         display: none;
+     }
+     .Group-11-13 {
+         display: block;
+         width: 100%;
+         height: 199px;
+     }
+     #jamono {
+         font-size: 14px;
+     }
+     #newScool {
+         font-size: 25px;
+     }
+     .titreJamono {
+         margin-top: 10px;
+     }
+     .diss-disp {
+         display: block;
+     }
+     .payss {
+         width: 70%;
+         padding-bottom: 15px;
+     }
+     .fillt {
+         width: 100%;
+     }
+     .dropdown-toggle::after {
+         position: absolute;
+         right: 20px;
+         top: 17px;
+     }
+     .Rectangle-26-ent {
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-right: 20px;
+         margin-top: -120px;
+     }
+     .div-space-pb {
+         display: flex !important;
+     }
+     .div-space-pb-1 {
+         display: flex !important;
+     }
+     .mess {
+         padding-left: 20px;
+     }
+     .appe {
+         width: 50%;
+     }
+     .sec-appel-etrang {
+         font-size: 30px;
+     }
+     .Rectangle-28-28 {
+         width: 1px;
+         height: 119px;
+         background-color: #d6d6d6;
+         margin-right: 20px;
+     }
+     .Les-illimix-Jamono-N {
+         font-size: 20px;
+         margin-top: 13px;
+     }
+     .Rectangle-12 {
+         height: 65px;
+         display: flex;
+     }
+     .etoileOrange-appel-etra {
+         margin-top: -5px !important;
+     }
+     .block90 {
+         width: 33.33%;
+     }
+     .diss-disp {
+         display: flex;
+     }
+     .-minutes5 {
+         font-size: 16px;
+     }
+     .Valable-24-heures24 {
+         font-size: 14px;
+     }
+     .-F90 {
+         font-size: 25px;
+     }
+     .-minute-valab {
+         padding-left: 15px;
+     }
+     .-Souscription-605 {
+         font-weight: bold;
+         font-size: 16px;
+         padding-bottom: 3px;
+     }
+     .blockheader80 {
+         padding-bottom: 30px !important;
+         padding-top: 15px !important;
+     }
+     .-vos-proches- {
+         font-size: 15px;
+     }
+     .div-width {
+         width: 49%;
+         margin-bottom: 35px;
+     }
+     .vvdetail {
+         width: 112px;
+         height: 40px;
+     }
+     .swiper-block-div-12 {
+         display: none;
+     }
+     .card-ww {
+         width: 100%;
+     }
+     .swipe-slide-div {
+         width: 85% !important;
+         text-align: left !important;
+         max-width: 385px;
+     }
+     .card-body-space-div {
+         padding: 12px !important;
+         height: 407px;
+     }
+     .aider-nn {
+         font-size: 15px;
+         height: 70px;
+         padding-top: 17px;
+         padding-right: unset;
+     }
+     .diss-ju {
+         display: block;
+     }
+     .Inscription-eespace-c {
+         font-size: 18px;
+         padding-top: unset;
+         padding-top: 15px;
+     }
+     .div-pb-recte {
+         padding-bottom: 14px;
+     }
+     .div-mob-disp {
+         display: flex !important;
+     }
+     .width-img-client {
+         width: 160px;
+     }
+     .vdetail {
+         margin-top: -4px;
+         position: unset;
+         right: unset;
+     }
+     .vdetaillle-2 {
+         margin-top: -4px;
+     }
+     .inscription-client-block-500 {
+         display: none;
+     }
+     .inscription-client-block-400 {
+         display: flex;
+     }
+     .card-mv10 {
+         padding-top: 20px;
+         padding-left: 15px;
+         padding-right: 10px;
+     }
+     .card-ww-600 {
+         width: 49%;
+     }
+     .diss-ju {
+         display: flex;
+         justify-content: space-between;
+     }
+ }
+ 
+ @media screen and (min-width: 800px) and (max-width: 906px) {
+     .contentA {
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+     .illustration-block-1 {
+         display: none;
+     }
+     .illustration-block {
+         display: none;
+     }
+     .illustration-block-2 {
+         display: flex;
+     }
+     .pass-seront-bien {
+         display: none;
+     }
+     .Group-11-11 {
+         display: none !important;
+     }
+     .Group-11-12 {
+         display: none;
+     }
+     .Group-11-13 {
+         display: block;
+         width: 100%;
+         height: 199px;
+     }
+     #jamono {
+         font-size: 14px;
+     }
+     #newScool {
+         font-size: 25px;
+     }
+     .titreJamono {
+         margin-top: 10px;
+     }
+     .diss-disp {
+         display: block;
+     }
+     .payss {
+         width: 70%;
+         padding-bottom: 15px;
+     }
+     .fillt {
+         width: 100%;
+     }
+     .dropdown-toggle::after {
+         position: absolute;
+         right: 20px;
+         top: 17px;
+     }
+     .Rectangle-26-ent {
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-right: 20px;
+         margin-top: -120px;
+     }
+     .div-space-pb {
+         display: flex !important;
+     }
+     .div-space-pb-1 {
+         display: flex !important;
+     }
+     .mess {
+         padding-left: 20px;
+     }
+     .appe {
+         width: 50%;
+     }
+     .sec-appel-etrang {
+         font-size: 30px;
+     }
+     .Rectangle-28-28 {
+         width: 1px;
+         height: 119px;
+         background-color: #d6d6d6;
+         margin-right: 20px;
+     }
+     .Les-illimix-Jamono-N {
+         font-size: 20px;
+         margin-top: 15px;
+     }
+     .Rectangle-12 {
+         height: 65px;
+         display: flex;
+     }
+     .etoileOrange-appel-etra {
+         margin-top: -5px !important;
+     }
+     .block90 {
+         width: 33.33%;
+     }
+     .diss-disp {
+         display: flex;
+     }
+     .-minutes5 {
+         font-size: 16px;
+     }
+     .Valable-24-heures24 {
+         font-size: 14px;
+     }
+     .-F90 {
+         font-size: 25px;
+     }
+     .-minute-valab {
+         padding-left: 15px;
+     }
+     .-Souscription-605 {
+         font-weight: bold;
+         font-size: 16px;
+         padding-bottom: 3px;
+     }
+     .blockheader80 {
+         padding-bottom: 30px !important;
+         padding-top: 15px !important;
+     }
+     .-vos-proches- {
+         font-size: 15px;
+     }
+     .div-width {
+         width: 49%;
+         margin-bottom: 35px;
+         height: 325px;
+     }
+     .vvdetail {
+         width: 112px;
+         height: 40px;
+     }
+     .swiper-block-div-12 {
+         display: flex;
+     }
+     .vdetail {
+         width: 115px;
+         height: 40px;
+         position: unset;
+         right: unset;
+     }
+     .vdetaillle-2 {
+         width: 115px;
+         height: 40px;
+     }
+     .aider-nn {
+         font-size: 15px;
+         padding-right: unset;
+     }
+     .width-img-client {
+         width: 165px;
+     }
+     .card-mv10 {
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-right: 20px;
+     }
+     .Inscription-eespace-c {
+         font-size: 21px;
+     }
+     .img-div-space {
+         margin-left: -21px;
+         margin-right: -20px;
+     }
+ }
+ 
+ @media screen and (min-width: 907px) and (max-width: 1023px) {
+     .contentA {
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+     .illustration-block-1 {
+         display: none;
+     }
+     .illustration-block-2 {
+         display: flex;
+     }
+     .illustration-block {
+         display: none;
+     }
+     .pass-seront-bien {
+         display: none;
+     }
+     .Group-11-11 {
+         display: none !important;
+     }
+     .Group-11-12 {
+         display: none;
+     }
+     .Group-11-13 {
+         display: block;
+         width: 100%;
+         height: 199px;
+     }
+     #jamono {
+         font-size: 14px;
+     }
+     #newScool {
+         font-size: 25px;
+     }
+     .titreJamono {
+         margin-top: 10px;
+     }
+     .diss-disp {
+         display: block;
+     }
+     .payss {
+         width: 70%;
+         padding-bottom: 15px;
+     }
+     .fillt {
+         width: 100%;
+     }
+     .dropdown-toggle::after {
+         position: absolute;
+         right: 20px;
+         top: 17px;
+     }
+     .Rectangle-26-ent {
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-right: 20px;
+         margin-top: -120px;
+     }
+     .div-space-pb {
+         display: flex !important;
+     }
+     .div-space-pb-1 {
+         display: flex !important;
+     }
+     .mess {
+         padding-left: 20px;
+     }
+     .appe {
+         width: 50%;
+     }
+     .sec-appel-etrang {
+         font-size: 30px;
+     }
+     .Rectangle-28-28 {
+         width: 1px;
+         height: 119px;
+         background-color: #d6d6d6;
+         margin-right: 20px;
+     }
+     .Les-illimix-Jamono-N {
+         font-size: 20px;
+     }
+     .Rectangle-12 {
+         height: 65px;
+         display: flex;
+     }
+     .etoileOrange-appel-etra {
+         margin-top: -5px !important;
+     }
+     .block90 {
+         width: 33.33%;
+     }
+     .diss-disp {
+         display: flex;
+     }
+     .-minutes5 {
+         font-size: 16px;
+     }
+     .Valable-24-heures24 {
+         font-size: 14px;
+     }
+     .-F90 {
+         font-size: 25px;
+     }
+     .-minute-valab {
+         padding-left: 15px;
+     }
+     .-Souscription-605 {
+         font-weight: bold;
+         font-size: 16px;
+         padding-bottom: 3px;
+     }
+     .blockheader80 {
+         padding-bottom: 30px !important;
+         padding-top: 15px !important;
+     }
+     .-vos-proches- {
+         font-size: 15px;
+     }
+     .div-width {
+         width: 49%;
+         margin-bottom: 35px;
+         height: 325px;
+     }
+     .vvdetail {
+         width: 112px;
+         height: 40px;
+     }
+     .swiper-block-div-12 {
+         display: flex;
+     }
+     .vdetail {
+         width: 120px;
+         height: 42px;
+         position: unset;
+         right: unset;
+     }
+     .vdetaillle-2 {
+         width: 120px;
+         height: 42px;
+     }
+     .aider-nn {
+         font-size: 18px;
+         padding-right: unset;
+     }
+     .width-img-client {
+         width: 193px;
+     }
+     .card-mv10 {
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-right: 20px;
+     }
+     .Inscription-eespace-c {
+         font-size: 28px;
+     }
+     .img-div-space {
+         margin-left: -20px;
+         margin-right: -20px;
+     }
+ }
+ 
+ @media screen and (min-width: 1023px) and (max-width: 1286px) {
+     .contentA {
+         padding-left: 10px;
+         padding-right: 10px;
+     }
+     .Group-11-11 {
+         display: none !important;
+     }
+     .Group-11-12 {
+         display: none;
+     }
+     .Group-11-13 {
+         display: block;
+         width: 100%;
+         height: 199px;
+     }
+     #jamono {
+         font-size: 18px;
+     }
+     #newScool {
+         font-size: 30px;
+     }
+     .titreJamono {
+         margin-top: 28px;
+     }
+     .diss-disp {
+         display: block;
+     }
+     .payss {
+         width: 70%;
+         padding-bottom: 15px;
+     }
+     .fillt {
+         width: 100%;
+     }
+     .dropdown-toggle::after {
+         position: absolute;
+         right: 20px;
+         top: 17px;
+     }
+     .Rectangle-26-ent {
+         padding-top: 20px;
+         padding-left: 20px;
+         padding-right: 20px;
+         margin-top: -80px;
+     }
+     .div-space-pb {
+         display: flex !important;
+     }
+     .div-space-pb-1 {
+         display: flex !important;
+     }
+     .mess {
+         padding-left: 20px;
+     }
+     .appe {
+         width: 50%;
+     }
+     .sec-appel-etrang {
+         font-size: 30px;
+     }
+     .Rectangle-28-28 {
+         width: 1px;
+         height: 119px;
+         background-color: #d6d6d6;
+         margin-right: 20px;
+     }
+     .Les-illimix-Jamono-N {
+         font-size: 20px;
+     }
+     .Rectangle-12 {
+         height: 65px;
+         display: flex;
+     }
+     .etoileOrange-appel-etra {
+         margin-top: -5px !important;
+     }
+     .block90 {
+         width: 33.33%;
+     }
+     .diss-disp {
+         display: flex;
+     }
+     .-minutes5 {
+         font-size: 16px;
+     }
+     .Valable-24-heures24 {
+         font-size: 14px;
+     }
+     .-F90 {
+         font-size: 25px;
+     }
+     .-minute-valab {
+         padding-left: 15px;
+     }
+     .-Souscription-605 {
+         font-weight: bold;
+         font-size: 16px;
+         padding-bottom: 3px;
+     }
+     .blockheader80 {
+         padding-bottom: 30px !important;
+         padding-top: 15px !important;
+     }
+     .-vos-proches- {
+         font-size: 15px;
+     }
+     .div-width {
+         width: 49%;
+         margin-bottom: 35px;
+         height: 325px;
+     }
+     .vvdetail {
+         width: 112px;
+         height: 40px;
+     }
+     .swiper-block-div-12 {
+         display: flex;
+     }
+     .vdetail {
+         width: 120px;
+         height: 42px;
+         position: unset;
+         right: unset;
+     }
+     .vdetaillle-2 {
+         width: 120px;
+         height: 42px;
+     }
+     .aider-nn {
+         font-size: 18px;
+         padding-right: unset;
+     }
+     .card-mv10 {
+         padding-top: 20px;
+         padding-left: 30px;
+         padding-right: 30px;
+     }
+     .Inscription-eespace-c {
+         font-size: 30px;
+         margin-bottom: 3px;
+     }
+ }
+ 
+ .dropdown-menu {
+     max-height: 200px !important;
+     overflow: scroll !important;
+ }

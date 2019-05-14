@@ -1,0 +1,143 @@
+@media screen and (min-width: 1024px) {
+    .contentS{
+        padding-right: 20px;
+        padding-left: 20px;
+    }  
+}
+
+html{font-family: HelvNeueOrange;}
+
+body{
+    background-color: #f6f6f6;
+    font-size: 17px;
+    font-family: HelvNeueOrange;
+}
+
+.title-page{
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.backg{
+    background-color: #f6f6f6 !important;
+}
+
+.hide-reverse{
+    display: none;
+}
+
+.card-imageS{
+    height: auto;
+}
+
+.bg-orange{
+    background-color: #fb7900;
+    color: white;
+}
+
+.color-orange{
+    color: #fb7900;
+}
+
+.zoom-part:hover{
+    transform: scale(1.1);
+}
+
+/* Page internet et fixe */
+
+.prix-offre{
+    font-size: 20px;
+}
+
+.label-checkbox{
+    font-family: HelvNeueOrange;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-radius: 10px;
+    border-color: #4bb4e6;
+    background-color: #4bb4e6 !important;
+}
+
+.desc-offre{
+    font-size: 16px;
+    margin-top: -12px;
+}
+
+.label-test{
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.7px;
+}
+
+.body-urgente{
+    font-size: 16px;
+    letter-spacing: 0.6px;
+}
+
+@media screen and (max-width: 980px) {
+    body{
+        font-size: 15px;
+    }
+
+    .desc-offre{
+        font-size: 12px;
+        margin-top: -12px;
+    }
+
+    .prix-offre{
+        font-size: 17px;
+    }
+
+    .card-imageS{
+        height: auto;
+    }
+
+    .hide-screen{
+        display: none;
+    }
+    .hide-reverse{
+        display: inline;
+    }
+
+    .zoom-part:hover{
+        transform: unset;
+    }
+
+    .swiper-container-offre .swiper-slide {
+        width: 40%;
+    }
+    .swiper-container-tv .swiper-slide {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .swiper-container-offre .swiper-slide {
+        width: 80%;
+    }
+    .swiper-container-tv .swiper-slide {
+        width: 40%;
+    }
+
+    .title-page{
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .desc-offre{
+        font-size: 12px;
+        line-height: 1.5;
+        color:#000000;
+        letter-spacing: 0.5px;
+    }
+
+    .label-checkbox{
+        font-family: HelvNeueOrange;
+        font-weight: normal;
+        font-size: 12px;
+        letter-spacing: 0.4px;
+    }
+}

@@ -1,0 +1,18 @@
+uuid: 7a887049-037b-44b1-a748-a4447020f482
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.cadeau_sargal
+id: node.cadeau_sargal.title
+field_name: title
+entity_type: node
+bundle: cadeau_sargal
+label: 'Nombre de point'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

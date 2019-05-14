@@ -1,0 +1,21 @@
+uuid: e83a71f0-67bd-40dc-ae42-aa3f8997bfbe
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_actualite_smartphone_prix
+field_name: field_actualite_smartphone_prix
+entity_type: node
+type: string
+settings:
+  max_length: 1024
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

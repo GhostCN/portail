@@ -1,0 +1,17 @@
+uuid: b86e933e-390b-42ca-96ed-1fb650427e9b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Bouquet TV'
+type: bouquet_tv
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

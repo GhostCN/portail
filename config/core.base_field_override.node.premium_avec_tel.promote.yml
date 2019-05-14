@@ -1,0 +1,22 @@
+uuid: 007aad72-ff75-4b71-b69f-13e59f550b0b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.premium_avec_tel
+id: node.premium_avec_tel.promote
+field_name: promote
+entity_type: node
+bundle: premium_avec_tel
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

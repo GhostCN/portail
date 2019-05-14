@@ -1,0 +1,19 @@
+uuid: f056423d-91a5-4f65-abaa-aac26a5b9a29
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_faq_orange_money
+field_name: field_faq_orange_money
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

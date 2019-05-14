@@ -1,0 +1,18 @@
+uuid: 1bb93aa4-2bbb-456f-87a9-a0b0ce669a07
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bloc_actualite
+id: node.bloc_actualite.title
+field_name: title
+entity_type: node
+bundle: bloc_actualite
+label: 'Titre du bloc'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+uuid: 46104275-5f6d-4509-859f-fe09d776c85c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_comment_souscrire
+    - node.type.etapes_souscrire
+    - node.type.page_home_simple
+id: node.page_home_simple.field_comment_souscrire
+field_name: field_comment_souscrire
+entity_type: node
+bundle: page_home_simple
+label: 'Comment souscrire'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      etapes_souscrire: etapes_souscrire
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

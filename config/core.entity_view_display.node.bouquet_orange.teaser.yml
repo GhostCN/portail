@@ -1,0 +1,22 @@
+uuid: bfb77544-5652-4e51-b890-b5016a349884
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.bouquet_orange
+  module:
+    - user
+id: node.bouquet_orange.teaser
+targetEntityType: node
+bundle: bouquet_orange
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_a_la_une: true
+  field_categorie: true
+  field_logo: true
+  langcode: true

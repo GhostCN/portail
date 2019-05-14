@@ -1,0 +1,19 @@
+uuid: 69bf4fb7-a5e5-4020-b836-a1de86e4890b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_etapes_de_deploiement
+field_name: field_etapes_de_deploiement
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

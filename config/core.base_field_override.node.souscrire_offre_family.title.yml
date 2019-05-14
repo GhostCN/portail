@@ -1,0 +1,18 @@
+uuid: 36c23a42-03fb-47b3-a259-3044976290a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.souscrire_offre_family
+id: node.souscrire_offre_family.title
+field_name: title
+entity_type: node
+bundle: souscrire_offre_family
+label: 'Titre étape'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,48 @@
+uuid: dfea67d1-cfb6-4979-a080-b17ba75ac4ee
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.bloc_etapes_souscription_keurgui.body
+    - field.field.node.bloc_etapes_souscription_keurgui.field_action_keurgui_box
+    - node.type.bloc_etapes_souscription_keurgui
+  module:
+    - text
+id: node.bloc_etapes_souscription_keurgui.default
+targetEntityType: node
+bundle: bloc_etapes_souscription_keurgui
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_action_keurgui_box:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,0 +1,19 @@
+uuid: bdc92872-049e-4a42-a1d8-78270b060f99
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pr
+    - node.type.template_teranga_liberty
+id: node.template_teranga_liberty.field_pr
+field_name: field_pr
+entity_type: node
+bundle: template_teranga_liberty
+label: 'Prix Data'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

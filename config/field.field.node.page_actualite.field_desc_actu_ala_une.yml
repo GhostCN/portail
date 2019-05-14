@@ -1,0 +1,21 @@
+uuid: ab8d5565-9ff8-40ba-8a94-a735e6db1f5f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_desc_actu_ala_une
+    - node.type.page_actualite
+  module:
+    - text
+id: node.page_actualite.field_desc_actu_ala_une
+field_name: field_desc_actu_ala_une
+entity_type: node
+bundle: page_actualite
+label: 'Description actualité à la une'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

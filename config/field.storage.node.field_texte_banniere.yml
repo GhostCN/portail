@@ -1,0 +1,19 @@
+uuid: d4cf5382-a6f4-4ab0-b902-8d0fc3b36119
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_texte_banniere
+field_name: field_texte_banniere
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

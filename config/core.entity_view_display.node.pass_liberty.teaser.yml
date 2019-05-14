@@ -1,0 +1,19 @@
+uuid: b02bccb5-5531-40e3-b71b-38709ab53334
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.pass_liberty
+  module:
+    - user
+id: node.pass_liberty.teaser
+targetEntityType: node
+bundle: pass_liberty
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

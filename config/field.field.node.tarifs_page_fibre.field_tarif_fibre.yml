@@ -1,0 +1,19 @@
+uuid: 1d759dcd-c5d5-42e2-9a35-3e00ca6e9eba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarif_fibre
+    - node.type.tarifs_page_fibre
+id: node.tarifs_page_fibre.field_tarif_fibre
+field_name: field_tarif_fibre
+entity_type: node
+bundle: tarifs_page_fibre
+label: 'Tarif fibre'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

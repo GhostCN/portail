@@ -1,0 +1,22 @@
+uuid: 0c892d43-2de4-4cb8-9f96-d6322439b32f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.banniere_publicitaire
+id: node.banniere_publicitaire.promote
+field_name: promote
+entity_type: node
+bundle: banniere_publicitaire
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

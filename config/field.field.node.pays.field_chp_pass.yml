@@ -1,0 +1,28 @@
+uuid: 8ff7b609-f9f2-47ad-ae02-96ffdf3347ef
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_chp_pass
+    - node.type.pass
+    - node.type.pays
+id: node.pays.field_chp_pass
+field_name: field_chp_pass
+entity_type: node
+bundle: pays
+label: Pass
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      pass: pass
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,139 @@
+uuid: e2a74885-bb01-487e-854c-8705229051ad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.teranga_telephone.field_appareil_photo
+    - field.field.node.teranga_telephone.field_batterie
+    - field.field.node.teranga_telephone.field_caracteristique_teranga
+    - field.field.node.teranga_telephone.field_connectivite
+    - field.field.node.teranga_telephone.field_couleurs
+    - field.field.node.teranga_telephone.field_ecran
+    - field.field.node.teranga_telephone.field_image_telephone_teranga
+    - field.field.node.teranga_telephone.field_ios
+    - field.field.node.teranga_telephone.field_memoire
+    - field.field.node.teranga_telephone.field_poids
+    - field.field.node.teranga_telephone.field_ram
+    - image.style.thumbnail
+    - node.type.teranga_telephone
+  module:
+    - inline_entity_form
+    - svg_image
+id: node.teranga_telephone.default
+targetEntityType: node
+bundle: teranga_telephone
+mode: default
+content:
+  field_appareil_photo:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_batterie:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_caracteristique_teranga:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_connectivite:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_couleurs:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ecran:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_telephone_teranga:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_ios:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_memoire:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_poids:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ram:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

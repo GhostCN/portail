@@ -1,0 +1,17 @@
+uuid: 2d0724c8-4fae-4d05-8c09-a72f08c6e598
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Besoin d''aide'
+type: besoin_d_aide
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

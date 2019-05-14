@@ -1,0 +1,17 @@
+uuid: 130a0cb6-193e-45f1-85bb-4e038e207a05
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: FAQ
+type: faq
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

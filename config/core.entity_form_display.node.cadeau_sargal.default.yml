@@ -1,0 +1,46 @@
+uuid: 7bd96c33-c181-438f-ae1e-d61bce557df1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.cadeau_sargal.field_cadeau
+    - field.field.node.cadeau_sargal.field_validite
+    - node.type.cadeau_sargal
+id: node.cadeau_sargal.default
+targetEntityType: node
+bundle: cadeau_sargal
+mode: default
+content:
+  field_cadeau:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_validite:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

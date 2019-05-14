@@ -1,0 +1,28 @@
+uuid: c148c809-73c5-4479-83a3-6d2f7f3ba186
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo_offre_concernee
+    - node.type.offre_mobile
+    - node.type.promo_bon_plan
+id: node.promo_bon_plan.field_promo_offre_concernee
+field_name: field_promo_offre_concernee
+entity_type: node
+bundle: promo_bon_plan
+label: 'Offre concernée'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      offre_mobile: offre_mobile
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

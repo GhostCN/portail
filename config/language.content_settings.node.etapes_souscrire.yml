@@ -1,0 +1,11 @@
+uuid: 12effb8d-c5f9-4e1d-bcc5-0a2e815d145c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.etapes_souscrire
+id: node.etapes_souscrire
+target_entity_type_id: node
+target_bundle: etapes_souscrire
+default_langcode: site_default
+language_alterable: false

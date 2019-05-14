@@ -1,0 +1,38 @@
+uuid: cf1647e7-af57-4aa3-918b-a5326c3677c5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.appels.field_appel_cout
+    - node.type.appels
+id: node.appels.default
+targetEntityType: node
+bundle: appels
+mode: default
+content:
+  field_appel_cout:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 50
+    region: content
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

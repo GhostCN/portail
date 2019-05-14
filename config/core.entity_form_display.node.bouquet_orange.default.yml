@@ -1,0 +1,54 @@
+uuid: 696a0855-d839-42f9-bdbb-c706245acc7d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.bouquet_orange.field_a_la_une
+    - field.field.node.bouquet_orange.field_categorie
+    - field.field.node.bouquet_orange.field_logo
+    - image.style.thumbnail
+    - node.type.bouquet_orange
+  module:
+    - svg_image
+id: node.bouquet_orange.default
+targetEntityType: node
+bundle: bouquet_orange
+mode: default
+content:
+  field_a_la_une:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_categorie:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_logo:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

@@ -1,0 +1,30 @@
+uuid: 9ae814c4-4e00-40ed-a883-2285a1e82c9c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bloc_actualite.body
+    - node.type.bloc_actualite
+  module:
+    - text
+    - user
+id: node.bloc_actualite.teaser
+targetEntityType: node
+bundle: bloc_actualite
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_icone_bloc: true
+  langcode: true

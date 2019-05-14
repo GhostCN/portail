@@ -1,0 +1,28 @@
+uuid: f7f4bb2a-94b3-4686-a4c9-a6f01f66297d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_en_resume
+    - node.type.keurgui
+    - node.type.offre_en_resume
+id: node.keurgui.field_offre_en_resume
+field_name: field_offre_en_resume
+entity_type: node
+bundle: keurgui
+label: 'Offre en résumé'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      offre_en_resume: offre_en_resume
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

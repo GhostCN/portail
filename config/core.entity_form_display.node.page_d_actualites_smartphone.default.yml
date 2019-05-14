@@ -1,0 +1,157 @@
+uuid: 54d30e38-6b6c-4436-b22f-9f563f8231ea
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.page_d_actualites_smartphone.body
+    - field.field.node.page_d_actualites_smartphone.field_actualite_image_baniere
+    - field.field.node.page_d_actualites_smartphone.field_actualite_smartphone_prix
+    - field.field.node.page_d_actualites_smartphone.field_ancien_prix
+    - field.field.node.page_d_actualites_smartphone.field_avis_d_experts
+    - field.field.node.page_d_actualites_smartphone.field_caracteristiques
+    - field.field.node.page_d_actualites_smartphone.field_description_titre
+    - field.field.node.page_d_actualites_smartphone.field_image_secondaire
+    - field.field.node.page_d_actualites_smartphone.field_image_top_baniere
+    - field.field.node.page_d_actualites_smartphone.field_promo
+    - field.field.node.page_d_actualites_smartphone.field_reduction
+    - field.field.node.page_d_actualites_smartphone.field_vente_flash
+    - image.style.thumbnail
+    - node.type.page_d_actualites_smartphone
+  module:
+    - inline_entity_form
+    - svg_image
+    - text
+id: node.page_d_actualites_smartphone.default
+targetEntityType: node
+bundle: page_d_actualites_smartphone
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 4
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_actualite_image_baniere:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_actualite_smartphone_prix:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ancien_prix:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_avis_d_experts:
+    weight: 9
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_caracteristiques:
+    type: inline_entity_form_complex
+    weight: 8
+    region: content
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+  field_description_titre:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image_secondaire:
+    type: image_image
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_image_top_baniere:
+    type: image_image
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_promo:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_reduction:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_vente_flash:
+    type: boolean_checkbox
+    weight: 11
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

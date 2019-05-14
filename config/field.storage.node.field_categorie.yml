@@ -1,0 +1,51 @@
+uuid: c006a222-e72a-49cf-8d91-340e6c5e1d90
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_categorie
+field_name: field_categorie
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: local
+      label: local
+    -
+      value: general
+      label: general
+    -
+      value: divert
+      label: divert
+    -
+      value: cinema
+      label: cinema
+    -
+      value: decouverte
+      label: decouverte
+    -
+      value: jeuness
+      label: jeuness
+    -
+      value: info
+      label: info
+    -
+      value: africaine
+      label: africaine
+    -
+      value: musique
+      label: musique
+    -
+      value: sport
+      label: sport
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

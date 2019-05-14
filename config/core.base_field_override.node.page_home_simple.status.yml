@@ -1,0 +1,22 @@
+uuid: 5bdbbdf6-27dd-480b-b907-d0acab1b729e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_home_simple
+id: node.page_home_simple.status
+field_name: status
+entity_type: node
+bundle: page_home_simple
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

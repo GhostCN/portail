@@ -1,0 +1,19 @@
+uuid: 364932d3-a57e-4ed3-a0af-84bda15c99c6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_connexion
+    - node.type.pass_data_org
+id: node.pass_data_org.field_connexion
+field_name: field_connexion
+entity_type: node
+bundle: pass_data_org
+label: 'Connexion ( Ex : 20 Mo )'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,739 @@
+{{ attach_library('orange/global-orange-money-css') }}
+{{ attach_library('orange/global-orange-money-js') }}
+
+<div class="bg-head-title" id="bg-title">
+  <img src="/sites/default/files/images/orangeMoney/Orange_Money_Bandeau_deskto-Low.jpg" class="img-title-home show-landscape hide-mobile-fibre">
+  <img src="/sites/default/files/images/orangeMoney/Orange_Money_Bandeau_mobile.jpg" class="img-title-home show-landscape hide-fibre">
+</div>
+
+<div class="contentS">
+  <div class="title-text card border-0">
+    <div><span class="color-orange title-1"><B>Orange</B></span></div>
+    <div><span class="text-white"><h1 class="mb-0">Money</h1></span></div>
+  </div>
+</div>
+<div class="bg-white hide-mobile-fibre" id="fixeOnscrool">
+  <div class="contentS">
+    <div class="link-page">
+      <div id="linkPageImg"><a href="/"><img src="/sites/default/files/images/orangeMoney/Small_Logo.png"></a></div>
+      <div data-link="kwNeuf" class="active">Quoi de neuf ?</div>
+      <div data-link="kwOm">C’est quoi Orange Money ?</div>
+      <div data-link="souscrire">Comment souscrire ?</div>
+      <div data-link="calc">Calculateur de frais</div>
+      <div data-link="kpartenaire">Comment devenir partenaire ?</div>
+      <div data-link="faq">FAQ</div>
+    </div>
+  </div>
+</div>
+
+<div class="scroll-div" id="kwNeuf"><div class="space50"></div></div>
+<div class="scroll-div contentS" id="kwNeuf">
+  <div>
+    <h2 class="title-block">
+      Quoi de neuf ?
+    </h2>
+
+    <div class="space15"></div>
+
+    <div class="super-slide hide-mobile-fibre hide-landscape">
+      <div class="row">
+        <div class="col-lg-9 col-9">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators ci">
+              {% for slider in slider_om %}
+              <li data-target="#carouselExampleIndicators" data-slide-to="{{ loop.index -1 }}" class="{% if loop.first %}active{% endif %}"></li>
+              {% endfor %}
+            </ol>
+            <div class="carousel-inner">
+              {% for slider in slider_om %}
+              <div class="carousel-item {% if loop.first %} active {% endif %}">
+                <div class="desc-car-tv">
+                  <div class="title-card-tv">
+                    <div class="card-desc-sport py-1 mb-2">
+                      Astuces
+                    </div>
+                  </div>
+                  <div class="car-tv-title">
+                    {{ slider.astuce }}
+                  </div>
+                  <a href="{{ slider.lien }}" class="btn btn-dark">Découvrir</a>
+                </div>
+                <img align="left" class="d-block img-slide-tv" src="{{ file_url(slider.image) }}" alt="First slide">
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-3">
+          <div class="indicators-slide">
+            {% for slider in slider_om %}
+            <div class="card slide-to border-0" data-target="#carouselExampleIndicators" data-slide-to="{{ loop.index -1 }}">
+              <div class="card-desc-sport desc-indicator {% if not loop.first %}anactive{% endif %}">
+                <div>{{ slider.astuce }}</div>
+              </div>
+              <div class="card-image">
+                <img src="{{ file_url(slider.image) }}" style="width: 100%; height: 125px;" alt="">
+              </div>
+            </div>
+            {% if not loop.last %}
+              <div class="space20"></div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hide-fibre show-landscape">
+    <div class="swiper-container swpOM" style="overflow: hidden">
+      <div class="swiper-wrapper">
+        {% for slider in slider_om %}
+        <div class="swiper-slide">
+          <div class="desc-car-tv">
+            <div class="title-card-tv">
+              <div class="card-desc-sport py-1 mb-2">
+                Astuces
+              </div>
+            </div>
+            <div class="car-tv-title">
+              {{ slider.astuce }}
+            </div>
+            <a href="{{ slider.lien }}" type="button" class="btn btn-sm btn-dark">Découvrir</a>
+          </div>
+          <img class="d-block img-slide-tv" src="{{ file_url(slider.image) }}" alt="First slide">
+        </div>
+        {% endfor %}
+      </div>
+
+
+      <!-- Add Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <div id="kwOm"></div>
+
+  <div class="hide-mobile-fibre hide-landscape"><div class="space50"></div></div>
+  <div>
+    <h2 class="title-block">
+      C’est quoi Orange Money ?
+    </h2>
+
+    <div class="space20"></div>
+
+    <div class="kwOm hide-mobile-fibre hide-landscape">
+      <div class="answer">
+        <div class="img-illustration">
+          <img src="/sites/default/files/images/orangeMoney/Paiement_marchand.svg">
+        </div>
+        <div class="desc-kwOM">
+          <h3 class="title mb-0">
+            Paiement marchand
+          </h3>
+          <div class="desc">
+            Avec le Kalpé Orange Money je paie mes achats dans un large réseau de partenaires directement depuis mon téléphone mobile.
+          </div>
+          <!--<div class="link">
+            <a class="color-orange" href="">En savoir plus <img src="/sites/default/files/images/orangeMoney/keyboard-arrow-up.svg" class="ml-1"></a>
+          </div>-->
+        </div>
+      </div>
+      <div class="answer">
+        <div class="img-illustration">
+          <img src="/sites/default/files/images/orangeMoney/Achatdecredit.svg">
+        </div>
+        <div class="desc-kwOM">
+          <h3 class="title mb-0">
+            Achat de crédit
+          </h3>
+          <div class="desc">
+            Je peux acheter du crédit depuis chez moi. Plus besoin de me déplacer à la boutique. Je peux tout faire de chez moi et à partir de mon smartphone.
+          </div>
+          <!--<div class="link">
+            <a class="color-orange" href="">En savoir plus <img src="/sites/default/files/images/orangeMoney/keyboard-arrow-up.svg" class="ml-1"></a>
+          </div>-->
+        </div>
+      </div>
+      <div class="answer">
+        <div class="img-illustration">
+          <img src="/sites/default/files/images/orangeMoney/Transfertdargent-01.svg">
+        </div>
+        <div class="desc-kwOM">
+          <h3 class="title mb-0">
+            Transfert d’argent
+          </h3>
+          <div class="desc">
+            Je peux transférer de l’argent à mes proches au Sénégal ou à l’international
+            vers les numéros Orange des pays suivants : Mali, Côte d'Ivoire,
+            Burkina Faso, Niger, Guinée Bissau.
+          </div>
+          <!--<div class="link">
+            <a class="color-orange" href="">En savoir plus <img src="/sites/default/files/images/orangeMoney/keyboard-arrow-up.svg" class="ml-1"></a>
+          </div>-->
+        </div>
+      </div>
+      <div class="answer">
+        <div class="img-illustration">
+          <img src="/sites/default/files/images/orangeMoney/Paiement_de_factures.svg">
+        </div>
+        <div class="desc-kwOM">
+          <h3 class="title mb-0">
+            Paiement de factures
+          </h3>
+          <div class="desc">
+            Finies les longues attentes pour payer une facture.
+            Avec Orange Money je paie mes factures SONATEL, ORANGE, SENELEC, WOYOFAL,SDE,CANAL+ depuis mon domicile sans me déplacer
+          </div>
+          <!--<div class="link">
+            <a class="color-orange" href="">En savoir plus <img src="/sites/default/files/images/orangeMoney/keyboard-arrow-up.svg" class="ml-1"></a>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hide-fibre show-landscape">
+    <div class="swiper-container-kwom" style="overflow: hidden">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" id="slide1">
+          <div class="card bg-white border-0">
+            <img class="card-img-top" src="/sites/default/files/images/orangeMoney/Paiement_marchand.svg" alt="Card image cap">
+            <div class="card-bodyOM">
+              <div class="cardTom">Paiement marchand</div>
+              <div class="cardTomdesc">
+                Avec le Kalpé Orange Money je paie mes achats dans un large réseau de partenaires directement depuis mon téléphone mobile
+              </div>
+              <!--<div class="link">
+                <a class="color-orange" href="">En savoir plus <img src="/sites/default/files/images/orangeMoney/keyboard-arrow-up.svg" class="ml-1"></a>
+              </div>-->
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" id="slide2">
+          <div class="card bg-white border-0">
+            <img class="card-img-top" src="/sites/default/files/images/orangeMoney/Achatdecredit.svg" alt="Card image cap">
+            <div class="card-bodyOM">
+              <div class="cardTom">Achat de crédit</div>
+              <div class="cardTomdesc">
+                Je peux acheter du crédit depuis chez moi. Plus besoin de me déplacer à la boutique. Je peux tout faire de chez moi et à partir de mon smartphone
+              </div>
+              <!--<div class="link">
+                <a class="color-orange" href="">En savoir plus <img src="/sites/default/files/images/orangeMoney/keyboard-arrow-up.svg" class="ml-1"></a>
+              </div>-->
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" id="slide3">
+          <div class="card bg-white border-0">
+            <img class="card-img-top" src="/sites/default/files/images/orangeMoney/Transfertdargent-01.svg" alt="Card image cap">
+            <div class="card-bodyOM">
+              <div class="cardTom">Transfert d’argent</div>
+              <div class="cardTomdesc">
+                Je peux transférer de l’argent à mes proches au Sénégal ou à l’international vers les numéros Orange des pays suivants : Mali, Côte d'Ivoire, Burkina Faso, Niger, Guinée Bissau.
+              </div>
+              <!--<div class="link">
+                <a class="color-orange" href="">En savoir plus <img src="/sites/default/files/images/orangeMoney/keyboard-arrow-up.svg" class="ml-1"></a>
+              </div>-->
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" id="slide4">
+          <div class="card bg-white border-0">
+            <img class="card-img-top" src="/sites/default/files/images/orangeMoney/Paiement_de_factures.svg" alt="Card image cap">
+            <div class="card-bodyOM">
+              <div class="cardTom">Paiement de factures</div>
+              <div class="cardTomdesc">
+                Finies les longues attentes pour payer une facture.
+                Avec Orange Money je paie mes factures SONATEL, ORANGE, SENELEC, WOYOFAL,SDE,CANAL+ depuis mon domicile sans me déplacer.
+              </div>
+              <!--<div class="link">
+                <a class="color-orange" href="">En savoir plus <img src="/sites/default/files/images/orangeMoney/keyboard-arrow-up.svg" class="ml-1"></a>
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="scroll-div" id="souscrire">
+  <div class="hide-mobile-fibre hide-landscape" id="souscrire"><div class="space50"></div></div>
+
+  <div class="souscrireOM">
+    <div class="contentS">
+      <h2 class="title-block">
+        Comment souscrire ?
+      </h2>
+      <div class="space50"></div>
+
+      <div class="list-step">
+        <div class="step">
+          <div class="media">
+            <img class="" src="/sites/default/files/images/orangeMoney/orange-et-vous.svg" alt="Generic placeholder image">
+            <div class="media-body">
+              <div class="m-title">Etape 1</div>
+              RDV en agence ou kiosque pour vous inscrire gratuitement.
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="media">
+            <img class="" src="/sites/default/files/images/orangeMoney/step2.svg" alt="Generic placeholder image">
+            <div class="media-body">
+              <div class="m-title">Etape 2</div>
+              Recevez un sms de confirmation.
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="media">
+            <img class="" src="/sites/default/files/images/orangeMoney/step3.svg" alt="Generic placeholder image">
+            <div class="media-body">
+              <div class="m-title">Etape 3</div>
+              Personnalisez votre code secret.
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="media">
+            <img class="" src="/sites/default/files/images/orangeMoney/step4.svg" alt="Generic placeholder image">
+            <div class="media-body">
+              <div class="m-title">Etape 4</div>
+              Téléchargez l'appli pour une meilleure expérience.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space50"></div>
+
+
+
+      <img src="/sites/default/files/images/orangeMoney/monument.svg" class="img-monument">
+
+      <div class="desc-souscrireOM hide-mobile-fibre">
+        En vous rendant en agence ou en kiosque munissez-vous de votre pièce d'identité (carte d’identité pour les nationaux, passeport ou carte CEDEAO pour les étrangers) et de votre téléphone portable contenant une puce Orange valide.
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="scroll-div" id="calc">
+  <div class="contentS">
+
+    <div class="space50"></div>
+    <div class="hide-landscape">
+      <div class="actionOm">
+        <div class="action">
+          <div class="actImg">
+            <img src="/sites/default/files/images/orangeMoney/bitmap-01.svg">
+          </div>
+          <div class="desc">
+            <div class="title-action">
+              Calculateur de frais
+            </div>
+            <div class="act-select">
+              <select class="custom-select select-mat border-1 service">
+                <option selected disabled>Services (exemple : Facture Sde)</option>
+                <option value="1">Retrait d'argent</option>
+                <option value="2">Transfert avec code local</option>
+                <option value="3">Transfert international</option>
+                <option value="4">Paiement de facture</option>
+              </select>
+            </div>
+            <div class="act-input">
+              <div class="mat-div">
+                <div for="first-name" class="mat-label">Montant : <img src="/sites/default/files/images/internet-fixe/asterix.svg"></div>
+                <input type="text" class="mat-input mtn">
+              </div>
+            </div>
+
+            <div class="result">
+              <div class="frais"><B>Frais</B></div>
+              <div class="result-price">
+                <div class="montant CalMtn">0</div>
+                <div class="unite">FCFA</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="action">
+          <div class="actImg">
+            <img src="/sites/default/files/images/orangeMoney/group-208.svg">
+          </div>
+          <div class="desc">
+            <div class="title-action">
+              Impression de reçu :
+            </div>
+
+            <div class="descImp">
+              <B>Cliquez-sur le lien ci-dessous pour vous rendre sur notre interface d'impression de recu.</B>
+              <span>L'impression est possible uniquement à J+1 aprés la transaction. Pour les paiements de factures SONATEL, SDE, ORANGE et SENELEC</span>
+
+            </div>
+
+            <!--<div class="act-input">
+              <div class="mat-div">
+                <div for="first-name" class="mat-label">N° de la transaction : <img src="/sites/default/files/images/internet-fixe/asterix.svg"></div>
+                <input type="text" class="mat-input" id="first-name">
+              </div>
+            </div>-->
+            <a href="http://41.208.148.69/orange_money/recus.php">
+              <button class="btn btn-primary btn-block btnImp">Impression</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="show-landscape hide-mobile-fibre">
+      <div class="hide-swper">
+        <div class="swiper-container-calc" style="overflow: hidden">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="action">
+                <div class="actImg">
+                  <img src="/sites/default/files/images/orangeMoney/bitmap-01.svg">
+                </div>
+                <div class="desc">
+                  <div class="title-action">
+                    Calculateur de frais
+                  </div>
+                  <div class="act-select">
+                    <select class="custom-select select-mat border-1 service">
+                      <option selected disabled>Services (exemple : Facture Sde)</option>
+                      <option value="1">Retrait d'argent</option>
+                      <option value="2">Transfert avec code local</option>
+                      <option value="3">Transfert international</option>
+                      <option value="4">Paiement de facture</option>
+                    </select>
+                  </div>
+                  <div class="act-input">
+                    <div class="mat-div">
+                      <div for="first-name" class="mat-label">Montant : <img src="/sites/default/files/images/internet-fixe/asterix.svg"></div>
+                      <input type="text" class="mat-input mtn">
+                    </div>
+                  </div>
+
+                  <div class="result">
+                    <div class="frais"><B>Frais</B></div>
+                    <div class="result-price">
+                      <div class="montant CalMtn">0</div>
+                      <div class="unite">FCFA</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="action">
+                <div class="actImg">
+                  <img src="/sites/default/files/images/orangeMoney/group-208.svg">
+                </div>
+                <div class="desc">
+                  <div class="title-action">
+                    Impression de reçu :
+                  </div>
+
+                  <div class="descImp">
+                    <B>Cliquez-sur le lien ci-dessous pour vous rendre sur notre interface d'impression de recu.</B>
+                    <span>L'impression est possible uniquement à J+1 aprés la transaction.</span>
+                  </div>
+
+                  <!--<div class="act-input">
+                    <div class="mat-div">
+                      <div for="first-name" class="mat-label">N° de la transaction : <img src="/sites/default/files/images/internet-fixe/asterix.svg"></div>
+                      <input type="text" class="mat-input" id="first-name">
+                    </div>
+                  </div>-->
+
+                  <a href="http://41.208.148.69/orange_money/recus.php">
+                    <button class="btn btn-primary btn-block btnImp">Impression</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="scroll-div" id="kpartenaire">
+  <div class="space50"></div>
+  <div class="contentS">
+    <div class="partenaire">
+      <div class="imgOM">
+        <img src="/sites/default/files/images/orangeMoney/group-330.svg" class="hide-mobile-fibre">
+        <img src="/sites/default/files/images/orangeMoney/group-330.svg" width="100%" class="hide-fibre">
+      </div>
+
+      <div class="descPart">
+        Vous voulez proposer <B>Orange Money</B> comme solution de paiement dans votre commerce ou entreprise ?
+      </div>
+
+      <div class="btnP">
+        <button class="md-trigger btn btn-outline-dark btn-block" data-modal="modal-1">Devenir partenaire</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="scroll-div" id="faq">
+  <div class="space50"></div>
+  <div class="contentS">
+    <h2 class="title-block">
+      Questions fréquentes
+    </h2>
+  </div>
+  <div class="space20"></div>
+  <div class="contentS">
+    <div class="card border-0 tte-largeure">
+      <div class="card-body card-acc">
+        <div class="accordion" id="accordionExample">
+          {% for faq in faq_om %}
+          <div class="card {% if loop.last %}border-0{% endif %}" {% if loop.index == 1 %}style="border-top: none;"{% endif %}>
+            <div class="card-header my-2" id="heading{{ loop.index }}">
+              <h5 class="mb-0">
+                <button class="btn-accordeon btn btn-link collapsed font20" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}S" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+                  {{ faq.question }}
+                </button>
+              </h5>
+            </div>
+            <div id="collapse{{ loop.index }}S" class="collapse" aria-labelledby="heading{{ loop.index }}" data-parent="#accordionExample">
+              <div class="card-body">
+                {{ faq.reponse|raw }}
+              </div>
+            </div>
+          </div>
+         {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="space50"></div>
+
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Modal pour s'abonner #}
+
+<div class="md-modal md-effect-1" id="modal-1">
+  <div class="md-content">
+    <div class="md-tt">Devenir partenaire</div>
+    <div>
+      <p class="sub-t">Laissez nous vos coordonnées et nous vous recontacterons pour vous ajouter comme partenaire Orange Money.</p>
+      <div class="desc-md">
+        <img src="/sites/default/files/images/orangeMoney/fill-1.svg" alt="">
+        <div>
+          <div>
+            Vous aurez besoin des documents suivants pour votre inscription :
+          </div>
+          <div>• NINEA</div>
+          <div>• Registre de commerce</div>
+          <div>• Relevé d’identité bancaire</div>
+          <div>• Copie de la pièce d’identité de la/des personne(s) figurant dans le RCCM et pouvant engager la responsabilité sociale de l’entreprise (CNI pour les ressortissants UEMOA et Passeport pour les étrangers hors UEMOA).</div>
+        </div>
+      </div>
+      <form action="" method="POST">
+        <div class="list-inp">
+          <div class="mat-div">
+            <div for="first-name" class="mat-label">Saisissez votre prénom</div>
+            <input type="text" name="prenom" class="mat-input" required>
+          </div>
+          <div class="mat-div">
+            <div for="first-name" class="mat-label">Saisissez votre nom</div>
+            <input type="text" name="nom" class="mat-input" required>
+          </div>
+          <div class="mat-div">
+            <div for="first-name" class="mat-label">Saisissez votre numéro de téléphone</div>
+            <input type="number" name="tel" class="mat-input" required>
+          </div>
+          <div class="mat-div">
+            <div for="first-name" class="mat-label">Saisissez votre adresse email</div>
+            <input type="email" name="email" class="mat-input" required>
+          </div>
+        </div>
+        <button class="btn btn-primary">Envoyer</button>
+      </form>
+    </div>
+    <a href="javascript:;" class="md-close waves-effect waves-light"><img src="/sites/default/files/images/orangeMoney/c.svg" alt=""></a>
+  </div>
+</div>
+
+{% if notif is not null %}
+  <div class="md-modal md-effect-1" id="modal-2" style="text-align: center;">
+    <div class="md-content">
+      <div class="md-tt">Devenir partenaire</div>
+      <div>
+        <p class="sub-t">{{ notif }}</p>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+
+<div class="md-overlay"></div><!-- the overlay element -->

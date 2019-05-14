@@ -1,0 +1,17 @@
+uuid: 4374e75d-91ca-4307-91a8-16ce42cc6e05
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Internet et Fixe'
+type: internet_et_fixe
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

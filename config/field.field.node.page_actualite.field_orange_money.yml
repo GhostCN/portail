@@ -1,0 +1,23 @@
+uuid: d516a8ab-d37f-47bc-9e5a-9f16b2973280
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orange_money
+    - node.type.page_actualite
+id: node.page_actualite.field_orange_money
+field_name: field_orange_money
+entity_type: node
+bundle: page_actualite
+label: 'Orange Money'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

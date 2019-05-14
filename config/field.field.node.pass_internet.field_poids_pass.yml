@@ -1,0 +1,23 @@
+uuid: 2b11d4e4-0c90-48e2-83c6-d58ea11a0bab
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_poids_pass
+    - node.type.pass_internet
+id: node.pass_internet.field_poids_pass
+field_name: field_poids_pass
+entity_type: node
+bundle: pass_internet
+label: Poids
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

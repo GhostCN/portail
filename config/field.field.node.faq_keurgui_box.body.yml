@@ -1,0 +1,22 @@
+uuid: 9525db4f-09ad-4d11-abaf-70576b8a87db
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.faq_keurgui_box
+  module:
+    - text
+id: node.faq_keurgui_box.body
+field_name: body
+entity_type: node
+bundle: faq_keurgui_box
+label: Réponse
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

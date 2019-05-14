@@ -1,0 +1,19 @@
+uuid: d2485a96-4265-4fa7-84b5-6091ef5fd8cf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.premium_avec_tel
+  module:
+    - user
+id: node.premium_avec_tel.teaser
+targetEntityType: node
+bundle: premium_avec_tel
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

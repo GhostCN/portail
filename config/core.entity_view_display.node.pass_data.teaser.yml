@@ -1,0 +1,22 @@
+uuid: 63f28161-e73c-497b-ab17-01786fba12a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.pass_data
+  module:
+    - user
+id: node.pass_data.teaser
+targetEntityType: node
+bundle: pass_data
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_appel: true
+  field_sms: true
+  field_valabilite: true
+  langcode: true

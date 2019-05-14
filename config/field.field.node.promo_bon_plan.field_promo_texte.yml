@@ -1,0 +1,19 @@
+uuid: 1a1b7189-2c04-4b1e-8076-2c3aeb09565b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo_texte
+    - node.type.promo_bon_plan
+id: node.promo_bon_plan.field_promo_texte
+field_name: field_promo_texte
+entity_type: node
+bundle: promo_bon_plan
+label: 'Texte bouton'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

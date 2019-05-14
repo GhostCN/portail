@@ -1,0 +1,18 @@
+uuid: 4fe61e6e-903a-42bf-98b1-885f880b06e2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bloc_etapes_souscription_keurgui
+id: node.bloc_etapes_souscription_keurgui.title
+field_name: title
+entity_type: node
+bundle: bloc_etapes_souscription_keurgui
+label: 'Option (Ex : Option 1)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

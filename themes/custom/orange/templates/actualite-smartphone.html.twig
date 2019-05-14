@@ -1,0 +1,443 @@
+{{ attach_library('orange/global-actualite-smartphone-css') }}
+<!-- <p class="mb-3"></p> -->
+<section class="">
+  <div class="Group-111 ">
+          <div class="contentA debut-lli">
+            <ul class="debut ">
+                <li class="debutli-etran ml-0">
+                    <a href="/" class="style-col">Accueil</a><img class="imgSmall" src="/{{directory}}/icones/keyboard-arrow-right-gray.svg" alt="" id="fleche">
+                </li>
+                <li class="debutli-etran">
+                    <b class="apel-etr">Actualités</b>
+                </li>
+            </ul>
+        </div>
+    <div class="text-style-of contentA offre-hom ">
+      <span class="text-style-1-of color-orange-style">{{ smartphone.titre }}</span>
+     <h2 class="text-style-2-of mt-0 ">{{ smartphone.desc_titre | raw }}</h2>
+    </div>
+    <img class="imgSmall Group-7" src="{{ file_url(smartphone.image_baniere) }}" alt="">
+  </div>
+  <div class="label-copy-orange">
+    <div class="contentA">
+      <!--p class="label-text">Jusqu’au 30 novembre<br>
+        <span class="soixante-span">75 FCFA</span>/semaine</p-->
+      {{ smartphone.promo | raw }}
+    </div>
+  </div>
+</section>
+<section class="contentA actu-smart-new">
+  <div class="diss-ju loren-img">
+    <div class="img-block-tzxt">
+      <img class="imgSmall img-block-t" src="{{ file_url(smartphone.image) }}" alt="">
+    </div>
+    <div class="text-des">
+      {{ smartphone.description | raw }}
+    </div>
+  </div>
+</section>
+<div class="contentA tab-descr">
+  <div class="o-tab-container ">
+    <a class="o-tab-heading" href="#" id="tab1">Les caractéristiques</a>
+    <div class="o-tab-content show" id="tab-1-content">
+      <p class="partage">
+        <div class="diss-ju">
+          <div class="block-img-xs">
+      <p class="Iphone-XS-Max">{{ smartphone.caracteristiques[0].titre }}</p>
+      <div class="diss-ju-wrap icone-detail">
+        {% for attribut in smartphone.caracteristiques[0].attributs %}
+          <div class="disspa block-img-detail">
+            <div class="">
+              <img class="imgSmall img-icone-actu" src="{{ file_url(attribut.icone) }}" alt="">
+            </div>
+            <p class="IOS-12-Processeur">
+              {{ attribut.texte | raw }}
+            </p>
+          </div>
+        {% endfor %}
+        <!--div class="disspa block-img-detail">
+          <div class="">
+            <img class="imgSmall img-icone-actu" src="/sites/default/files/icones/ico-photo-actu.svg" alt="">
+          </div>
+          <p class="IOS-12-Processeur"><b>Photo</b> : 7 Mpx Front, 12 Mpx Arriére<br>
+            <b>Coloris</b>: Coloris : Or, Argent, Gris sidéral</p>
+        </div>
+        <div class="disspa block-img-detail">
+          <div class="">
+            <img class="imgSmall img-icone-actu" src="/sites/default/files/icones/ico-caract-ristiques-actu.svg" alt="">
+          </div>
+          <p class="IOS-12-Processeur"><b>Ecran</b> : 5.8 Pouces <br>
+            <b>Mémoire </b>: 64 Go, 256 Go et 512 </br>
+            <b>RAM</b>: 4Go
+          </p>
+        </div>
+        <div class="disspa block-img-detail">
+          <div class="">
+            <img class="imgSmall img-icone-actu" src="/sites/default/files/icones/ico-4-g-actu.svg" alt="">
+          </div>
+          <p class="IOS-12-Processeur">4G LTE / 3G+ </br>
+            Wi-Fi Bluetooth</p>
+        </div-->
+      </div>
+
+    </div>
+  </div>
+  </p>
+</div>
+<a class="o-tab-heading" href="#" id="tab2">Avis d’experts</a>
+<div class="o-tab-content" id="tab-2-content">
+  <div class="general-tchat">
+    {% for avis in smartphone.avis %}
+      <div class="diss-ju">
+        {% if loop.index is odd %}
+          <div class="">
+            <img class="imgSmall " src="{{ file_url(avis.image) }}" alt="">
+          </div>
+          <div class="arrow-left">
+          </div>
+        {% endif %}
+        <div class="Path-actu">
+          <div class="img-file-actu">
+            <img class="imgSmall" src="/sites/default/files/icones/fill-1-actu.svg" alt="">
+          </div>
+          <div class="text-file-actu">
+            {{ avis.texte | raw }}
+          </div>
+
+          <div class="img-file-actu-2">
+            <img class="imgSmall" src="/sites/default/files/icones/fill-2-actu.svg" alt="">
+          </div>
+        </div>
+        {% if loop.index is even %}
+          <div class="arrow-right">
+          </div>
+          <div class="">
+            <img class="imgSmall" src="{{ file_url(avis.image) }}" alt="">
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+    <!--div class="diss-ju">
+      <div class="Path-actu">
+        <div class="img-file-actu">
+          <img class="imgSmall" src="/sites/default/files/icones/fill-1-actu.svg" alt="">
+        </div>
+        <div class="text-file-actu">
+          <p class="Sed-ut-perspiciatis">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem et aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            Nemo
+
+          </p>
+          <p class="Sed-ut-perspiciatis"><b>Maria Fernandez,</b> Ingénieur Télécom Sonatel</p>
+        </div>
+
+        <div class="img-file-actu-2">
+          <img class="imgSmall" src="/sites/default/files/icones/fill-2-actu.svg" alt="">
+        </div>
+      </div>
+      <div class="arrow-right">
+      </div>
+      <div class="">
+        <img class="imgSmall" src="/sites/default/files/icones/img-expert-2.png" alt="">
+      </div>
+    </div-->
+  </div>
+</div>
+</div>
+</div>
+<section class="accordion-carac contentA">
+  <div class="">
+    <div class="card border-0">
+      <div class="card-body card-body-family">
+        <div class="accordion" id="accordionExample">
+          <div class="card accordion-card-1">
+            <div class="card-header my-2" id="headingOne">
+                                <span class="mb-0 ">
+                                            <button class="btn-accordeon btn btn-link collapsed font20 fq-family fq-actu" type="button" data-toggle="collapse" data-target="#collapseOneS" aria-expanded="true" aria-controls="collapseOne">
+                                                    Les caractéristiques
+                              </button>
+                                        </span>
+            </div>
+
+            <div id="collapseOneS" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body-xs">
+                <div class="block-img-xs">
+                  <p class="Iphone-XS-Max">{{ smartphone.caracteristiques[0].titre }}</p>
+                  <div class="diss-ju-wrap icone-detail">
+                    {% for attribut in smartphone.caracteristiques[0].attributs %}
+                      <div class="disspa block-img-detail">
+                        <div class="">
+                          <img class="imgSmall img-icone-actu" src="{{ file_url(attribut.icone) }}" alt="">
+                        </div>
+                        <p class="IOS-12-Processeur">
+                          {{ attribut.texte | raw }}
+                        </p>
+                      </div>
+                    {% endfor %}
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card accordion-card-1">
+            <div class="card-header my-1 block-2" id="headingTwo">
+                                <span class="mb-0 ">
+                                            <button class="btn-accordeon btn btn-link collapsed font20 fq-family" type="button" data-toggle="collapse" data-target="#collapseTwoS" aria-expanded="false" aria-controls="collapseTwo">
+                                         Avis d’experts
+                              </button>
+                                        </span>
+            </div>
+            <div id="collapseTwoS" class="collapse collapsed" aria-labelledby="headingTwo" data-parent="#accordionExample">
+              <div class="card-body-actu">
+                <div class="general-tchat">
+                  {% for avis in smartphone.avis %}
+                    <div class="diss-ju">
+                      {% if loop.index is odd %}
+                        <div class="">
+                          <img class="imgSmall img-tchat" src="{{ file_url(avis.image) }}" alt="">
+                        </div>
+                        <div class="arrow-left">
+                        </div>
+                      {% endif %}
+                      <div class="Path-actu">
+                        <div class="img-file-actu">
+                          <img class="imgSmall img-tchat-block img-tchat-block-1" src="/sites/default/files/icones/fill-1-actu.svg" alt="">
+                        </div>
+                        <div class="text-file-actu">
+                          {{ avis.texte | raw }}
+                        </div>
+
+                        <div class="img-file-actu-2">
+                          <img class="imgSmall  img-tchat-block img-tchat-block-2" src="/sites/default/files/icones/fill-2-actu.svg" alt="">
+                        </div>
+                      </div>
+
+                      {% if loop.index is even %}
+                        <div class="arrow-right">
+                        </div>
+                        <div class="">
+                          <img class="imgSmall img-tchat" src="{{ file_url(avis.image) }}" alt="">
+                        </div>
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+<div class="contentA">
+  <div class="eshop-block">
+    <div class="">
+      <img class="imgSmall eshop-im" src="/sites/default/files/icones/group-16-actu.svg" alt="">
+    </div>
+    <p class="Vous-souhaitez-achet" >Commander en ligne. Rendez-vous sur notre boutique Jumia </p>
+    <div class="Vous-souhaitez-btn">
+      <a href="https://www.jumia.sn/shop-orange-1536076014/" target="_blank" class="btn btn-primary eshop-achete">Accéder</a>
+    </div>
+  </div>
+</div>
+
+<!--descriptif block mobile-->
+<!--fin description block mobile-->
+<section class="block-actu-part contentA ">
+  <!-- <div class="part">
+      <div class="disspa">
+          <p class="Partager-avec-vos-am">Partager avec vos amis</p>
+          <img class="imgSmall img-sociaux" src="/sites/default/files/icones/facebook-hover.svg" alt="">
+          <img class="imgSmall img-sociaux" src="/sites/default/files/icones/twitter-hover.svg" alt="">
+          <img class="imgSmall img-sociaux" src="/sites/default/files/icones/linkedin-hover.svg" alt="">
+      </div>
+  </div> -->
+  <div class="nous-contacte-block">
+    <div class="disspa-w block-element-actu">
+      <div class="rectangle16 card border-0" id="blue-block">
+        <div class="diss-ju face-gmail">
+          <div class="">
+            <img class="imgSmall img-sociaux-block" src="/sites/default/files/icones/group-259-fac.svg" alt="">
+          </div>
+          <p class="Nous-suivre-sur-Face">Nous suivre sur Facebook</p>
+          <div class="btn-sous">
+            <a href="https://www.facebook.com/orange.sn/" target="_blank" type="" class="btn btn-detail">Nous suivre</a>
+          </div>
+        </div>
+      </div>
+      <div class="rectangle16 card border-0" id="mv-block">
+        <div class=" diss-ju face-gmail">
+          <div class="">
+            <img class="imgSmall img-sociaux-block pl-1" src="/sites/default/files/icones/group-330-gamail.svg" alt="">
+          </div>
+          <p class="Nous-suivre-sur-Face">Nous contacter par mail</p>
+          <div class="btn-sous">
+            <a href="mailto:serviceclient@orange-sonatel.com" type="" class="btn btn-detail">Envoyer</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+uuid: 7a8d011a-b8aa-4cf1-bff4-8af7e3b3aa78
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.souscrire_offre_family
+id: node.souscrire_offre_family.status
+field_name: status
+entity_type: node
+bundle: souscrire_offre_family
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

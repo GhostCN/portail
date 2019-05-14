@@ -1,0 +1,29 @@
+uuid: 923a67b1-fa65-41d9-a48b-41c581809161
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.illimix.field_illimix_cout
+    - field.field.node.illimix.field_illimix_duree_appel
+    - field.field.node.illimix.field_illimix_nombre_sms
+    - field.field.node.illimix.field_illimix_period_utilisation
+    - field.field.node.illimix.field_illimix_validite_jours
+    - node.type.illimix
+  module:
+    - user
+id: node.illimix.teaser
+targetEntityType: node
+bundle: illimix
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_illimix_cout: true
+  field_illimix_duree_appel: true
+  field_illimix_nombre_sms: true
+  field_illimix_period_utilisation: true
+  field_illimix_validite_jours: true
+  langcode: true

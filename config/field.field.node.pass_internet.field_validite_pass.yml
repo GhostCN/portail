@@ -1,0 +1,21 @@
+uuid: fac6b097-966a-4f40-9683-1559dc2b0975
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_validite_pass
+    - node.type.pass_internet
+  module:
+    - options
+id: node.pass_internet.field_validite_pass
+field_name: field_validite_pass
+entity_type: node
+bundle: pass_internet
+label: Validité
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

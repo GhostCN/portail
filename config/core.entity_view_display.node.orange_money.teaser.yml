@@ -1,0 +1,21 @@
+uuid: d87f5620-1817-4571-a8af-9c41bffcfad2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.orange_money
+  module:
+    - user
+id: node.orange_money.teaser
+targetEntityType: node
+bundle: orange_money
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_faq_orange_money: true
+  field_slider: true
+  langcode: true

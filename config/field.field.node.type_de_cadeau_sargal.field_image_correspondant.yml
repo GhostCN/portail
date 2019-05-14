@@ -1,0 +1,38 @@
+uuid: 17758687-4dc4-4c74-9846-ff244dbff256
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_correspondant
+    - node.type.type_de_cadeau_sargal
+  module:
+    - image
+id: node.type_de_cadeau_sargal.field_image_correspondant
+field_name: field_image_correspondant
+entity_type: node
+bundle: type_de_cadeau_sargal
+label: 'Image correspondant'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

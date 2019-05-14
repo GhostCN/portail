@@ -1,0 +1,17 @@
+uuid: 2811c86f-2e3c-4262-a0fd-2af12f69bea1
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Illimix
+type: illimix
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

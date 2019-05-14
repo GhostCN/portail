@@ -1,0 +1,21 @@
+uuid: 685a3522-a668-4892-bf56-111b1f864baa
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_description_teranga
+field_name: field_description_teranga
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

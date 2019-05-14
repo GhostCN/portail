@@ -1,0 +1,213 @@
+uuid: 9d4fc381-aac0-45dc-9db7-91b48f43d326
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.offre_mobile.field_offre_mobile_appel_offre
+    - field.field.node.offre_mobile.field_offre_mobile_avantage
+    - field.field.node.offre_mobile.field_offre_mobile_description
+    - field.field.node.offre_mobile.field_offre_mobile_details
+    - field.field.node.offre_mobile.field_offre_mobile_illimix
+    - field.field.node.offre_mobile.field_offre_mobile_image
+    - field.field.node.offre_mobile.field_offre_mobile_prix_appels
+    - field.field.node.offre_mobile.field_offre_mobile_prix_sms
+    - field.field.node.offre_mobile.field_offre_mobile_question
+    - field.field.node.offre_mobile.field_offre_mobile_resume
+    - field.field.node.offre_mobile.field_offre_mobile_sms_offre
+    - field.field.node.offre_mobile.field_url
+    - image.style.thumbnail
+    - node.type.offre_mobile
+  module:
+    - inline_entity_form
+    - path
+    - svg_image
+id: node.offre_mobile.default
+targetEntityType: node
+bundle: offre_mobile
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_offre_mobile_appel_offre:
+    weight: 12
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_offre_mobile_avantage:
+    weight: 17
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_offre_mobile_description:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_offre_mobile_details:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_offre_mobile_illimix:
+    weight: 16
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      collapsed: true
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_offre_mobile_image:
+    type: image_image
+    weight: 10
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_offre_mobile_prix_appels:
+    weight: 14
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_offre_mobile_prix_sms:
+    weight: 15
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_offre_mobile_question:
+    weight: 18
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: STARTS_WITH
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_offre_mobile_resume:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_offre_mobile_sms_offre:
+    weight: 13
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_url: true

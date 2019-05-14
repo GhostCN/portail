@@ -1,0 +1,18 @@
+uuid: 39f20ef4-0e39-4a4f-8d82-d9ac9bd22d78
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.faq_fibre
+id: node.faq_fibre.title
+field_name: title
+entity_type: node
+bundle: faq_fibre
+label: Question
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

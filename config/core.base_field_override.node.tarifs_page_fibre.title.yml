@@ -1,0 +1,18 @@
+uuid: 963217f0-34b3-44cd-85b1-74a8fd96ea46
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.tarifs_page_fibre
+id: node.tarifs_page_fibre.title
+field_name: title
+entity_type: node
+bundle: tarifs_page_fibre
+label: 'Block tarifs fibre'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

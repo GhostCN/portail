@@ -1,0 +1,34 @@
+uuid: e439e09f-aab5-44be-9847-985ae339cd2c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.slider.field_slider_image
+    - field.field.node.slider.field_slider_lien
+    - node.type.slider
+  module:
+    - image
+    - user
+id: node.slider.teaser
+targetEntityType: node
+bundle: slider
+mode: teaser
+content:
+  field_slider_image:
+    type: image
+    weight: 2
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_slider_lien: true
+  langcode: true

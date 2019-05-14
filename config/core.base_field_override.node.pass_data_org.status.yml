@@ -1,0 +1,22 @@
+uuid: f4bb3f24-6642-4c98-ad95-083ea6768a1d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_data_org
+id: node.pass_data_org.status
+field_name: status
+entity_type: node
+bundle: pass_data_org
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

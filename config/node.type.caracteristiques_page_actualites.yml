@@ -1,0 +1,17 @@
+uuid: 0d41a10c-6610-45c7-b48c-1550752a7745
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Caractéristiques Page d''Actualités'
+type: caracteristiques_page_actualites
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

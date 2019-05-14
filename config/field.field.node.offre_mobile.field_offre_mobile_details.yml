@@ -1,0 +1,19 @@
+uuid: e1fa03e3-6f14-4ea0-85b0-5b3fb8fdc830
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_mobile_details
+    - node.type.offre_mobile
+id: node.offre_mobile.field_offre_mobile_details
+field_name: field_offre_mobile_details
+entity_type: node
+bundle: offre_mobile
+label: 'Détails Pass'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

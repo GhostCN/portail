@@ -1,0 +1,347 @@
+<?php
+
+use Drupal\portail\Controller\MainWindowController;
+use Drupal\portail\Controller\OffreHomeController;
+use Drupal\portail\Controller\HelpController;
+use Drupal\portail\Utils\PortailUtils;
+use Drupal\portail\Constante\PortailConstante;
+use Drupal\portail\Constante\ThemeConstante;
+
+const VARIABLES = 'variables';
+const OFFRE = 'offre';
+const ATTACHED = '#attached';
+const LIBRARY = 'library';
+
+function portail_preprocess_page(&$variables) {
+  if($variables['is_front']) {
+    $mainWindows = new MainWindowController();
+    $variables['windows'] = $mainWindows->getAllMainWindow();
+    $variables['sliders'] = $mainWindows->getSliders();
+    $variables['actu'] = $mainWindows->getActu();
+    $variables['phones'] = $mainWindows->getAllPhone();
+
+    $help = new HelpController();
+    $variables['aides'] = $help->getAllHelp();
+
+  }
+
+  $menu_tree = [];
+  //Get drupal menu
+  $main_menu = \Drupal::menuTree()->load('main', new \Drupal\Core\Menu\MenuTreeParameters());
+//Generate array
+  generateMainMenuTree($menu_tree, $main_menu);
+  $variables['footermenu'] = $menu_tree;
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function portail_page_attachments_alter(array &$attachments)
+{
+    $current_path = \Drupal::service('path.current')->getPath();
+    if($current_path == '/menu/header') {
+        if (in_array('orange/global-css', $attachments[ATTACHED][LIBRARY])) {
+            $index = array_search('orange/global-css', $attachments[ATTACHED][LIBRARY]);
+            unset($attachments[ATTACHED][LIBRARY][$index]);
+        }
+        if (in_array('orange/global-js', $attachments[ATTACHED][LIBRARY])) {
+            $index = array_search('orange/global-js', $attachments[ATTACHED][LIBRARY]);
+            unset($attachments[ATTACHED][LIBRARY][$index]);
+        }
+    }
+}
+function generateMainMenuTree(&$output, &$input, $parent = FALSE)
+{
+  $input = array_values($input);
+  foreach ($input as $key => $item) {
+    //If menu element disabled skip this branch
+    if ($item->link->isEnabled()) {
+      $key = 'mainmenu-' . $key;
+      $name = $item->link->getTitle();
+      $url = $item->link->getUrlObject();
+      $url_string = $url->toString();
+
+      //If not root element, add as child
+      if ($parent === FALSE) {
+        $output[$key] = [
+          'name' => $name,
+          'tid' => $key,
+          'url_str' => $url_string
+        ];
+      } else {
+        $parent = 'mainmenu-' . $parent;
+        $output['children'][$key] = [
+          'name' => $name,
+          'tid' => $key,
+          'url_str' => $url_string
+        ];
+      }
+
+      if ($item->hasChildren) {
+        if ($item->depth == 1) {
+          generateMainMenuTree($output[$key], $item->subtree, $key);
+        } else {
+          generateMainMenuTree($output['children'][$key], $item->subtree, $key);
+        }
+      }
+    }
+  }
+}
+/**
+ * Implements hook_form_alter().
+ */
+function portail_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id)
+{
+  $form['temp_op'] = $form_state->getValue('pass');
+  if ($form_id == 'user_register_form' || $form_id == 'user_form') {
+    $form['#validate'][] = 'portail_user_register_form_validate';
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function portail_mail($key, &$message, $params)
+{
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+
+  switch ($key) {
+    case 'partenaire':
+      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8;';
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Manifestation d\'interet du client @prenom @nom ', array('@prenom' => $params['prenom'], '@nom' => $params['nom']), $options);
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
+
+
+/**
+ * Implements hook_page_attachments().
+ */
+function portail_page_attachments(array &$page) {
+  $current_path = \Drupal::service('path.current')->getPath();
+
+  switch ($current_path) {
+    case '/offres-mobiles':
+      $description = "Profitez de nos pass et forfait Illimix. Plus de crédit et d'internet dans votre mobile.  Le réseau 4G +  d'Orange. Roaming et promotion à l'international.";
+      break;
+    case '/offres-mobiles/jamono-max-13':
+      $description = "Inscrivez-vous à Jamono Max d'Orange. Beaucoup d'internet et de crédit d'appel dans les forfaits Illimix. Une large gamme de pass. Le meilleur réseau du Sénégal.";
+      break;
+    case '/offres-mobiles/jamono-allo-14':
+      $description = "Inscrivez-vous à Jamono Allo d'Orange. Beaucoup de crédit d'appel dans les forfaits Illimix mais aussi de l'internet mobile. Large gamme de pass. Le meilleur réseau du Sénégal.";
+      break;
+    case '/offres-mobiles/jamono-new-s-cool-15':
+      $description = "Inscris-toi à Jamono New S'Cool d'Orange. Plus d'internet dans ton pass Illimix. Des appels et SMS moins chers vers tes potes S'Cool. Un pass exclusif. Le meilleur réseau du Sénégal.";
+      break;
+    case '/offres-mobiles/family':
+      $description = "Notre offre Famille. Prix des appels réduits entre membres de la famille. Seddo Pass Internet et Seddo Bonus gratuit. Smartphone exclusif.";
+      break;
+    case '/offres-mobiles/roaming-et-international':
+      $description = "Les offres internationales d'Orange :  roaming, appels vers l'étranger, Pass Voyage, Pass Internationaux. Tarifs réduits vers : France, Côte d’Ivoire, Mali, Canada…";
+      break;
+    case '/pass-internet':
+      $description = "Des pass internet à partir de 50F pour te connecter au réseau 4G +. Achat via Passorange.sn,  Orane Money, #1234# ou application Orange et Moi";
+      break;
+    case '/offres-mobiles/illimix':
+      $description = "Nos forfaits jour, semaine ou mois. Appels, SMS, internet mobile, tout compris à partir de 490 F. #1234# ou application Orange et Moi.";
+      break;
+    case '/internet-adsl-fibre':
+      $description = "Internet à la maison sur le meilleur réseau du Sénégal. Téléphone inclus. Assistance 24/24 en cas de panne. Fibre, ADSL, Keurgui Box. Installation à votre domicile.";
+      break;
+    case '/internet-adsl-fibre/home-fibre':
+      $description = "Vivez l'internet très haut débit avec Home Fibre ! 34.900 FCFA/mois. Débit 50 MégaMax. Bouquet TV Orange. Bouquet Canal + en option. Appels illimités vers les fixes et 2 numéros mobile.";
+      break;
+    case '/internet-adsl-fibre/keurgui-box-63':
+      $description = "Avec Keurgui Box accédez à la maison au réseau 4G d'Orange. Une  gamme de Pass jusqu'à 70 Go à partir de 1000 FCFA. Forfaits au mois disponibles.  Frais d'accés à 35.000 FCFA.";
+      break;
+    case '/internet-adsl-fibre/keurgui-60':
+      $description = "Le haut débit économique avec l'offre Keurgui d'Orange ! 12.900 FTTC/mois. Débit 1 MégaMax. Internet ADSL et forfait téléphone 6195 FTTC. 1 Numéro Fixe illimité.";
+      break;
+    case '/internet-adsl-fibre/home-61':
+      $description = "Découvrez le haut débit avec Home! 19.900 FTTC/mois. Débit 4 MégaMax. Bouquet TV Orange. Forfait téléphone 10.000 FTTC.  Appels illimités vers les fixes soir et week-end.";
+      break;
+    case '/internet-adsl-fibre/home-62':
+      $description = "Le confort du haut débit avec Home + ! 29.900 FTTC/mois. Débit 15 MégaMax. Bouquet TV Orange. Bouquet Canal + en option. Appels illimités vers les fixes et 2 numéros mobile.";
+      break;
+    case '/internet-adsl-fibre/tv-orange':
+      $description = "Offre TV Orange : + de 30 chaines pour toute la famille. Série, film, manga, dessin animé, documentaire, infos, musique, people. Bouquet Canal + en option payante.";
+      break;
+    default:
+      $description="Orange c'est du mobile, de l'internet et du fixe. Pass internet et illimix généreux. Des promotions crédit  via Orange Money. Gamme de téléphone. Réseau 4G et assistance 24/24.";
+  }
+  $meta_description = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'description',
+      'content' => $description
+    ],
+  ];
+  $page[ATTACHED]['html_head'][] = [$meta_description, 'description'];
+}
+
+
+function portail_user_register_form_validate($form, $form_state) {
+  $form['temp_op'] = $form_state->getValue('pass');
+  $password = $form_state->getValue('pass');
+  $errors = [];
+  if (strlen($password) < 8) {
+    $errors[] = "Mot de passe très court, renseignez au moins 8 caractères.";
+  }
+
+  if (!preg_match("#[0-9]+#", $password)) {
+    $errors[] = "Le mot de passe doit inclure au moins un chiffre!";
+  }
+
+  if (!preg_match("#[a-z]+#", $password)) {
+    $errors[] = "Le mot de passe doit au moins inclure une lettre minuscule!";
+  }
+
+  if (!preg_match("#[A-Z]+#", $password)) {
+    $errors[] = "Le mot de passe doit au moins inclure une lettre majucscule!";
+  }
+
+  if( !preg_match("#\W+#", $password) ) {
+    $errors[] .= "Le mot de passe doit au moins inclure un symbole! ";
+  }
+  if($errors) {
+    foreach ($errors as $error) {
+      drupal_set_message($error, 'error');
+    }
+    $form_state->setErrorByName('pass');
+  }
+}
+
+
+function portail_theme()
+{
+  $eligibilite_variables = [PortailConstante::ELIGIBLE => NULL, PortailConstante::STEP => NULL, PortailConstante::REQUEST_TYPE => NULL, PortailConstante::CODE_GPS => NULL, PortailConstante::TYPE_CLIENT => NULL];
+
+  return [
+    'liste_pass' => [
+      VARIABLES => ['allpass' => NULL]
+    ],
+    'offres_mobiles' => [
+      VARIABLES => ['offres' => NULL, 'promos' => NULL]
+      ],
+    'details_offre' => [
+      VARIABLES => ['appels' => NULL, 'sms' => NULL, 'avantages' => NULL, 'allpass' => NULL, 'offres' => NULL,
+        'illimixs' => NULL, 'questions' => NULL, 'promos' => NULL, 'title' => NULL, 'title1' => NULL, 'title2' => NULL, 'appel_offre' => NULL, 'sms_offre' => NULL]
+    ],
+      'internet_fixe' => [
+        VARIABLES => ['infos' => NULL, 'questions' => NULL, 'images_bouquet'=> NULL]
+    ],
+      'offre_home_plus' => [
+        VARIABLES => ['id' => NULL, OFFRE => NULL, 'tarifs' => NULL, 'faq_hhk' => NULL, 'souscription' => NULL, 'offre_resume' => NULL, 'options' => NULL, 'template' => NULL, PortailConstante::SLIDER_TV => NULL, PortailConstante::BOUQUETS_ORANGE=> NULL
+      ]
+    ],
+      'offre_home_fibre' => [
+        VARIABLES => ['id' => NULL, 'tarifs_fibre' => NULL, 'etapes_deploiement' => NULL, 'options_inclus' => NULL, 'faq' => NULL, OFFRE => NULL, PortailConstante::SLIDER_TV => NULL, PortailConstante::BOUQUETS_ORANGE => NULL]
+    ],
+      'offre_keurgui_box' => [
+        VARIABLES => ['id' => NULL, OFFRE => NULL, 'tarifs' => NULL, 'faq_hhk' => NULL, 'souscription' => NULL, 'offre_resume' => NULL, 'options' => NULL, 'comment_souscrire' => NULL
+      ]
+    ],
+      'tv_orange' => [
+        VARIABLES => [OFFRE => NULL, PortailConstante::SLIDER_TV => NULL, PortailConstante::BOUQUETS_ORANGE => NULL]
+    ],
+      'pass_internationaux' => [
+        VARIABLES => ['infos_pass' => NULL, 'pays' => NULL, 'pass' => NULL]
+    ],
+     'appel_depuis_etranger' => [
+        VARIABLES => ['infos_pass' => NULL, 'pays' => NULL, 'pass' => NULL]
+    ],
+      'test_eligibilite' => [
+        VARIABLES => $eligibilite_variables
+    ],
+      'test_eligibilite_mob' => [
+        VARIABLES => $eligibilite_variables
+    ],
+      'eligible_mob' => [
+        VARIABLES => $eligibilite_variables
+    ],
+      'non_eligible_mob' => [
+        VARIABLES => $eligibilite_variables
+    ],
+      'souscription_mob' => [
+        VARIABLES => $eligibilite_variables
+    ],
+      'confirmation_mob' => [
+        VARIABLES => $eligibilite_variables
+    ],
+      'illimix' => [
+        VARIABLES => []
+    ],
+      'assistance' => [
+          VARIABLES => []
+      ],
+      'hub-pass-internationaux' => [
+        VARIABLES => []
+    ],
+      'promo_block' => [
+        VARIABLES => ['events' => NULL]
+    ],
+      'orange-money' => [
+        VARIABLES => ['slider_om' => NULL, 'faq_om' => NULL, 'notif' => NULL,'etat' => NULL]
+    ],
+      'offre_family' => [
+        VARIABLES => ['id' => NULL, 'tarifs_family' => NULL, 'fondamentaux' => NULL, 'sousc_family' => NULL, 'faq_family' => NULL]
+    ],
+    'actualite' => [
+        VARIABLES => ['id' => NULL, 'chp_actualite' => NULL]
+    ],
+    'contact' => [
+        VARIABLES => []
+    ],
+    'recherche' => [
+        VARIABLES => ['videos' => NULL, 'tweets' => NULL, 'faqs' => NULL, 'produits' => NULL, 'elements' => NULL, 'query' => NULL, 'communautes' => NULL]
+    ],
+    'menu_header' => [
+        VARIABLES => ['items' => NULL]
+    ],
+    'menu_footer' => [
+        VARIABLES => ['footermenu' => NULL]
+    ],
+    'hub_actualite' => [
+      VARIABLES => ['actus' => NULL]
+    ],
+    'actualite_smartphone' => [
+        VARIABLES => ['smartphone' => NULL]
+    ],
+    'actu_video' => [
+      VARIABLES => []
+    ],
+    'orange_aicha' => [
+        VARIABLES => []
+    ],
+      'gold_platinium' => [
+          VARIABLES => []
+      ],
+    'findan' => [
+      VARIABLES => []
+    ],
+      'sargal' => [
+          VARIABLES => ['cadeau_sargal' => NULL, 'faq_sargal' => NULL]
+      ],
+
+      'hub_teranga' => [
+          VARIABLES => ['offres' => NULL, 'forfaits' => NULL]
+      ],
+      'teranga_liberty' => [
+          VARIABLES => ['content' => NULL, 'forfaits' => NULL]
+      ],
+      'teranga_premium' => [
+          VARIABLES => ['content' => NULL, 'forfaits' => NULL]
+      ],
+  ];
+}
+
+function portail_node_presave(\Drupal\Core\Entity\EntityInterface $node) {
+  if ($node->bundle() == 'offre_mobile') {
+    $url = PortailUtils::sanitizeString($node->getTitle());
+    $node->set('field_url', $url);
+  }
+}

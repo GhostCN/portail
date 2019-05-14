@@ -1,0 +1,76 @@
+{{ attach_library('rebours-css') }}
+<input type="hidden" id="date_event" value="{{events.0.date_fin}}">
+ {% if events.0.status == 1 and events.0.date_fin|date('d-m-Y H:i') > events.0.date_en_ligne|date('d-m-Y H:i') and events.0.date_fin|date('d-m-Y H:i') >= "now"|date('d-m-Y H:i') %}
+ {# Début promo #}
+<div class="row hide-screen space40" id="block-timer">
+
+
+
+
+       {% for event in events %}
+       <div class="col-lg-3 col-xs-6 col-6 py-3 text-center" id="annonce">
+         <img src="{{ file_url(event.icone) }}" alt="">
+       </div>
+       <div class="clearfix"></div>
+       <div class="col-lg-3 col-xs-6 col-6 py-3 text-center"  id="annonce">
+         <img src="/sites/default/files/images/line-bonus.svg" alt="" style="float: left; margin-top: -7px;">
+         <B class="color-orange title-annonce " style="float: left; margin-top: -7px;">{{event.pourcentage}} </B><span class="desc-annonce">{{event.prix}}</span>
+         <div class="clearfix"></div>
+         <img src="/sites/default/files/images/line-bonus.svg" alt=""  style="float: right;margin-left: 200px; margin-top: -50px;">
+       </div>
+       <div class="clearfix"></div>
+       <div class="col-lg-4 col-xs-8 col-8 py-3 text-center" id="annonce">
+
+           <div class="row text-dark">
+             <div class="col-lg-3 col-xs-3 col-3 d-flex" style="display:inline-flex;">
+               <div class="time dizaine">
+                 <B id="d-jj">0</B>
+               </div>
+               <div class="time unite">
+                 <B id="u-jj">0</B>
+               </div>
+             </div>
+             <div class="clearfix"></div>
+             <div class="col-lg-3 col-xs-3 col-3 d-flex" style="display:inline-flex;" >
+               <div class="time dizaine">
+                 <B id="d-hh">0</B>
+               </div>
+               <div class="time unite">
+                 <B id="u-hh">0</B>
+               </div>
+             </div>
+             <div class="clearfix"></div>
+             <div class="col-lg-3  col-xs-3 col-3 d-flex"  style="display:inline-flex;">
+               <div class="time dizaine">
+                 <B id="d-mn">0</B>
+               </div>
+               <div class="time unite">
+                 <B id="u-mn">0</B>
+               </div>
+             </div>
+             <div class="clearfix"></div>
+             <div class="col-lg-3  col-xs-3 col-3 d-flex"  style="display:inline-flex;">
+               <div class="time dizaine">
+                 <B id="d-ss">0</B>
+               </div>
+               <div class="time unite">
+                 <B id="u-ss">0</B>
+               </div>
+             </div>
+           </div>
+
+       </div>
+       <div class="clearfix"></div>
+       <div class="col-lg-2 col-xs-4 col-4 py-3 text-left" id="annonce">
+         <a href="{{ event.lien_button }}" class="btn btn-inverse btn-dark" >En profiter</a>
+       </div>
+       <div class="clearfix"></div>
+
+ {% endfor %}
+   </div>
+
+</div>
+
+{# Fin promo #}
+
+ {% endif %}

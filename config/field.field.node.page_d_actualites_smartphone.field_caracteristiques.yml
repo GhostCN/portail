@@ -1,0 +1,28 @@
+uuid: ed2a38c4-5881-468b-8111-20f8b65c23a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_caracteristiques
+    - node.type.caracteristiques_page_actualites
+    - node.type.page_d_actualites_smartphone
+id: node.page_d_actualites_smartphone.field_caracteristiques
+field_name: field_caracteristiques
+entity_type: node
+bundle: page_d_actualites_smartphone
+label: Caractéristiques
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      caracteristiques_page_actualites: caracteristiques_page_actualites
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

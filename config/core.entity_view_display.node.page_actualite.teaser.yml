@@ -1,0 +1,31 @@
+uuid: 6710e5f0-52b3-4390-a688-27ab8ba6cb4e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.page_actualite
+  module:
+    - user
+id: node.page_actualite.teaser
+targetEntityType: node
+bundle: page_actualite
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_actu_ala_une: true
+  field_bloc_actu: true
+  field_desc_actu: true
+  field_desc_actu_ala_une: true
+  field_image_actu: true
+  field_image_actu_ala_une: true
+  field_meme_theme: true
+  field_souscrire_actu: true
+  field_soustitre_actu: true
+  field_titre_actu: true
+  field_titre_actu_ala_une: true
+  field_titre_bloc_actualite: true
+  langcode: true

@@ -1,0 +1,693 @@
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff");
+}
+
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff");
+}
+
+@media screen and (min-width: 1560px) {
+    .contentA {
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+        width: 1360px;
+        margin: auto !important;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .contentA {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .contentA {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+.contentA {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+body {
+    background-color: #eeeeee !important;
+}
+
+.sous-fib-optique {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.sac-nav-ul {
+    display: flex;
+    list-style: none;
+    margin-left: -35px;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.orange {
+    color: #ff7900;
+}
+
+.ima-width {
+    width: 100%;
+}
+
+.image-back {
+    background-color: black;
+}
+
+.quartier-vb {
+    position: absolute;
+    margin-right: 40%;
+    margin-left: 22%;
+    margin-top: 67px;
+}
+
+.vivre-f {
+    font-size: 40px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.white-st {
+    color: #ffffff;
+}
+
+.row-card {
+    width: 100%;
+}
+
+.cercle-numb {
+    background-color: #ccc;
+    font-size: 16px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 17px;
+    color: #fff
+}
+
+.card-sumilateur {
+    border: none !important;
+    padding-left: 40px;
+    padding-top: 50px;
+    padding-bottom: 46px;
+    margin-bottom: 80px;
+}
+
+.div-selc {
+    margin-top: 0px;
+    display: flex;
+}
+
+.test-para {
+    font-size: 20px;
+    padding-top: 46px;
+    padding-bottom: 83px;
+}
+
+.lancer-le {
+    margin-left: 21px;
+    width: 130%;
+    /*background-color: #cccccc;*/
+    color: #fff;
+    margin-top: 5px;
+}
+
+.mat-label {
+    display: block;
+    font-size: 16px;
+    transform: translateY(25px);
+    color: #e2e2e2;
+    transition: all 0.5s;
+}
+
+.mat-input {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 8px 0;
+    color: #666666 !important;
+}
+
+.mat-div {
+    position: relative;
+    margin-top: -23px;
+}
+
+.mat-div:after,
+.mat-div:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #e2e2e2;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.mat-div::after {
+    background-color: #ff7900;
+    transform: scaleX(0);
+}
+
+.is-active::after {
+    transform: scaleX(1);
+}
+
+.is-active .mat-label {
+    color: #ff7900;
+}
+
+.is-completed .mat-label {
+    font-size: 12px;
+    transform: translateY(0);
+}
+
+.text-com {
+    font-size: 18px !important;
+    font-weight: normal !important;
+    color: #666666;
+}
+
+.custum-select-chos {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    padding-bottom: 4px !important;
+    background-color: #fff;
+    border-bottom: 2px solid #e2e2e2 !important;
+    font-size: 18px !important;
+}
+
+.cde {
+    padding-bottom: 6px;
+}
+
+.cdee {
+    padding-bottom: 6px;
+}
+
+.text-numb {
+    font-size: 20px;
+    color: #cccccc;
+    font-weight: normal;
+    padding-left: 12px;
+}
+
+.nav-tabs {
+    border-bottom: none !important;
+    padding-right: 35px;
+}
+
+.ab {
+    border-bottom: 2px solid #ccc !important;
+}
+
+.ab1 {
+    width: 25%;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    border-color: #fff !important;
+    border-top-style: 0 !important;
+    border-bottom: 2px solid #ff7900 !important;
+    color: #ff7900 !important;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link:hover {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.cercle-numb.active {
+    background-color: #ff7900;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.text-numb.active {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff7900;
+    padding-left: 0px;
+}
+
+.tab-content {
+    border-style: none !important;
+    border-width: 0 0px 0px !important;
+    padding: unset !important;
+}
+
+.elig {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 13px;
+}
+
+.bnficier {
+    font-size: 18px;
+    padding-bottom: 13px;
+    color: #666666;
+}
+
+.mois-tr {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.image-box-lo {
+    margin-top: -8px;
+}
+
+.border-action {
+    border-right: 2px solid #cfcece;
+}
+
+.rectangle133 {
+    display: flex;
+    padding-bottom: 10px;
+    margin-left: 16px;
+}
+
+.col-inter-nt {
+    padding-right: 0px !important;
+}
+
+.im {
+    font-size: 18px;
+    padding-left: 6%;
+}
+
+.fibre-butt {
+    margin-top: 20px;
+    width: 100%;
+    margin-left: 17px;
+}
+
+.fibre-bu {
+    margin-top: 51px;
+    width: 105%;
+    margin-left: 10px;
+}
+
+.row1-1 {
+    padding-top: 46px;
+}
+
+.a-space {
+    padding-bottom: 55px;
+}
+
+.rectang {
+    display: flex;
+    padding-top: 20px;
+}
+
+.Nous-vous-remercions {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 12px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+.Vous-serez-contact {
+    color: #666666;
+    font-size: 18px;
+    padding-bottom: 55px;
+}
+
+.Prochaines-tap {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.Etape-1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Signature-du {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.Avant-installation {
+    font-size: 18px;
+    color: #666666;
+}
+
+.Mask-img {
+    width: 363px;
+}
+
+.etap-sig-text {
+    margin-left: 20px;
+    padding-right: 82px;
+}
+
+.paragr {
+    padding-bottom: 15px;
+}
+
+.frame-img-cl {
+    position: absolute;
+    padding-left: 43px;
+    padding-top: 43px;
+}
+
+.maison-rectangle {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    color: #fff;
+    margin-top: 128px;
+    margin-left: 87px;
+}
+
+.displa {
+    display: flex;
+}
+
+.asterix-deb {
+    margin-left: -123px;
+    margin-top: -22px;
+}
+
+#asterix-deb-1 {
+    margin-left: -345px;
+    margin-top: -22px;
+}
+
+#asterix-deb-2 {
+    margin-left: -450px;
+    margin-top: -22px;
+}
+
+.asterix-suiv {
+    margin-top: -13px;
+    margin-left: 3px;
+}
+
+.home-car {
+    font-size: 24px;
+    color: #ff7900;
+    font-weight: bold;
+}
+
+.tex-car-2 {
+    color: #666666;
+}
+
+.prix-ttc {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn-sou {
+    width: 100%;
+}
+
+.prix-ttc-moi {
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.card-pas-int {
+    width: 280px !important;
+}
+
+.pas-interesse-block {
+    margin-bottom: 80px;
+    margin-top: -35px;
+}
+
+.pas-intt {
+    display: none;
+}
+
+.Pas-interesse {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.cercle-numb-prec {
+    font-size: 16px !important;
+    padding-left: 7px !important;
+    padding-right: 7px !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+.text-numb-prec {
+    font-size: 20px !important;
+    font-weight: normal !important;
+    padding-left: 12px !important;
+}
+
+.a-prec {
+    padding-bottom: 12px !important;
+}
+
+.col-boq {
+    margin-left: 5%;
+}
+
+.step3-formu {
+    padding-right: 23px;
+}
+
+.vali-form {
+    width: 92%;
+    margin-left: 18px;
+}
+
+.no {
+    color: #666666;
+}
+
+.deux-btt {
+    margin-left: 25%;
+}
+
+.remp-for-no {
+    width: 55%;
+    margin-left: 4%;
+}
+
+.voir-offr-no {
+    width: 55%;
+    margin-left: 5%;
+}
+
+.image-box-lo-non {
+    margin-left: -13px;
+    margin-top: -15px;
+}
+
+.mat-input {
+    font-weight: bold;
+    color: black !important;
+}
+
+.choise {
+    font-weight: bold;
+    color: black !important;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    background-color: unset !important;
+    border-top: unset !important;
+    border-left: unset !important;
+    border-right: unset !important;
+}
+
+.form-selc-in {
+    margin-top: -49px;
+    padding-bottom: 33px;
+}
+
+.form-selc-ine {
+    margin-top: -49px;
+    padding-bottom: 33px;
+}
+
+@media screen and (max-width: 780px) {
+    .contentA {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .sac-nav-ul-tes {
+        margin-left: -30px;
+        padding-top: 15px;
+    }
+    .sous-fib-optique {
+        font-size: 20px;
+        padding-bottom: 5px;
+        padding-top: 10px;
+        padding-left: 8px;
+    }
+    .debutlii-of-tes {
+        font-size: 14px;
+    }
+    .quartier-vb {
+        margin-left: 3%;
+        margin-right: unset;
+        margin-top: 10px;
+    }
+    .vivre-f {
+        font-size: 30px;
+    }
+    .card-sumilateur {
+        border: none !important;
+        padding-left: 0px;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        margin-bottom: 35px;
+    }
+    .nav-link-pr {
+        border-bottom: 2px solid #ff7900;
+        padding-left: 3px !important;
+    }
+    .text-numb.active {
+        font-size: 18px;
+        font-weight: bold;
+        color: #ff7900;
+        padding-left: 5px;
+    }
+    .div-tes-eli {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .div-tes-eli {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+    .test-para {
+        font-size: 16px;
+        padding-top: 18px;
+        padding-bottom: 22px;
+    }
+    .custum-select-chos {
+        padding-bottom: 8px !important;
+    }
+    .mat-input {
+        padding: unset;
+    }
+    .div-pad-sp {
+        padding-bottom: 40px;
+    }
+    .asterix-deb {
+        margin-left: -158px;
+        margin-top: -13px;
+    }
+    .asterix-deb-1 {
+        margin-left: -208px;
+        margin-top: -13px;
+    }
+    .lancer-le {
+        margin-left: unset;
+        width: 212%;
+    }
+    .vous-etes-eligible-mob {
+        font-size: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+        padding-left: 13px;
+    }
+    .Bnficiez-de-linte {
+        font-size: 18px;
+        color: #666666;
+        padding-top: 20px;
+    }
+    .Mois-mob {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .fibre-butt {
+        width: 100%;
+        margin-left: unset;
+    }
+    .lancer-le {
+        margin-left: unset;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .swipe3 {
+        width: 90% !important;
+        display: block !important;
+        max-width: 288px;
+    }
+    .swipe4 {
+        width: 90% !important;
+        max-width: 279px;
+    }
+    .swiper-slide {
+        text-align: unset !important;
+    }
+    .equipements-inclus-of-mob {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #fleche {
+        margin-top: -4px;
+    }
+    .asterix-debbe {
+        margin-left: -166px;
+        margin-top: -13px;
+    }
+    .lancer-le-for {
+        width: 100%;
+        background-color: #cccccc;
+        color: #fff;
+    }
+    .Bnficiez-de-linte-conf {
+        font-size: 18px;
+        color: #666666;
+    }
+    .ima-etap {
+        width: 49%;
+    }
+    .etap-mob {
+        font-size: 18px;
+    }
+    .signe-contrat-mob {
+        font-size: 18px;
+    }
+    .Avant-installation-mob {
+        color: #666666;
+        padding-right: 14px;
+    }
+    .text-com {
+        padding-bottom: 15px;
+        margin-bottom: 0;
+    }
+}

@@ -1,0 +1,19 @@
+uuid: 1c3dcddb-f861-4d29-a22a-4edee15042e1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duree
+    - node.type.internet_et_fixe
+id: node.internet_et_fixe.field_duree
+field_name: field_duree
+entity_type: node
+bundle: internet_et_fixe
+label: Durée
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

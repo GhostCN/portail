@@ -1,0 +1,22 @@
+uuid: ebec0789-dca1-469f-85b5-3bd3aef76187
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.sous_le_meme_theme
+id: node.sous_le_meme_theme.promote
+field_name: promote
+entity_type: node
+bundle: sous_le_meme_theme
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

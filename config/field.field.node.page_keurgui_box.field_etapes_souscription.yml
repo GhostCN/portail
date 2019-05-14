@@ -1,0 +1,28 @@
+uuid: 347bace7-6ae6-4864-85ef-8e61292d485c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_etapes_souscription
+    - node.type.bloc_etapes_souscription_keurgui
+    - node.type.page_keurgui_box
+id: node.page_keurgui_box.field_etapes_souscription
+field_name: field_etapes_souscription
+entity_type: node
+bundle: page_keurgui_box
+label: Etapes_souscription
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bloc_etapes_souscription_keurgui: bloc_etapes_souscription_keurgui
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

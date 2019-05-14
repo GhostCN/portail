@@ -1,0 +1,23 @@
+uuid: f14db429-e6ea-4a21-b3b2-2cffe583692d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_montant_pass
+    - node.type.pass_internet
+id: node.pass_internet.field_montant_pass
+field_name: field_montant_pass
+entity_type: node
+bundle: pass_internet
+label: Montant
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

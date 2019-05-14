@@ -1,0 +1,21 @@
+uuid: 83c77a0f-14f5-435a-8b43-e1f09845106d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_illimix_nombre_sms
+field_name: field_illimix_nombre_sms
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

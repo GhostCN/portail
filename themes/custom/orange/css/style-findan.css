@@ -1,0 +1,295 @@
+.carousel-caption{
+  bottom: -9%;
+}
+
+#ibou{
+  padding: 30px 0 30px 0;
+}
+#social{
+  padding: 35px 0 0 0;
+}
+
+#video{
+  padding: 35px 0 70px 0;
+}
+
+.orange{
+  color: #ff7900;
+  font-weight: bold;
+}
+.bgblack{
+  background-color: #292929;
+  padding: 5% 8% !important;
+  /*height:50vh;*/
+  color: #fff;
+}
+/***/
+.bgbblack{
+  background-color: #000000;
+  padding: 2% 8% !important;
+  /*height:50vh;*/
+  color: #fff;
+  margin-bottom: -42px;
+}
+.tsct{
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: bold;
+}
+.icone-reseau-sociaux a{
+  margin-left: 20px;
+
+  font-size: 20px;
+}
+.icone-reseau-sociaux a i{
+  margin-top: 10px;
+}
+.ft-icone-hove{
+  color: #fff;
+  margin-left: 10px;
+  font-size: 12px;
+}
+.firt-so{
+  margin-left: -26px;
+}
+.sbord{
+  border-radius: 50px;
+  box-shadow: 0px 0px 2px #fff;
+  padding: 0.5em 0.6em;
+}
+.pads{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.nav .nav-item:first-child{
+  margin-left: 0 !important;
+}
+/***/
+.min-tou,.min-30{
+  margin-top: 70px;
+}
+.min-tou img{
+  width: 65%;
+}
+.min-30 img{
+  width: 85%;
+}
+.la{
+  font-size: 40px;
+}
+.carousel{
+  margin-bottom: 0;
+}
+.join-ibou{
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+}
+.ico-text{
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+.sect{
+  height: 50vh;
+}
+.mdpad{
+  padding: 40px 0;
+}
+.ibou{
+  width: 60%;
+  max-width: 228px;
+}
+.tsize{
+  font-size: 70px;
+  line-height: 75px;
+  font-weight: bold;
+}
+.title-slide {
+  color: #fff;
+  font-size: 111px;
+  line-height: 104px;
+  text-align: left;
+  font-weight: bold;
+  margin: 53% 53% 53% -11%;
+}
+.titre{
+  color: #000;
+  font-size: 72px;
+  line-height: 55px;
+  text-align:left;
+  font-weight: bold;
+  margin-bottom: 55%;
+  margin-left: -23%;
+}
+.pop-over{
+  display: none;
+}
+.logo{
+  height: 107px;
+  margin-right: -106%;
+}
+.zoom {
+  transition: transform .2s; /* Animation */
+}
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .title-slide {
+    font-size: 82px;
+    line-height: 73px;
+  }
+  .titre {
+    font-size: 53px;
+    line-height: 55px;
+    margin-bottom: 42%;
+  }
+}
+@media (max-width: 867px) {
+  .title-slide {
+    font-size: 72px;
+  }
+  .titre {
+    font-size: 42px;
+    line-height: 47px;
+    margin-bottom: 118px;
+  }
+  .logo{
+    height: inherit;
+  }
+}
+@media (max-width: 767px) {
+  .svns{
+    padding-bottom: 15px;
+  }
+  .tsct {
+    font-size: 18px;
+    line-height: 35px;
+  }
+  .join-ibou {
+    font-size: 31px;
+  }
+  .mdpad {
+    padding: 10px;
+  }
+  .sect {
+    height: initial;
+  }
+  .title-slide {
+    font-size: 51px;
+    line-height: 52px;
+    margin: 45% 45% 45% -32px;
+  }
+  .titre{
+    font-size: 19px;
+    line-height: 20px;
+    margin-bottom: 75px;
+  }
+  .logo{
+    height: inherit;
+  }
+  .tsize,.la{
+    font-size: 30px;
+  }
+  .orange{
+    text-align: center !important;
+  }
+}
+@media (max-width: 740px) {
+  .tsize,.la{
+    font-size: 30px;
+    text-align: center !important;
+  }
+  .tsize{
+    line-height: 35px;
+  }
+  .min-tou, .min-30{
+    text-align: center;
+    margin-top: 11px;
+  }
+  .min-tou img, .min-30 img{
+    width: 100%;
+
+  }
+  #video {
+    padding: 35px 0 38px 0;
+  }
+}
+@media (max-width: 450px) {
+
+  .li-mobile, .li-mobile ul{
+    padding-left: 0 !important;
+  }
+  .ico-text {
+    font-size: 12px;
+    text-align: center;
+  }
+  .titre {
+    margin-bottom: 66px;
+  }
+  .la{
+    font-size: 21px;
+    text-align: center !important;
+  }
+  .ibou {
+    padding-top: 0;
+    max-width: 150px;
+  }
+  .desktop{
+    display: none;
+  }
+  .mobile{
+    display: block !important;
+  }
+  .slick-slide img {
+    display: block;
+    margin: auto;
+  }
+  .title-slide {
+    font-size: 33px;
+    line-height: 30px;
+    margin: 44% 0 33% 0;
+    display: inline;
+  }
+  .title-slide br{
+    display: none;
+  }
+  .carousel-caption {
+    top: -8%;
+  }
+  .min-tou img, .min-30 img {
+    width: 72%;
+    margin: auto;
+  }
+  .tsize{
+    font-size: 22px;
+    text-align: left !important;
+  }
+  .orange{
+    text-align: left !important;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 360px) {
+  .join-ibou {
+    font-size: 29px;
+  }
+  .ico-text {
+    font-size: 12px;
+    text-align: center;
+  }
+  .titre {
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 320px) {
+  .titre {
+    margin-bottom: 20px;
+  }
+  .title-slide{
+    margin: 36%;
+    margin-left: -26px;
+  }
+}

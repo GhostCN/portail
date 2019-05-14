@@ -1,0 +1,27 @@
+uuid: 9f2a0c27-bb72-45fa-9652-9d5ce493905f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.zone_pays_orange
+  module:
+    - user
+id: node.zone_pays_orange.teaser
+targetEntityType: node
+bundle: zone_pays_orange
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_appel_international: true
+  field_appel_local: true
+  field_appel_vers_senegal: true
+  field_data_ko: true
+  field_envoi_sms: true
+  field_pays_de: true
+  field_reception_appel: true
+  field_reception_sms: true
+  langcode: true

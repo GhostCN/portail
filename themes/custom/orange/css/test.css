@@ -1,0 +1,71 @@
+.scrollbar {
+    height: 350px;
+    width: auto;
+    overflow-y: scroll;
+}
+
+@media all and (max-width:768px) {
+  .scrollbar {
+    overflow-x: unset;
+  }
+}
+
+.force-overflow {
+    min-height: 400px;
+    width: auto;
+}
+
+#style-1::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	color: #ff7900;
+}
+.li_Megamenu{
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 25px;
+}
+.li_body-footer{
+    font-weight: normal !important;
+    letter-spacing: normal;
+    line-height: 1.25rem !important;
+}
+.search{
+    position: absolute;
+    width: 145px;
+    margin-top: 20px;
+    margin-left: -140px;
+    display: none;
+    float: left;
+    background: transparent;
+    border: none;
+    border-bottom: solid 2px #666666;
+
+    -webkit-animation-name: showingSearch;
+    -moz-animation-name: showingSearch;
+    -o-animation-name: showingSearch;
+    animation-name: showingSearch;
+
+    -webkit-transition: ease-in-out;
+    -moz-transition: ease-in-out;
+    -ms-transition: ease-in-out;
+    -o-transition: ease-in-out;
+    transition: ease-in-out;
+
+    -webkit-animation-duration: 0.8s;
+    -moz-animation-duration: 0.8s;
+    -o-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+}
+
+@keyframes showingSearch {
+    from{
+        margin-left: 0;
+    }
+    To{
+        margin-left: -140px;
+    }
+}
+
+.linq :hover{
+  color: #ff7900 !important;
+}

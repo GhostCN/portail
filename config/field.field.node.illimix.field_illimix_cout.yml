@@ -1,0 +1,23 @@
+uuid: 7dd9ce3a-fafc-48cf-a852-95e1a6296abb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_illimix_cout
+    - node.type.illimix
+id: node.illimix.field_illimix_cout
+field_name: field_illimix_cout
+entity_type: node
+bundle: illimix
+label: coût
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,18 @@
+uuid: 7a761e33-d431-4d78-910f-f765c7a46060
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.teranga_telephone
+id: node.teranga_telephone.title
+field_name: title
+entity_type: node
+bundle: teranga_telephone
+label: 'Titre Telephone'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

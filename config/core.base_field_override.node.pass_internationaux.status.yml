@@ -1,0 +1,22 @@
+uuid: 7a8b7c83-89f7-4cb6-8f75-be0d04947db0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_internationaux
+id: node.pass_internationaux.status
+field_name: status
+entity_type: node
+bundle: pass_internationaux
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

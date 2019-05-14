@@ -1,0 +1,108 @@
+uuid: 94552d7a-38e3-405b-a81b-65edc4369893
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.premium_avec_tel.field_autre
+    - field.field.node.premium_avec_tel.field_bonus_vers_orange
+    - field.field.node.premium_avec_tel.field_forfait_24_mois
+    - field.field.node.premium_avec_tel.field_forfait_total_positionne
+    - field.field.node.premium_avec_tel.field_internet_mobile
+    - field.field.node.premium_avec_tel.field_ndeg_illimite_vers_orange
+    - field.field.node.premium_avec_tel.field_sms_orange
+    - field.field.node.premium_avec_tel.field_tarif_ht
+    - field.field.node.premium_avec_tel.field_tarif_ttc
+    - node.type.premium_avec_tel
+id: node.premium_avec_tel.default
+targetEntityType: node
+bundle: premium_avec_tel
+mode: default
+content:
+  field_autre:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_bonus_vers_orange:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_forfait_24_mois:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_forfait_total_positionne:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_internet_mobile:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ndeg_illimite_vers_orange:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sms_orange:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tarif_ht:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tarif_ttc:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

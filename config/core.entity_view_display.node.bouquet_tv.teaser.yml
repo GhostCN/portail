@@ -1,0 +1,26 @@
+uuid: 8ffc897d-ec06-4b83-993a-3793a328b6be
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.bouquet_tv
+  module:
+    - user
+id: node.bouquet_tv.teaser
+targetEntityType: node
+bundle: bouquet_tv
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_image_bouquet_1: true
+  field_image_bouquet_2: true
+  field_image_bouquet_3: true
+  field_image_bouquet_4: true
+  field_image_bouquet_5: true
+  field_image_bouquet_6: true
+  field_image_principale: true
+  langcode: true

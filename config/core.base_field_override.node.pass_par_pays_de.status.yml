@@ -1,0 +1,22 @@
+uuid: f10c2046-3fff-41df-83b2-c47196f22b85
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_par_pays_de
+id: node.pass_par_pays_de.status
+field_name: status
+entity_type: node
+bundle: pass_par_pays_de
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

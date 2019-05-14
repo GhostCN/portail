@@ -1,0 +1,21 @@
+uuid: bbbf4d86-f28c-41fe-88f2-9eee87345f68
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.sous_le_meme_theme
+  module:
+    - user
+id: node.sous_le_meme_theme.teaser
+targetEntityType: node
+bundle: sous_le_meme_theme
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_bouton_theme: true
+  field_image_theme: true
+  langcode: true

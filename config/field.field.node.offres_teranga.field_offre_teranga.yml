@@ -1,0 +1,28 @@
+uuid: fd0b93db-53da-442a-858e-fcd76bb46be1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_teranga
+    - node.type.offres_teranga
+    - node.type.teranga
+id: node.offres_teranga.field_offre_teranga
+field_name: field_offre_teranga
+entity_type: node
+bundle: offres_teranga
+label: 'Offre teranga'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      teranga: teranga
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

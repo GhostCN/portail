@@ -1,0 +1,19 @@
+uuid: 1080eb35-c545-406d-8d59-2b552f14d50a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reception_sms
+    - node.type.zone_pays_orange
+id: node.zone_pays_orange.field_reception_sms
+field_name: field_reception_sms
+entity_type: node
+bundle: zone_pays_orange
+label: 'Réception SMS ( Ex : Gratuite)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

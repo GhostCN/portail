@@ -1,0 +1,17 @@
+uuid: 0dada9f8-f659-4cd7-9a41-9800d501e8ec
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Page Home +'
+type: page_home
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

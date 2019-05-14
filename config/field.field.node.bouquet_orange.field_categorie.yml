@@ -1,0 +1,21 @@
+uuid: a2c09015-0a04-4f24-8c70-a87103a53d3f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categorie
+    - node.type.bouquet_orange
+  module:
+    - options
+id: node.bouquet_orange.field_categorie
+field_name: field_categorie
+entity_type: node
+bundle: bouquet_orange
+label: Catégorie
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

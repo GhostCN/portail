@@ -1,0 +1,635 @@
+{{ attach_library('orange/global-recherche-css')}}
+{{ attach_library('orange/global-recherche-js')}}
+
+<div class="contentS rechercheS">
+    <div class="file-areane">
+        <div><a href="/">Accueil</a></div>
+        <div><a href="#"><img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="icone right"></a></div>
+        <div class="active">Recherche</div>
+    </div>
+</div>
+
+<div class="content-page">
+    <div class="header-bandeau">
+        <img src="/sites/default/files/images/recherche/bandeau-recherche.png" class="bnd_desk" alt="">
+        <img src="/sites/default/files/images/recherche/bandeau-mobile.png" class="bnd_mobile" alt="">
+    </div>
+    
+    <div class="main-content">
+        <div class="contentS rechercheS">
+            <div class="card card-bandeau">
+                <div>Faire une</div>
+                <div class="active">Recherche</div>
+            </div>
+
+            <div class="card card-content-page">
+                <div class="title-flex">
+                    <div>Que recherchez-vous ?</div>
+                  <form method="get">
+                    <div class="search-block">
+                        <div class="mat-div">
+                            <input class="mat-input" value="{{ query }}" name="q" id="first-name" type="text" />
+                        </div>
+                      <a href="#" id="search">
+                        <div class="search-icone">
+                            <img src="/sites/default/files/images/recherche/rechercher-black.svg" alt="rechercher">
+                        </div>
+                      </a>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="result-count">
+                    Il y a <span>{{ elements }} résultats </span> trouvés pour cette recherche.
+                </div>
+
+                <div class="results-items">
+                    <div class="o-tab-container ">
+                        <a class="o-tab-heading sg-tabs" href="#" id="tab1">Produits et services</a>
+                        <div class="o-tab-content show sg-tab-content" id="tab-1-content">
+                            <div class="list-results" data-shown="10">
+                              {% for produit in produits %}
+                                <a href="{{ produit.path }}" class="result">
+                                    <div class="result-title">
+                                        <div class="result-top-title">
+                                          {{ produit.product }}
+                                        </div>
+                                        <div class="result-text-title">
+                                            {{ produit.title }}
+                                        </div>
+                                    </div>
+                                    <div class="result-text">
+                                        {{ produit.summary }}
+                                    </div>
+                                    <div class="result-link">
+                                        Voir détails <img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="">
+                                    </div>
+                                </a>
+
+                                {% else %}
+
+                                <div>Il n'y a pas de résultats pour cette recherche. Veuillez réessayer avec d'autres mots clés.</div>
+                              {% endfor %}
+
+                              <div class="show-more">Afficher plus</div>
+                            </div>
+                        </div>
+                        <a class="o-tab-heading sg-tabs" href="#" id="tab2">FAQ</a>
+                        <div class="o-tab-content sg-tab-content" id="tab-2-content">
+                            <div class="list-results" data-shown="10">
+                              {% for faq in faqs %}
+                                <div class="result">
+                                    <div class="result-title">
+                                        <div class="result-top-title">
+                                            {{ faq.type }}
+                                        </div>
+                                        <div class="result-text-title">
+                                            {{ faq.title }}
+                                        </div>
+                                    </div>
+                                    <div class="result-text">
+                                        {{ faq.content | raw }}
+                                    </div>
+                                    <!--a href="" class="result-link">
+                                        Voir détails <img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="">
+                                    </a-->
+                                </div>
+
+                                {% else %}
+
+                                <div>Il n'y a pas de résultats pour cette recherche. Veuillez réessayer avec d'autres mots clés.</div>
+                              {% endfor %}
+
+                              <div class="show-more">Afficher plus</div>
+                            </div>
+                        </div>
+                        <a class="o-tab-heading sg-tabs" href="#" id="tab3">Communauté</a>
+                        <div class="o-tab-content sg-tab-content" id="tab-3-content">
+                            <div class="list-results" data-shown="10">
+                              {% for com in communautes %}
+                                <a href="{{ com.url }}" target="_blank" class="result">
+                                  <div class="result-title">
+                                    <div class="result-top-title">
+                                      twitter
+                                    </div>
+                                    <div class="result-text-title">
+                                      {{ com.username }}
+                                    </div>
+                                  </div>
+                                  <div class="result-text">
+                                    {{ com.text }}
+                                  </div>
+                                  <div class="result-link">
+                                    Voir détails <img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="">
+                                  </div>
+                                </a>
+                                {% else %}
+
+                                <div>Il n'y a pas de résultats pour cette recherche. Veuillez réessayer avec d'autres mots clés.</div>
+                              {% endfor %}
+                            </div>
+                        </div>
+                        <a class="o-tab-heading sg-tabs" href="#" id="tab4">Twitter</a>
+                        <div class="o-tab-content sg-tab-content" id="tab-4-content">
+                            <div class="list-results" data-shown="10">
+                              {% for tweet in tweets %}
+                                <a href="{{ tweet.url }}" target="_blank" class="result">
+                                    <div class="result-title">
+                                        <div class="result-top-title">
+                                            twitter
+                                        </div>
+                                        <div class="result-text-title">
+                                            {{ tweet.username }}
+                                        </div>
+                                    </div>
+                                    <div class="result-text">
+                                        {{ tweet.text }}
+                                    </div>
+                                    <div class="result-link">
+                                        Voir détails <img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="">
+                                    </div>
+                                </a>
+
+                                {% else %}
+
+                                <div>Il n'y a pas de résultats pour cette recherche. Veuillez réessayer avec d'autres mots clés.</div>
+                              {% endfor %}
+
+                              <div class="show-more">Afficher plus</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="results-items-mobile">
+                    <div class="items-tab" id="item-tab1">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" aria-current="page">Produits et services</a>
+                            </li>
+                        </ul>
+                        <div class="results-items-mobile-control">
+                            <img src="/sites/default/files/images/recherche/arrow-right.svg" alt="" style="opacity: 0.3">
+                            <img src="/sites/default/files/images/recherche/arrow-left.svg" class="toggle-tab" alt="" data-toggle="item-tab2">
+                        </div>
+
+                        <div class="list-results">
+                          {% for produit in produits %}
+                            <div class="result">
+                                <div class="result-title">
+                                    <div class="result-top-title">
+                                      {{ produit.product }}
+                                    </div>
+                                    <div class="result-text-title">
+                                      {{ produit.title }}
+                                    </div>
+                                </div>
+                                <div class="result-text">
+                                  {{ produit.summary }}
+                                </div>
+                                <a href="{{ produit.path }}" class="result-link">
+                                    Voir détails <img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="">
+                                </a>
+                            </div>
+                          {% endfor %}
+                            <div class="result">
+                                <div class="result-title">
+                                    <div class="result-top-title">
+                                        Forfait internet
+                                    </div>
+                                    <div class="result-text-title">
+                                        Lorem ipsum dolor sit amet consectetur 
+                                    </div>
+                                </div>
+                                <div class="result-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <span>Bonus Allo’Scool</span> ut labore et dolore magna aliqua.
+                                </div>
+                                <a href="" class="result-link">
+                                    Voir détails <img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="result">
+                                <div class="result-title">
+                                    <div class="result-top-title">
+                                        Forfait internet
+                                    </div>
+                                    <div class="result-text-title">
+                                        Lorem ipsum dolor sit amet consectetur 
+                                    </div>
+                                </div>
+                                <div class="result-text">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <span>Bonus Allo’Scool</span> ut labore et dolore magna aliqua.
+                                </div>
+                                <a href="" class="result-link">
+                                    Voir détails <img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="items-tab" id="item-tab2">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" aria-current="page">FAQ</a>
+                            </li>
+                        </ul>
+                        <div class="results-items-mobile-control">
+                            <img src="/sites/default/files/images/recherche/arrow-right.svg" class="toggle-tab" alt="" data-toggle="item-tab1">
+                            <img src="/sites/default/files/images/recherche/arrow-left.svg" class="toggle-tab" alt="" data-toggle="item-tab3">
+                        </div>
+
+                        <div class="list-results">
+                          {% for faq in faqs %}
+                            <div class="result">
+                                <div class="result-title">
+                                    <div class="result-top-title">
+                                      {{ faq.type }}
+                                    </div>
+                                    <div class="result-text-title">
+                                      {{ faq.title }}
+                                    </div>
+                                </div>
+                                <div class="result-text">
+                                  {{ faq.content |raw }}
+                                </div>
+                                <a href="" class="result-link">
+                                    Voir détails <img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="">
+                                </a>
+                            </div>
+                          {% endfor %}
+                        </div>
+                    </div>
+                    <div class="items-tab" id="item-tab3">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" aria-current="page">Communauté</a>
+                            </li>
+                        </ul>
+                        <div class="results-items-mobile-control">
+                            <img src="/sites/default/files/images/recherche/arrow-right.svg" class="toggle-tab" alt="" data-toggle="item-tab2">
+                            <img src="/sites/default/files/images/recherche/arrow-left.svg" class="toggle-tab" alt="" data-toggle="item-tab4">
+                        </div>
+
+                        <div class="list-results">
+                          {% for com in communautes %}
+                            <div class="result">
+                              <div class="result-title">
+                                <div class="result-top-title">
+                                  twitter
+                                </div>
+                                <div class="result-text-title">
+                                  {{ com.username }}
+                                </div>
+                              </div>
+                              <div class="result-text">
+                                {{ com.text }}
+                              </div>
+                              <a href="{{ com.url }}" target="_blank" class="result-link">
+                                Voir détails <img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="">
+                              </a>
+                            </div>
+                          {% endfor %}
+                        </div>
+                    </div>
+                    <div class="items-tab" id="item-tab4">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#" aria-current="page">Twitter</a>
+                            </li>
+                        </ul>
+                        <div class="results-items-mobile-control">
+                            <img src="/sites/default/files/images/recherche/arrow-right.svg" class="toggle-tab" alt="" data-toggle="item-tab3">
+                            <img src="/sites/default/files/images/recherche/arrow-left.svg" alt="" style="opacity: 0.3">
+                        </div>
+
+                        <div class="list-results">
+                          {% for tweet in tweets %}
+                            <div class="result">
+                                <div class="result-title">
+                                    <div class="result-top-title">
+                                        Twitter
+                                    </div>
+                                    <div class="result-text-title">
+                                        {{ tweet.username }}
+                                    </div>
+                                </div>
+                                <div class="result-text">
+                                  {{ tweet.text }}
+                                </div>
+                                <a href="{{ tweet.url }}" target="_blank" class="result-link">
+                                    Voir détails <img src="/sites/default/files/images/recherche/keyboard-arrow-up.svg" alt="">
+                                </a>
+                            </div>
+                          {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-video">
+                    <div class="title-vid">
+                        Vidéos
+                    </div>
+
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                          {% for video in videos %}
+                            {% if (loop.index - 1) is divisible by(3) %}
+                              <div class="carousel-item {% if loop.index == 1 %}active {% endif %}">
+                                <div class="list-video">
+                            {% endif %}
+                                    <div class="video">
+                                      <iframe width="100%" height="auto"
+                                              src="https://www.youtube.com/embed/{{ video.videoId }}">
+                                      </iframe>
+                                        <div class="res-content">
+                                            <div class="result-title">
+                                                <div class="result-top-title">
+                                                    Youtube
+                                                </div>
+                                                <div class="result-text-title">
+                                                    {{ video.title }}
+                                                </div>
+                                            </div>
+
+                                            <div class="res-text">
+                                                {{ video.description }}
+                                            </div>
+                                        </div>
+                                    </div>
+                          {% if loop.index is divisible by(3) %}
+                                </div>
+                            </div>
+                          {% endif %}
+                          {% endfor %}
+                        {% if videos|length is not divisible by(3) %}
+                              </div>
+                          </div>
+                        {% endif %}
+
+                        </div>
+                        <a class="carousel-control-prev ctr-carousel ctr-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <img src="/sites/default/files/images/recherche/arrow-left-copy-2.svg" alt="">
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next ctr-carousel" href="#carouselExampleControls" role="button" data-slide="next">
+                            <img src="/sites/default/files/images/recherche/arrow-left-copy.svg" alt="">
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="search-video-mobile">
+                    <div class="title-vid-mobile">
+                        Vidéos
+                    </div>
+                    
+                    <div class="swiper-container-recherche" style="overflow: hidden">
+                        <div class="swiper-wrapper">
+                          {% for video in videos %}
+                            <div class="swiper-slide" id="slide{{ loop.index }}">
+                                <div class="video">
+                                  <iframe width="100%" height="auto" frameborder="0" allowfullscreen
+                                          src="https://www.youtube.com/embed/{{ video.videoId }}">
+                                  </iframe>
+                                    {#<div class="img-vid">
+                                        <div class="play">
+                                            <img src="/sites/default/files/images/recherche/play.svg" class="img-play" alt="">
+                                        </div>
+                                        <img class="img" src="/sites/default/files/images/recherche/forfait.jpg" alt="">
+                                    </div>#}
+                                    <div class="res-content">
+                                        <div class="result-title">
+                                            <div class="result-top-title">
+                                                Youtube
+                                            </div>
+                                            <div class="result-text-title">
+                                              {{ video.title }}
+                                            </div>
+                                        </div>
+
+                                        <div class="res-text">
+                                          {{ video.description }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <!--div class="see-more">
+                    <button type="button" class="btn btn-secondary">Afficher plus</button>
+                </div>
+
+                <div class="associe">
+                    <div class="title">
+                        Recherches associées
+                    </div>
+                    <div class="list-associated">
+                        <div class="associated">
+                            Forfait internet
+                        </div>
+                        <div class="associated">
+                            Illimix
+                        </div>
+                        <div class="associated">
+                            Allo New'Scool
+                        </div>
+                        <div class="associated">
+                            Forfait internet
+                        </div>
+                        <div class="associated">
+                            Illimix
+                        </div>
+                        <div class="associated">
+                            Allo New'Scool
+                        </div>
+                    </div>
+                    <div class="associe-mobile">
+                        <div class="swiper-container-associated">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide" id="slide1">
+                                    Forfait internet
+                                </div>
+                                <div class="swiper-slide" id="slide1">
+                                    Illimix
+                                </div>
+                                <div class="swiper-slide" id="slide1">
+                                    Allo New'Scool
+                                </div>
+                                <div class="swiper-slide" id="slide1">
+                                    Forfait internet
+                                </div>
+                                <div class="swiper-slide" id="slide1">
+                                    Illimix
+                                </div>
+                                <div class="swiper-slide" id="slide1">
+                                    Allo New'Scool
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+    <div class="contentS d-none d-md-block d-sm-block">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-block d-md-none d-sm-none">
+
+        <div class="col-sm-12">
+            <p class="pt-1"></p>
+            <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+        </div>
+        <div class="hide-reverse">
+            <div class="row" style="overflow: hidden">
+                <div class="col-12">
+                    <div class="swiper-container-footer">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="slide1">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="slide2">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="slide3">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                                            </p>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

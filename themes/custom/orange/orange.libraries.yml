@@ -1,0 +1,431 @@
+global-css:
+  version: VERSION
+  css:
+    theme:
+      'https://use.fontawesome.com/releases/v5.2.0/css/all.css':
+        type: external
+        minified: true
+        attributes:
+          crossorigin: anonymous
+          integrity: "sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      css/boosted.css: {}
+      #css/internet-fixe.css: {}
+      #css/jamononewscool.css: {}
+      css/main.css: {}
+      css/nav-footer.css: {}
+      css/offres-mobiles.css: {}
+      css/orangeHelvetica.css: {}
+      css/orangeIcons.css: {}
+      css/style.css: {}
+      #css/stylepass.css: {}
+      css/swiper.min.css: {}
+      css/test.css: {}
+      css/global-interne.css: {}
+
+global-findan-css:
+  version: VERSION
+  css:
+    theme:
+      'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css':
+        type: external
+      css/style-findan.css: {}
+
+
+global-internet-fixe-css:
+  version: VERSION
+  css:
+    theme:
+      css/internet-fixeS.css: {}
+
+global-home-fibre-css:
+  version: VERSION
+  css:
+    theme:
+      css/home-fibre.css: {}
+      css/jQuery-plugin-progressbar.css: {}
+
+global-tv-orange-css:
+  version: VERSION
+  css:
+    theme:
+      css/home-fibre.css: {}
+      css/slick.css: {}
+      css/slick-theme.css: {}
+
+global-acc-css:
+  version: VERSION
+  css:
+    theme:
+      css/slick.css: {}
+      css/slick-theme.css: {}
+      css/accueil-v2.css: {}
+
+global-orange-money-css:
+  version: VERSION
+  css:
+    theme:
+      css/orangeMoney.css: {}
+
+global-offre-family-css:
+  version: VERSION
+  css:
+    theme:
+      css/offre-family.css: {}
+
+global-illimix-css:
+  version: VERSION
+  css:
+    theme:
+      css/illimix.css: {}
+
+global-offre-home-css:
+  version: VERSION
+  css:
+    theme:
+      css/offre-home.css: {}
+
+global-offre-keurgui-css:
+  version: VERSION
+  css:
+    theme:
+      css/keurgui-box.css: {}
+
+global-pass-internationaux-css:
+  version: VERSION
+  css:
+    theme:
+      css/pass-internationaux.css: {}
+      css/select2.css: {}
+
+global-appel-depuis-etranger-css:
+  version: VERSION
+  css:
+    theme:
+      css/appel-depuis-etranger.css: {}
+      css/select2.css: {}
+
+global-actualite-css:
+  version: VERSION
+  css:
+    theme:
+      css/actualite.css: {}
+
+global-actualite-smartphone-css:
+  version: VERSION
+  css:
+    theme:
+      css/actualite-smartphone.css: {}
+
+global-hub-actualite-css:
+  version: VERSION
+  css:
+    theme:
+      css/hub-actu.css: {}
+
+global-actu-video-css:
+  version: VERSION
+  css:
+    theme:
+      css/video.css: {}
+
+global-hub-pass-internationaux-css:
+  version: VERSION
+  css:
+    theme:
+      css/hub-pass-internationaux.css: {}
+
+
+global-hub-teranga-css:
+  version: VERSION
+  css:
+    theme:
+      css/hub-teranga.css: {}
+
+global-teranga-liberty-css:
+  version: VERSION
+  css:
+    theme:
+      css/teranga-liberty.css: {}
+
+global-teranga-premium-css:
+  version: VERSION
+  css:
+    theme:
+      css/teranga-premium.css: {}
+
+global-contact-css:
+  version: VERSION
+  css:
+    theme:
+      css/contact.css: {}
+
+global-recherche-css:
+  version: VERSION
+  css:
+    theme:
+      css/recherche.css: {}
+
+global-sargal-css:
+  version: VERSION
+  css:
+    theme:
+      css/slick.css: {}
+      css/slick-theme.css: {}
+      css/sargal.css: {}
+
+global-assistance-css:
+  version: VERSION
+  css:
+    theme:
+      css/slick.css: {}
+      css/slick-theme.css: {}
+      css/assistance.css: {}
+
+
+global-orange-aicha-css:
+  version: VERSION
+  css:
+    theme:
+      css/orange-aicha.css: {}
+
+global-sargal-js:
+  version: VERSION
+  js:
+    js/sargal.js: {}
+    js/slick.js: {}
+
+global-teranga-liberty-js:
+  version: VERSION
+  js:
+    js/teranga-liberty.js: {}
+
+global-teranga-premium-js:
+  version: VERSION
+  js:
+    js/teranga-premium.js: {}
+
+global-hub-teranga-js:
+  version: VERSION
+  js:
+    js/hub-teranga.js: {}
+
+global-assistance-js:
+  version: VERSION
+  js:
+    js/slick.js: {}
+    js/assistance.js: {}
+
+global-orange-aicha-js:
+  version: VERSION
+  js:
+    js/orange-aicha.js: {}
+
+global-gold-platinium-css:
+  version: VERSION
+  css:
+    theme:
+      css/gold-platinium.css: {}
+
+global-gold-platinium-js:
+  version: VERSION
+  js:
+    js/gold-platinium.js: {}
+
+global-recherche-js:
+  version: VERSION
+  js:
+    js/recherche.js: {}
+
+global-contact-js:
+  version: VERSION
+  js:
+    js/contact.js: {}
+
+global-keurgui-js:
+  version: VERSION
+  js:
+    js/keurgui-box.js: {}
+
+global-tv-orange-js:
+  version: VERSION
+  js:
+    js/slick.js: {}
+    js/isotope.pkgd.js: {}
+    js/tv-orange.js: {}
+
+global-orange-money-js:
+  version: VERSION
+  js:
+    js/orangeMoney.js: {}
+    js/calculateur.js: {}
+    js/classie.js: {}
+    js/modalEffects.js: {}
+
+global-offre-family-js:
+  version: VERSION
+  js:
+    js/offre-family.js: {}
+
+global-illimix-js:
+  version: VERSION
+  js:
+    js/illimix.js: {}
+
+global-home-js:
+  version: VERSION
+  js:
+    js/offre-home.js: {}
+
+global-home-fibre-js:
+  version: VERSION
+  js:
+    js/jQuery-plugin-progressbar.js: {}
+    js/offre-home-fibre.js: {}
+
+
+global-internet-fixe-js:
+  version: VERSION
+  js:
+    js/custom.js: {}
+
+global-jamono-css:
+  version: VERSION
+  css:
+    theme:
+      css/detail-offre-mobile.css: {}
+
+global-passinternet-css:
+  version: VERSION
+  css:
+    theme:
+      css/pass-internet.css: {}
+
+global-testeligibilite-css:
+  version: VERSION
+  css:
+    theme:
+      css/souscription.css: {}
+
+
+
+global-testeligibilite-js:
+  version: VERSION
+  js:
+    js/souscription.js: {}
+
+global-actu-video-js:
+  version: VERSION
+  css:
+    theme:
+      css/video.js: {}
+
+
+global-pass-internationaux-js:
+  version: VERSION
+  js:
+    js/pass-internationaux.js: {}
+    js/select2.js: {}
+
+global-appel-depuis-etranger-js:
+  version: VERSION
+  js:
+    js/appel-depuis-etranger.js: {}
+    js/select2.js: {}
+
+global-acc-js:
+  version: VERSION
+  js:
+    js/slick.js: {}
+    js/accueil-v2.js: {}
+
+global-actualite-js:
+  version: VERSION
+  js:
+    js/actualite.js: {}
+    js/service-magik.js: {}
+    js/classie.js: {}
+    js/modalEffects.js: {}
+
+global-menu-header-js:
+  version: VERSION
+  js:
+    https://www.orange.sn/themes/custom/orange/js/menu-header.js: { type: external }
+    https://www.orange.sn/themes/custom/orange/js/main.js: { type: external }
+    https://www.orange.sn/themes/custom/orange/js/offres-mobiles.js: { type: external }
+    https://www.orange.sn/themes/custom/orange/js/boosted.js: { type: external }
+    https://www.orange.sn/themes/custom/orange/js/test.js: { type: external }
+    https://www.orange.sn/themes/custom/orange/js/swiper.min.js: { type: external }
+  dependencies:
+    - core/jquery
+
+global-js:
+  version: VERSION
+  js:
+    js/swiper.min.js: {}
+    js/main.js: {}
+    js/popper.min.js: {}
+    js/boosted.js: {}
+    js/test.js: {}
+#    js/timer.js: {}
+    js/offres-mobiles.js: {}
+  dependencies:
+    - core/jquery
+
+global-findan-js:
+  version: VERSION
+  js:
+    https://code.jquery.com/jquery-3.3.1.slim.min.js: { type: external }
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js: { type: external }
+    js/findan.js: {}
+
+main-js:
+  version: VERSION
+  js:
+    js/timer.js: {}
+
+google-maps-js:
+  version: VERSION
+  js:
+    https://maps.googleapis.com/maps/api/js?key=AIzaSyDJRi1lBrCE1itOkRQoTHo_A3QYyjwwKYo: { type: external }
+    js/geoloc.js: {}
+#stylesheets-remove:
+#    - core/../../../...css
+
+
+global-menu-header-css:
+  version: VERSION
+  css:
+    theme:
+      'https://use.fontawesome.com/releases/v5.2.0/css/all.css':
+        type: external
+        minified: true
+        attributes:
+          crossorigin: anonymous
+          integrity: "sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      'https://www.orange.sn/themes/custom/orange/css/boosted.css':
+        type: external
+        minified: true
+      'https://www.orange.sn/themes/custom/orange/css/main.css':
+        type: external
+        minified: true
+      'https://www.orange.sn/themes/custom/orange/css/nav-footer.css':
+        type: external
+        minified: true
+      'https://www.orange.sn/themes/custom/orange/css/offres-mobiles.css':
+        type: external
+        minified: true
+      'https://www.orange.sn/themes/custom/orange/css/orangeHelvetica.css':
+        type: external
+        minified: true
+      'https://www.orange.sn/themes/custom/orange/css/orangeIcons.css':
+        type: external
+        minified: true
+      'https://www.orange.sn/themes/custom/orange/css/style.css':
+        type: external
+        minified: true
+      'https://www.orange.sn/themes/custom/orange/css/test.css':
+        type: external
+        minified: true
+      'https://www.orange.sn/themes/custom/orange/css/global-interne.css':
+        type: external
+        minified: true

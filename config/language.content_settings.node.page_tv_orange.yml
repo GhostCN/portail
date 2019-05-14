@@ -1,0 +1,11 @@
+uuid: 4cc6ef91-b877-4f8b-be35-df96a550e04f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_tv_orange
+id: node.page_tv_orange
+target_entity_type_id: node
+target_bundle: page_tv_orange
+default_langcode: site_default
+language_alterable: false

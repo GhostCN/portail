@@ -1,0 +1,11 @@
+uuid: 2881cbaf-698d-436c-a2e3-4fc780055f3d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_d_actualites_smartphone
+id: node.page_d_actualites_smartphone
+target_entity_type_id: node
+target_bundle: page_d_actualites_smartphone
+default_langcode: site_default
+language_alterable: false

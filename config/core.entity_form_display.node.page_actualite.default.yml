@@ -1,0 +1,206 @@
+uuid: bfb58911-6a72-40ff-95aa-bbd269fa030d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.page_actualite.field_actu_ala_une
+    - field.field.node.page_actualite.field_bloc_actu
+    - field.field.node.page_actualite.field_code_ussd
+    - field.field.node.page_actualite.field_desc_actu
+    - field.field.node.page_actualite.field_desc_actu_ala_une
+    - field.field.node.page_actualite.field_image_actu
+    - field.field.node.page_actualite.field_image_actu_ala_une
+    - field.field.node.page_actualite.field_image_actu_mobile
+    - field.field.node.page_actualite.field_meme_theme
+    - field.field.node.page_actualite.field_orange_money
+    - field.field.node.page_actualite.field_portail_magik
+    - field.field.node.page_actualite.field_service_magik
+    - field.field.node.page_actualite.field_souscrire_actu
+    - field.field.node.page_actualite.field_soustitre_actu
+    - field.field.node.page_actualite.field_titre_actu
+    - field.field.node.page_actualite.field_titre_actu_ala_une
+    - field.field.node.page_actualite.field_titre_bloc_actualite
+    - field.field.node.page_actualite.field_titre_lien_a_la_une
+    - image.style.thumbnail
+    - node.type.page_actualite
+  module:
+    - inline_entity_form
+    - svg_image
+    - text
+id: node.page_actualite.default
+targetEntityType: node
+bundle: page_actualite
+mode: default
+content:
+  field_actu_ala_une:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_bloc_actu:
+    weight: 10
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_code_ussd:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_desc_actu:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_desc_actu_ala_une:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image_actu:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_image_actu_ala_une:
+    weight: 13
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_meme_theme:
+    weight: 11
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_orange_money:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_portail_magik:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_service_magik:
+    weight: 18
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_souscrire_actu:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_soustitre_actu:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_titre_actu:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_titre_actu_ala_une:
+    weight: 14
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_titre_bloc_actualite:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_titre_lien_a_la_une:
+    weight: 16
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_image_actu_mobile: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true
+  url_redirects: true

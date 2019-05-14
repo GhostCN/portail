@@ -1,0 +1,19 @@
+uuid: 4d924c41-747f-46e8-83bf-7e4c3dbba95f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_data_ko
+    - node.type.zone_pays_orange
+id: node.zone_pays_orange.field_data_ko
+field_name: field_data_ko
+entity_type: node
+bundle: zone_pays_orange
+label: 'Data (Ko) ( Ex : 1 F )'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

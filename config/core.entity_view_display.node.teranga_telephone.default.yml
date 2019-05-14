@@ -1,0 +1,123 @@
+uuid: fb3225d3-60de-4d7a-83e8-39f8ca05eba6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.teranga_telephone.field_appareil_photo
+    - field.field.node.teranga_telephone.field_batterie
+    - field.field.node.teranga_telephone.field_caracteristique_teranga
+    - field.field.node.teranga_telephone.field_connectivite
+    - field.field.node.teranga_telephone.field_couleurs
+    - field.field.node.teranga_telephone.field_ecran
+    - field.field.node.teranga_telephone.field_image_telephone_teranga
+    - field.field.node.teranga_telephone.field_ios
+    - field.field.node.teranga_telephone.field_memoire
+    - field.field.node.teranga_telephone.field_poids
+    - field.field.node.teranga_telephone.field_ram
+    - node.type.teranga_telephone
+  module:
+    - svg_image
+    - user
+id: node.teranga_telephone.default
+targetEntityType: node
+bundle: teranga_telephone
+mode: default
+content:
+  field_appareil_photo:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_batterie:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_caracteristique_teranga:
+    weight: 111
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_connectivite:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_couleurs:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ecran:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_telephone_teranga:
+    weight: 101
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_ios:
+    weight: 110
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_memoire:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_poids:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ram:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,22 @@
+uuid: 81578d21-437d-41fe-b434-71cc1e4b05e2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.vous_etes_deja_client
+  module:
+    - text
+id: node.vous_etes_deja_client.body
+field_name: body
+entity_type: node
+bundle: vous_etes_deja_client
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

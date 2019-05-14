@@ -1,0 +1,29 @@
+uuid: 5712ff33-65a6-4d3a-9f51-8f02136539ee
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faq_family.body
+    - node.type.faq_family
+  module:
+    - text
+    - user
+id: node.faq_family.teaser
+targetEntityType: node
+bundle: faq_family
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

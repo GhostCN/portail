@@ -1,0 +1,73 @@
+uuid: 1d51471c-70b4-45ea-8f06-b59643caabcc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.compte_a_rebours.field_date_en_ligne
+    - field.field.node.compte_a_rebours.field_icone
+    - field.field.node.compte_a_rebours.field_lien_du_bouton
+    - field.field.node.compte_a_rebours.field_pourcentage_bonus
+    - field.field.node.compte_a_rebours.field_prix_bonus
+    - node.type.compte_a_rebours
+  module:
+    - datetime
+    - svg_image
+    - user
+id: node.compte_a_rebours.default
+targetEntityType: node
+bundle: compte_a_rebours
+mode: default
+content:
+  field_date_en_ligne:
+    weight: 105
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_icone:
+    weight: 101
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_lien_du_bouton:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pourcentage_bonus:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prix_bonus:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_date_fin: true
+  field_texte_banniere: true
+  langcode: true

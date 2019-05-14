@@ -1,0 +1,28 @@
+uuid: 7a9ccc3b-d2ff-414c-8232-e222e9cbbde0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bloc_actu
+    - node.type.bloc_actualite
+    - node.type.page_actualite
+id: node.page_actualite.field_bloc_actu
+field_name: field_bloc_actu
+entity_type: node
+bundle: page_actualite
+label: 'Bloc actualité'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bloc_actualite: bloc_actualite
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

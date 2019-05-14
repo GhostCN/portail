@@ -1,0 +1,17 @@
+uuid: 2cb8db5b-d6d2-47ec-b52e-6caecd29f7b2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Forfait Internet Teranga'
+type: forfait_internet_teranga
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

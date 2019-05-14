@@ -1,0 +1,1046 @@
+@media screen and (min-width: 1300px) {
+    .contentS{
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .contentS{
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+  }
+}
+
+
+@media screen and (min-width: 980px) {
+ p.bt-bottom{
+     position: absolute;
+     bottom: -2px;
+ }
+}
+
+
+
+@media screen and (min-width: 1560px) {
+    .contentS{
+        width: 1360px;
+        margin: auto !important;
+    }
+
+    #scrollToTop{
+        position: fixed;
+        bottom: 20px;
+        right: unset !important;
+        display: none;
+    }
+
+    #conseiller{
+        position: fixed;
+        bottom: 50%;
+        right: 200px !important;
+        display: none;
+    }
+}
+
+#scrollToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    display: none;
+}
+
+#conseiller{
+    position: fixed;
+    bottom: 50%;
+    right: 100px;
+    display: none;
+}
+
+.rond{
+    border-radius: 60% !important;
+}
+
+.mobile{
+    display: none;
+}
+
+html{font-family: HelvNeueOrange;}
+
+body{
+    background-color: #eeeeee;
+    font-size: 16px;
+    font-family: HelvNeueOrange;
+    overflow-x: hidden;
+}
+
+.backg{
+    /*background-color: #f6f6f6 !important;*/
+}
+
+.conseiller{
+    background-color: #50be87;
+    color: #ffffff;
+}
+
+.m-aide{
+    margin-bottom: 21px;
+}
+
+.title-page{
+    font-size: 30px;
+}
+
+.title-page h1, .title-page h2{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.title-page h2{
+    margin-top: 0px;
+}
+
+.intitule-frame{
+    position: absolute;
+    margin-top: 35px;
+    margin-left: 33px;
+}
+
+.prod-eshop, .index-aide{
+    display: flex;
+    justify-content: space-between;
+}
+
+.prod-eshop .prod{
+    width: 31.4%;
+}
+
+.index-aide .wh-aide{
+    width: 48%;
+}
+
+.slide-otitle{
+    font-size: 30px;
+    color: #ff7900;
+    font-weight: bold;
+    margin-top: 38px;
+    margin-bottom: 6px;
+}
+
+.otitle{
+    margin-top: -3px;
+}
+
+.index-aide .wh-aide .title-icone, .index-aide .wh-aide .desc-sim{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.img-center{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.img-center img{
+  width: 85px;
+  height: 100px;
+}
+
+
+#annonce{
+    height: 80px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.title-annonce{
+    font-size: 28px;
+}
+
+.desc-annonce{
+    font-size: 14px;
+}
+
+.time{
+    font-size: 35px;
+    background-color: #ffffff;
+    color: #000000;
+    display: inline;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+.dizaine{
+    border-right: 2px solid black;
+}
+
+.unite{
+    border-left: 2px solid black;
+}
+
+.desc-pages{
+    margin-top: -0.5em;
+}
+
+.hide-reverse{
+    display: none;
+}
+
+.card-imageS{
+  width: 100%;
+  height: auto;
+  max-height: 210px;
+}
+
+.card-imd-affaire{
+    width: 100px;
+}
+
+.card-body-aide {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    height: 97px;
+    padding-top: 25px;
+  }
+
+.carousel-img-blue{
+    height: 264px;
+    background-color: #000000;
+    background-position: center;
+    background-size: cover;
+}
+
+.img-nav-slide{
+    width: 9px;
+    height: 14px;
+}
+
+.carousel-control-S {
+  width: 32px !important;
+  height: 30.5px !important;
+  background-color: #000000 !important;
+  color: white !important;
+  opacity: 0.58 !important;
+  bottom: calc(50% - 1rem) !important;
+  padding-top: 4px;
+}
+
+.swiper-button-next{
+    right: 0;
+}
+
+.swiper-button-prev{
+    left: 0;
+}
+
+.carousel-control-S:hover{
+    background-color: #fb7900 !important;
+}
+
+.pager-slide{
+    position: absolute;
+    bottom: 0;
+    margin-left: 85%;
+    margin-bottom: 20px;
+}
+
+.desc-frame{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title-offre-flash{
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.mt-reduction{
+    font-size: 16px;
+}
+
+.p-reduction{
+    font-size: 30px;
+}
+
+.bg-orange{
+    background-color: #fb7900;
+    color: white;
+}
+
+.img-slide{
+    height: 250px;
+}
+
+.flash-space{
+    margin-top: 24px;
+}
+
+.color-orange{
+    color: #fb7900;
+}
+
+.title-icone{
+    font-size: 20px;
+}
+
+.image-sim{
+    width: 40px;
+    height: 40px;
+}
+
+.image-carte-sim{
+    width: 25px;
+    height: 40px;
+}
+
+.image-offre{
+    width: 50px;
+    height: 35px;
+}
+
+.slide-promo{
+    height: 360px;
+    overflow: hidden;
+}
+
+.slide-promo:hover{
+    overflow: unset;
+}
+
+.categorie-affaire{
+    height: 14px;
+    font-size: 14px;
+}
+
+.title-affaire{
+    font-size: 18px;
+}
+
+.flou:hover img{
+    -webkit-filter: invert(0.4);
+	filter: invert(0.3);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.card-titleS{
+    font-size: 20px;
+}
+
+.desc-card{
+    font-size: 16px;
+    line-height: 1.25;
+    color: #666666;
+    height: 100px;
+}
+
+.slide-image-promo{
+    width: 50%;
+}
+
+.prix-affaire{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.link-app .media-body, .link-app .desc-app{
+  color: #000000;
+}
+
+.m-star{
+    margin-bottom: 6.7px;
+}
+
+.m-dispo{
+    margin-bottom: 10.3px;
+}
+
+.icon-left-view{
+    display: none;
+}
+
+.marge-fun{
+    margin-left: 50px;
+}
+
+.img-fluid-fun{
+    width: 90px;
+}
+
+.indicator-slide{
+    visibility: hidden;
+}
+
+.sm-text{
+    font-size: 16px;
+    color: #fb7900;
+}
+
+.title-flash{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.slide .carousel-indicators .active{
+    background-color: #fb7900;
+}
+
+.zoom-part{
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.zoom-part:hover{
+    transform: scale(1.1);
+}
+
+.app-OMw{
+    background-color: #a885d8;
+}
+
+.app-OM{
+    background-color: #4bb4e6;
+}
+
+.img-app{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 220px;
+    right: -9px;
+}
+
+.desc-app{
+    font-size: 14px;
+    line-height: 1.43;
+}
+
+.space{
+    margin-bottom: 50px;
+}
+
+.space40{
+    margin-bottom: 30px;
+}
+
+.space20{
+    margin-bottom: 20px;
+}
+
+.b-aide{
+    font-size: 30px;
+}
+
+/* Page internet et fixe */
+
+.prix-offre{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.label-checkbox{
+    font-family: HelvNeueOrange;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-radius: 10px;
+    border-color: #4bb4e6;
+    background-color: #4bb4e6 !important;
+}
+
+.desc-offre{
+    font-size: 16px;
+    margin-top: -12px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+    .element_menu{
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (min-width: 1000px) and (max-width: 1320px) {
+    .contentS{
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    body{
+        font-size: 14px;
+    }
+
+    .desc-pages{
+        font-size: 14px;
+    }
+
+    .card-titleS{
+        font-size: 18px;
+    }
+
+    .title-icone{
+        font-size: 18px;
+    }
+
+    .desc-card{
+        font-size: 14px;
+    }
+
+    .desc-sim{
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .card-body-aide {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .sm-text{
+        font-size: 13px;
+    }
+
+    .font-btn{
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .flou .card-titleS {
+    font-size: 17px;
+  }
+
+    .card-body-aide {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .desc-sim{
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .title-icone{
+        font-size: 18px;
+    }
+
+  .desc-card {
+    font-size: 14px;
+  }
+
+  .flou .card-body{
+    padding: 10px;
+  }
+
+  .sm-text {
+    font-size: 13px;
+  }
+
+  .desc-pages{
+      display: none;
+  }
+
+  .lien-direct .card-titleS{
+      font-size: 17.5px;
+  }
+}
+
+.sac-nav-ul {
+    display: flex;
+    list-style: none;
+    margin-left: -35px;
+    font-size: 18px;
+    line-height: 1.22;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sac-nav-ul a{
+    color: #666666;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.sac-nav-ul a:hover{
+    color: #ff7900;
+}
+
+.sac-nav-ul b{
+    color: #000000;
+}
+
+.sac-nav-ul .debutlii .px-2{
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    margin-top: -1px;
+}
+
+.font20{
+    font-size: 20px;
+}
+
+.card-body  .card-acc {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.btn-accordeon.btn.pac{
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.btn-accordeon.btn.pac::after{
+
+}
+
+.btn-accordeon.btn{
+    white-space: unset;
+}
+
+@media screen and (max-width: 980px) {
+
+    .tte-largeure{
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+
+    .slide-otitle{
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+
+    .swp-blockImg{
+        height: 212px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .block-desc{
+        background-color: #000000;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .spL{
+        justify-content: left !important;
+        margin-top: -15px;
+    }
+
+    .swpdp{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #swpager{
+        bottom: 130px;
+    }
+
+    .block-desc .desc-frame{
+        font-size: 14px;
+        margin-right: 20px;
+    }
+
+    .block-desc .text-right{
+        display: flex;
+        align-items: center;
+    }
+
+    body{
+        font-size: 15px;
+    }
+
+    .font20{
+        font-size: 16px;
+    }
+
+    .sac-nav-ul {
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
+    .debutlii {
+        font-size: 14px;
+    }
+
+    #wr{
+        margin-bottom: 14px;
+    }
+
+    .content-mobile{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .title-page.text-dark.space-resp{
+        margin-top: 10px;
+    }
+
+    .content-mobile-swiper{
+        margin-left: 0px;
+    }
+
+    .nvb{
+        margin-left: 0px;
+    }
+
+    .swin{
+        margin-top: -8px;
+    }
+
+    #scrollToTop{
+        bottom: 30px;
+        right: 10px;
+        z-index: 1;
+    }
+
+    h5{
+        font-size: 16px;
+    }
+
+    .image-sim{
+        width: 40px;
+        height: 40px;
+    }
+
+    .image-carte-sim{
+        width: 25px;
+        height: 40px;
+    }
+
+    .intitule-frame{
+        position: absolute;
+        text-align: center;
+        margin-left: 40%;
+        margin-top: 13%;
+    }
+
+    .card-imageS{
+      height: auto;
+      max-height: 184px;
+    }
+
+    .slide-promo{
+        height: 100%;
+    }
+
+    .slide-image-promo{
+        width: 16%;
+    }
+
+    .prix-offre{
+        font-size: 18px;
+    }
+
+    .flash-space{
+        margin-top: 0px;
+    }
+
+    .m-aide{
+        margin-bottom: 10px;
+    }
+
+    .icon-left-view{
+        display: block;
+    }
+
+    .pager-slide{
+        margin-left: 80%;
+        margin-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
+    .carousel-control-S {
+        width: 32px !important;
+        height: 40px !important;
+      }
+
+    .carousel-img-blue{
+        height: 212px;
+    }
+
+    .img-fluid-fun{
+        width: 58.3px;
+        height: 61.5px;
+    }
+
+    .marge-fun{
+        margin-left: 30px;
+        margin-top: -15px;
+    }
+
+    .indicator-slide{
+        visibility: visible;
+    }
+
+    .hide-screen{
+        visibility: visible;
+    }
+    .hide-reverse{
+        display: inline;
+    }
+
+    .sw-aff{
+        margin-top: 10px;
+    }
+
+    .zoom-part:hover{
+        transform: unset;
+    }
+
+    .desc-card{
+        font-size: 14px;
+        line-height: 1.43;
+        height: 100px;
+        text-align: left !important;
+    }
+
+    .card-Resp{
+        text-align: left !important;
+    }
+
+    .swiper-slide{
+        text-align: left !important;
+    }
+
+    /*.swper{
+        background-color: #000000;
+    }*/
+
+    .card.border-0.slide-otitle{
+        background-color: transparent;
+    }
+
+    .img-app{
+        width: 120px;
+        right: -14px;
+    }
+
+    .title-page{
+        font-size: 20px;
+    }
+
+    .title-page h1, .title-page h2{
+        font-size: 20px;
+    }
+
+    .space40{
+        margin-bottom: 0px;
+    }
+
+    .space20{
+        margin-bottom: 10px;
+    }
+
+    .r-space{
+        margin-top: -20px;
+    }
+
+    .card-bodyS {
+        padding-right: 0.25rem;
+        padding-left: 0.25rem;
+        padding-top: 14.1px;
+        padding-bottom: 13px;
+    }
+
+    .swiper-pagination-bullet{
+        background:#ffffff !important;
+        opacity:.5
+    }
+
+    .swiper-pagination-bullet-active{
+        opacity:1;
+        background:#fb7900 !important;
+    }
+
+    .space-resp{
+        margin-top: 30px;
+    }
+
+    .space-resp.rs{
+        margin-top: 5px;
+    }
+
+    .title-icone{
+        font-size: 16px;
+    }
+
+    .card-body-aide {
+        height: auto;
+        padding-top: 1.25rem;
+      }
+}
+
+@media screen and (min-width: 500px) and (max-width: 980px) {
+
+    .space20 #carouselExampleControls .container{
+        max-width: unset;
+    }
+
+    .swp-blockImg{
+        height: 328px !important;
+    }
+
+    .index-aide .wh-aide {
+        width: 24% !important;
+    }
+
+    .swiper-container .swper{
+        margin-top: 25px;
+    }
+
+    .flaide{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flaide .index-aide{
+        width: 49%;
+    }
+
+    .flaide .index-aide .wh-aide{
+        width: 48% !important;
+    }
+
+    .desc-sim{
+        font-size: 13px;
+        color: #666666;
+    }
+
+    .hide-screen.showLandscape{
+      display: block;
+    }
+
+    .hide-screen.showLandscape.space20{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    .spL{
+        margin-top: 5px;
+    }
+
+    .title-page{
+        font-size: 30px;
+    }
+
+    .title-page h1, .title-page h2{
+        font-size: 30px;
+    }
+
+    .space-resp.rs {
+        margin-top: 15px;
+    }
+
+    .block-desc{
+        display:none;
+    }
+
+    .descL.card.border-0{
+        background-color: transparent;
+        margin-left: 30px;
+    }
+
+    .slide-otitle {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .descL{
+        display: none;
+    }
+
+    .content-mobile{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .hide-mobile{
+        display: none;
+    }
+
+    h5{
+        font-size: 10px;
+    }
+
+    .marge-fun{
+        margin-left: 30px;
+    }
+
+    .desc-sim{
+        font-size: 10px;
+        color: #666666;
+    }
+
+    .image-sim{
+        width: 51px;
+        height: 51px;
+    }
+
+    .image-carte-sim{
+        width: 32px;
+        height: 51px;
+    }
+
+    .image-offre{
+        width: 68px;
+        height: 51px;
+    }
+
+    .btn-slide{
+        font-size: 15px;
+    }
+
+    .sm-text{
+        font-size: 14px;
+    }
+
+    .card-body-aide {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+    .title-icone{
+        font-size: 14px;
+    }
+
+    .title-flash{
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .card-titleS{
+        font-size: 14px;
+    }
+
+    .card-Resp{
+        font-size: 16px;
+    }
+
+    .pager-slide{
+        margin-left: 75%;
+    }
+}

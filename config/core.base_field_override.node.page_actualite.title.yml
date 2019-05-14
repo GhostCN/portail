@@ -1,0 +1,18 @@
+uuid: e1cadf50-afbe-4af3-93c2-a817f126c9f3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_actualite
+id: node.page_actualite.title
+field_name: title
+entity_type: node
+bundle: page_actualite
+label: 'Nom de l''offre'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

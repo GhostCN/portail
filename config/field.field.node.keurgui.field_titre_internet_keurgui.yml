@@ -1,0 +1,19 @@
+uuid: e5d60641-64a6-49c2-a23e-6224951c7a49
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titre_internet_keurgui
+    - node.type.keurgui
+id: node.keurgui.field_titre_internet_keurgui
+field_name: field_titre_internet_keurgui
+entity_type: node
+bundle: keurgui
+label: 'Titre internet'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

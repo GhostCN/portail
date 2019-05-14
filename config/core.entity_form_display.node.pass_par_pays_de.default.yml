@@ -1,0 +1,64 @@
+uuid: dbf95157-cd68-40d2-b265-68e5df0a5b04
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pass_par_pays_de.field_pass_data
+    - field.field.node.pass_par_pays_de.field_pass_voix
+    - node.type.pass_par_pays_de
+  module:
+    - inline_entity_form
+id: node.pass_par_pays_de.default
+targetEntityType: node
+bundle: pass_par_pays_de
+mode: default
+content:
+  field_pass_data:
+    weight: 2
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_pass_voix:
+    weight: 1
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

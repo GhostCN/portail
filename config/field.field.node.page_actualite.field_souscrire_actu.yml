@@ -1,0 +1,21 @@
+uuid: fab5cec5-d46c-443e-9d87-730592c714cc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_souscrire_actu
+    - node.type.page_actualite
+  module:
+    - text
+id: node.page_actualite.field_souscrire_actu
+field_name: field_souscrire_actu
+entity_type: node
+bundle: page_actualite
+label: 'Comment souscrire ?'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

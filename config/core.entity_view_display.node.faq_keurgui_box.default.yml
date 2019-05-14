@@ -1,0 +1,27 @@
+uuid: 8fb4c0f9-7077-424a-895e-793f208a77ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.faq_keurgui_box.body
+    - node.type.faq_keurgui_box
+  module:
+    - text
+    - user
+id: node.faq_keurgui_box.default
+targetEntityType: node
+bundle: faq_keurgui_box
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

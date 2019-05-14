@@ -1,0 +1,11 @@
+uuid: 472a163e-e22c-4433-93a6-caa384830fca
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.promo_bon_plan
+id: node.promo_bon_plan
+target_entity_type_id: node
+target_bundle: promo_bon_plan
+default_langcode: site_default
+language_alterable: false

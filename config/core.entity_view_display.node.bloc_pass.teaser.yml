@@ -1,0 +1,21 @@
+uuid: 36a311c8-c6b2-4554-b5f1-2498ff53d0ff
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.bloc_pass
+  module:
+    - user
+id: node.bloc_pass.teaser
+targetEntityType: node
+bundle: bloc_pass
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_duree_validite: true
+  field_tarif_pass: true
+  langcode: true

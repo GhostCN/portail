@@ -1,0 +1,22 @@
+uuid: 20887bb6-a711-4134-9c0a-03a77c2830e6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.cadeau_sargal
+id: node.cadeau_sargal.promote
+field_name: promote
+entity_type: node
+bundle: cadeau_sargal
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

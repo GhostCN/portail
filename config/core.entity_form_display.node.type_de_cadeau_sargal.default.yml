@@ -1,0 +1,58 @@
+uuid: 69b9fb4d-de4b-49d2-8141-d731a4fe38f8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.type_de_cadeau_sargal.field_cadeaux_sargal
+    - field.field.node.type_de_cadeau_sargal.field_image_correspondant
+    - image.style.thumbnail
+    - node.type.type_de_cadeau_sargal
+  module:
+    - inline_entity_form
+    - svg_image
+id: node.type_de_cadeau_sargal.default
+targetEntityType: node
+bundle: type_de_cadeau_sargal
+mode: default
+content:
+  field_cadeaux_sargal:
+    weight: 26
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_image_correspondant:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

@@ -1,0 +1,22 @@
+uuid: bfcee417-42a1-4b82-b32a-97b6b2ef3ddf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.etapes_deploiement
+  module:
+    - text
+id: node.etapes_deploiement.body
+field_name: body
+entity_type: node
+bundle: etapes_deploiement
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

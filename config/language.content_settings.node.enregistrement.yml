@@ -1,0 +1,11 @@
+uuid: b121fa13-bbc6-45e8-9beb-8f45a9be39a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.enregistrement
+id: node.enregistrement
+target_entity_type_id: node
+target_bundle: enregistrement
+default_langcode: site_default
+language_alterable: false

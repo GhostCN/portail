@@ -1,0 +1,21 @@
+uuid: 7bc79e56-2088-4b61-9579-907389972432
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.type_de_cadeau_sargal
+  module:
+    - user
+id: node.type_de_cadeau_sargal.teaser
+targetEntityType: node
+bundle: type_de_cadeau_sargal
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_cadeaux_sargal: true
+  field_image_correspondant: true
+  langcode: true

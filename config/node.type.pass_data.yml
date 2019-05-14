@@ -1,0 +1,17 @@
+uuid: 7c02bfed-d992-4686-a9d4-4317ede6a806
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Pass Voix'
+type: pass_data
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

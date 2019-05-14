@@ -1,0 +1,11 @@
+uuid: 5fab9130-f2aa-4b63-8e60-de27174a9bee
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.template_teranga_liberty
+id: node.template_teranga_liberty
+target_entity_type_id: node
+target_bundle: template_teranga_liberty
+default_langcode: site_default
+language_alterable: false

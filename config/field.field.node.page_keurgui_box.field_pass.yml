@@ -1,0 +1,28 @@
+uuid: e48f99db-d8d1-4b22-b5aa-213636c1ed4d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pass
+    - node.type.bloc_pass
+    - node.type.page_keurgui_box
+id: node.page_keurgui_box.field_pass
+field_name: field_pass
+entity_type: node
+bundle: page_keurgui_box
+label: 'Gamme Pass'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      bloc_pass: bloc_pass
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

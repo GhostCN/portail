@@ -1,0 +1,22 @@
+uuid: da120c4b-b5e1-456e-97e4-7ca3361648db
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.faq_home
+id: node.faq_home.status
+field_name: status
+entity_type: node
+bundle: faq_home
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

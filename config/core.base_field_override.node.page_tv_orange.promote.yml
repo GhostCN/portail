@@ -1,0 +1,22 @@
+uuid: 0803c98c-d0c3-44cb-945a-51ee1ca91850
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_tv_orange
+id: node.page_tv_orange.promote
+field_name: promote
+entity_type: node
+bundle: page_tv_orange
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

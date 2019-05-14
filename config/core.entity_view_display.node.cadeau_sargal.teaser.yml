@@ -1,0 +1,21 @@
+uuid: d72cda7c-fd38-41af-849f-6a20baa117f7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.cadeau_sargal
+  module:
+    - user
+id: node.cadeau_sargal.teaser
+targetEntityType: node
+bundle: cadeau_sargal
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_cadeau: true
+  field_validite: true
+  langcode: true

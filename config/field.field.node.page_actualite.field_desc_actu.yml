@@ -1,0 +1,21 @@
+uuid: c735e44a-b152-4f32-a96f-57bdb07775c2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_desc_actu
+    - node.type.page_actualite
+  module:
+    - text
+id: node.page_actualite.field_desc_actu
+field_name: field_desc_actu
+entity_type: node
+bundle: page_actualite
+label: Descriptif
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

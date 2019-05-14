@@ -1,0 +1,402 @@
+{{ attach_library('orange/global-offre-family-css') }}
+{{ attach_library('orange/global-offre-family-js') }}
+    <div class="contentA">
+        <section class="">
+            <div class="d-none  d-sm-none d-md-none d-lg-block">
+                <ul class="sac-nav-ul mb-0">
+                    <li class="debutlii">
+                        <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+                    </li>
+                    <li class="debutlii">
+                        <a href="{{ path('offres-mobile') }}"> Nos offres mobiles</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+                    </li>
+                    <li class="debutlii dropdown">
+                        <a class="nav-link dropdown-toggle dropb " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" style="padding: 0;">
+                            <b>Offre family</b>
+                        </a>
+                        <div class="dropdown-menu dropdow-menu-prinicepale">
+                            <a class="dropdown-item" href="/offres-mobiles/jamono-max-13" role="menuitem">Jamono Max</a>
+                            <a class="dropdown-item" href="/offres-mobiles/jamono-allo-14" role="menuitem">Jamono Allo</a>
+                            <a class="dropdown-item" href="/offres-mobiles/family" role="menuitem">Family</a>
+                            <a class="dropdown-item" href="/offres-mobiles/roaming-et-international" role="menuitem">International</a>
+                        </div>
+                    </li>
+                    {#<li class="debutlii">
+                        <a href="#"> <b> Offre family </b></a>
+                    </li>#}
+                </ul>
+            </div>
+            <ul class="fil-ar-family mb-0 d-lg-none">
+                <li class="">
+                    <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+                </li>
+                <li class="">
+                    <a href="#"> Offre family</a>
+                </li>
+            </ul>
+
+        </section>
+    </div>
+    <div class="Group-111 ">
+        <div class="text-style-of contentA offre-hom ">
+            <h1 class="text-style-1-of color-orange-style">Offre</br>
+            <span class="text-style-2-of mt-0 ">Family </span></h1>
+        </div>
+        <img class="imgSmall bandeau  d-none  d-sm-none d-md-none d-lg-block" src="/sites/default/files/icones/offre-family/Bandeau-Page-Family-desktop-Low-min.jpg" alt="">
+        <img class="imgSmall  d-lg-none" src="/sites/default/files/icones/offre-family/Bandeau-Page-Family-Mobile.jpg" alt="">
+    </div>
+
+    <div class="">
+        <!--Card version desktop-->
+        <div class="body-Interne contentA">
+            <section class="pdle">
+                <div class="card card-tarifs-family">
+                    <div class="contenue-card-family">
+                        <div class="contenue-appel-icone">
+                            <div class="dsp">
+                                <img class="icone-block-action" src="/sites/default/files/icones/offre-family/group-5-family.svg" alt="">
+                                <p class="contenue-parag">Prix des appels</p>
+                            </div>
+                            <p class="sec-family">{{tarifs_family.0.prix_appel}}</p>
+                        </div>
+
+
+                        <div class="contenue-appel-icone">
+                            <div class="dsp">
+                                <img class="icone-block-action" src="/sites/default/files/icones/offre-family/group-4-family.svg" alt="">
+                                <p class="contenue-parag">Prix des SMS</p>
+                            </div>
+                            <p class="sec-family">{{tarifs_family.0.prix_sms}}</p>
+                        </div>
+
+                        <div class="contenue-appel-icone">
+                            <div class="dsp">
+                                <img class="icone-block-action" src="/sites/default/files/icones/offre-family/group-3-family.svg" alt="">
+                                <p class="contenue-parag">Seddo Pass internet</p>
+                            </div>
+                            <p class="sec-family">{{tarifs_family.0.seddo_pass}}</p>
+                        </div>
+
+                        <div class="contenue-appel-icone">
+                            <div class="dsp">
+                                <img class="icone-block-action" src="/sites/default/files/icones/offre-family/group-133-family.svg" alt="">
+                                <p class="contenue-parag">Seddo Bonus</p>
+                            </div>
+                            <p class="sec-family">{{tarifs_family.0.seddo_bonus}}</p>
+                        </div>
+                    </div>
+                    <div class="desc-contenu-fammily">
+                        Tarifs valables entre les membres de la famille enregistrés dans l'offre Family.
+                    </div>
+                </div>
+            </section>
+            <section class="decouvre-fondamentaux">
+                <div class="blog-tabs">
+                    <ul class="nav nav-tabs row border-bottom-0 " id="myTab" role="tablist">
+                        <li class="nav-item col-lg-6 text-center">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                                <span class="mb-0 offr-resm-family">Les fondamentaux de l’offre</span>
+                            </a>
+                        </li>
+                        <li class="nav-item col-lg-6 text-center">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                                <span class="mb-0 offr-resm-family">Comment souscrire ?</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content tab-content-border ml-0 mr-2" id="myTabContent">
+                        <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="contenue-card-family blockavantage">
+                                {% for i in 0..5 %}
+                                <div class="contenue-appel-icone">
+                                    <img class="img-wi" src="{{file_url(fondamentaux['icons_fand'][i])}}" alt="">
+                                    <p class="une-connexion-st-family">{{fondamentaux['detail_fand'][i]|striptags('<br><strong><b>')|raw}}</p>
+                                </div>                                                 
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="row blockavantage">
+                            {% for i in 0..2 %}
+                                <div class="col-lg-4">
+                                    <div class="Tarifs">
+                                        <div class="option">
+                                            <span>{{sousc_family['etape_sousc'][i]}}
+                                                        <h4>{{sousc_family['titre_sousc'][i]}}</h4></span>
+                                        </div>
+                                    </div>
+                                    <p class="Lorem-ipsum-d">{{sousc_family['description_sousc'][i]|striptags('<br><strong><b>')|raw}}</p>
+                                </div>
+                             {% endfor %}   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="swipper-img-text ">
+
+                <p class="fondamentaux pb-1">Les fondamentaux de l’offre </p>
+                <div class="swiper-container-offre-family e" style="overflow: hidden;">
+                    <div class="swiper-wrapper">
+                        {% for i in 0..5 %}
+                        <div class=" swiper-slide swipe3-family ">
+                            <div class=" card blog-img-text family-card">
+                                <div class="div-img">
+                                    <img class="img-wii" src="{{file_url(fondamentaux['icons_fand'][i])}}" alt="">
+                                </div>
+                                <p class="Loffre-est-disponib-family">{{fondamentaux['detail_fand'][i]|striptags('<strong><b>')|raw}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+            <section class="decouvre-fondamentaux">
+                <div class="card card-smart-family">
+                    <div class="contenue-card-family card-contenue-1">
+
+                        <div class="block-family-part">
+                            <img class="smartphone-ic smart-1" src="{{file_url(tarifs_family.0.image_phone)}}" alt="" id="">
+                            <img class="smartphone-ic samrt " width="" src="{{file_url(tarifs_family.0.image_phone)}}" alt="" id="">
+                        </div>
+                        <div class="smart-text-phone">
+                            <p class="Marque-family">{{tarifs_family.0.type_phone}}</p>
+                            <p class="Modle-family">{{tarifs_family.0.nom_phone}}</p>
+                            <p class="Systme-dexploitati-family">{{tarifs_family.0.description_phone}}</p>
+                            <a href="{{tarifs_family.0.lien_detail}}"><b class="dtail-smart">Détails</b><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche"> </a>
+                        </div>
+                       <!-- <div class="prix-btn">
+                            <p class="sec-smart">{{tarifs_family.0.prix_phone}}</p>
+                            <div><a href="{{tarifs_family.0.lien_acheter}}" class="btn btn-primary acheter-family btn-ache ">Acheter</a>
+                                <a href="{{tarifs_family.0.lien_acheter}}" type="button" class="btn btn-info btn-ache-1-1 acheter-family  d-lg-none d-md-none d-sm-block">Acheter</a>
+                            </div>
+                        </div>
+                    </div> -->
+                    </div>
+                </div>
+            </section>
+            <!-- pour les avantages Devenir New S’cool ? version mobile -->
+            <div class="swipper-img-text">
+                <h2 class="Les-avantages-New-S pl-2">Comment souscrire ?</h2>
+                <div class="Rectangle-13 pr-1">
+                    <div class="row">
+                        {% for i in 0..2 %}
+                        <div class="col-12 p-3" style=" display: flex;">
+                            <div class="px-3 mt">
+                                <h4 class="mb-0 pb-1 se-rendre">{{sousc_family['etape_sousc'][i]}} {{sousc_family['titre_sousc'][i]}}</h4><span class="option-mobile"> {{sousc_family['description_sousc'][i]|striptags}}</span>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <!-- fin version mobile -->
+            <div id="faq">
+                <div class="content-mobile">
+                    <div class="title-block">
+                        <B>Questions fréquentes</B>
+                    </div>
+                </div>
+                <div class="space20"></div>
+                <div class="">
+                    <div class="card border-0">
+                            {% set valeur = faq_family['questions_family']|length %}
+                        <div class="card-body card-body-family">
+                            <div class="accordion" id="accordionExample">
+                                {% set key = 1 %}
+                                {% for i in 0..valeur-1 %}
+                                <div class="card {% if valeur == key %}border-0{% endif %}" {% if key == 1 %} style="border-top: none;"{% endif %}>
+                                  <div class="card-header my-2" id="heading{{key}}">
+                                    <h5 class="mb-0">
+                                      <button class="btn-accordeon btn btn-link collapsed font20" type="button" data-toggle="collapse" data-target="#collapse{{key}}S" aria-expanded="{% if key == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{key}}">
+                                        {{faq_family['questions_family'][i]}}
+                                      </button>
+                                    </h5>
+                                  </div>
+
+                                  <div id="collapse{{key}}S" class="collapse {% if key == 1 %}show{% endif %}" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                      {{faq_family['reponses_family'][i]|raw}}
+                                    </div>
+                                  </div>
+                                </div>
+                                  {% set key= key + 1 %}
+                                  {% endfor %}
+                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- footer jaune -->
+        <div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+            <div class="contentS d-none d-md-block d-sm-block">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+                    </div>
+                    <div class="sous-bloc-footer col-sm-4">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+                                </div>
+                                <div class="col-sm-10">
+                                    <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+                                </div>
+                                <div class="col-lg-2"></div>
+                                <div class="col-sm-10">
+                                    <p style=" text-align: justify;">
+                                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                                    </p>
+                                </div>
+                                <div class="col-lg-2"></div>
+                                <div class="col-sm-10">
+                                    <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sous-bloc-footer col-sm-4">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                                </div>
+                                <div class="col-sm-10">
+                                    <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+                                </div>
+                                <div class="col-lg-2"></div>
+                                <div class="col-sm-10">
+                                    <p style=" text-align: justify;">
+                                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+                                </div>
+                                <div class="col-lg-2"></div>
+                                <div class="col-sm-10">
+                                    <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sous-bloc-footer col-sm-4">
+                        <div>
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                                </div>
+                                <div class="col-sm-10">
+                                    <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+                                </div>
+                                <div class="col-lg-2"></div>
+                                <div class="col-sm-10">
+                                    <p style=" text-align: justify;">
+                                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                                    </p>
+                                </div>
+                                <div class="col-lg-2"></div>
+                                <div class="col-sm-10">
+                                    <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container d-block d-md-none d-sm-none">
+
+                <div class="col-sm-12">
+                    <p class="pt-1"></p>
+                    <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+                </div>
+                <div class="hide-reverse">
+                    <div class="row" style="overflow: hidden">
+                        <div class="col-12">
+                            <div class="swiper-container-footer">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide" id="slide1">
+                                        <div>
+                                            <div class="row">
+                                                <div class="text-left col-sm-2">
+                                                    <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                                                </div>
+                                                <div class="col-sm-8 py-2">
+                                                    <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                                                </div>
+                                                <div class="col-lg-2"></div>
+                                                <div class="col-sm-8">
+                                                    <p class="text-block-jaune" style=" text-align: justify;">
+                                                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-2"></div>
+                                                <div class="col-sm-10 text-left">
+                                                    <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" id="slide2">
+                                        <div>
+                                            <div class="row">
+                                                <div class="text-left col-sm-2">
+                                                    <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                                                </div>
+                                                <div class="col-sm-8 py-2">
+                                                    <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                                                </div>
+                                                <div class="col-lg-2"></div>
+                                                <div class="col-sm-8">
+                                                    <p class="text-block-jaune" style=" text-align: justify;">
+                                                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-2"></div>
+                                                <div class="col-sm-10 text-left">
+                                                    <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" id="slide3">
+                                        <div>
+                                            <div class="row">
+                                                <div class="text-left col-sm-2">
+                                                    <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                                                </div>
+                                                <div class="col-sm-8 py-2">
+                                                    <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                                                </div>
+                                                <div class="col-lg-2"></div>
+                                                <div class="col-sm-8">
+                                                    <p class="text-block-jaune" style=" text-align: justify;">
+                                                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                                                    </p>
+                                                    </p>
+                                                </div>
+                                                <div class="col-lg-2"></div>
+                                                <div class="col-sm-10 text-left">
+                                                    <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+    </div>

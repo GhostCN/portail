@@ -1,0 +1,64 @@
+uuid: 2d3fff03-193a-4336-944f-3563438926a7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.orange_money.field_faq_orange_money
+    - field.field.node.orange_money.field_slider
+    - node.type.orange_money
+  module:
+    - inline_entity_form
+id: node.orange_money.default
+targetEntityType: node
+bundle: orange_money
+mode: default
+content:
+  field_faq_orange_money:
+    weight: 2
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_slider:
+    weight: 1
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

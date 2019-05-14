@@ -1,0 +1,19 @@
+uuid: c0d62ee3-7772-40a7-b411-82a55cda9539
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarification
+    - node.type.pass_liberty
+id: node.pass_liberty.field_tarification
+field_name: field_tarification
+entity_type: node
+bundle: pass_liberty
+label: Tarification
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

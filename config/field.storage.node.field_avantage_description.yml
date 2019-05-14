@@ -1,0 +1,19 @@
+uuid: 009fce9c-756d-4b85-8097-1f6dd2d9ecb5
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_avantage_description
+field_name: field_avantage_description
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

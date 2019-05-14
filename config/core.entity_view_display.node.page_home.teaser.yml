@@ -1,0 +1,28 @@
+uuid: e5fdad60-16a2-43f3-90da-919e8f8c586c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.page_home
+  module:
+    - user
+id: node.page_home.teaser
+targetEntityType: node
+bundle: page_home
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_commen: true
+  field_faq_home_plus: true
+  field_o: true
+  field_option_home_plus: true
+  field_options_bouquet_inclus: true
+  field_options_internet_inclus_of: true
+  field_options_tel_inclus: true
+  field_tarif_home_plus: true
+  field_titre_internet: true
+  langcode: true

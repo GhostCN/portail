@@ -1,0 +1,22 @@
+uuid: a97e6568-7ed9-4605-96d0-823e594e6a6b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.teranga
+id: node.teranga.promote
+field_name: promote
+entity_type: node
+bundle: teranga
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

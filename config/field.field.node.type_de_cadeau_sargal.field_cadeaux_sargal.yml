@@ -1,0 +1,28 @@
+uuid: c2da0f41-d079-4194-a8f7-6c5e3a96eb8b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cadeaux_sargal
+    - node.type.cadeau_sargal
+    - node.type.type_de_cadeau_sargal
+id: node.type_de_cadeau_sargal.field_cadeaux_sargal
+field_name: field_cadeaux_sargal
+entity_type: node
+bundle: type_de_cadeau_sargal
+label: 'Cadeaux sargal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      cadeau_sargal: cadeau_sargal
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

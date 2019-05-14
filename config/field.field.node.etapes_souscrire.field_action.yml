@@ -1,0 +1,19 @@
+uuid: 1043e506-fb93-47f6-8780-af035b5ca009
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_action
+    - node.type.etapes_souscrire
+id: node.etapes_souscrire.field_action
+field_name: field_action
+entity_type: node
+bundle: etapes_souscrire
+label: Action
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

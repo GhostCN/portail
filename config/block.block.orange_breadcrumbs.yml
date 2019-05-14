@@ -1,0 +1,22 @@
+uuid: dd0af031-7417-496f-86dc-d4ff531d515d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - orange
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: orange_breadcrumbs
+theme: orange
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Fils d''Ariane'
+  provider: system
+  label_display: '0'
+visibility: {  }

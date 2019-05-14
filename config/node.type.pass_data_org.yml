@@ -1,0 +1,17 @@
+uuid: e2de981f-6c5a-45c9-9d71-4c906522f65c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Pass Data'
+type: pass_data_org
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

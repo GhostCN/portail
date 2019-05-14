@@ -1,0 +1,406 @@
+{{ attach_library('orange/global-offre-keurgui-css') }}
+{{ attach_library('orange/global-keurgui-js') }}
+<div class="contentA">
+  <section class="">
+    <ul class="sac-nav-ul mb-0">
+      <li class="debutlii">
+        <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+      </li>
+      <li class="debutlii d-none d-sm-block">
+        <a href="{{ path('internet-fixe') }}">Internet ADSL - Fibre</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+      </li>
+      <li class="debutlii">
+        <a href="#"> <b> Offre Keurgui Box </b></a>
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="Group-111">
+  <div class="text-style-of-box contentA">
+    <h1 class="text-style-1-of-box color-orange-style">Offre</br>
+    <span class="text-style-2-of-box mt-0 ">Keurgui Box</span></h1>
+  </div>
+  <div class="img-height">
+    <img class="imgSmall Group-7-boxxe d-none  d-sm-none d-md-none d-lg-block" src="/sites/default/files/icones/background-header-keurgui-box-desktop.jpg" alt="">
+
+  </div>
+  <img class="imgSmall Group-7-boxxe d-lg-none" src="/sites/default/files/icones/background-header-mobile-keurgui-box.jpg" alt="">
+</div>
+<div class="contentA">
+  <div class="">
+    <section class="pack">
+      <div class="card card-box">
+        <div class="d-none  d-sm-none d-md-none d-lg-block">
+          <div class="row">
+            <div class="col-lg-4 col-boxx">
+              <img class="Group-7-box" src="/sites/default/files/icones/keurgui-box.png" alt="">
+            </div>
+            <div class="col-lg-8">
+              <div class="keur-box">
+                <p class="keure-ce"> <b>Le pack <span class="orange">KeurguiBox</span> c’est :</b> </p>
+                {% for option in tarifs.0.options_keurgui %}
+                <div class="im-text pb-2">
+                  <img class="int-marg" src="/sites/default/files/icones/check-orange.svg" alt="">
+                  <span class="text-box-deb color-6">{{option}}</span>
+                </div>
+                {% endfor %}
+                <div class="trente-text">
+                  <p class="color-6 tar">Le prix de la KeurguiBox à l'achat:</p>
+                  <span class="orange trente-cinq"><b> {{tarifs.0.tarif_keurgui}} </b></span>
+                </div>
+                <div class="bt-sous trente-text-1">
+                  <!--<a class="btn  bt-souscrire disable-btn disabled" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension" href="#" role="button" >Souscrire</a>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--mobile-->
+        <div class="d-lg-none">
+          <div class="row">
+            <div class="col-6 max-im">
+              <img class="Group-7-boxe" src="/sites/default/files/icones/keurgui-box@2x.png" alt="">
+            </div>
+            <div class="col-6 max-box">
+              <p class="keure-ce px-2"> <b class="">Le pack <span class="orange">KeurguiBOX</span> c’est :</b> </p>
+            </div>
+          </div>
+          {% for option in tarifs.0.options_keurgui %}
+          <div class="tex-imgg">
+            <div class="row">
+              <div class="col-2">
+                <img class="int-marg" src="/sites/default/files/icones/check-orange.svg" alt="">
+              </div>
+              <div class="col-10 col-tex">
+                <span class="tex-sim color-6">{{option}}</span>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <hr class="box-car-h">
+          <p class="tex-sim color-6 unique">Pour un tarif de bienvenue unique :</p>
+          <p class="mb-3"><b class="orange or-mob">{{tarifs.0.tarif_keurgui}}</b></p>
+          <a class="btn btn-primary bt-souscrire" href="#" role="button" style="display: none;">Souscrire</a>
+
+        </div>
+        <!--fin mobile-->
+      </div>
+    </section>
+    <section class="packe">
+      <h2 class="Les-Pass-Internet-Jo mt-0"> Une gamme de Pass dédiée via <span class="orange"> passorange.sn </span> </h2>
+      <div class="row mb-3">
+        {% set len = options['pass_keurgui_box']|length %}
+        {% for i in 0..len-1 %}
+        <div class="col-lg-2 col-6 ">
+          <div class="card card1-box">
+            <!--a href="#" -->
+              <div class="card-body card1-body-box">
+                <div class="card-title im-text mb-0"> <span class="pass-style-box"> Pass</span>
+                  <b class="pass-Mo-box mb-0 ">{{options['pass_keurgui_box'][i]}}</b>
+                </div>
+                <b class="text-style-1-of-box">{{options['tarif_pass_keurgui_box'][i]}}</b>
+                <hr class="sepa">
+                <p class="Valable-24h-pour-les-box mb-0">{{options['duree_pass_keurgui_box'][i]}}</p>
+              </div>
+            <!--/a-->
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div>Les Pass sont accessibles via Orange Money</div>
+    </section>
+    <section class="pack">
+      <h2 class="Les-Pass-Internet-Jo joo mt-0"> <span class="orange">Deux nouveaux forfaits</span> <b class=""></b> pour ceux qui souhaitent un abonnement : </h2>
+      <div class="deux-car">
+        <div class="row">
+          <div class="col-lg-6 col-12 card-mob-for">
+            <div class="card card-move">
+              <p class="forf">{{offre_resume['titre_forfait'][0]}}</p>
+              <div class="im-text">
+                <img class="image-etoile-card-2" src="/sites/default/files/icones/plus.svg" alt="">
+                <span class="deux-mil-cin">{{offre_resume['credit_forfait'][0]}}</span>
+              </div>
+              <hr class="hrblanc">
+              <p class="tail-num">{{offre_resume['tarif_forfait'][0]}}</p>
+              <span class="frai sgmb-btn">{{offre_resume['frais_forfait'][0]}}</span>
+              <!--<a class="btn btn-primary bt-sou" data-toggle="modal" data-target="#exampleModalCenter-2" href="" role="button">S'abonner</a>-->
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 card-mob-for">
+            <div class="card card-bl">
+              <p class="forf">{{offre_resume['titre_forfait'][1]}}</p>
+              <div class="im-text">
+                <img class="image-etoile-card-2" src="/sites/default/files/icones/plus.svg" alt="">
+                <span class="deux-mil-cin">{{offre_resume['credit_forfait'][1]}}</span>
+              </div>
+              <hr class="hrblanc">
+              <p class="tail-num">{{offre_resume['tarif_forfait'][1]}}</p>
+              <span class="frai sgmb-btn">{{offre_resume['frais_forfait'][1]}}</span>
+              <!--<a class="btn btn-primary bt-sou" data-toggle="modal" data-target="#exampleModalCenter-2" href="" role="button">S'abonner</a>-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="Le-client-paie-les-f">Le client paie les frais d’accès et le pass sera automatiquement positionné. Réception de la facture chaque fin de mois.</p>
+    </section>
+    <section class="packee d-none  d-sm-none d-md-none d-lg-block">
+      <div class="d-none  d-sm-none d-md-none d-lg-block">
+        <ul class="nav nav-tabs row border-bottom-0 " id="myTab" role="tablist">
+          <li class="nav-item col-lg-6 text-center">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+              <span class="mb-0 offr-resm">Pourquoi souscrire à Keurgui Box ?</span>
+            </a>
+          </li>
+          <li class="nav-item col-lg-6 text-center">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+              <span class="mb-0 offr-resm">Comment souscrire ?</span>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content tab-content-border ml-0 mr-2" id="myTabContent">
+          <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row blockavantage">
+
+              {% for i in 0..3 %}
+              <div class="col-lg-3  ">
+                <div class="groupe171">
+                  <img src="{{file_url(souscription['icone_souscription_keurgui_box'][i])}}" class="" alt="">
+                </div>
+                <div class="text-img">
+                  <p class="une-connexion-st">
+                    <b class="offr">{{souscription['titre_souscription_keurgui_box'][i]}}</b>
+                  </p>
+                  <p class="loren-isp">{{souscription['description_souscription_keurgui_box'][i]|striptags('<strong><b>')|raw}}
+                  </p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="row blockavantage">
+            {% for i in 0..2 %}
+              <div class="col-lg-4">
+                <div class="Tarifs">
+                  <div class="option">
+                    <span>{{comment_souscrire['titre_etapes_souscription_keurgui_box'][i]}}
+                      <h4>{{comment_souscrire['action_etapes_souscription_keurgui_box'][i]}}</h4></span>
+                  </div>
+                </div>
+                <p class="Lorem-ipsum-d">{{comment_souscrire['description_etapes_souscription_keurgui_box'][i]|striptags('<strong><b>')|raw}}</p>
+              </div>
+            {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--pour mobile-->
+    <section class="packe d-block d-lg-none">
+      <h2 class="Les-avantages-New-SSS d-block d-lg-none">Pourquoi souscrire à Keurgui Box ?</h2>
+      <div class="d-block d-lg-none mb-2">
+        <div class="row ">
+          {% for i in 0..3 %}
+          <div class="col-6 mb-2">
+            <div class="Rectangle-333 text-center">
+              <img class="py-2" src="{{file_url(souscription['icone_souscription_keurgui_box'][i])}}" alt="Card image cap" id="imageLoren">
+              <p class="Tarifs-rduits">{{souscription['titre_souscription_keurgui_box'][i]}}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!--fin mobile-->
+        <section class="equipement qs">
+      <h2 class="qsf">Questions fréquentes</h2>
+         <div class="card border-0">
+            {% set valeur = faq_hhk['question_faq_keurgui_box']|length %}
+                <div class="card-body card-acc">
+                    <div class="accordion" id="accordionExample">
+                    {% set key = 1 %}
+                    {% for i in 0..valeur-1 %}
+                        <div class="card backg {% if valeur == key %}border-0{% endif %}" {% if key == 1 %} style="border-top: none;"{% endif %} >
+                            <div class="card-header my-2" id="heading{{key}}">
+                                <h5 class="mb-0">
+                                    <button class="btn-accordeon btn btn-link collapsed backg font20" type="button" data-toggle="collapse" data-target="#collapse{{key}}S" aria-expanded="{% if key == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{key}}">
+                                            {{faq_hhk['question_faq_keurgui_box'][i]}}
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapse{{key}}S" class="collapse {% if key == 1 %}show{% endif %}" aria-labelledby="heading{{key}}" data-parent="#accordionExample">
+                            <div class="card-body">
+                                  {{faq_hhk['reponse_faq_keurgui_box'][i]|raw}}
+                            </div>
+                            </div>
+                        </div>
+                    {% set key= key + 1 %}
+                    {% endfor %}
+                    </div>
+                </div>
+
+            <div class="space50"></div>
+        </div>
+    </section>
+  </div>
+</div>
+<br><br>
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

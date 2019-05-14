@@ -1,0 +1,18 @@
+uuid: 34059a7b-c971-4f68-875f-873afd875b01
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bloc_pass
+id: node.bloc_pass.title
+field_name: title
+entity_type: node
+bundle: bloc_pass
+label: 'Pass ( Ex: 1G )'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

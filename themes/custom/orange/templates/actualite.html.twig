@@ -1,0 +1,441 @@
+{{ attach_library('orange/global-actualite-css') }}
+{{ attach_library('orange/global-actualite-js') }}
+<!-- <p class="mb-3"></p> -->
+    <section class="">
+    <div class="Group-111 ">
+        <div class="contentA">
+            <div class=" debut-lli">
+                <ul class="debut ">
+                    <li class="debutli-etran ml-0">
+                        <a href="/" class="style-col">Accueil</a><img class="imgSmall" src="/{{directory}}/icones/keyboard-arrow-right-gray.svg" alt="" id="fleche">
+                    </li>
+                    <li class="debutli-etran">
+                        <b class="apel-etr">Actualités</b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            <div class="text-style-of contentA offre-hom ">
+                <span class="text-style-1-of color-orange-style">{{ chp_actualite.nom_actu.0 }}</span>
+                <h2 class="text-style-2-of mt-0 ">
+                    {{ chp_actualite.titre_actu.0 |raw }}
+                </h2>
+            </div>
+            <img class="imgSmall Group-7" src="{{file_url(chp_actualite['image_actu'][0])}}" alt="">
+        </div>
+        <div class="label-copy-orange">
+            <div class="contentA">
+                <p class="label-text">
+                    {{ chp_actualite.titre_2_actu.0|raw }}
+                </p>
+              {% if chp_actualite.code_ussd.0 %}
+                <p class="souscrireSg"><button onclick="document.location.href='tel:{{ chp_actualite.code_ussd.0 }}'" class="btn btn-secondary btn-block">Souscrire</button></p>
+              {% endif %}
+            </div>
+        </div>
+        <div style="margin-left:100px;margin-bottom:20px;">
+            {% spaceless %}
+                <span class="a2a_kit a2a_kit_size_{{ chp_actualite.buttons_size }} addtoany_list" data-a2a-url="{{ chp_actualite.link_url }}" data-a2a-title="{{ chp_actualite.link_title }}">
+                    {% if chp_actualite.universal_button_placement == 'before' %}
+                    {{ chp_actualite.universal_button }}
+                    {% endif %}
+
+                    {% if chp_actualite.addtoany_html %}
+                    {{ chp_actualite.addtoany_html|raw }}
+                    {% endif %}
+
+                    {% if chp_actualite.universal_button_placement == 'after' %}
+                    {{ chp_actualite.universal_button }}
+                    {% endif %}
+                </span>
+            {% endspaceless %}
+        </div>
+    </section>
+
+    <div class="contentA tab-descr">
+        <div class="o-tab-container ">
+            <a class="o-tab-heading" href="#" id="tab1">Descriptif</a>
+            <div class="o-tab-content show" id="tab-1-content">
+                {{ chp_actualite.desc_actu.0|raw }}
+              {% if chp_actualite.service_magik.0 %}
+                <p>
+                    <button class="btn btn-primary abonnement" id="modal" data-toggle="modal" data-target="#abonnement">S'abonner</button>
+                </p>
+              {% endif %}
+            </div>
+            <a class="o-tab-heading" href="#" id="tab2">Conditions</a>
+            <div class="o-tab-content" id="tab-2-content">
+                {{ chp_actualite.souscription_actu.0|raw }}
+            </div>
+        </div>
+    </div>
+
+    {% if chp_actualite['titre_bloc']|length > 0 %}
+    <div class="card border-0 card-desc">
+        <div class="avantages contentA">
+            <p class="Quels-avantages-pour">{{ chp_actualite.titre_bloc_actualite.0 }}</p>
+            <div class="disspa-w avantage-tab">
+                {% for i in 0..2 %}
+                <div class="block-avantage">
+                    <div class=" diss-ju ">
+                        <div class="img-surf">
+                            <img class="imgSmall " src="{{file_url(chp_actualite['icone_bloc'][i])}}" alt="">
+                        </div>
+                        <div class="text-sruf">
+                            <p class="Je-surfe-sur-le-rse">
+                                {{chp_actualite['titre_bloc'][i]}}
+                            </p>
+                            <p class="Pour-la-6e-fois-cons">
+                                {{chp_actualite['description_bloc'][i]|raw}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <!--descriptif block mobile-->
+    <section class="contentA">
+        <div class="des-con-avantages">
+            <div class="description-mob">
+                <p class="Descriptif-block-mob">Descriptif</p>
+                {{ chp_actualite.desc_actu.0|raw }}
+
+              {% if chp_actualite.code_ussd.0 %}
+                <p class="souscrireSg"><button onclick="document.location.href='tel:{{ chp_actualite.code_ussd.0 }}'" class="btn btn-secondary btn-block">Souscrire</button></p>
+              {% endif %}
+
+              {% if chp_actualite.service_magik.0 %}
+                <p>
+                  <button class="btn btn-primary abonnement" data-toggle="modal" data-target="#abonnement">S'abonner</button>
+                </p>
+              {% endif %}
+            </div>
+            <div class="condition-mob-block">
+                <p class="Descriptif-block-mob">Conditions</p>
+                <div class="disspa">
+                    {{ chp_actualite.souscription_actu.0|raw }}
+                </div>
+            </div>
+        </div>
+        <div class="avantages-swipe">
+            <p class="Descriptif-block-mob">{{ chp_actualite.titre_bloc_actualite.0 }}</p>
+            <div class="swiper-container-mobile e">
+                <div class="swiper-wrapper">
+                    {% for i in 0..2 %}
+                    <div class=" swiper-slide swipe3-family ">
+                        <div class=" card blog-img-text family-card">
+                            <div class="div-img">
+                                <img class="img-wii" src="{{file_url(chp_actualite['icone_bloc'][i])}}" alt="">
+                            </div>
+                            <p class="Je-surfe-sur-le-rse">
+                                {{chp_actualite['titre_bloc'][i]}}
+                            </p>
+                            <p class="Loffre-est-disponib-family">
+                                {{chp_actualite['description_bloc'][i]|raw|striptags}}
+                            </p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--fin description block mobile-->
+
+ {% if chp_actualite.orange_money.0 %}
+    <div class="contentS">
+    <div class="partenaire">
+        <div class="imgOM">
+            <img src="/sites/default/files/images/orangeMoney/group-330.svg" class="img-desk">
+            <img src="/sites/default/files/images/orangeMoney/group-330.svg" class="img-mob" width="100%">
+        </div>
+
+        <div class="descPart">
+            Vous êtes intéressé ? Démarrez votre inscription en ligne.
+        </div>
+
+        <div class="btnP">
+            <button class="md-trigger btn btn-outline-dark btn-block" data-modal="modal-1">Devenir partenaire</button>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+    <section class="block-actu-part contentA ">
+        <div class="nous-contacte-block">
+            <div class="disspa-w block-element-actu">
+                <div class="rectangle16 card border-0" id="blue-block">
+                    <div class="diss-ju face-gmail">
+                        <div class="">
+                            <img class="imgSmall img-sociaux-block" src="/{{directory}}/icones/actualite/group-259-fac.svg" alt="">
+                        </div>
+                        <p class="Nous-suivre-sur-Face">Nous suivre sur Facebook</p>
+                        <div class="btn-sous">
+                            <a href="https://web.facebook.com/orange.sn/" target="_blank" class="btn btn-detail">Voir détails</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rectangle16 card border-0" id="mv-block">
+                    <div class=" diss-ju face-gmail">
+                        <div class="">
+                            <img class="imgSmall img-sociaux-block pl-1" src="/{{directory}}/icones/actualite/group-330-gamail.svg" alt="">
+                        </div>
+                        <p class="Nous-suivre-sur-Face">Nous contacter par mail</p>
+                        <div class="btn-sous">
+                            <a href="mailto:serviceclient@orange-sonatel.com"  class="btn btn-detail">Voir détails</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="block-actu-part contentA" id="meme-theme">
+        <p class="Sur-le-mme-thme">Sur le même thème</p>
+        <div class="disspa-w">
+            {% for i in 0..2 %}
+            <div class="rectanglr-actu card border-0">
+                <img class="imgSmall img-actu-moment" src="{{file_url(chp_actualite['image_meme'][i])}}" alt="">
+                <div class="card-body diss-ju card-body-actu">
+                    <p class="Accdez-au-wifi-dOr pt-2 mb-0">
+                        <b>{{chp_actualite['titre_meme'][i]}}</b>
+                    </p>
+                    <div class="">
+                        <a href="{{chp_actualite['lien_meme'][i]}}" class="btn btn-primary btn-dec-actu">Découvrir</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="meme-theme-actu contentA">
+        <p class="Sur-le-mme-thme">Sur le même thème</p>
+        <div class="swiper-container-mobile e">
+            <div class="swiper-wrapper">
+                {% for i in 0..2 %}
+                <div class=" swiper-slide swipe3-actu ">
+                    <div class=" card blog-img-texte family-card">
+                        <img class="img-swipe-theme" src="{{file_url(chp_actualite['image_meme'][i])}}" alt="">
+                        <div class="card-body-actu-mob">
+                            <p class="Accdez-au-wifi-dOr pt-2 mb-0">
+                                <b>{{chp_actualite['titre_meme'][i]}}</b>
+                            </p>
+                            <div class="">
+                                <a href="{{chp_actualite['lien_meme'][i]}}" class="btn btn-primary">Découvrir</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+    <div class="contentS d-none d-md-block d-sm-block">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-block d-md-none d-sm-none">
+
+        <div class="col-sm-12">
+            <p class="pt-1"></p>
+            <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+        </div>
+        <div class="hide-reverse">
+            <div class="row" style="overflow: hidden">
+                <div class="col-12">
+                    <div class="swiper-container-footer">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="slide1">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="slide2">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="slide3">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                                            </p>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{# Modal pour partenaire #}
+
+<div class="md-modal md-effect-1" id="modal-1">
+    <div class="md-content">
+        <div class="md-tt">Devenir partenaire</div>
+        <div>
+            <p class="sub-t">Laissez nous vos coordonnées et nous vous recontacterons pour vous ajouter comme partenaire Orange Money.</p>
+            <div class="desc-md">
+                <img src="/sites/default/files/images/orangeMoney/fill-1.svg" alt="">
+                <div>
+                    <div>
+                        Vous aurez besoin des documents suivants pour votre inscription :
+                    </div>
+                    <div>• NINEA</div>
+                    <div>• Registre de commerce</div>
+                    <div>• Relevé d’identité bancaire</div>
+                    <div>• Copie de la pièce d’identité de la/des personne(s) figurant dans le RCCM et pouvant engager la responsabilité sociale de l’entreprise (CNI pour les ressortissants UEMOA et Passeport pour les étrangers hors UEMOA).</div>
+                </div>
+            </div>
+            <form action="/orange-money" method="POST">
+                <div class="list-inp">
+                    <div class="mat-div">
+                        <div for="first-name" class="mat-label">Saisissez votre prénom</div>
+                        <input type="text" name="prenom" class="mat-input mtn" required>
+                    </div>
+                    <div class="mat-div">
+                        <div for="first-name" class="mat-label">Saisissez votre nom</div>
+                        <input type="text" name="nom" class="mat-input mtn" required>
+                    </div>
+                    <div class="mat-div">
+                        <div for="first-name" class="mat-label">Saisissez votre numéro de téléphone</div>
+                        <input type="number" name="tel" class="mat-input mtn" required>
+                    </div>
+                    <div class="mat-div">
+                        <div for="first-name" class="mat-label">Saisissez votre adresse email</div>
+                        <input type="email" name="email" class="mat-input mtn" required>
+                    </div>
+                </div>
+                <button class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+        <a href="javascript:;" class="md-close waves-effect waves-light"><img src="/sites/default/files/images/orangeMoney/c.svg" alt=""></a>
+    </div>
+</div>
+
+
+<div class="md-overlay"></div><!-- the overlay element -->

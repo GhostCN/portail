@@ -1,0 +1,19 @@
+uuid: 8b25ab84-7cf3-4905-8c6f-f020f711b5e7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_option_home_plus
+    - node.type.page_home
+id: node.page_home.field_option_home_plus
+field_name: field_option_home_plus
+entity_type: node
+bundle: page_home
+label: 'Options home plus'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

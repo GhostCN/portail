@@ -1,0 +1,28 @@
+uuid: 2527a489-9725-49ea-a050-4a08630d46a1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_template_de_page_liberty
+    - node.type.template_teranga_liberty
+    - node.type.teranga
+id: node.teranga.field_template_de_page_liberty
+field_name: field_template_de_page_liberty
+entity_type: node
+bundle: teranga
+label: 'Template de page liberty'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      template_teranga_liberty: template_teranga_liberty
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

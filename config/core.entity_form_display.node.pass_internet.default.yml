@@ -1,0 +1,128 @@
+uuid: e14a0f5c-4e7c-4c20-9607-fd466ffdcd9f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pass_internet.field_info_supplementaire_pass
+    - field.field.node.pass_internet.field_montant_pass
+    - field.field.node.pass_internet.field_offre_concernee_pass
+    - field.field.node.pass_internet.field_poids_pass
+    - field.field.node.pass_internet.field_restrictions_pass
+    - field.field.node.pass_internet.field_validite_pass
+    - field.field.node.pass_internet.field_volume_pass
+    - node.type.pass_internet
+  module:
+    - path
+id: node.pass_internet.default
+targetEntityType: node
+bundle: pass_internet
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_info_supplementaire_pass:
+    weight: 130
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_montant_pass:
+    weight: 127
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_offre_concernee_pass:
+    weight: 132
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_poids_pass:
+    weight: 126
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_restrictions_pass:
+    weight: 131
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_validite_pass:
+    weight: 128
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_volume_pass:
+    weight: 129
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 120
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

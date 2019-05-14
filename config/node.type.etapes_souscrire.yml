@@ -1,0 +1,17 @@
+uuid: dfea0932-302e-475e-af29-b8ac2f3d071b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Etapes souscrire'
+type: etapes_souscrire
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

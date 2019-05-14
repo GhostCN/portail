@@ -1,0 +1,23 @@
+uuid: 5133c525-4485-499e-9a22-3ef563afd55b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_forfait_24_mois
+    - node.type.premium_avec_tel
+id: node.premium_avec_tel.field_forfait_24_mois
+field_name: field_forfait_24_mois
+entity_type: node
+bundle: premium_avec_tel
+label: 'forfait 24 mois'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,11 @@
+uuid: 13b929e2-1a40-4fa1-ae40-0c4f3c29fc4d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_internationaux
+id: node.pass_internationaux
+target_entity_type_id: node
+target_bundle: pass_internationaux
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,534 @@
+{#
+/**
+ * @file
+ * Bartik's theme implementation to display a single page.
+ *
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template normally located in the
+ * core/modules/system directory.
+ *
+ * Available variables:
+ *
+ * General utility variables:
+ * - base_path: The base URL path of the Drupal installation. Will usually be
+ *   "/" unless you have installed Drupal in a sub-directory.
+ * - is_front: A flag indicating if the current page is the front page.
+ * - logged_in: A flag indicating if the user is registered and signed in.
+ * - is_admin: A flag indicating if the user has permission to access
+ *   administration pages.
+ *
+ * Site identity:
+ * - front_page: The URL of the front page. Use this instead of base_path when
+ *   linking to the front page. This includes the language domain or prefix.
+ *
+ * Page content (in order of occurrence in the default page.html.twig):
+ * - node: Fully loaded node, if there is an automatically-loaded node
+ *   associated with the page and the node ID is the second argument in the
+ *   page's path (e.g. node/12345 and node/12345/revisions, but not
+ *   comment/reply/12345).
+ *
+ * Regions:
+ * - page.header: Items for the header region.
+ * - page.highlighted: Items for the highlighted region.
+ * - page.primary_menu: Items for the primary menu region.
+ * - page.secondary_menu: Items for the secondary menu region.
+ * - page.featured_top: Items for the featured top region.
+ * - page.content: The main content of the current page.
+ * - page.sidebar_first: Items for the first sidebar.
+ * - page.sidebar_second: Items for the second sidebar.
+ * - page.featured_bottom_first: Items for the first featured bottom region.
+ * - page.featured_bottom_second: Items for the second featured bottom region.
+ * - page.featured_bottom_third: Items for the third featured bottom region.
+ * - page.footer_first: Items for the first footer column.
+ * - page.footer_second: Items for the second footer column.
+ * - page.footer_third: Items for the third footer column.
+ * - page.footer_fourth: Items for the fourth footer column.
+ * - page.footer_fifth: Items for the fifth footer column.
+ * - page.breadcrumb: Items for the breadcrumb region.
+ *
+ * @see template_preprocess_page()
+ * @see html.html.twig
+ */
+#}
+
+{{ attach_library('orange/global-acc-css')}}
+{{ attach_library('orange/global-acc-js')}}
+
+
+{# Début header #}
+{% include directory ~ '/templates/includes/header.html.twig' %}
+{# Fin header #}
+
+{# Début content #}
+<div class="contentS">
+  {{ page.breadcrumb }}
+
+  <div class="blok-fenetre">
+    <h1 class="titre-fenetre">Dalal ak Jamm ci Orange !</h1>
+
+    <div class="list-fenetre">
+      {% for win in windows %}
+      <div class="item-fenetre">
+        <a href="{{ path(win.url) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Fenêtres Principales', 'eventAction':'button_click','eventLabel':'{{ win.title }}'});">
+          <img src="{{ file_url(win.image) }}" class="img-fen" alt="">
+        </a>
+        <div class="desc-fen">
+          <div class="titre-fen">
+            <a href="{{ path(win.url) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Fenêtres Principales', 'eventAction':'button_click','eventLabel':'{{ win.title }}'});">
+              {{ win.title }} <img src="/sites/default/files/images/accueil-v2/keyboard-arrow-up.svg" alt="">
+            </a>
+          </div>
+          <div class="sub-tr-fen">
+            {{ win.resume }}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="list-fenetre-mobile">
+      <div class="swiper-container-fen-acc" style="overflow: hidden">
+        <div class="swiper-wrapper mb-0">
+          {% for win in windows %}
+          <div class="swiper-slide">
+            <a href="{{ path(win.url) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Fenêtres Principales', 'eventAction':'button_click','eventLabel':'{{ win.title }}'});">
+              <div class="fen-mob">
+                <img src="{{ file_url(win.image) }}" class="img-fen-mob" alt="">
+                <div class="desc-fen">
+                  {{ win.title }}
+                </div>
+              </div>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blok-anim">
+    <div class="list-anim">
+      <div class="anim">
+        <div class="blc-slider">
+          <div class="list-slider">
+            {% for slide in sliders %}
+            <div class="slider">
+              <div class="dsc-slider">
+                <div class="slider-tt-v">
+                  <p>{{ slide.titre_principal | raw }}</p>
+                </div>
+                <div class="slider-st-v">
+                  {{ slide.title }}
+                </div>
+                <a href="{{ slide.lien }}" class="btn btn-inverse btn-primary">Découvir</a>
+              </div>
+              <img src="{{ file_url(slide.image) }}" alt="">
+              <div class="desc-sld-mob">
+                <div>{{ slide.title }}</div>
+                <a href="{{ slide.lien }}" class="btn btn-inverse btn-dark">Découvir</a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="anim">
+        <div class="blc-aide">
+          <h2>Besoin d’aide ?</h2>
+
+          <div class="list-aide">
+            {% for a in aides %}
+            <a href="{{a.lien}}" class="aide-item" onclick="dataLayer.push({'event':'click','eventCategory':'Besoin d\'aide', 'eventAction':'button_click','eventLabel':'{{ a.title }}'});" target="_blank">
+              <img src="{{ file_url(a.image) }}" alt="">
+              <div class="dsc-aide">
+                <div class="tt-aide">{{ a.title }}</div>
+                <div class="st-aide">{{ a.info }}</div>
+              </div>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blok-now">
+    <h1 class="titre-fenetre">En ce moment chez Orange</h1>
+
+    <div class="list-act">
+      {% for i in 0..3 %}
+
+        {% if  actu[0]['titre'][i]%}
+      <div class="actu">
+        {% set titre = actu[0]['titre'][i] %}
+        <a href="{{ path('actualite', {'id':actu[0]['uri'][i]}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Actualités', 'eventAction':'button_click','eventLabel':'{{ titre }}'});">
+          <img src="{{file_url(actu[0]['image'][i])}}" class="img-act" alt="">
+        </a>
+
+        <div class="desc-act">
+          <div class="tt-act">
+            <a href="{{ path('actualite', {'id':actu[0]['uri'][i]}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Actualités', 'eventAction':'button_click','eventLabel':'{{ titre }}'});">
+              {{actu[0]['titre'][i]}}
+            </a>
+          </div>
+          <div class="txt-act">{{actu[0]['desc'][i]|striptags}}</div>
+          <a href="{{ path('actualite', {'id':actu[0]['uri'][i]}) }}" class="color-orange" onclick="dataLayer.push({'event':'click','eventCategory':'Actualités', 'eventAction':'button_click','eventLabel':'{{ titre }}'});">
+            <B>
+              En Savoir Plus
+            </B>
+            <img src="/sites/default/files/images/accueil-v2/keyboard-arrow-up-orange.svg" alt="">
+          </a>
+        </div>
+      </div>
+      {% endif %}
+
+      {% endfor %}
+    </div>
+
+    <div class="list-act-mobil">
+      <div class="swiper-container-act" style="overflow: hidden">
+        <div class="swiper-wrapper mb-0">
+          {% for i in 0..3 %}
+            {% if  actu[0]['titre'][i]%}
+              {% set titre = actu[0]['titre'][i] %}
+          <div class="swiper-slide">
+            <div class="actu">
+              <a href="{{ path('actualite', {'id':actu[0]['uri'][i]}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Actualités', 'eventAction':'button_click','eventLabel':'{{ titre }}'});">
+                <img src="{{file_url(actu[0]['image'][i])}}" class="img-act" alt="">
+              </a>
+
+              <div class="desc-act">
+                <div class="tt-act">
+                  <a href="{{ path('actualite', {'id':actu[0]['uri'][i]}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Actualités', 'eventAction':'button_click','eventLabel':'{{ titre }}'});">
+                    {{actu[0]['titre'][i]}}
+                  </a>
+                </div>
+                <div class="txt-act">{{actu[0]['desc'][i]|striptags}}</div>
+                <a href="{{ path('actualite', {'id':actu[0]['uri'][i]}) }}" class="color-orange" onclick="dataLayer.push({'event':'click','eventCategory':'Actualités', 'eventAction':'button_click','eventLabel':'{{ titre }}'});">
+                  <B>
+                    En Savoir Plus
+                  </B>
+                  <img src="/sites/default/files/images/accueil-v2/keyboard-arrow-up-orange.svg" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blok-shop">
+    <h1 class="titre-fenetre">Les bonnes affaires du jour</h1>
+
+    <div class="list-blok">
+      <div class="blok-item">
+        <div class="vente-flash">
+          <div class="vente-t">
+            <div class="tt-flash">Les stars du moment</div>
+            <div class="st-flash">Ne manquez pas ces occasions</div>
+          </div>
+
+          <div class="list-ori">
+            {% for phone in phones %}
+            {% if phone.flash == "1" %}
+            <div>
+              <div class="vente-flash-origi">
+                <div class="img-origi">
+                  <img src="{{ file_url(phone.image) }}" alt="">
+                </div>
+                <div class="dsc-origi">
+                  <div class="tt-or">{{ phone.title }}</div>
+                  <div class="st-or">{{ phone.prix }}</div>
+
+                  <div class="dsc-ph-txt">{{ phone.reduction | raw }}</div>
+                  <div class="lnk"><a href="{{ path('actualite-smartphone',{'id': phone.id}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Eshop', 'eventAction':'button_click','eventLabel':'{{ phone.title }}'});" class="btn btn-primary">Voirs Détails</a></div>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="blok-item">
+        <div class="list-phone-flash">
+          {% for phone in phones %}
+          {% if phone.flash == "0" %}
+          <div class="phone-flash">
+            <div class="flsh-ttP">{{ phone.title }}</div>
+            <div class="flsh-ttSub">{{ phone.title }}</div>
+            <img src="{{ file_url(phone.image) }}" class="flh-img" alt="">
+
+            <div class="desc-ph">
+              <div class="phone-prixS color-orange">
+                {{ phone.prix }}
+              </div>
+
+              <div class="etoiles">
+                <img src="/sites/default/files/images/accueil-v2/star-full.svg" alt="">
+                <img src="/sites/default/files/images/accueil-v2/star-full.svg" alt="">
+                <img src="/sites/default/files/images/accueil-v2/star-full.svg" alt="">
+                <img src="/sites/default/files/images/accueil-v2/star-empty.svg" alt="">
+              </div>
+              <div class="stt">Disponible</div>
+
+              <a href="{{ path('actualite-smartphone',{'id': phone.id}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Eshop', 'eventAction':'button_click','eventLabel':'{{ phone.title }}'});" class="btn btn-primary">Voir Détails</a>
+            </div>
+          </div>
+          {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="list-phone-flash-mobile">
+          <div class="swiper-container-flh" style="overflow: hidden">
+            <div class="swiper-wrapper mb-0">
+              {% for phone in phones %}
+              {% if phone.flash == "0" %}
+              <div class="swiper-slide">
+                <div class="phone-flash">
+                  <div class="flsh-ttP">{{ phone.title }}</div>
+                  <div class="flsh-ttSub">{{ phone.title }}</div>
+                  <img src="{{ file_url(phone.image) }}" class="flh-img" alt="">
+
+                  <div class="desc-ph">
+                    <div class="phone-prixS color-orange">
+                      {{ phone.prix }}
+                    </div>
+
+                    <div class="etoiles">
+                      <img src="/sites/default/files/images/accueil-v2/star-full.svg" alt="">
+                      <img src="/sites/default/files/images/accueil-v2/star-full.svg" alt="">
+                      <img src="/sites/default/files/images/accueil-v2/star-full.svg" alt="">
+                      <img src="/sites/default/files/images/accueil-v2/star-empty.svg" alt="">
+                    </div>
+                    <div class="stt">Disponible</div>
+
+                    <a href="{{ path('actualite-smartphone',{'id': phone.id}) }}" onclick="dataLayer.push({'event':'click','eventCategory':'Eshop', 'eventAction':'button_click','eventLabel':'{{ phone.title }}'});" class="btn btn-primary">Voir Détails</a>
+                  </div>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blok-app">
+    <h1 class="titre-fenetre">Nos apps vous facilitent la vie</h1>
+
+    <div class="list-appS">
+      <a href="https://play.google.com/store/apps/details?id=com.orange.myorange.osn&hl=fr" target="_blank" class="app" onclick="dataLayer.push({'event':'click','eventCategory':'Apps', 'eventAction':'button_click','eventLabel':'Orange et moi'});">
+        <div class="tt-app">
+          <img src="/sites/default/files/images/accueil-v2/orange-et-moi-black.svg" alt="">
+          <div>
+            <div class="telch">Télécharger l'application</div>
+            <div>Orange et moi</div>
+          </div>
+        </div>
+
+        <div class="desc-appS">
+          <p>Gérez vos services mobiles depuis votre smartphone. Achat de pass internet, rechargement de crédit, consultation de factures, assistance, suivi de votre consommation..etc</p>
+          <button class="btn btn-outline-dark">Voir Détails</button>
+        </div>
+
+        <img src="/sites/default/files/images/accueil-v2/Orange_et_Moi_desktop.svg" class="img-ill" alt="">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.orange.mobile.orangemoney&hl=fr" target="_blank" class="app" onclick="dataLayer.push({'event':'click','eventCategory':'Apps', 'eventAction':'button_click','eventLabel':'Orange Money'});">
+        <div class="tt-app">
+          <img src="/sites/default/files/images/accueil-v2/orange-money-black.svg" alt="">
+          <div>
+            <div class="telch">Télécharger l'application</div>
+            <div>Orange Money</div>
+          </div>
+        </div>
+
+        <div class="desc-appS">
+          <p>Notre offre mobile banking. Payez vos achats, transferez de l'argent, achetez du crédit, règlez vos factures Sénélec,SDE,…etc depuis votre téléphone mobile.</p>
+          <button class="btn btn-outline-dark">Voir Détails</button>
+        </div>
+
+        <img src="/sites/default/files/images/accueil-v2/Orange_Money_desktop.svg" class="img-ill" alt="">
+      </a>
+    </div>
+  </div>
+</div>
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  {# Fin footer-body#}
+
+  {# Footer #}
+  {% include directory ~ '/templates/includes/footer.html.twig' %}
+  {# Fin footer #}
+
+  {# <div class="row">
+    <div class="col-lg-12 text-right">
+      <button class="btn btn-rounded text-center rounded-circle btn-primary rond scrollToTop-btn" id="scrollToTop">
+        <i class="fas fa-angle-up fa-2x"></i>
+      </button>
+    </div>
+  </div> #}

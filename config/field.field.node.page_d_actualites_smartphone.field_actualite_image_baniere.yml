@@ -1,0 +1,38 @@
+uuid: 9fd9de52-e674-4afb-9848-6044a6c3e019
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_actualite_image_baniere
+    - node.type.page_d_actualites_smartphone
+  module:
+    - image
+id: node.page_d_actualites_smartphone.field_actualite_image_baniere
+field_name: field_actualite_image_baniere
+entity_type: node
+bundle: page_d_actualites_smartphone
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

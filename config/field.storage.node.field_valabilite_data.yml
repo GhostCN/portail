@@ -1,0 +1,21 @@
+uuid: 0e1699a6-5a55-446c-b09f-89422d859b21
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_valabilite_data
+field_name: field_valabilite_data
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

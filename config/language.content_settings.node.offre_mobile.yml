@@ -1,0 +1,11 @@
+uuid: d98ca0ed-21be-4c81-8116-5c36de1d4631
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.offre_mobile
+id: node.offre_mobile
+target_entity_type_id: node
+target_bundle: offre_mobile
+default_langcode: site_default
+language_alterable: false

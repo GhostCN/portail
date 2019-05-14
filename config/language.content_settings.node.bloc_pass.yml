@@ -1,0 +1,11 @@
+uuid: c449766c-0e0d-4910-8e4c-d3c1c04ab95d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bloc_pass
+id: node.bloc_pass
+target_entity_type_id: node
+target_bundle: bloc_pass
+default_langcode: site_default
+language_alterable: false

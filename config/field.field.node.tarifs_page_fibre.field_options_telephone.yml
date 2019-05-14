@@ -1,0 +1,19 @@
+uuid: 463a9cba-3e60-4ddb-9599-febfda2ea803
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_options_telephone
+    - node.type.tarifs_page_fibre
+id: node.tarifs_page_fibre.field_options_telephone
+field_name: field_options_telephone
+entity_type: node
+bundle: tarifs_page_fibre
+label: 'Options Telephone Inclus Offre'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

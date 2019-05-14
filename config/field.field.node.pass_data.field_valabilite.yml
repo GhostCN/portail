@@ -1,0 +1,19 @@
+uuid: 930276cb-dea5-4daf-8f29-02f9af856ccf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_valabilite
+    - node.type.pass_data
+id: node.pass_data.field_valabilite
+field_name: field_valabilite
+entity_type: node
+bundle: pass_data
+label: 'valabilité ( Ex : valable 3j)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,36 @@
+uuid: 56b68132-4bf3-447e-8dd8-b1d05720d284
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_validite_pass
+field_name: field_validite_pass
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Jour
+      label: Jour
+    -
+      value: Semaine
+      label: Semaine
+    -
+      value: Mois
+      label: Mois
+    -
+      value: Jours
+      label: '3 jours'
+    -
+      value: Nuit
+      label: Nuit
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

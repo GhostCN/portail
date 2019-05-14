@@ -1,0 +1,37 @@
+uuid: 4301a272-4f55-4226-9659-d61e2168da61
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pass_liberty.field_tarification
+    - node.type.pass_liberty
+id: node.pass_liberty.default
+targetEntityType: node
+bundle: pass_liberty
+mode: default
+content:
+  field_tarification:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

@@ -1,0 +1,17 @@
+uuid: 1ee05536-ffba-4d3e-902a-6062c873c6d5
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Avantages Offre'
+type: avantage_offre
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

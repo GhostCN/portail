@@ -1,0 +1,21 @@
+uuid: 1470dbcb-6cbb-4198-86a8-c5874e7f5875
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_help_informations
+field_name: field_help_informations
+entity_type: node
+type: string
+settings:
+  max_length: 1024
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

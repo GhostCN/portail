@@ -1,0 +1,816 @@
+    @font-face {
+        font-family: HelvNeueOrange;
+        font-style: normal;
+        font-weight: 400;
+        src: url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff");
+    }
+    
+    @font-face {
+        font-family: HelvNeueOrange;
+        font-style: normal;
+        font-weight: 700;
+        src: url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff");
+    }
+    
+    body {
+        font-family: HelvNeueOrange;
+        font-size: 16px;
+        width: 100%;
+        height: auto;
+    }
+    
+    html {
+        font-family: HelvNeueOrange;
+    }
+    
+    body {
+        background-color: #eeeeee !important;
+    }
+    
+    .contentA {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+    .imgSmall.bandeau {}
+    
+    .desc-contenu-fammily {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+    
+    .Group-111 {
+        height: 300px;
+        overflow: hidden;
+    }
+    
+    .nav .nav-link:focus,
+    .nav .nav-link:hover {
+        background-color: unset !important;
+        color: #fb7900 !important;
+        border: unset !important;
+    }
+    
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-item.show .nav-link {
+        color: #000;
+        background-color: #fff;
+        border-color: #000;
+        font-weight: bold !important;
+        padding-top: 21px !important;
+    }
+    
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-item.show .nav-link:hover {
+        border-top: #000 solid 2px !important;
+        border-left: #000 solid 2px !important;
+        border-right: #000 solid 2px !important;
+        border-bottom: #fff solid 2px !important;
+        background-color: #fff !important;
+    }
+    
+    .nav .nav-link {
+        font-weight: normal !important;
+    }
+    
+    @media screen and (min-width: 1560px) {
+        .contentA {
+            width: 1360px;
+            margin: auto !important;
+        }
+        .img-height {
+            height: 350px;
+            overflow: hidden;
+        }
+        .text-style-of {
+            margin-top: 50px !important;
+            left: 0;
+            right: 0;
+        }
+    }
+    
+    .img-wi {
+        width: 30%;
+    }
+    
+    .fil-ar-family {
+        display: flex;
+        list-style: none;
+        margin-left: -35px;
+        font-size: 18px;
+        line-height: 1.22;
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+    
+    .sac-nav-ul-of {
+        display: flex;
+        list-style: none;
+        margin-left: -35px;
+        font-size: 18px;
+        line-height: 1.22;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .imgSmall {
+        width: 100%;
+    }
+    
+    .card-tarifs-family {
+        padding-left: 55px;
+        padding-right: 55px;
+        padding-top: 50px;
+        border: none !important;
+        margin-top: -72px;
+        margin-bottom: 50px;
+    }
+    
+    .decouvre-fondamentaux {
+        margin-bottom: 50px;
+    }
+    
+    .offr-resm-family {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        font-size: 20px;
+    }
+    
+    .tab-content-border {
+        border-top: 2px solid black !important;
+        background-color: #fff;
+        padding-top: 55px !important;
+        padding-bottom: 55px;
+    }
+    
+    .blockavantage {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .dsp {
+        display: flex;
+    }
+    
+    .equipement {
+        margin-bottom: 50px;
+    }
+    
+    .qs {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+    
+    .qsf {
+        padding-left: 7px;
+    }
+    
+    .space50 {
+        padding-bottom: 50px;
+    }
+    
+    .title-block {
+        font-size: 30px;
+    }
+    
+    .font20 {
+        font-size: 20px;
+    }
+    
+    .text-style-of {
+        position: absolute;
+        margin-top: 65px;
+        z-index: 1;
+    }
+    
+    .text-style-1-of {
+        font-size: 30px;
+        color: #ff7900;
+    }
+    
+    .text-style-2-of {
+        font-size: 50px;
+        color: #ffffff
+    }
+    
+    .contenue-card-family {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .contenue-appel-icone {
+        width: 33.33%;
+    }
+    
+    .contenue-parag {
+        font-size: 22px;
+        font-weight: bold;
+        color: #000000;
+        padding-left: 10px;
+    }
+    
+    .sec-family {
+        font-size: 40px;
+        color: #fb7900;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 55px;
+    }
+    
+    .nav .nav-link {
+        padding-top: 16px !important;
+        padding-bottom: 16px;
+    }
+    
+    .une-connexion-st-family {
+        width: 236px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+    
+    .card-smart-family {
+        border: none !important;
+        padding-left: 50px;
+        padding-top: 25px;
+        padding-bottom: 0;
+        padding-right: 85px;
+    }
+    
+    .Modle-family {
+        color: #000000;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+    .Systme-dexploitati-family {
+        color: #666666;
+        font-size: 20px;
+        width: 484px;
+        padding-top: 7px;
+        padding-bottom: 8px;
+    }
+    
+    .dtail-smart {
+        color: #000000;
+        font-size: 21px;
+    }
+    
+    .sec-smart {
+        color: #ff7900;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+    
+    .block-family-part {
+        width: 12%;
+    }
+    
+    .smart-phone {
+        position: absolute;
+        bottom: 25px;
+        left: 43px;
+    }
+    
+    .Marque-family {
+        color: #ff7900;
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 1px;
+    }
+    
+    .smart-text-phone {
+        padding-top: 50px;
+    }
+    
+    .prix-btn {
+        padding-top: 110px;
+    }
+    
+    .acheter-family {
+        width: 147px;
+    }
+    
+    .dropdow-menu-prinicepale {
+        top: 4px !important;
+        left: 15px !important;
+        width: 100%;
+    }
+    
+    .debutli {
+        margin-left: 12px;
+        font-size: 18px;
+        margin-top: -10px;
+        margin-left: -15px;
+    }
+    
+    .samrt {
+        display: none;
+    }
+    
+    .btn-ache-1-1 {
+        display: none;
+    }
+    
+    .swipper-img-text {
+        display: none;
+    }
+    
+    .space20 {
+        margin-bottom: 20px;
+    }
+    
+    .card-header .btn-accordeon.font20 {
+        font-size: 20px;
+    }
+    
+    #faq {
+        padding-bottom: 55px;
+    }
+    
+    .card-body-family {
+        padding-bottom: 50px;
+    }
+    
+    .smartphone-ic {
+        width: 205px;
+    }
+    
+    @media screen and (max-width: 599px) {
+        .contentA {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .fq-family {
+            font-size: 15px;
+        }
+        .text-style-of {
+            margin-top: 30px;
+        }
+        .img-wii {
+            width: 100px;
+        }
+        .text-style-1-of {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .text-style-2-of {
+            font-size: 30px;
+        }
+        .card-tarifs-family {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 30px;
+            margin-top: -100px;
+        }
+        .contenue-card-family {
+            display: block;
+        }
+        .contenue-appel-icone {
+            width: 100%;
+        }
+        .icone-block-action {
+            width: 15%;
+        }
+        .contenue-parag {
+            font-size: 20px;
+        }
+        .sec-family {
+            font-size: 30px;
+            margin-bottom: 40px;
+            margin-top: 10px;
+        }
+        .Rectangle-13 {
+            background-color: #fff;
+        }
+        .Les-avantages-New-S {
+            font-size: 20px;
+            margin-top: -4px;
+            padding-left: 0 !important;
+        }
+        .imag-tp {
+            width: 140%;
+        }
+        .smart-phone {
+            left: 9px;
+            top: 13px;
+            width: 48%;
+            bottom: unset;
+        }
+        .smartphone-ic {
+            width: 119px;
+            padding-left: 2px;
+        }
+        .card-smart-family {
+            padding-left: unset;
+            padding-top: 10px;
+            padding-bottom: 0;
+            padding-right: 0px;
+            height: 226px;
+        }
+        .block-family-part {
+            width: 45%;
+            margin-left: -2px;
+        }
+        .smart-text-phone {
+            width: 55%;
+        }
+        .card-contenue-1 {
+            display: flex;
+        }
+        .smart-text-phone {
+            padding-top: 15px;
+        }
+        .Marque-family {
+            font-size: 25px;
+        }
+        .Modle-family {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+        .Systme-dexploitati-family {
+            font-size: 14px;
+            width: unset;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            height: 90px;
+            overflow: hidden;
+        }
+        .dtail-smart {
+            font-size: 17px;
+        }
+        .samrt {
+            display: block;
+        }
+        .smart-1 {
+            display: none;
+        }
+        .prix-btn {
+            display: flex;
+            background-color: #fb7900;
+            margin-top: 0px;
+            padding-top: 27px;
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 20px;
+            padding-bottom: 15px;
+            justify-content: space-between;
+        }
+        .sec-smart {
+            color: #ffffff;
+            font-size: 30px;
+        }
+        .btn-ache-1-1 {
+            display: block;
+        }
+        .btn-ache {
+            display: none !important;
+        }
+        .acheter-family {
+            width: 112px;
+            height: 40px;
+        }
+        .swipe3-family {
+            width: 70% !important;
+            max-width: 236px;
+        }
+        .family-card {
+            border: none !important;
+        }
+        .Loffre-est-disponib-family {
+            font-size: 14px;
+        }
+        .blog-img-text {
+            padding-left: 20px;
+            padding-right: 18px;
+            padding-bottom: 26px;
+            padding-top: 30px;
+            height: 272px;
+        }
+        .swiper-slide {
+            text-align: unset !important;
+        }
+        .div-img {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .swipper-img-text {
+            padding-bottom: 45px;
+            display: block
+        }
+        .fondamentaux {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .blog-tabs {
+            display: none;
+        }
+        .space50 {
+            padding-bottom: 25px;
+        }
+        .content-mobile {
+            padding-right: 10px !important;
+            padding-left: 10px !important;
+        }
+        .font20 {
+            line-height: 1;
+        }
+        .card-header .btn-accordeon.font20 {
+            font-size: 15px;
+        }
+        .space20 {
+            margin-bottom: 10px;
+        }
+        .title-block {
+            font-size: 20px;
+        }
+        .option-mobile {
+            font-size: 14px;
+        }
+        .Group-111 {
+            height: unset;
+        }
+    }
+    
+    @media only screen and (max-width: 600px) and (min-width: 599px) {
+        .Group-111 {
+            height: 199px;
+            overflow: hidden;
+        }
+    }
+    
+    @media only screen and (max-width: 767px) and (min-width: 600px) {
+        .contentA {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .option-mobile {
+            font-size: 14px;
+        }
+        .fq-family {
+            font-size: 15px;
+        }
+        .img-wii {
+            width: 100px;
+        }
+        .text-style-of {
+            margin-top: 55px;
+        }
+        .text-style-1-of {
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .text-style-2-of {
+            font-size: 30px;
+        }
+        .card-tarifs-family {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 30px;
+            margin-top: -60px;
+        }
+        .contenue-card-family {
+            display: flex;
+            justify-content: space-between;
+        }
+        .contenue-appel-icone {
+            width: 49%;
+        }
+        .icone-block-action {
+            width: 15%;
+        }
+        .contenue-parag {
+            font-size: 20px;
+        }
+        .sec-family {
+            font-size: 30px;
+            margin-bottom: 40px;
+            margin-top: 10px;
+        }
+        .Rectangle-13 {
+            background-color: #fff;
+        }
+        .Les-avantages-New-S {
+            font-size: 20px;
+            margin-top: -4px;
+        }
+        .imag-tp {
+            width: 140%;
+        }
+        .smart-phone {
+            left: 9px;
+            top: 13px;
+            width: 48%;
+            bottom: unset;
+        }
+        .smartphone-ic {
+            width: 119px;
+            padding-left: 2px;
+        }
+        .card-smart-family {
+            padding-left: unset;
+            padding-top: 10px;
+            padding-bottom: 0;
+            padding-right: 0px;
+        }
+        .block-family-part {
+            width: 30%;
+            margin-left: -2px;
+        }
+        .smart-text-phone {
+            width: 70%;
+        }
+        .card-contenue-1 {
+            display: flex;
+        }
+        .smart-text-phone {
+            padding-top: 15px;
+        }
+        .Marque-family {
+            font-size: 25px;
+        }
+        .Modle-family {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+        .Systme-dexploitati-family {
+            font-size: 14px;
+            width: unset;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+        .dtail-smart {
+            font-size: 17px;
+        }
+        .samrt {
+            display: block;
+        }
+        .smart-1 {
+            display: none;
+        }
+        .prix-btn {
+            display: flex;
+            background-color: #fb7900;
+            margin-top: 0px;
+            padding-top: 27px;
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 20px;
+            padding-bottom: 15px;
+            justify-content: space-between;
+        }
+        .sec-smart {
+            color: #ffffff;
+            font-size: 30px;
+        }
+        .btn-ache-1-1 {
+            display: block;
+        }
+        .btn-ache {
+            display: none !important;
+        }
+        .acheter-family {
+            width: 112px;
+            height: 40px;
+        }
+        .swipe3-family {
+            width: 70% !important;
+            max-width: 236px;
+        }
+        .family-card {
+            border: none !important;
+        }
+        .Loffre-est-disponib-family {
+            font-size: 14px;
+        }
+        .blog-img-text {
+            padding-left: 20px;
+            padding-right: 18px;
+            padding-bottom: 26px;
+            padding-top: 30px;
+            height: 272px;
+        }
+        .swiper-slide {
+            text-align: unset !important;
+        }
+        .div-img {
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .swipper-img-text {
+            padding-bottom: 45px;
+            display: block;
+        }
+        .fondamentaux {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .blog-tabs {
+            display: none;
+        }
+        .space50 {
+            padding-bottom: 25px;
+        }
+        .space20 {
+            margin-bottom: 10px;
+        }
+        .content-mobile {
+            padding-right: 10px !important;
+            padding-left: 10px !important;
+        }
+        .font20 {
+            line-height: 1;
+        }
+        .card-header .btn-accordeon.font20 {
+            font-size: 16px;
+        }
+        .title-block {
+            font-size: 16px;
+        }
+        .Group-111 {
+            max-height: 199px;
+            overflow: hidden;
+        }
+    }
+    
+    @media only screen and (max-width: 1024px) and (min-width: 768px) {
+        .contentA {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .img-wii {
+            width: 100px;
+        }
+        .Group-111 {
+            height: 199px;
+            overflow: hidden;
+        }
+        .text-style-of {
+            position: absolute;
+            margin-top: 30px;
+        }
+        .text-style-1-of {
+            font-size: 14px;
+        }
+        .text-style-2-of {
+            font-size: 25px;
+        }
+        .blog-tabs {
+            display: block;
+        }
+        .swipper-img-text {
+            display: none;
+        }
+        .nav-item {
+            width: 49% !important;
+        }
+        .contenue-appel-icone {
+            width: 49%;
+        }
+        .btn-ache-1-1 {
+            display: none !important;
+        }
+        .prix-btn {
+            width: 22%;
+        }
+        .smart-text-phone {
+            width: 47%;
+        }
+        .block-family-part {
+            width: 25%;
+            margin-left: -5px;
+        }
+        .Systme-dexploitati-family {
+            width: unset;
+        }
+        .blockavantage {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .card-smart-family {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .smartphone-ic {
+            width: 205px;
+        }
+    }
+    
+    @media only screen and (max-width: 1100px) and (min-width: 1025px) {
+        .contentA {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        .block-family-part {
+            width: 20%;
+        }
+        .card-tarifs-family {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
+        .smartphone-ic {
+            width: 205px;
+        }
+    }

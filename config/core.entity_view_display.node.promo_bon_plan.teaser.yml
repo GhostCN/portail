@@ -1,0 +1,21 @@
+uuid: 1f5d94f4-cb02-4c6a-af0e-b5f4183463dc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.promo_bon_plan.field_promo_image
+    - node.type.promo_bon_plan
+  module:
+    - user
+id: node.promo_bon_plan.teaser
+targetEntityType: node
+bundle: promo_bon_plan
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_promo_image: true
+  langcode: true

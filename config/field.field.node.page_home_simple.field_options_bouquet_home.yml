@@ -1,0 +1,19 @@
+uuid: 4d88b259-b9d7-4a3c-aeb9-0def7fb6de2b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_options_bouquet_home
+    - node.type.page_home_simple
+id: node.page_home_simple.field_options_bouquet_home
+field_name: field_options_bouquet_home
+entity_type: node
+bundle: page_home_simple
+label: 'Options Bouquet TV Inclus offre'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

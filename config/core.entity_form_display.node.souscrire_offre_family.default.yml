@@ -1,0 +1,48 @@
+uuid: 5de170ca-4420-426f-8243-2b1255e8e6c6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.souscrire_offre_family.field_description_etapes
+    - field.field.node.souscrire_offre_family.field_etape_souscription
+    - node.type.souscrire_offre_family
+  module:
+    - text
+id: node.souscrire_offre_family.default
+targetEntityType: node
+bundle: souscrire_offre_family
+mode: default
+content:
+  field_description_etapes:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_etape_souscription:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

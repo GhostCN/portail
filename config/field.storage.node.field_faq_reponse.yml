@@ -1,0 +1,19 @@
+uuid: c2b2761d-1a89-4494-a997-8a718d5d3bbb
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_faq_reponse
+field_name: field_faq_reponse
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

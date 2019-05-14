@@ -1,0 +1,17 @@
+uuid: f63c113b-38e1-4e5e-94d2-d7133bf51302
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Bloc Etapes Souscription Keurgui Box'
+type: bloc_etapes_souscription_keurgui
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

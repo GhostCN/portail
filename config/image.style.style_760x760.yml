@@ -1,0 +1,15 @@
+uuid: a108f50e-f809-47d6-9a94-d4660d0d03f7
+langcode: fr
+status: true
+dependencies: {  }
+name: style_760x760
+label: 'style 760x760'
+effects:
+  662e0092-c525-4576-af90-ab18dfb58433:
+    uuid: 662e0092-c525-4576-af90-ab18dfb58433
+    id: image_scale
+    weight: 1
+    data:
+      width: 760
+      height: 760
+      upscale: true

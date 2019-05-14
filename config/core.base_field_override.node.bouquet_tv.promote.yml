@@ -1,0 +1,22 @@
+uuid: 12b7cda8-b939-4418-8790-f1b6a90a9573
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bouquet_tv
+id: node.bouquet_tv.promote
+field_name: promote
+entity_type: node
+bundle: bouquet_tv
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

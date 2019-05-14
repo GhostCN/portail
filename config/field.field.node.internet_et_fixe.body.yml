@@ -1,0 +1,22 @@
+uuid: 1d50fc50-6915-435a-98b6-3ec58c44a740
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.internet_et_fixe
+  module:
+    - text
+id: node.internet_et_fixe.body
+field_name: body
+entity_type: node
+bundle: internet_et_fixe
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

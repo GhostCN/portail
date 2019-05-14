@@ -1,0 +1,284 @@
+pass-internet:
+  path: '/pass-internet'
+  defaults:
+    _controller: '\Drupal\portail\Controller\PassController::getAllPassInternet'
+    _title: 'Pass Internet | Pass Jour , Semaine, Mois, 3 Jours, Nuit'
+    _summary: 'Pass Internet : Pass Jour , Semaine, Mois, 3 Jours, Nuit'
+    _product: 'Pass Internet'
+  requirements:
+    _permission: 'access content'
+
+offres-mobile:
+  path: '/offres-mobiles'
+  defaults:
+    _controller: '\Drupal\portail\Controller\OffreController::getAllOffre'
+    _title: 'Offre Mobile | Jamono et Teranga | Pass Illimix Orange'
+    _summary: 'Jamono max, Jamono Allo, Jamono New SCool, Family, Premium, International'
+    _product: 'Offres mobile'
+  requirements:
+    _permission: 'access content'
+
+internet-fixe:
+  path: '/internet-adsl-fibre'
+  defaults:
+    _controller: '\Drupal\portail\Controller\InternetController::getAll'
+    _title: 'Internet, téléphone, TV | ADSL, Fibre et Box 4G'
+    _summary: 'Home Fibre, Home+, Home, Keurgui, Keurgui Box'
+    _product: 'Internet Fibre'
+  requirements:
+    _permission: 'access content'
+
+details-offre-home:
+  path: '/internet-adsl-fibre/{url}'
+  defaults:
+    _controller: '\Drupal\portail\Controller\OffreHomeController::getDetailsOffre'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+
+details-offre-mobile:
+  path: '/offres-mobiles/{id}'
+  defaults:
+    _controller: '\Drupal\portail\Controller\OffreController::getOffre'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+fibre-home:
+  path: '/internet-adsl-fibre/home-fibre'
+  defaults:
+    _controller: '\Drupal\portail\Controller\FibreController::getAll'
+    _title: 'Offre Home Fibre |Internet, TV, Téléphone'
+    _summary: 'Notre meilleure offre Fibre + TV + Téléphone Frais daccès : 25.000 FTTC'
+    _product: 'Home Fibre'
+  requirements:
+    _permission: 'access content'
+
+
+tv-orange:
+  path: '/internet-adsl-fibre/tv-orange'
+  defaults:
+    _controller: '\Drupal\portail\Controller\TVOrangeController::getAll'
+    _title: 'Offre TV : + de 30 chaines et bouquet Canal + en option.'
+    _summary: 'Offre TV : + de 30 chaines et bouquet Canal + en option.'
+    _product: 'TV Orange'
+  requirements:
+    _permission: 'access content'
+
+
+test-eligibbilte:
+  path: '/internet-adsl-fibre/test-eligibilite'
+  defaults:
+    _controller: '\Drupal\portail\Controller\EligibiliteController::initializeTestEligibilite'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+
+pass-internationaux:
+  path: '/offres-mobiles/roaming-et-international/tarifs-international/{pays}'
+  defaults:
+    _controller: '\Drupal\portail\Controller\PassInternationauxController::getAll'
+    _title: 'Roaming et international, tarifs internationals'
+    _summary: 'Appel vers létranger'
+    _product: 'Pack international'
+    pays: ''
+  requirements:
+    _permission: 'access content'
+
+
+appel-depuis-etranger:
+  path: '/offres-mobiles/roaming-et-international/pass-voyage/{pays}'
+  defaults:
+    _controller: '\Drupal\portail\Controller\AppelDepuisEtrangerController::getAll'
+    _title: 'Roaming et international, pass-voyage'
+    _summary: 'Appel depuis létranger'
+    _product: 'Pack international'
+    pays: ''
+  requirements:
+    _permission: 'access content'
+
+
+illimix:
+  path: '/offres-mobiles/illimix'
+  defaults:
+    _controller: '\Drupal\portail\Controller\IllimixController::getAll'
+    _title: 'Illimix'
+    _summary: 'Illimix New Scool, Illimix Max, Illimix Allo'
+    _product: 'Illimix'
+  requirements:
+    _permission: 'access content'
+
+hub-pass-internationaux:
+  path: '/offres-mobiles/roaming-et-international'
+  defaults:
+    _controller: '\Drupal\portail\Controller\HubPassInternationauxController::getAll'
+    _title: 'Offre International | Nos offres mobiles'
+    pays: ''
+    _product: 'Offres international'
+  requirements:
+    _permission: 'access content'
+
+orange-money:
+  path: '/orange-money'
+  defaults:
+    _controller: '\Drupal\portail\Controller\OrangeMoneyController::getAll'
+    _title: 'Orange Money'
+    _summary: 'Orange Money'
+    _product: 'Orange Money'
+  requirements:
+    _permission: 'access content'
+
+recherche:
+  path: '/recherche'
+  defaults:
+    _controller: '\Drupal\portail\Controller\RechercheController::getAll'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+gold-platinium:
+  path: '/gold-platinium'
+  defaults:
+    _controller: '\Drupal\portail\Controller\GoldPlatiniumController::getAll'
+    _title: 'Gold platinium'
+    _summary: 'Gold platinium'
+    _product: 'Gold Platinium'
+  requirements:
+    _permission: 'access content'
+
+contact:
+  path: '/nous-contacter'
+  defaults:
+    _controller: '\Drupal\portail\Controller\ContactController::getAll'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+assistance:
+  path: '/assistance'
+  defaults:
+    _controller: '\Drupal\portail\Controller\AssistanceController::getAll'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+teranga:
+  path: '/teranga'
+  defaults:
+    _controller: '\Drupal\portail\Controller\TerangaController::getAll'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+detail-teranga:
+  path: '/teranga/{id}'
+  defaults:
+    _controller: '\Drupal\portail\Controller\TerangaController::getDetail'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+orange-aicha:
+  path: '/orange-aicha'
+  defaults:
+    _controller: '\Drupal\portail\Controller\OrangeAichaController::getAll'
+    _title: 'Orange Aicha'
+    _summary: 'Orange Aicha'
+    _product: 'Orange Aicha'
+  requirements:
+    _permission: 'access content'
+
+offre-family:
+  path: '/offres-mobiles/family'
+  defaults:
+    _controller: '\Drupal\portail\Controller\OffreController::getOffreFamily'
+    _title: 'Offre Family | Nos offres mobiles'
+    _summary: 'Découvrez notre offre Family'
+    _product: 'Family'
+  requirements:
+    _permission: 'access content'
+
+orange-actu:
+  path: '/services-portail-magik'
+  defaults:
+    _controller: '\Drupal\portail\Controller\OrangeActuController::getAll'
+    _title: 'Portail Magik'
+    _summary: 'Services SVA, portail Magik'
+    _product: 'SVA'
+  requirements:
+    _permission: 'access content'
+
+orange-actu-sub:
+  path: '/services-portail-magik/subcription'
+  defaults:
+    _controller: '\Drupal\portail\Controller\OrangeActuController::subscribe'
+    _title: ''
+    _format: 'json'
+  requirements:
+    _permission: 'access content'
+
+actu-video:
+  path: '/2019-vous-appartient'
+  defaults:
+    _controller: '\Drupal\portail\Controller\ActuVideoController::getAll'
+    _title: '2019 vous appartient'
+    _summary: '2019 vous appartient'
+  requirements:
+    _permission: 'access content'
+
+actualite:
+  path: '/actualite/{id}'
+  defaults:
+    _controller: '\Drupal\portail\Controller\ActualiteController::getAll'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+
+actualite-smartphone:
+  path: '/actualite-smartphone/{id}'
+  defaults:
+    _controller: '\Drupal\portail\Controller\ActualiteController::getActuSmartphone'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+
+menu-header:
+  path: '/menu/header'
+  defaults:
+    _controller: '\Drupal\portail\Controller\MenuController::getHeader'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+
+menu-footer:
+  path: '/menu/footer'
+  defaults:
+    _controller: '\Drupal\portail\Controller\MenuController::getFooter'
+    _title: ''
+  requirements:
+    _permission: 'access content'
+
+findan:
+  path: '/service-client-digital'
+  defaults:
+    _controller: '\Drupal\portail\Controller\ActuVideoController::findanPage'
+    _title: 'Service client en ligne d Orange'
+    _summary: 'Service client en ligne d Orange'
+    _product: 'Service client'
+  requirements:
+    _permission: 'access content'
+
+sargal:
+  path: '/sargal'
+  defaults:
+    _controller: '\Drupal\portail\Controller\SargalController::getAll'
+    _title: 'Sargal'
+    _summary: 'Page Sargal'
+    _product: 'Sargal'
+  requirements:
+    _permission: 'access content'

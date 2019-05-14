@@ -1,0 +1,17 @@
+uuid: 9c6067db-fa7d-46e2-b320-a138888c9fff
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Offre Premium Avec Tel'
+type: teranga_telephone
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

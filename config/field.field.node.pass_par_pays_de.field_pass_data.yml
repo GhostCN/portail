@@ -1,0 +1,28 @@
+uuid: 9d88801c-84c1-4301-b2d4-357cb701aa4e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pass_data
+    - node.type.pass_data_org
+    - node.type.pass_par_pays_de
+id: node.pass_par_pays_de.field_pass_data
+field_name: field_pass_data
+entity_type: node
+bundle: pass_par_pays_de
+label: 'Pass Data'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      pass_data_org: pass_data_org
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

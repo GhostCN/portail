@@ -1,0 +1,21 @@
+uuid: 0aaf7248-d920-4903-be39-8495cc1a9a46
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_c
+    - node.type.slider_tv
+  module:
+    - options
+id: node.slider_tv.field_c
+field_name: field_c
+entity_type: node
+bundle: slider_tv
+label: Catégorie
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

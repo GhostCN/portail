@@ -1,0 +1,127 @@
+{#
+/**
+ * @file
+ * Theme override for the basic structure of a single Drupal page.
+ *
+ * Variables:
+ * - logged_in: A flag indicating if user is logged in.
+ * - root_path: The root path of the current page (e.g., node, admin, user).
+ * - node_type: The content type for the current node, if the page is a node.
+ * - head_title: List of text elements that make up the head_title variable.
+ *   May contain one or more of the following:
+ *   - title: The title of the page.
+ *   - name: The name of the site.
+ *   - slogan: The slogan of the site.
+ * - page_top: Initial rendered markup. This should be printed before 'page'.
+ * - page: The rendered page markup.
+ * - page_bottom: Closing rendered markup. This variable should be printed after
+ *   'page'.
+ * - db_offline: A flag indicating if the database is offline.
+ * - placeholder_token: The token for generating head, css, js and js-bottom
+ *   placeholders.
+ *
+ * @see template_preprocess_html()
+ */
+#}
+{%
+  set body_classes = [
+  logged_in ? 'user-logged-in',
+  not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
+  node_type ? 'page-node-type-' ~ node_type|clean_class,
+  db_offline ? 'db-offline',
+]
+%}
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+<head>
+  <meta charset="UTF-8">
+  <meta name="keywords" content="adsl, fibre, pass internet, assistance, kalpé orange money, offre mobile, smartphone, réseau 4G, 4G+ , assistance, crédit téléphonique, Jamono, Keurgui Box, Home, bouquet télévision, illimix, orange sénégal,Orange Money,  assistance, promotions, forfaits téléphoniques, forfait téléphone">
+
+  <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+      <js-placeholder token="{{ placeholder_token }}">
+
+
+        <script>
+          dataLayer = [{
+            'brand': 'orange',                        // cette variable est constante (toujours orange)
+            'site_domain': 'portal',             // varie en fonction du domaine ou du sous-domaine
+            'market_country': 'osn',         //  cette variable est constante (toujours osn)
+            'market_type': 'b2c',             // c’est le type de marché (soit b2c ou b2b suivant le marché)
+            'lang': 'fr',                              // c’est la langue du site
+            'page_type': 'homepage' // elle est à valoriser en fonction de la page sur laquelle on se trouve.
+          }];
+        </script>
+
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-ND8HXH');</script>
+        <!-- End Google Tag Manager -->
+
+        </head>
+<body{{ attributes.addClass(body_classes) }}>
+
+
+<!-- Load Facebook SDK for JavaScript -->
+
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '2028730737163257',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v3.2'
+    });
+  };
+  (function(d, s, id) {
+
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/fr_FR/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+ 
+
+<!-- Your customer chat code -->
+
+<div class="fb-customerchat"
+  attribution=install_email
+  page_id="165622776799685"
+   messenger_app_id="2028730737163257"
+   theme_color="#0084ff"
+  logged_in_greeting="Hello, comment puis-je vous aider ? Ibou "
+  logged_out_greeting="Hello, comment puis-je vous aider ? Ibou ">
+</div>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND8HXH"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+{#
+  Keyboard navigation/accessibility link to main content section in
+  page.html.twig.
+#}
+<a href="#main-content" class="visually-hidden focusable skip-link">
+  {{ 'Skip to main content'|t }}
+</a>
+{{ page_top }}
+{{ page }}
+{{ page_bottom }}
+<js-bottom-placeholder token="{{ placeholder_token }}">
+
+  <script type="text/javascript">/*{literal}<![CDATA[*/window.lightningjs||function(c){function g(b,d){d&&(d+=(/\?/.test(d)?"&":"?")+"lv=1");c[b]||function(){var i=window,h=document,j=b,g=h.location.protocol,l="load",k=0;(function(){function b(){a.P(l);a.w=1;c[j]("_load")}c[j]=function(){function m(){m.id=e;return c[j].apply(m,arguments)}var b,e=++k;b=this&&this!=i?this.id||0:0;(a.s=a.s||[]).push([e,b,arguments]);m.then=function(b,c,h){var d=a.fh[e]=a.fh[e]||[],j=a.eh[e]=a.eh[e]||[],f=a.ph[e]=a.ph[e]||[];b&&d.push(b);c&&j.push(c);h&&f.push(h);return m};return m};var a=c[j]._={};a.fh={};a.eh={};a.ph={};a.l=d?d.replace(/^\/\//,(g=="https:"?g:"http:")+"//"):d;a.p={0:+new Date};a.P=function(b){a.p[b]=new Date-a.p[0]};a.w&&b();i.addEventListener?i.addEventListener(l,b,!1):i.attachEvent("on"+l,b);var q=function(){function b(){return["<head></head><",c,' onload="var d=',n,";d.getElementsByTagName('head')[0].",d,"(d.",g,"('script')).",i,"='",a.l,"'\"></",c,">"].join("")}var c="body",e=h[c];if(!e)return setTimeout(q,100);a.P(1);var d="appendChild",g="createElement",i="src",k=h[g]("div"),l=k[d](h[g]("div")),f=h[g]("iframe"),n="document",p;k.style.display="none";e.insertBefore(k,e.firstChild).id=o+"-"+j;f.frameBorder="0";f.id=o+"-frame-"+j;/MSIE[ ]+6/.test(navigator.userAgent)&&(f[i]="javascript:false");f.allowTransparency="true";l[d](f);try{f.contentWindow[n].open()}catch(s){a.domain=h.domain,p="javascript:var d="+n+".open();d.domain='"+h.domain+"';",f[i]=p+"void(0);"}try{var r=f.contentWindow[n];r.write(b());r.close()}catch(t){f[i]=p+'d.write("'+b().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}a.P(2)};a.l&&setTimeout(q,0)})()}();c[b].lv="1";return c[b]}var o="lightningjs",k=window[o]=g(o);k.require=g;k.modules=c}({});
+    if(navigator.userAgent.match(/Android|BlackBerry|BB10|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) {
+      window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/c6609b1f138c.js");}
+    else{window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/2eb3f6ce72ca.js");}/*]]>{/literal}*/
+  </script>
+</body>
+</html>

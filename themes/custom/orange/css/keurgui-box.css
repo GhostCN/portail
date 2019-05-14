@@ -1,0 +1,569 @@
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff");
+}
+
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff");
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .contentA {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .bt-souscrire {
+        width: 220px !important;
+        margin-top: 50px;
+    }
+    .bt-sou {
+        width: 30%;
+        margin-left: 315px !important;
+    }
+    .Group-7-box {
+        width: 95%;
+    }
+    .trente-text {
+        margin-top: 55px !important;
+    }
+    .card-box {
+        padding-bottom: 90px !important;
+        margin-top: -45px !important;
+    }
+}
+
+@media screen and (min-width: 1560px) {
+    .contentS {
+        width: 1360px;
+        margin: auto !important;
+    }
+    .contentA {
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+        width: 1360px;
+        margin: auto !important
+    }
+    .img-height {
+        height: 300px;
+        overflow: hidden;
+    }
+    .text-style-of-box {
+        left: 0;
+        right: 0;
+        padding-top: 76px;
+    }
+    .debut-box {
+        margin-left: 10px !important;
+    }
+    .accueille-box {
+        margin-left: -47px;
+    }
+    .debut-box {
+        margin-left: 6px;
+    }
+}
+
+a:focus {
+    color: #f16e00;
+    outline: none !important;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    color: #fb7900 !important;
+    background-color: unset !important;
+    border: unset !important;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+    font-weight: bold !important;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link:hover {
+    border-top: #000 solid 3px !important;
+    border-left: #000 solid 2px !important;
+    border-right: #000 solid 2px !important;
+    border-bottom: #fff solid 2px !important;
+    background-color: #fff !important;
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: -2px;
+}
+
+.o-tab-container .o-tab-heading[aria-expanded="false"] {
+    font-size: 17px;
+}
+
+.o-tab-container .o-tab-heading[aria-expanded="true"] {
+    font-size: 20px;
+}
+
+.nav .nav-link {
+    font-weight: normal !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+}
+
+.btn-link[aria-expanded="true"] {
+    color: #f16e00;
+}
+
+body {
+    background-color: #eeeeee !important;
+}
+
+.packe {
+    margin-bottom: 53px;
+}
+
+.packee {
+    margin-bottom: 55px;
+}
+
+.accueille-box {
+    margin-bottom: 28px;
+}
+
+.debut-box {
+    display: flex;
+    list-style: none;
+    margin-left: -27px;
+}
+
+.debutli {
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+.imgSmall {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.Group-7-boxxe {
+    width: 100%;
+}
+
+#fleche-box {
+    margin-top: -17px;
+    margin-left: 75px;
+}
+
+#fleche1-box {
+    margin-top: -17px;
+    margin-left: 140px;
+}
+
+#fleche2-box {
+    margin-top: -14px;
+    margin-left: 180px;
+}
+
+#debutli1-box {
+    padding-left: 10px;
+}
+
+.dropb {
+    margin-top: -11px;
+    margin-left: -18px;
+    height: 0;
+}
+
+.dropdow-menu-prinicepale-box {
+    top: 23px !important;
+    left: 14px !important;
+    width: 100%;
+}
+
+.text-style-of-box {
+    position: absolute;
+    padding-top: 68px;
+}
+
+.text-style-1-of-box {
+    font-size: 24px;
+    color: #ff7900;
+}
+
+.text-style-2-of-box {
+    font-size: 50px;
+    color: #ffffff
+}
+
+.contentA {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.col-boxx {
+    max-width: 32% !important;
+}
+
+
+/* .Group-7-box {
+    width: 100%
+} */
+
+.card-box {
+    border: none !important;
+    margin-top: -83px;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+}
+
+.keur-box {
+    padding-top: 30px;
+}
+
+.keure-ce {
+    font-size: 30px;
+}
+
+.orange {
+    color: #ff7900;
+}
+
+.im-text {
+    display: flex;
+}
+
+.color-6 {
+    color: #666666;
+}
+
+.text-box-deb {
+    padding-left: 15px;
+}
+
+.trente-text {
+    position: absolute;
+    top: 73%;
+}
+
+.trente-text-1 {
+    position: absolute;
+    top: 80%;
+    left: 60%;
+}
+
+.tar {
+    margin-bottom: 0 !important;
+}
+
+.trente-cinq {
+    font-size: 40px;
+}
+
+.bt-souscrire {
+    width: 261px;
+    margin-left: 28px;
+}
+
+.pack {
+    margin-bottom: 60px;
+}
+
+.card1-box {
+    border: none !important;
+    width: 100%;
+}
+
+.card1-body-box {
+    padding-left: 11px !important;
+    border-left: 2px solid #ff7900 !important;
+    padding-right: 0px !important;
+}
+
+.pass-style-box {
+    font-size: 14px;
+    color: #666666;
+}
+
+.pass-Mo-box {
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: -5px;
+    color: #666666;
+}
+
+.sepa {
+    margin-top: 0.35rem !important;
+    margin-bottom: 0.35rem !important;
+    border-top: 3px solid #eeeeee;
+}
+
+.Valable-24h-pour-les-box {
+    color: #666666;
+    font-size: 10px;
+}
+
+.card-move {
+    background-color: #a885d8 !important;
+    border: none !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 25px;
+    margin-bottom: 20px;
+}
+
+.forf {
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.deux-mil-cin {
+    color: #fff;
+    padding-left: 15px;
+}
+
+.hrblanc {
+    width: 270px;
+    height: 2px;
+    color: #eeeeee;
+    margin-bottom: 2px;
+}
+
+.tail-num {
+    font-size: 34px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.frai {
+    font-size: 14px;
+    color: #fff;
+}
+
+.bt-sou {
+    margin-left: 338px;
+    margin-top: -40px;
+    margin-bottom: 30px;
+    cursor: not-allowed !important;
+}
+
+.card-bl {
+    background-color: #4bb4e7 !important;
+    border: none !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 25px;
+    margin-bottom: 20px;
+}
+
+.deux-car {
+    margin-bottom: 2px;
+}
+
+.offr-resm {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 20px;
+}
+
+.blockavantage {
+    padding-left: 30px;
+    padding-bottom: 38px;
+}
+
+.groupe171 {
+    padding-bottom: 15px;
+}
+
+.tab-content-border {
+    border-top: 2px solid black !important;
+    background-color: #fff;
+    padding-top: 55px !important;
+}
+
+.card-sp {
+    padding-right: 35px;
+    padding-left: 30px;
+}
+
+.card-question-frequent {
+    padding-left: 18px;
+}
+
+.content-bckg {
+    background-color: #7a7777;
+}
+
+.loren-isp {
+    font-size: 18px;
+    color: #666666;
+    margin-top: 15px;
+}
+
+.offr {
+    padding-right: 35px;
+}
+
+.sgmb-btn {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 780px) {
+    .sgmb-btn {
+        margin-bottom: 20px;
+    }
+    .Group-111 {
+        height: 147px;
+        overflow: hidden;
+    }
+    .contentA {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .Group-7-boxe {
+        width: 100%;
+    }
+    .sac-nav-ul-of {
+        display: flex;
+        list-style: none;
+        margin-left: -35px;
+        font-size: 18px;
+        line-height: 1.22;
+    }
+    .accueille-box {
+        margin-bottom: 17px;
+    }
+    .text-style-of-box {
+        padding-top: 15px;
+    }
+    .text-style-1-of-box {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .text-style-2-of-box {
+        font-size: 30px;
+    }
+    .card-box {
+        margin-top: -65px;
+        padding-top: 23px;
+        padding-left: 23px;
+        padding-bottom: 23px;
+        padding-right: 14px;
+    }
+    .keure-ce {
+        font-size: 20px;
+        padding-top: 19px;
+    }
+    .max-im {
+        max-width: 44% !important;
+    }
+    .max-box {
+        max-width: 86% !important;
+    }
+    .tex-imgg {
+        margin-top: 17px;
+    }
+    .int-marg {
+        width: 27px;
+        margin-top: 4px;
+    }
+    .tex-sim {
+        font-size: 14px;
+    }
+    .col-tex {
+        margin-left: -5px;
+    }
+    .box-car-h {
+        border-top: 2px solid #eee;
+        margin-top: 27px;
+    }
+    .or-mob {
+        font-size: 30px;
+    }
+    .unique {
+        margin-bottom: 0 !important;
+    }
+    .bt-souscrire {
+        width: 95%;
+        margin-bottom: 13px;
+        margin-left: unset;
+    }
+    .pack {
+        margin-bottom: 40px;
+    }
+    .Les-Pass-Internet-Jo {
+        font-size: 20px;
+        padding-right: 38px;
+    }
+    .card1-box {
+        width: 96%;
+        margin-bottom: 11px;
+    }
+    .card1-body-box {
+        padding-bottom: 8px !important;
+    }
+    .joo {
+        padding-right: 30px !important;
+    }
+    .card-move {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
+    .tail-num {
+        font-size: 30px;
+    }
+    .bt-sou {
+        margin-left: unset;
+        margin-top: unset;
+        margin-bottom: 20px;
+        margin-top: 12px;
+    }
+    .card-mob-for {
+        margin-bottom: 18px;
+    }
+    .card-bl {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
+    .Le-client-paie-les-fff {
+        font-size: 14px;
+        margin-top: -15px;
+        margin-bottom: 0px;
+    }
+    .Rectangle-333 {
+        width: 100%;
+        background-color: #ffffff;
+        height: 164px;
+    }
+    .Tarifs-rduits {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .Les-avantages-New-SSS {
+        padding-right: 10px !important;
+        margin-top: 0;
+    }
+    .packe {
+        margin-bottom: 28px;
+    }
+    .card-sp {
+        padding-right: 5px;
+        padding-left: 5px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .card-header {
+        height: 52px;
+    }
+}

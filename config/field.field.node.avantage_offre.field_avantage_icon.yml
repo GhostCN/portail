@@ -1,0 +1,38 @@
+uuid: 39d4d3a0-f538-4229-a9f5-73166b753824
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_avantage_icon
+    - node.type.avantage_offre
+  module:
+    - image
+id: node.avantage_offre.field_avantage_icon
+field_name: field_avantage_icon
+entity_type: node
+bundle: avantage_offre
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,38 @@
+
+<!-- Modal -->
+<div class="modal fade Rectangle-modal" id="{{ id }}" tabindex="-1" role="dialog" aria-labelledby="Title{{ id }}" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modale-widt" role="document">
+    <div class="modal-content modal-con-2">
+      <div class="modal-header mb-0">
+        <div class="">
+          <h3 class="modal-title mb-2 d-none  d-sm-none d-md-none d-lg-block" id="Title{{ id }}">{{ pass.title }}</h3>
+          <h3 class="modal-title tiltle-mo mb-2 d-lg-none" id="Title{{ id }}">Pass<span class="nre-de-mo-pup">{{ pass.validite }}</span></h3>
+          <span class="Valable-24h-pour-les-pup mb-1">Valable 24h {{ pass.restriction }}</span>
+        </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <b class="color-orange-style F pup-F">{{ pass.montant }}F</b>
+      <div class="hre mb-3 hre-pup"></div>
+      <div class="row">
+        <div class="col-lg-6">
+          <h4 class="mb-1"><b>Disponibilité</b> </h4>
+          <p class="Nous-activerons-le">Nous activerons le pass dès que possible et nous enverrons un SMS dès qu’il sera prêt à l’emploi</p>
+        </div>
+        {#
+        <div class="col-lg-6">
+          <div class="pt-4 pb-0 pup-mod text-center">
+            <button type="button" class="btn btn-primary but-pup disable-btn" data-dismiss="modal" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension">Acheter</button>
+          </div>
+        </div>
+        #}
+      </div>
+      {% if pass.info %}
+        <div class="modal-footer Rectangle-footer  ">
+          <span class="Go-gratuit Rectangle-footer-text">{{ pass.info | raw }}</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

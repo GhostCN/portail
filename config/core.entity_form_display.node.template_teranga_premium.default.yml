@@ -1,0 +1,75 @@
+uuid: 0bc12c3b-2490-4fcf-8666-dafc64909ae4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.template_teranga_premium.field_bandeau
+    - field.field.node.template_teranga_premium.field_offre_avec_tel
+    - field.field.node.template_teranga_premium.field_offre_sans_tel
+    - image.style.thumbnail
+    - node.type.template_teranga_premium
+  module:
+    - inline_entity_form
+    - svg_image
+id: node.template_teranga_premium.default
+targetEntityType: node
+bundle: template_teranga_premium
+mode: default
+content:
+  field_bandeau:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_offre_avec_tel:
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_offre_sans_tel:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

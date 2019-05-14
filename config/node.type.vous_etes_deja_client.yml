@@ -1,0 +1,17 @@
+uuid: db89b688-4fda-4cf6-adff-19bddd43d417
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'vous etes deja client'
+type: vous_etes_deja_client
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

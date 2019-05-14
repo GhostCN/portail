@@ -1,0 +1,20 @@
+uuid: 69061ee5-2348-46b3-b546-5a4d9139d24b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.banniere_publicitaire
+  module:
+    - user
+id: node.banniere_publicitaire.teaser
+targetEntityType: node
+bundle: banniere_publicitaire
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_banniere: true
+  langcode: true

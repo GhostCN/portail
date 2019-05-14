@@ -1,0 +1,28 @@
+uuid: 762c0718-5dd3-4eb0-ac64-2342397a9a0e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_mobile_prix_sms
+    - node.type.offre_mobile
+    - node.type.sms
+id: node.offre_mobile.field_offre_mobile_prix_sms
+field_name: field_offre_mobile_prix_sms
+entity_type: node
+bundle: offre_mobile
+label: 'Prix des SMS'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sms: sms
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

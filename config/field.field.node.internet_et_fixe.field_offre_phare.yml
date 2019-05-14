@@ -1,0 +1,23 @@
+uuid: 83768ffc-2398-426a-8468-49cdd8d2b3e8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_phare
+    - node.type.internet_et_fixe
+id: node.internet_et_fixe.field_offre_phare
+field_name: field_offre_phare
+entity_type: node
+bundle: internet_et_fixe
+label: 'Offre phare'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

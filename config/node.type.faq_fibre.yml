@@ -1,0 +1,17 @@
+uuid: b284c7b1-aaa0-463c-b350-d7dd1d6c0656
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'FAQ Fibre'
+type: faq_fibre
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

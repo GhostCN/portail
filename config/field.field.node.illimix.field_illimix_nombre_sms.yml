@@ -1,0 +1,19 @@
+uuid: f5127766-ec69-45a6-849b-e2afbf809eec
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_illimix_nombre_sms
+    - node.type.illimix
+id: node.illimix.field_illimix_nombre_sms
+field_name: field_illimix_nombre_sms
+entity_type: node
+bundle: illimix
+label: 'Nombre de SMS'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

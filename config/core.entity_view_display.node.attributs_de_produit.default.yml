@@ -1,0 +1,42 @@
+uuid: 469cf585-3030-43f3-a7c1-28e5322c67d3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.attributs_de_produit.body
+    - field.field.node.attributs_de_produit.field_attribut_produit_icone
+    - node.type.attributs_de_produit
+  module:
+    - svg_image
+    - text
+    - user
+id: node.attributs_de_produit.default
+targetEntityType: node
+bundle: attributs_de_produit
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_attribut_produit_icone:
+    weight: 102
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

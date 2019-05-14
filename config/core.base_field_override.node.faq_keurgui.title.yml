@@ -1,0 +1,18 @@
+uuid: 8093396c-c48c-4dcf-8783-2404e31e80b3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.faq_keurgui
+id: node.faq_keurgui.title
+field_name: title
+entity_type: node
+bundle: faq_keurgui
+label: Question
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

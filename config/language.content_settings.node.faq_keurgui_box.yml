@@ -1,0 +1,11 @@
+uuid: 4b7f8796-f5b6-43d1-a13e-762ab1d01377
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.faq_keurgui_box
+id: node.faq_keurgui_box
+target_entity_type_id: node
+target_bundle: faq_keurgui_box
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,22 @@
+uuid: 44a07425-0049-4a67-944b-dbf6f040075b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.avantage_offre
+id: node.avantage_offre.promote
+field_name: promote
+entity_type: node
+bundle: avantage_offre
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

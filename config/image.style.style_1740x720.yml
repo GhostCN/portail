@@ -1,0 +1,16 @@
+uuid: 39a8411d-4435-4e7c-862d-badf2902e711
+langcode: fr
+status: true
+dependencies: {  }
+name: style_1740x720
+label: 'style 1740×720'
+effects:
+  98639a66-6514-4336-8dc0-7cc805c35b65:
+    uuid: 98639a66-6514-4336-8dc0-7cc805c35b65
+    id: image_scale
+    weight: 1
+    data:
+      width: 1740
+      height: 720
+      upscale: true
+pipeline: __default__

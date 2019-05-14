@@ -1,0 +1,368 @@
+@font-face {
+  font-family: HelvNeueOrange;
+  font-style: normal;
+  font-weight: 400;
+  /*src: url("/fonts/HelvNeue55_W1G.woff2") format("woff2"), url("/fonts/HelvNeue55_W1G.woff") format("woff");*/
+}
+
+@font-face {
+  font-family: HelvNeueOrange;
+  font-style: normal;
+  font-weight: 700;
+  /*src: url("/fonts/HelvNeue75_W1G.woff2") format("woff2"), url("/fonts/HelvNeue75_W1G.woff") format("woff");*/
+}
+html{font-family: HelvNeueOrange;}
+
+.back-arrow-black {
+    width: 16px;
+    height: 16px;
+}
+
+.début {
+    display: flex;
+}
+
+.début>li {
+    list-style: none;
+    margin-left: 28px;
+}
+
+.but{
+        margin-top: 38px;
+}
+hr{
+ border-top: 2px solid rgba(0,0,0,.1);
+}
+.Device_smart_phone{
+  width: 100px;
+  height: 100px;
+}
+.call {
+       width: 100px;
+       height: 100px;
+       object-fit: contain;
+}
+/* .ca p{
+  width: 781px;
+  height: 75px;
+  font-family: HelvNeueOrange;
+  font-size: 16px;
+  line-height: 1.13;
+  letter-spacing: 0.6px;
+  color: #000000;
+   margin-top: 13px;
+} */
+.Comment-activer-un-p{
+  letter-spacing: 1px;
+}
+h4{
+  width: 416px;
+  height: 30px;
+  font-family: HelvNeueOrange;
+  font-size: 30px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+.content{
+    padding-left : 50px;
+    padding-right : 50px;
+}
+.ca .col-lg-2 {
+     max-width: 12.667%;
+
+}
+.spa1{
+
+  font-family: HelvNeueOrange;
+
+  letter-spacing: 0.6px;
+  color: #000000;
+}
+.card {
+  width: 140px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.26);
+}
+.-Mo{
+    width: 47px;
+    height: 16px;
+    font-family: HelvNeueOrange;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+}
+.Data_Services {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.-Moo{
+  width: 41px;
+  height: 16px;
+  font-family: HelvNeueOrange;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: bold;
+  font-stretch: bold;
+  color: #ff7900;
+}
+
+.Rectangle-5{
+  width: 12px;
+  height: 43.2px;
+  transform: rotate(-225deg);
+  -webkit-transform-origin-x: right;
+}
+}
+.Les-Pass-Jour{
+  width: 162px;
+  height: 24px;
+  font-family: HelvNeueOrange;
+  font-size: 24px;
+  color: #000000;
+}
+.text-style-1 {
+  color: #fb7900;
+}
+.Valable-24-heures-d{
+  width: 290px;
+/* width: 250px; */
+  font-family: HelvNeueOrange;
+  font-size: 16px;
+  color: #666666;
+
+}
+
+.flex-ul {
+  display:flex;
+  overflow-x:auto;
+  margin:2px;
+  padding:1em;
+
+}
+
+.flex-li {
+  list-style-type:none;
+  margin:auto 10px;
+}
+
+.rectangle {
+  width: 200px;
+  font-size: 9px ;
+  height: 40px ;
+  background-color: #ff7900;
+ }
+
+/* .rectangle:hover {
+    background-color: #223645;
+} */
+.Jamono-New-Scool {
+  width: 155px;
+  height: 12px;
+  font-family: HelvNeueOrange;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+#peupeup {
+    width: 250px;
+    height: 16px;
+    color: #666666;
+    margin-top: -16px;
+}
+#phone{
+     width: 90px;
+     height: 100px;
+     object-fit: contain;
+}
+  .mob{
+
+    width: 140px;
+    height: 20px;
+    font-family: HelvNeueOrange;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+ }
+ .text {
+
+    width: 857px;
+    height: 78px;
+    font-family: HelvNeueOrange;
+    font-size: 15px;
+    line-height: 1.13;
+    letter-spacing: 0.6px;
+    margin-top: 17px;
+
+}
+
+.ibou-small {
+    margin-top: 52px;
+    margin-left: 170px;
+}
+.par{
+  color: #666666;
+  margin-top: -15px;
+}
+    @media screen and  (max-width: 780px) {
+      body {
+        font-size: 9px;
+      }
+      .accueil{
+        height: 135px;
+      }
+      .d-flex{
+        overflow: scroll !important;
+      }
+     .flex-ul {
+         display:flex;
+         margin:2px;
+         padding:1em;
+        }
+    .flex-li {
+        list-style-type:none;
+        margin:auto 10px;
+       }
+       .pass{
+         height: 14px;
+       }
+    .rectangle {
+        width: 165px !important;
+        font-size: 9px !important;
+        height: 30px !important;
+              }
+      .rectangles{
+      }
+      .text{
+      width: unset;
+height: unset;
+font-size: unset;
+line-height: unset;
+margin-top: unset;
+letter-spacing: unset;
+      }
+      .mob{
+        width: unset;
+height: unset;
+font-size: unset;
+line-height: unset;
+letter-spacing: unset;
+      }
+      .ca .col-lg-2 {
+     max-width: 16.667%;
+
+}
+
+      .Jamono-New-Scool{
+        font-size: 11px;
+
+
+      }
+  .call{
+width: 45px;
+height: 66px;
+margin-left: 5px;
+margin-top: 23px;
+  }
+  #phone{
+     width: 55px;
+     height: 180px;
+     margin-left: 4px;
+  }
+  .spa1{
+font-size: 11px;
+padding-left: 15px;
+  }
+    /* .ca > p{
+     width: 224px;
+     height: 130px;
+     font-size: 11px;
+     line-height: 1.13;
+     margin-left: 11px;
+      } */
+
+    .Valable-24-heures-d{
+      font-size: 13px;
+      width: unset;
+   }
+   .-Mo{
+    font-size: 12px;
+     }
+     .Data_Services{
+       width: 18px;
+     }
+     .-Moo{
+       font-size: 14px;
+     }
+     #b2{
+     margin-left: 25px;
+     }
+     #b3{
+       margin-left: -25px;
+     }
+     .peupeu{
+     display: block;
+     height: 195px;
+
+     }
+     .-MMo{
+       font-size: 10px;
+     }
+     .caa{
+       width: 124px;
+     }
+     .psj{
+     margin-left: 49px;
+     margin-top: 18px;
+     }
+     #par{
+    font-size: 11px;
+    width: 110px;
+    margin-top: -11px;
+    margin-left: 44px;
+}
+
+     .dsp{
+       margin-top: -30px;
+     }
+     .modal-footer{
+       width: 279px;
+       margin-top: 15px;
+     }
+     .cadr{
+       margin-left: 34px;
+     }
+     #no{
+       font-size: 14px;
+     }
+     #pim{
+
+       width: 215px;
+     }
+     #fe{
+       width: 67px;
+     }
+     #spae{
+       margin-left: -12px;
+     }
+     .rever{
+       flex-direction: column-reverse;
+     }
+     .margin-mobile{
+       text-align: center ;
+     }
+     /* .cen{
+       text-align: center;
+     } */
+     .vra{
+       margin-top: -11px;
+     }
+
+
+
+
+
+
+
+}

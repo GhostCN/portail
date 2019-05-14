@@ -1,0 +1,144 @@
+@media screen and (min-width: 1460px) {
+    .contentS{
+        width: 1360px !important;
+        margin: auto !important;
+        position: relative;
+    }
+}
+
+.contentS{
+    padding-right: 100px;
+    padding-left: 100px;
+    color: #ffffff;
+}
+
+header, .footer-body{
+    display: none;
+}
+
+body{
+    background-color: #000000;
+}
+
+.space50{
+    margin-bottom: 50px;
+}
+
+.space30{
+    margin-bottom: 30px;
+}
+
+.retour{
+    margin-top: 20px;
+}
+
+.retour img{
+    margin-right: 10px;
+}
+
+.retour .snt{
+    width: 110px;
+    margin-right: 0px;
+    float: right;
+}
+
+.retour a{
+    color: #ffffff;
+}
+
+/* .video-header{
+    height: 150px;
+} */
+
+.img-bandeau{
+    width: 100%;
+}
+
+.video-header-title{
+    display: flex;
+    flex-direction: row;
+}
+
+.video-header-title.card.border-0{
+    background-color: transparent;
+}
+
+div.title{
+    font-size: 30px;
+    color: #fb7900;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.subtitle{
+    font-size: 25px;
+}
+
+.color-orange{
+    color: #fb7900;
+}
+
+.smLogo{
+    width: 30px;
+}
+
+.logo-orange{
+    margin-right: 10px;;
+}
+
+.marge-video{
+    margin-top: -5px;
+}
+
+.overlay{
+    display: none;
+    margin-top: 10px;
+}
+
+.sign{
+    margin-top: 10px;
+}
+
+.overlay .phone i{
+    margin-right: 10px;
+}
+
+.overlay button{
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 767px){
+    .smLogo {
+        width: 25px;
+    }
+
+    div.title {
+        font-size: 25px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .smLogo {
+        width: 20px;
+    }
+
+    div.title {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .overlay{
+        margin-top: 10px;
+    }
+
+    .retour .snt {
+        width: 70px;
+    }
+}

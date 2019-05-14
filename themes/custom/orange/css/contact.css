@@ -1,0 +1,566 @@
+@media screen and (min-width: 1460px) {
+    .contentS{
+        width: 1360px !important;
+        margin: auto !important;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .contentS{
+        padding-right: 100px;
+        padding-left: 100px;
+        position: relative;
+    }
+
+    .desc-tabs-txt .media{
+        min-width: 80px !important;
+    }
+
+    .desc-tabs-txt .media:nth-child(2){
+        min-width: 90px !important;
+    }
+
+    .desc-tabs-txt .media:nth-child(4){
+        min-width: 145px !important;
+    }
+
+    .desc-pass .media{
+        min-width: 105px;
+    }
+}
+
+body{
+    background-color: #eeeeee;
+}
+
+.space-areane{
+    margin-bottom: 30px;
+}
+
+.space50{
+    margin-bottom: 50px;
+}
+
+.contact-areane{
+    display: flex;
+    font-size: 18px;
+    color: #666666;
+}
+
+.contact-areane span{
+    margin-right: 15px;
+}
+
+.contact-areane span.active{
+    font-weight: bold;
+    color: #000000;
+}
+
+.bg-head-contact{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.bg-head-contact img{
+    width: 100%;
+    min-height: 100%;
+}
+
+.contact-title{
+    margin-top: 90px;
+    margin-bottom: 70px;
+    font-weight: bold;
+}
+
+.contact-title .small-titleC{
+    color: #ff7900;
+    font-size: 30px;
+}
+
+.contact-title .wh-title{
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.degrader{
+    position: absolute;
+    z-index: 1;
+    width: 88%;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 50px;
+}
+
+.tchat{
+    height: 450px;
+    padding-right: 20px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    overflow: hidden;
+}
+
+.tchat .chat-img-ibou{
+    width: 298px;
+}
+
+.tchat .img-ibou-desk{
+    width: 298px;
+    margin-top: 75px;
+}
+
+.tchat .chat-content{
+    padding-right: 20px;
+    padding-left: 80px;
+    overflow-y: scroll;
+}
+
+.chat-content .content{
+    height: 330px;
+}
+
+.message-ibou.fst{
+    margin-top: 10px;
+}
+
+.chat-rectangle {
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: #eeeeee;
+    width: 10px;
+    height: 10px;
+    top: 15px;
+    left: -5px;
+}
+
+.img-ibou-chat{
+    position: absolute;
+    left: -66px;
+    top: -4px;
+}
+
+.message-ibou{
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    color: #666666;
+    background-color: #eeeeee;
+    border-color: #ffffff;
+    border-radius: 8px;
+    position: relative;
+    width: -moz-fit-content;
+    width: -ms-fit-content;
+    width: fit-content;
+}
+
+.message-ibou .message-tt{
+    font-weight: bold;
+}
+
+.tchat .tchat-initial{
+    margin-top: 60px;
+}
+
+.list-answer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.list-answer .answer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 130px;
+    width: 23%;
+    border: solid 2px #eeeeee;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    color: #333333;
+    cursor: pointer;
+}
+
+.list-answer .answer div{
+    max-width: 134px;
+}
+
+.list-answer .answer:hover{
+    border-color: #ff7900;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.answer.active{
+    border-color: #ff7900;
+    color: #ff7900;
+    font-weight: bold;
+}
+
+.key-arrow{
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+}
+
+.load-answer{
+    margin-top: 30px;
+}
+
+.messages{
+    display: none;
+}
+
+.div-loading{
+    display: none;
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 60px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+.loading img{
+    width: 30px;
+}
+
+.scn-list-answer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.scn-list-answer .scn-answer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 49%;
+    height: 130px;
+    border-radius: 10px;
+    border: solid 2px #eeeeee;
+    padding-right: 35px;
+    padding-left: 35px;
+    font-size: 16px;
+    color: #333333;
+    cursor: pointer;
+}
+
+.scn-answer div{
+    max-width: 236px;
+}
+
+.scn-answer.active{
+    border-color: #ff7900;
+    color: #ff7900;
+    font-weight: bold;
+}
+
+.contact-via{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-via div{
+    width: 49%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 15px;
+    color: #ffffff;
+}
+
+.contact-via div img{
+    margin-top: 10px;
+    margin-right: 25px;
+}
+
+.contact-via div:first-child{
+    padding-left: 0px;
+}
+
+.scn-messages{
+    margin-top: 30px;
+    display: none;
+}
+
+.thd-lst{
+    display: none;
+}
+
+.thrd-list-answer{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.thrd-list-answer .thrd-answer{
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    width: 23%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: solid 2px #eeeeee;
+    color: #333333;
+}
+
+.thrd-list-answer .thrd-answer span{
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.thrd-list-answer .thrd-answer.active{
+    border-color: #ff7900;
+    font-weight: bold;
+    color: #ff7900;
+}
+
+.contact-via .contact-via-facebook{
+    background-color: #4bb4e7;
+}
+
+.contact-via .contact-via-mail{
+    background-color: #a885d8;
+}
+
+.contact-via button{
+    width: 140px;
+}
+
+.footer-dark{
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 85px;
+    justify-content: center;
+}
+
+.footer-dark div{
+    margin-right: 20px;
+}
+
+.footer-dark button{
+    width: 245px;
+    height: 42px;
+    font-size: 18px;
+}
+
+.card.contact-title{
+    background-color: transparent;
+    border: 0px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1120px) {
+    .contact-via div img {
+        margin-right: 10px;
+    }
+
+    .contact-via button {
+        width: 120px;
+    }
+
+    .contact-via div{
+        font-size: 16px;
+    }
+
+    .contact-via div{
+        padding-right: 15px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1100px){
+    .contentS {
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px){
+    .tchat .img-ibou-desk {
+        width: 200px;
+    }
+
+    .bg-head-contact {
+        height: 200px;
+    }
+
+    .contact-title {
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .contact-title .small-titleC {
+        font-size: 25px;
+    }
+
+    .contact-title .wh-title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .contS.contentS{
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+    }
+
+    .hide-contact{
+        display: none;
+    }
+
+    .space-areane{
+        margin-bottom: 10px;
+    }
+
+    .space50{
+        margin-bottom: 30px;
+    }
+
+    .contact-areane{
+        font-size: 13px;
+    }
+
+    .bg-head-contact{
+        height: 80px;
+    }
+
+    .bg-head-contact img{
+        height: 100%;
+    }
+
+    .tchat {
+        height: 555px;
+    }
+
+    .contact-title{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        z-index: 1;
+        height: 40px;
+    }
+
+    .contact-title .small-titleC {
+        font-size: 14px;
+    }
+
+    .contact-title .wh-title {
+        font-size: 30px;
+        margin-top: -5px;
+    }
+
+    .chat-img-ibou{
+        display: none;
+    }
+
+    .tchat .tchat-initial {
+        margin-top: 30px;
+    }
+
+    .tchat {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .message-ibou {
+        font-size: 14px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .list-answer .answer, .thrd-list-answer .thrd-answer{
+        width: 48%;
+    }
+
+    .list-answer .answer:first-child, .thrd-list-answer .thrd-answer:first-child{
+        margin-bottom: 10px;
+    }
+
+    .list-answer {
+        flex-wrap: wrap;
+    }
+
+    .degrader {
+       display: none;
+    }
+
+    .contact-via div {
+        width: 100%;
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .contact-via div:first-child {
+        margin-bottom: 10px;
+    }
+
+    .contact-via, .scn-list-answer, .thrd-list-answer{
+        flex-wrap: wrap;
+    }
+
+    .list-answer .answer{
+        font-size: 14px;
+    }
+
+    .footer-dark{
+        height: 140px;
+        flex-wrap: wrap;
+    }
+
+    .footer-dark div{
+        width: 75%;
+        text-align: center;
+    }
+
+    .footer-dark button{
+        margin-top: -30px;
+    }
+
+    .scn-answer div{
+        max-width: unset;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px){
+    .scn-list-answer .scn-answer{
+        width: 100%;
+    }
+
+    .scn-list-answer .scn-answer:first-child{
+        margin-bottom: 10px;
+    }
+
+    .contact-via div {
+        width: 100%;
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .contact-via div img {
+        margin-right: 13px;
+    }
+}
+

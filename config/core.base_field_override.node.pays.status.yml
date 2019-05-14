@@ -1,0 +1,22 @@
+uuid: bc980e03-fe3c-4499-9eef-57dfeed6e1d3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pays
+id: node.pays.status
+field_name: status
+entity_type: node
+bundle: pays
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

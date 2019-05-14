@@ -1,0 +1,21 @@
+uuid: 85318bf2-f1ff-43f2-8438-a305731a6e07
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sms_orange
+field_name: field_sms_orange
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

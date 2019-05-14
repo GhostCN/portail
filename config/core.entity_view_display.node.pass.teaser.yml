@@ -1,0 +1,21 @@
+uuid: f99cf634-3315-4eaa-9884-ecf8ace5b0d2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.pass
+  module:
+    - user
+id: node.pass.teaser
+targetEntityType: node
+bundle: pass
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_duree_pass: true
+  field_prix_pass: true
+  langcode: true

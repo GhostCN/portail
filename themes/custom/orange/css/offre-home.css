@@ -1,0 +1,685 @@
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff");
+}
+
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff");
+}
+
+body {
+    font-family: HelvNeueOrange;
+    font-size: 16px;
+    width: 100%;
+    height: auto;
+}
+
+html {
+    font-family: HelvNeueOrange;
+}
+
+body {
+    background-color: #eeeeee !important;
+}
+
+.contentA {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    color: #fb7900 !important;
+    background-color: unset !important;
+    border: unset !important;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+    font-weight: bold !important;
+    padding-top: 21px;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link:hover {
+    border-top: #000 solid 2px !important;
+    border-left: #000 solid 2px !important;
+    border-right: #000 solid 2px !important;
+    border-bottom: #fff solid 2px !important;
+    background-color: #fff !important;
+}
+
+.nav .nav-link {
+    font-weight: normal !important;
+}
+
+@media screen and (min-width: 1560px) {
+    .contentA {
+        width: 1360px;
+        margin: auto !important;
+    }
+    .img-height {
+        height: 350px;
+        overflow: hidden;
+    }
+    .text-style-of {
+        margin-top: 50px !important;
+        left: 0;
+        right: 0;
+    }
+    .btn-off {
+        /* width: 100%; */
+        position: absolute;
+        margin-bottom: 25px !important;
+    }
+    .bt-test {
+
+    }
+}
+
+.imgSmall {
+    width: 100%;
+}
+
+.sac-nav-ul-of {
+    display: flex;
+    list-style: none;
+    margin-left: -35px;
+    font-size: 18px;
+    line-height: 1.22;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text-style-1-of {
+    font-size: 30px;
+    color: #ff7900;
+}
+
+.text-style-2-of {
+    font-size: 50px;
+    color: #ffffff
+}
+
+.card-tarifs-of {
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: none !important;
+    margin-top: -72px;
+    margin-bottom: 40px;
+}
+
+.Tarifs-et-caractris-text {
+    font-size: 20px;
+}
+
+.Internet-Haut-dbit-of {
+    color: #8f8f8f;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+.decouvre-tvv {
+    margin-bottom: 29px;
+}
+
+.intern {
+    padding-bottom: 0px;
+    margin-bottom: 9px;
+}
+
+.Mois-of {
+    color: #fb7900;
+    font-size: 40px;
+}
+
+.col-spa {
+    padding-left: 47px !important;
+    padding-top: 8px;
+}
+
+.case-off {
+    padding-top: 22px;
+}
+
+.case-of {
+    font-size: 18px;
+}
+
+.btn-off {
+    /* width: 100%; */
+    position: absolute;
+    margin-bottom: 46px;
+}
+
+.Group-111 {
+    height: 300px;
+    overflow: hidden;
+}
+
+.btn-light {
+    position: absolute;
+    bottom: 41px;
+}
+
+.bt-sous {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    margin-left: 40px;
+}
+
+.equipements-inclus-of {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.mask-of {
+    border-radius: 2px;
+    background-color: #50be87 !important;
+    border: none !important;
+}
+
+.offr-resm {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 20px;
+}
+
+.text-col {
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+.mask-of-1 {
+    background-color: #a885d8 !important;
+    border: none !important;
+}
+
+.mask-of-2 {
+    background-color: #4bb4e7 !important;
+    border: none !important;
+}
+
+.equipement {
+    margin-bottom: 50px;
+}
+
+.rectangle-canal {
+    background-color: black;
+    margin-top: 0px;
+    width: 98%;
+    margin-left: 0px;
+    padding-left: 13px;
+    padding-top: 14px;
+}
+
+.vous-canal {
+    color: #ffffff;
+    margin-top: -8px;
+    padding-bottom: 7px;
+}
+
+#bouq {
+    padding-left: 3px;
+}
+
+.canal-bouq {
+    font-size: 20px;
+}
+
+#fleche-cana {
+    width: 13px;
+    margin-left: 115px !important;
+}
+
+.decouvre-tv {
+    margin-bottom: 50px;
+}
+
+.blockavantage {
+    padding-left: 30px;
+}
+
+.tab-content-border {
+    border-top: 2px solid black !important;
+    background-color: #fff;
+    padding-top: 55px !important;
+}
+
+.une-connexion-st {
+    font-size: 18px;
+    padding-left: 27px;
+    padding-top: 19px;
+    padding-right: 39px;
+}
+
+.dsp {
+    display: flex;
+}
+
+.dspp {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+.voir-t {
+    width: 113px;
+    height: 39px;
+    margin-top: 9px;
+}
+
+.groupe171 {
+    padding-bottom: 45px;
+}
+
+.text-style-color {
+    color: #666666;
+    font-size: 18px;
+    margin-bottom: 0px;
+    padding-top: 22px;
+    padding-right: 58px;
+}
+
+.col-orange {
+    color: #ff7900;
+}
+
+.text-style-colo-1 {
+    font-size: 28px;
+    color: black;
+    font-weight: bold;
+}
+
+.contentB {
+    position: absolute;
+    margin-top: 25px;
+    padding-left: 50px;
+    padding-right: 38%;
+}
+
+.bt-test {
+    width: 60%;
+    padding-top: 40px;
+}
+
+.om-blue {
+    background-color: #4bb4e7 !important;
+    padding-left: 45px;
+    padding-top: 28px;
+    border: none !important;
+    height: 271px;
+}
+
+.double-fleche {
+    width: 33px;
+}
+
+.omy {
+    font-size: 28px;
+    color: #000000;
+    padding-left: 15px;
+}
+
+.text-style-oof {
+    position: absolute;
+    margin-top: 25px;
+    z-index: 1;
+}
+
+.fac-paye {
+    font-size: 18px;
+    color: #000000;
+    padding-top: 23px;
+    padding-right: 114px;
+}
+
+.det {
+    position: absolute;
+    bottom: 15%;
+}
+
+.main-tel {
+    position: absolute;
+    right: 0;
+    bottom: 0%;
+}
+
+.card-question-frequent {
+    padding-left: 18px;
+}
+
+.check-sp {
+    padding-left: 10px;
+}
+
+.int-of {
+    padding-left: 8px;
+}
+
+.int-marg {
+    margin-top: -6px;
+}
+
+.card-equipe {
+    height: 310px;
+}
+
+.card-equipe h1 {
+    font-size: 24px;
+}
+
+.btn-carr {
+    position: absolute;
+    bottom: 8%;
+}
+
+.img-boxing {
+    position: absolute;
+    right: 0;
+}
+
+#box-1 {
+    bottom: 6%;
+}
+
+#box-2 {
+    bottom: 0%;
+}
+
+#box-3 {
+    bottom: 4%;
+}
+
+.canal-img {
+    width: 19%;
+    margin-top: 0px;
+}
+
+.text-style-of {
+    position: absolute;
+    margin-top: 65px;
+    z-index: 1;
+}
+
+.card-sp {
+    padding-right: 10px;
+    padding-left: 5px;
+    /* max-width: 31% !important; */
+}
+
+.border-action {
+    border-right: 2px solid #cfcece;
+}
+
+.mx {
+    max-width: 40% !important;
+}
+
+.btn-link {
+    padding-top: 23px !important;
+    padding-bottom: 3px !important;
+}
+
+.accordion .card-header button::after,
+.accordion .card-header a::after {
+    top: 30px;
+}
+
+.imgfle {
+    width: 25%;
+}
+
+@media screen and (max-width: 780px) {
+    .contentA {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .Group-111 {
+        height: 147px;
+        overflow: hidden;
+    }
+    .text-style-of {
+        margin-top: 10px;
+    }
+    .text-style-1-of {
+        font-size: 14px;
+    }
+    .text-style-2-of {
+        font-size: 30px;
+    }
+    .card-tarifs-of {
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-top: 65px;
+        padding-top: 35px !important;
+    }
+    .Internet-Haut-dbit-of {
+        font-size: 14px;
+        /* padding-bottom: 35px; */
+    }
+    .Mois-of {
+        font-size: 30px;
+    }
+    .col-spa {
+        padding-left: 0px !important;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .bt-sous {
+        position: unset;
+        bottom: unset;
+        margin-left: unset;
+    }
+    .swiper-slide-mob {
+        width: 90% !important;
+    }
+    #shad1 {
+        background-color: #20e683 !important;
+    }
+    #shad2 {
+        background-color: #a885d8 !important;
+    }
+    #shad3 {
+        background-color: #4bb4e7!important;
+    }
+    .shad {
+        width: 100%;
+        height: 370px;
+        padding-left: 25px;
+        padding-top: 30px;
+    }
+    .swipe2 {
+        text-align: start !important;
+        width: 89% !important;
+        margin-right: 10px;
+    }
+    .text-coll {
+        color: #ffffff;
+    }
+    .text-col {
+        color: #ffffff;
+        padding-left: 5px;
+    }
+    .box-1-swipe {
+        bottom: 11%;
+    }
+    #box-2-swipe {
+        bottom: -4%;
+    }
+    .equipements-inclus-of {
+        font-size: 20px;
+    }
+    .swipe3 {
+        width: 42% !important;
+        padding-right: 0px !important;
+        margin-right: -1px !important;
+        padding-top: 3px !important;
+        padding-bottom: 5px !important;
+    }
+    .afr {
+        width: 135px;
+        margin-right: 10px;
+    }
+    .carls {
+        margin-bottom: 10px !important;
+    }
+    .vous-canal {
+        font-size: 14px;
+        padding-bottom: 4px;
+    }
+    .canal-img {
+        width: 84px;
+        margin-top: -18px;
+        margin-left: 15px;
+    }
+    #fleche-cana {
+        margin-left: 7px !important;
+        margin-top: -10px;
+    }
+    .Rectangle-33 {
+        position: relative;
+        width: 100%;
+        height: 175px;
+        background-color: #ffffff;
+    }
+    .Rectangle-13 {
+        background-color: #ffffff;
+    }
+    .imag-tp {
+        padding-top: 10px;
+    }
+    .om-mob-blue {
+        background-color: #4bb4e7;
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .tl {
+        font-size: 14px;
+        padding-left: 15px;
+    }
+    .om-tl {
+        font-size: 18px;
+    }
+    .equipement {
+        padding-bottom: 0px;
+        margin-bottom: 30px;
+    }
+    .Group-11 {
+        background-color: #ffffff
+    }
+    .sw-mob {
+        margin-bottom: 0% !important;
+        margin-top: -25px !important;
+        max-width: 100% !important;
+        margin-left: 0px !important;
+    }
+    .contentE {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .contentB {
+        padding-right: unset;
+        padding-left: 25px;
+        padding-top: 25px;
+    }
+    .text-style-colo-1 {
+        font-size: 20px;
+    }
+    .text-style-color {
+        font-size: 16px;
+        padding-top: 15px;
+        padding-right: 95px !important;
+    }
+    .bt-test {
+        width: unset;
+        padding-top: 66px;
+    }
+    .btn-off {
+        width: 82%;
+        margin-bottom: unset;
+    }
+    .decouvre-tv {
+        margin-bottom: 38px;
+    }
+    .mx {
+        max-width: unset !important;
+        border-right: unset !important;
+    }
+    .border-action {
+        border-right: none !important;
+    }
+    .card-sp {
+        padding-right: 11px;
+        padding-left: 3px;
+        /* max-width: 31% !important; */
+    }
+    .qs {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+    .qsf {
+        padding-left: 7px;
+    }
+    .text-loren {
+        padding-left: 14px;
+        color: #666666;
+    }
+    .prme {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .rectangle-canal {
+        margin-top: 4px;
+        width: 98%;
+    }
+    .canal-img {
+        width: 115px;
+    }
+    #fleche-cana {
+        float: right;
+        margin-top: -10px;
+        margin-right: 5px;
+    }
+    .Tarifs-rduits {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    .card-vitesse {
+        border: none !important;
+        padding-top: 25px;
+        padding-left: 23px;
+        padding-right: 23px;
+        padding-bottom: 23px;
+    }
+    .pas-fib {
+        color: #666666;
+    }
+    /* .tv-im {
+      height: 280px;
+  } */
+}
+
+@media screen and (orientation :landscape) and (max-width: 780px) {
+    .swipe3 {
+        width: 25% !important;
+    }
+    .afr {
+        width: 144px;
+    }
+    .icn {
+        margin-top: -12px !important;
+    }
+}

@@ -1,0 +1,19 @@
+uuid: b23728e5-b747-401e-b873-9b9316c6b16e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_options_tel_inclus
+    - node.type.page_home
+id: node.page_home.field_options_tel_inclus
+field_name: field_options_tel_inclus
+entity_type: node
+bundle: page_home
+label: 'Options Telephone Inclus Offre'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

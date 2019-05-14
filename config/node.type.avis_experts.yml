@@ -1,0 +1,17 @@
+uuid: 309bb5a3-1776-43d3-a1bc-5daf2cd4a910
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Avis experts'
+type: avis_experts
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

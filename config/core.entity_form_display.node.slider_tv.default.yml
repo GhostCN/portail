@@ -1,0 +1,47 @@
+uuid: 0fab03db-f17e-477a-b927-c202eabd0456
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.slider_tv.field_c
+    - field.field.node.slider_tv.field_image_slider
+    - image.style.thumbnail
+    - node.type.slider_tv
+  module:
+    - svg_image
+id: node.slider_tv.default
+targetEntityType: node
+bundle: slider_tv
+mode: default
+content:
+  field_c:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_image_slider:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

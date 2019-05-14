@@ -1,0 +1,22 @@
+uuid: 8902ed32-366e-4c3a-a3df-f33e0a9d0bb7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - orange
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: orange_content
+theme: orange
+region: content
+weight: -2
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  provider: system
+  label_display: '0'
+visibility: {  }

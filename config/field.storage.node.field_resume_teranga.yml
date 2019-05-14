@@ -1,0 +1,21 @@
+uuid: 7e2072bc-b6dc-469a-9627-25c2c0522127
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_resume_teranga
+field_name: field_resume_teranga
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

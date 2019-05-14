@@ -1,0 +1,86 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+
+{% import _self as menus %}
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+
+{{ menus.menu_links(items, attributes, 0, device) }}
+{% macro menu_links(items, attributes, menu_level, device) %}
+  {% import _self as menus %}
+  {% if items %}
+    {#% if device == "mobile" %#}
+      {% for item in items %}
+          {% if menu_level == 0 %}
+            <div class="card mobile_menu">
+            <div class="card-header menu_mobile" id="heading{{ loop.index }}">
+            <h5 class="mb-0">
+              <button style="font-size: 14px;" class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}" aria-expanded="false" aria-controls="collapse{{ loop.index }}">
+                <img src="{{ file_url(item.entity.field_menu_image[0].entity.fileuri) }}" style="width: 40px;" class="pr-2">{{ item.title }}
+              </button>
+            </h5>
+          </div>
+          <div id="collapse{{ loop.index }}" class="collapse heading{{ loop.index }} mobile_menu" aria-labelledby="heading{{ loop.index }}" data-parent="#accordionExample" aria-expanded="false">
+            <div class="card-body text-dark">
+              <ul style="list-style:none">
+                {% endif %}
+                  <li class="mobile_menu" {{ item.attributes.addClass(['nav-item']) }}>
+                    <a href="{{ item.url }}" onclick="dataLayer.push({'event':'click','eventCategory':'Menu', 'eventAction':'button_click','eventLabel':'{{ item.title }}'});" {{item.entity.field_menu_attribut.value | raw}} class="nav-link li_Menu">{{ item.title }}</a>
+                    {% if item.below %}
+                      {{ menus.menu_links(item.below, attributes.addClass, menu_level + 1, device) }}
+                    {% else %}
+                  </li>
+                    {% endif %}
+                {% if menu_level == 0 %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    {#% else %#}
+      {% for item in items %}
+        {% if menu_level == 0 %}
+        <ul class="ul_Megamenu col-lg-2 col-sm-4 col-xs-12 desktop_menu">
+          <li class="nav-item">
+            <img src="{{ file_url(item.entity.field_menu_image[0].entity.fileuri) }}" style="width: 40px;"><br><br>
+          </li>
+        {% endif %}
+        <li class="desktop_menu" {{ item.attributes.addClass(['nav-item']) }}>
+          {% if menu_level == 0 %}
+            <a href="{{ item.url }}" onclick="dataLayer.push({'event':'click','eventCategory':'Menu', 'eventAction':'button_click','eventLabel':'{{ item.title }}'});" {{item.entity.field_menu_attribut.value | raw}} class="nav-link">{{ item.title }}</a>
+          {% else %}
+            <a href="{{ item.url }}" onclick="dataLayer.push({'event':'click','eventCategory':'Menu', 'eventAction':'button_click','eventLabel':'{{ item.title }}'});" {{item.entity.field_menu_attribut.value | raw}} class="nav-link li_Megamenu">{{ item.title }}</a>
+          {% endif %}
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes.addClass, menu_level + 1) }}
+          {% else %}
+        </li>
+          {% endif %}
+        {% if menu_level == 0 %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    {#% endif %#}
+  {% endif %}
+{% endmacro %}

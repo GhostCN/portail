@@ -1,0 +1,23 @@
+uuid: ea6fecc2-5aed-4b5c-a43a-f5d4943a3ddb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_mobile_sms_offre
+    - node.type.offre_mobile
+id: node.offre_mobile.field_offre_mobile_sms_offre
+field_name: field_offre_mobile_sms_offre
+entity_type: node
+bundle: offre_mobile
+label: 'Prix SMS vers même offre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

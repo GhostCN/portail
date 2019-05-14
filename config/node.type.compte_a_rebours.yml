@@ -1,0 +1,17 @@
+uuid: f69f84e2-fa55-4ad1-b077-bcab75028c0a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Compte à Rebours'
+type: compte_a_rebours
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

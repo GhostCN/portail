@@ -1,0 +1,28 @@
+uuid: 215df9dc-7ec4-49c5-9f52-d0b380efce35
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_commen
+    - node.type.etapes_souscrire
+    - node.type.page_home
+id: node.page_home.field_commen
+field_name: field_commen
+entity_type: node
+bundle: page_home
+label: 'Comment souscrire'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      etapes_souscrire: etapes_souscrire
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

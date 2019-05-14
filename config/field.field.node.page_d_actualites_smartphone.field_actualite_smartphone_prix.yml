@@ -1,0 +1,19 @@
+uuid: da620bb0-c2c1-4c9c-8ba9-cbbbd24ed96d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_actualite_smartphone_prix
+    - node.type.page_d_actualites_smartphone
+id: node.page_d_actualites_smartphone.field_actualite_smartphone_prix
+field_name: field_actualite_smartphone_prix
+entity_type: node
+bundle: page_d_actualites_smartphone
+label: Prix
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

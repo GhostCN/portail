@@ -1,0 +1,19 @@
+uuid: 1728cdeb-0eab-4c32-9d97-d7ecaf857b67
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ecran
+    - node.type.teranga_telephone
+id: node.teranga_telephone.field_ecran
+field_name: field_ecran
+entity_type: node
+bundle: teranga_telephone
+label: Ecran
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

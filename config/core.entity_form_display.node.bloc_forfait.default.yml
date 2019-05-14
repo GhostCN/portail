@@ -1,0 +1,63 @@
+uuid: 8cb010b4-a886-4338-9c69-9aad2afeefc6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.bloc_forfait.field_credit_telephonique
+    - field.field.node.bloc_forfait.field_frais_acces
+    - field.field.node.bloc_forfait.field_lien
+    - field.field.node.bloc_forfait.field_tarif_forfait
+    - node.type.bloc_forfait
+id: node.bloc_forfait.default
+targetEntityType: node
+bundle: bloc_forfait
+mode: default
+content:
+  field_credit_telephonique:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_frais_acces:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lien:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tarif_forfait:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

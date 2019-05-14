@@ -1,0 +1,21 @@
+uuid: fb854200-5e80-4cf6-b797-389c1291e1c8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_texte_banniere
+    - node.type.compte_a_rebours
+  module:
+    - text
+id: node.compte_a_rebours.field_texte_banniere
+field_name: field_texte_banniere
+entity_type: node
+bundle: compte_a_rebours
+label: 'Texte banniére'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

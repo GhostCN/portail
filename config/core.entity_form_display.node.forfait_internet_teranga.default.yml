@@ -1,0 +1,54 @@
+uuid: df7cd65d-279c-4561-8a0c-4ed3e91acff7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.forfait_internet_teranga.field_engagement
+    - field.field.node.forfait_internet_teranga.field_prix_forfait
+    - field.field.node.forfait_internet_teranga.field_validite_du_forfait
+    - node.type.forfait_internet_teranga
+id: node.forfait_internet_teranga.default
+targetEntityType: node
+bundle: forfait_internet_teranga
+mode: default
+content:
+  field_engagement:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_prix_forfait:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_validite_du_forfait:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

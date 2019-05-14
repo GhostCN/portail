@@ -1,0 +1,149 @@
+uuid: 530ddc66-7d05-454f-a45c-476715c9f2d8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.page_family.field_description_phone
+    - field.field.node.page_family.field_faq_family
+    - field.field.node.page_family.field_image_phone
+    - field.field.node.page_family.field_les_fondamentaux_de_l_offr
+    - field.field.node.page_family.field_lien_achat
+    - field.field.node.page_family.field_lien_detail
+    - field.field.node.page_family.field_nom_phone
+    - field.field.node.page_family.field_prix_appels
+    - field.field.node.page_family.field_prix_des_sms
+    - field.field.node.page_family.field_prix_phone
+    - field.field.node.page_family.field_seddo_bonus
+    - field.field.node.page_family.field_seddo_pass_internet
+    - field.field.node.page_family.field_souscrire_offre_family
+    - field.field.node.page_family.field_type_phone
+    - node.type.page_family
+  module:
+    - svg_image
+    - user
+id: node.page_family.default
+targetEntityType: node
+bundle: page_family
+mode: default
+content:
+  field_description_phone:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_faq_family:
+    weight: 111
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image_phone:
+    weight: 114
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_les_fondamentaux_de_l_offr:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_lien_achat:
+    weight: 110
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_lien_detail:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_nom_phone:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prix_appels:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prix_des_sms:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prix_phone:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_seddo_bonus:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_seddo_pass_internet:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_souscrire_offre_family:
+    weight: 113
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_type_phone:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

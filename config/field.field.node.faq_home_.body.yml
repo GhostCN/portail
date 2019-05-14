@@ -1,0 +1,22 @@
+uuid: c854fcf1-0344-422c-880c-2e89ca0342d7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.faq_home_
+  module:
+    - text
+id: node.faq_home_.body
+field_name: body
+entity_type: node
+bundle: faq_home_
+label: Réponse
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

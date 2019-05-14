@@ -1,0 +1,22 @@
+uuid: fb764894-af45-4c37-93ce-ac589d8eca04
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_data
+id: node.pass_data.promote
+field_name: promote
+entity_type: node
+bundle: pass_data
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

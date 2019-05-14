@@ -1,0 +1,17 @@
+uuid: 4fabce2a-27e5-42a0-9292-839a2be1b371
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Faq Orange Money'
+type: faq_orange_money
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

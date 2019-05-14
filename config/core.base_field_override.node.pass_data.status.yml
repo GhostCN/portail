@@ -1,0 +1,22 @@
+uuid: 5fc71b2f-cc55-4ffd-8ccd-2c9f64a548de
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_data
+id: node.pass_data.status
+field_name: status
+entity_type: node
+bundle: pass_data
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,188 @@
+uuid: 09f0242d-0492-4c55-a163-e55842792971
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.page_family.field_description_phone
+    - field.field.node.page_family.field_faq_family
+    - field.field.node.page_family.field_image_phone
+    - field.field.node.page_family.field_les_fondamentaux_de_l_offr
+    - field.field.node.page_family.field_lien_achat
+    - field.field.node.page_family.field_lien_detail
+    - field.field.node.page_family.field_nom_phone
+    - field.field.node.page_family.field_prix_appels
+    - field.field.node.page_family.field_prix_des_sms
+    - field.field.node.page_family.field_prix_phone
+    - field.field.node.page_family.field_seddo_bonus
+    - field.field.node.page_family.field_seddo_pass_internet
+    - field.field.node.page_family.field_souscrire_offre_family
+    - field.field.node.page_family.field_type_phone
+    - image.style.thumbnail
+    - node.type.page_family
+  module:
+    - inline_entity_form
+    - svg_image
+id: node.page_family.default
+targetEntityType: node
+bundle: page_family
+mode: default
+content:
+  field_description_phone:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_faq_family:
+    weight: 14
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_image_phone:
+    weight: 6
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_les_fondamentaux_de_l_offr:
+    weight: 12
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_lien_achat:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_lien_detail:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nom_phone:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_prix_appels:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_prix_des_sms:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_prix_phone:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_seddo_bonus:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_seddo_pass_internet:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_souscrire_offre_family:
+    weight: 13
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_type_phone:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  status:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true
+  url_redirects: true

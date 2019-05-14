@@ -1,0 +1,19 @@
+uuid: 4929599e-3a6c-4925-b3e4-d024da41a58a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_etape_souscription
+    - node.type.souscrire_offre_family
+id: node.souscrire_offre_family.field_etape_souscription
+field_name: field_etape_souscription
+entity_type: node
+bundle: souscrire_offre_family
+label: 'Etape souscription'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

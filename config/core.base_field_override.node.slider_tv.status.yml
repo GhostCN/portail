@@ -1,0 +1,22 @@
+uuid: 1be14437-dd03-4b52-8546-0abdc9a63cbd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.slider_tv
+id: node.slider_tv.status
+field_name: status
+entity_type: node
+bundle: slider_tv
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: 9cdbdc84-4d8a-42c5-9d6a-8e0273f5a97e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_forfait_24_mois
+field_name: field_forfait_24_mois
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+uuid: 898c5424-c9a5-4014-9b03-2902e58e2e78
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Page TV Orange'
+type: page_tv_orange
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,11 @@
+uuid: 07c84752-aaee-4acf-bbbb-fa50e4d0ec93
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.souscrire_offre_family
+id: node.souscrire_offre_family
+target_entity_type_id: node
+target_bundle: souscrire_offre_family
+default_langcode: site_default
+language_alterable: false

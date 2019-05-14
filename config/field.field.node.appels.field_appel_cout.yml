@@ -1,0 +1,23 @@
+uuid: 5dd27574-a9ad-4992-8b02-d7255cc33a14
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_appel_cout
+    - node.type.appels
+id: node.appels.field_appel_cout
+field_name: field_appel_cout
+entity_type: node
+bundle: appels
+label: coût
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

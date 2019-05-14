@@ -1,0 +1,22 @@
+uuid: 70dc369b-7ca5-4f56-8a24-10cd6e482c1d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.promo_bon_plan
+id: node.promo_bon_plan.promote
+field_name: promote
+entity_type: node
+bundle: promo_bon_plan
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

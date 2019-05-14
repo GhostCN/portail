@@ -1,0 +1,19 @@
+uuid: c9fee07d-da23-4def-867b-6c24e6d98ba4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cadeau
+    - node.type.cadeau_sargal
+id: node.cadeau_sargal.field_cadeau
+field_name: field_cadeau
+entity_type: node
+bundle: cadeau_sargal
+label: Cadeau
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

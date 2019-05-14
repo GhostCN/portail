@@ -1,0 +1,19 @@
+uuid: 02170279-cf71-4a2d-8576-9a5b477ddc26
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_avantages
+field_name: field_avantages
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

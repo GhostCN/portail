@@ -1,0 +1,21 @@
+uuid: 4446258d-840f-4b97-9daf-a454dbc51d75
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_avantages
+    - node.type.template_teranga_liberty
+  module:
+    - text
+id: node.template_teranga_liberty.field_avantages
+field_name: field_avantages
+entity_type: node
+bundle: template_teranga_liberty
+label: Avantages
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

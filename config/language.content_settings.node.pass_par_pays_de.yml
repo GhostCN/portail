@@ -1,0 +1,11 @@
+uuid: 628197e5-6748-496e-9de3-f71fb1b0d49b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_par_pays_de
+id: node.pass_par_pays_de
+target_entity_type_id: node
+target_bundle: pass_par_pays_de
+default_langcode: site_default
+language_alterable: false

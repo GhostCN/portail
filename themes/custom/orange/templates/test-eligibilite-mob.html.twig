@@ -1,0 +1,246 @@
+{{ attach_library('orange/global-testeligibilite-css') }}
+{{ attach_library('orange/global-testeligibilite-js') }}
+
+<div class="debut-body ">
+  <section class="sect-nav contentA">
+
+    <ul class="sac-nav-ul-tes mb-0 d-lg-none displa " style="list-style:none">
+      <li class="debutlii-of-tes">
+        <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+      </li>
+      <li class="debutlii-of-tes">
+        <a href="{{ path('internet-fixe') }}"> <b> Internet et Fixe </b></a>
+      </li>
+    </ul>
+    <div class="fibre-optique">
+      <p class="sous-fib-optique">Souscription Fibre Optique</p>
+    </div>
+  </section>
+  <section class="vibre-img contentA">
+    <div class="image-back">
+      <div class="quartier-vb">
+        <p class="vivre-f">Vivre la <span class="orange">fibre</span> </br> dans mon quartier</p>
+      </div>
+      <img src="/sites/default/files/icones/images-title-fibre.png" alt="" class="">
+    </div>
+  </section>
+  <section class="contentA">
+    <div class="card card-sumilateur">
+      <section>
+        <div class="div-tes-eli">
+          <div role="presentation" class="">
+            <a href="#step1" class="nav-link nav-link-pr active encours">
+              <span class="cercle-numb active">1</span> <span class="text-numb active">Test d’éligibilité</span>
+            </a>
+          </div>
+          <form role="form" method="post">
+            <div class="">
+              <div class="tab-pane active" role="tabpanel" id="step1">
+                <p class="test-para">Testez votre éligibilité avec votre numéro de téléphone afin de découvrir nos offres Fibre.</p>
+                <div class="row">
+                  <div class="col-12 div-pad-sp">
+                    <div class="div-selc">
+                      <select class="custom-select custum-select-chos " name="type_client" id="inputGroupSelect01" required="required">
+                        <option selected="">Type de client :</option>
+                        <option value="b2c">Particulier</option>
+                        <option value="pro">Pro PME-PMI</option>
+                        <option value="b2b">Grande Entreprise</option>
+                      </select>
+                      <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-deb-1">
+                    </div>
+                  </div>
+                  <div class="col-12 div-pad-sp">
+                    <div class="mat-div ">
+                      <div class="displa"><label for="first-name" class="mat-label text-com">N° téléphone fixe <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-suiv"></label></div>
+                      <input type="number" class="mat-input" id="N-téléphone-fixe" name="num_client" required="required">
+                    </div>
+                  </div>
+
+                  <div class="col-12 div-pad-sp">
+                    <div class="mat-div" data-toggle="modal" data-target="#exampleModalCenter-2">
+                      <div class="displa"> <label for="first-name" class="mat-label text-com">Mes coordonnées GPS  <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-suiv"></label></div>
+                      <input type="text" pattern="^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$" class="mat-input" autocomplete="false" id="Mes-coordonnées-GPS" name="code_gps" required="required">
+                    </div>
+                  </div>
+                  <input type="hidden" name="test_eligibilite" value="ok">
+                  <div class="col-12">
+
+                    <button type="submit" class="btn info lancer-le next-step efface">Lancer le test</button>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>
+
+<!-- footer jaune -->
+
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- fin footer jaune -->
+
+{% include directory ~ '/templates/includes/googlemap-modal.html.twig' %}

@@ -1,0 +1,42 @@
+uuid: 63174222-306b-4b02-b2a1-1ff0c1344a77
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_c
+field_name: field_c
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Documentaire
+      label: Documentaire
+    -
+      value: Sport
+      label: Sport
+    -
+      value: Jeuness
+      label: Jeunesse
+    -
+      value: Serie
+      label: Série
+    -
+      value: cinema
+      label: Cinéma
+    -
+      value: divert
+      label: Divertissement
+    -
+      value: musique
+      label: Musique
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

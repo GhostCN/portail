@@ -1,0 +1,485 @@
+.header-bandeau{
+    height: 393px;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-bandeau .bandeau{
+    position: absolute;
+    width: 100%;
+}
+
+.header-bandeau .bandeau-mobile{
+    display: none;
+}
+
+.card-header-aicha{
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.fil-aicha{
+    display: flex;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.fil-aicha a{
+    color: #666666;
+    margin-right: 12px;
+}
+
+.fil-aicha a:hover{
+    color: #ff7900;
+}
+
+.fil-aicha img{
+    width: 7px;
+    margin-right: 12px;
+}
+
+.fil-aicha span{
+    font-weight: bold;
+}
+
+.page-title-aicha{
+    margin-top: 70px;
+    font-size: 35px;
+    font-weight: bold;
+    width: 212px;
+}
+
+.gold-tabs{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.nav .nav-link {
+    padding: 10px 0.625rem;
+}
+
+.nav .nav-link.active {
+    padding: 20px 0.625rem;
+}
+
+.nav-tabs .nav-item{
+    flex: 1;
+    text-align: center;
+    font-size: 20px;
+    height: 50px;
+}
+
+.nav-tabs .nav-item a{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.nav-tabs .nav-item:first-child{
+    margin-right: 10px;
+}
+
+.nav-tabs .nav-link:not(.active):hover{
+    background-color: #ff7900;
+    border-color: #ff7900;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #ff7900;
+    border-color: #000;
+    font-size: 25px;
+    height: 50px;
+}
+
+.gold-o{
+    display: flex;
+    align-items: center;
+}
+
+.gold-o .gold-image{
+    width: 370px;
+    margin-right: 65px;
+}
+
+.gold-image img{
+    width: 370px;
+}
+
+#myTabContent{
+    background-color: #fff;
+    padding: 35px 70px;
+}
+
+.title-tab{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-desc{
+    color: #666666;
+    font-size: 16px;
+}
+
+.statut{
+    width: 100%;
+    height: 113px;
+    background-color: #ff7900;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.statut div{
+    margin-right: 10px;
+}
+
+.statut img{
+    margin-left: 20px;
+}
+
+.card-gold{
+    padding: 50px 0px;
+    margin-bottom: 50px;
+}
+
+.adv-gold{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.adv-gold .adv{
+    flex: 1;
+}
+
+.adv img{
+    width: 100%;
+}
+
+.adv-gold .adv:first-child{
+    margin-right: 50px;
+}
+
+.title-adv{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.desc-adv{
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+.frs{
+    margin-bottom: 30px;
+}
+
+.table-comparatif{
+    margin-bottom: 50px;
+    color: #ffffff;
+}
+
+.header-comparatif, .cont-comparatif{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-comparatif .table-text{
+    width: 50%;
+    background-color: #000000;
+}
+
+.header-comparatif .table-text, .header-comparatif .compare{
+    padding-top: 35px;
+    padding-bottom: 35px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.header-comparatif .yel{
+    background-color: #f8b623;
+}
+
+.header-comparatif .gry{
+    background-color: #666665;
+}
+
+.dsc-comparatif{
+    color: rgba(0, 0, 0, 0.4);
+    background-color: #fff;
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.cont-comparatif{
+    margin-top: 40px;
+}
+
+.dsc-comparatif .cont-comparatif:first-child{
+    margin-top: 0px;
+}
+
+
+
+.header-comparatif .compare, .cont-comparatif .crt{
+    width: 23%;
+    text-align: center;
+}
+
+.cont-comparatif .tex{
+    width: 50%;
+    padding-left: 20px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.gold-swp{
+    display: none;
+}
+
+@media screen and (max-width: 1280px){
+    .header-bandeau .bandeau {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .title-adv {
+        font-size: 25px;
+    }
+
+    .adv-gold .adv:first-child {
+        margin-right: 30px;
+    }
+
+    .page-title-aicha {
+        margin-top: 50px;
+    }
+
+    .header-comparatif .table-text, .header-comparatif .compare {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .gold-o .gold-image {
+        width: 300px;
+        margin-right: 40px;
+    }
+
+    .gold-image img {
+        width: 300px;
+    }
+
+    #myTabContent {
+        background-color: #fff;
+        padding: 20px 25px;
+    }
+
+    .header-bandeau{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .contentS{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .gold-tabs{
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+
+    .header-bandeau{
+        height: 235px;
+    }
+
+    .fil-aicha {
+        display: flex;
+        margin-top: 11px;
+        font-size: 14px;
+    }
+
+    .page-title-aicha {
+        margin-top: 15px;
+        font-size: 20px;
+        width: 155px;
+    }
+
+    .header-bandeau .bandeau {
+        height: 100%;
+        width: auto;
+    }
+
+    .statut img {
+        margin-left: 5px;
+    }
+
+    .statut{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .statut img{
+        height: 48px;
+    }
+
+    .title-adv {
+        font-size: 20px;
+    }
+
+    .desc-adv, .text-desc {
+        font-size: 15px;
+    }
+
+    .adv-gold .adv:first-child {
+        margin-right: 30px;
+    }
+
+    .gold-image img {
+        width: 200px;
+    }
+
+    .gold-o .gold-image {
+        margin-right: 35px;
+    }
+
+    .title-tab {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .card-gold {
+        padding: 35px 0px;
+        margin-bottom: 35px;
+    }
+
+    .table-comparatif {
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .header-bandeau{
+        height: 215px;
+    }
+
+    .adv-gold .adv {
+        width: 100%;
+        flex: unset;
+    }
+
+    .adv-gold .adv:first-child {
+        margin-right: 0px;
+    }
+
+    .adv img{
+        margin-bottom: 25px;
+    }
+
+    .title-adv {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .desc-adv {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .header-comparatif .table-text, .header-comparatif .compare {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        font-size: 14px;
+    }
+
+    .statut div {
+        margin-right: 0px;
+        width: 100%;
+    }
+
+    .statut div:nth-child(2){
+        margin-top: -40px;
+    }
+
+    .dsc-comparatif {
+        background-color: transparent;
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .cont-comparatif .tex {
+        padding-left: 0px;
+    }
+
+    .scn{
+        flex-direction: column-reverse;
+    }
+
+    .gold-tabs{
+        display: none;
+    }
+
+    .gold-swp{
+        display: block;
+        margin-top: 35px;
+    }
+
+    .swiper-container-gold .swiper-slide{
+        width: 85%;
+        max-width: 300px;
+        background-color: #fff;
+        padding: 25px 15px;
+        flex-wrap: wrap;
+    }
+
+    .swp-title{
+        font-size: 20px;
+        color: #ff7900;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .swp-Im img{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .desc-gold-title{
+        font-size: 16px;
+        font-weight: bold;
+        width: 143px;
+    }
+
+    .desc-swp-gold{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .desc-gold-txt{
+        font-size: 14px;
+        color: #666666;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .swiper-wrapper{
+        margin-bottom: 35px;
+    }
+}

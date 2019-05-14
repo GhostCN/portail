@@ -1,0 +1,19 @@
+uuid: 5ddb7486-e19f-44f7-861e-f7eadc09706d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_slider_lien
+field_name: field_slider_lien
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

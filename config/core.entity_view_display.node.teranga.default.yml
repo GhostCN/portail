@@ -1,0 +1,69 @@
+uuid: ff6bb242-b785-49eb-80f6-deff1eaf94e4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.teranga.field_description_teranga
+    - field.field.node.teranga.field_image_teranga
+    - field.field.node.teranga.field_resume_teranga
+    - field.field.node.teranga.field_template_de_page_liberty
+    - field.field.node.teranga.field_template_de_page_premium
+    - node.type.teranga
+  module:
+    - svg_image
+    - user
+id: node.teranga.default
+targetEntityType: node
+bundle: teranga
+mode: default
+content:
+  field_description_teranga:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image_teranga:
+    weight: 103
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_resume_teranga:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_template_de_page_liberty:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_template_de_page_premium:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

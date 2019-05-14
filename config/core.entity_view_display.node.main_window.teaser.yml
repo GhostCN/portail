@@ -1,0 +1,33 @@
+uuid: 989e4c5d-5753-4b4b-9f11-3e016e4fac0e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.main_window.field_main_window_image
+    - field.field.node.main_window.field_main_window_resume
+    - node.type.main_window
+  module:
+    - user
+id: node.main_window.teaser
+targetEntityType: node
+bundle: main_window
+mode: teaser
+content:
+  langcode:
+    type: language
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_main_window_image: true
+  field_main_window_resume: true

@@ -1,0 +1,29 @@
+uuid: f47e7c2f-224e-4535-94b4-d5ce13f3b6c3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faq_fibre.body
+    - node.type.faq_fibre
+  module:
+    - text
+    - user
+id: node.faq_fibre.teaser
+targetEntityType: node
+bundle: faq_fibre
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

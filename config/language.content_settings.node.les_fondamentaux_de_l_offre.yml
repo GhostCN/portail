@@ -1,0 +1,11 @@
+uuid: 146dbeb9-8d5a-47e8-a49a-6673296b18f0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.les_fondamentaux_de_l_offre
+id: node.les_fondamentaux_de_l_offre
+target_entity_type_id: node
+target_bundle: les_fondamentaux_de_l_offre
+default_langcode: site_default
+language_alterable: false

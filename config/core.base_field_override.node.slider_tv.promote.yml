@@ -1,0 +1,22 @@
+uuid: 3e34cf3e-6e6b-4131-b2d0-ff814f78cac2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.slider_tv
+id: node.slider_tv.promote
+field_name: promote
+entity_type: node
+bundle: slider_tv
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

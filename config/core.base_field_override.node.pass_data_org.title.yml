@@ -1,0 +1,18 @@
+uuid: 03619d89-e67d-4aa8-9ef1-24082f9049fa
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_data_org
+id: node.pass_data_org.title
+field_name: title
+entity_type: node
+bundle: pass_data_org
+label: 'Prix ( Ex : 1000 F )'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

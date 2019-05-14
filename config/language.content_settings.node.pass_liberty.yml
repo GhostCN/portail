@@ -1,0 +1,11 @@
+uuid: 7d801ac1-5350-4c44-bc7e-90ab5181a64d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_liberty
+id: node.pass_liberty
+target_entity_type_id: node
+target_bundle: pass_liberty
+default_langcode: site_default
+language_alterable: false

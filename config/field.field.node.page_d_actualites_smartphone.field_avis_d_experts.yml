@@ -1,0 +1,28 @@
+uuid: 0e735789-d214-4e96-9e50-2f73522f251b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_avis_d_experts
+    - node.type.avis_experts
+    - node.type.page_d_actualites_smartphone
+id: node.page_d_actualites_smartphone.field_avis_d_experts
+field_name: field_avis_d_experts
+entity_type: node
+bundle: page_d_actualites_smartphone
+label: 'Avis d''experts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      avis_experts: avis_experts
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

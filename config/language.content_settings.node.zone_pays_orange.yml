@@ -1,0 +1,11 @@
+uuid: 9ba7e5e5-31b7-44ed-8e1f-2e68b795a611
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.zone_pays_orange
+id: node.zone_pays_orange
+target_entity_type_id: node
+target_bundle: zone_pays_orange
+default_langcode: site_default
+language_alterable: false

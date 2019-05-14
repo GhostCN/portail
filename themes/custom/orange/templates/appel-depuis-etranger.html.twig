@@ -1,0 +1,492 @@
+{{ attach_library('orange/global-appel-depuis-etranger-css')}}
+{{ attach_library('orange/global-appel-depuis-etranger-js')}}
+    <div class="contentA">
+        <section class="accueil">
+            <ul class="sac-nav-ul mb-0">
+                <li class="debutlii">
+                    <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="">
+                </li>
+                <li class="debutlii d-none d-sm-block">
+                    <a href="{{ path('offres-mobile') }}"> Nos offres mobiles</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="">
+                </li>
+                <li class="debutlii d-none d-sm-block">
+                    <a href="{{ path('hub-pass-internationaux') }}">Roaming et international</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="">
+                </li>
+                <li class="debutlii">
+                    <a href="#"> <b> Pass-Voyage</b></a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="Group-11  img-height">
+        <div class="titreJamono contentA">
+            <h1 id="jamono">Roaming</br>
+            <span id="newScool">Pass Voyage </span></h1>
+        </div>
+        <img class="imgSmall bandeauD Group-11-11" src="/{{directory}}/icones/appel-depuis-etranger/international@2x-min.jpg" alt="">
+        <img class="imgSmall bandeauD Group-11-12" src="/{{directory}}/icones/appel-depuis-etranger/mob-apel.png" alt="">
+        <img class="imgSmall bandeauD Group-11-13" src="/{{directory}}/icones/appel-depuis-etranger/international-landscape.png" alt="">
+
+    </div>
+    <div class="contentA deuxcont" id="appel">
+        <section class="sec secmobile">
+            <div class="card border-0 Rectangle-26-ent">
+                <div class="card border-0">
+                    <div class="diss-disp div-space-pb">
+                        <div class="payss">
+                            <span class="Vers-quel-payss">Où allez-vous ?</span>
+                        </div>
+                        <div class="fillt">
+                            <select class="list-pays" name="state">
+                                <option value="AL">{{pass['pays'][0]}}</option>
+                                {% set len_pays = pays['id']|length %}
+                                {% for i in 0..len_pays-1 %}
+                                <option value="{{ path('appel-depuis-etranger', { 'pays': pays['id'][i] }) }}">{{pays['pays'][i]}}</option>
+                                {% endfor %}
+                            </select>
+                            {#<div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle drop-etrang" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  {{pass['pays'][0]}}
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                	{% set len_pays = pays['id']|length %}
+									   {% for i in 0..len_pays-1 %}
+	                                    <a class="dropdown-item" href="/offres-mobiles/roaming-et-international/pass-voyage/{{pays['id'][i]}}">
+	                                      {{pays['pays'][i]}}
+	                                	</a>
+	                                    {% endfor %}
+                                </div>
+                            </div>#}
+                        </div>
+                    </div>
+                    <div class="diss-disp div-space-pb-1">
+                        <div class="block-div-sp appe  ">
+                            <div class="diss-disp div-block-mob-div">
+                                <img class="imgSmall Group-11 img-top " src="/{{directory}}/icones/appel-depuis-etranger/group-3-carte.svg" alt="">
+                                <div class="block-div-sp">
+                                    <p class="apel-etr">Appel vers le Sénégal</p>
+                                    <span class="sec-appel-etrang">{{infos_pass['appel_vers_senegal']}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-div-sp div-flex-mob appe  ">
+                            <div class="diss-disp div-block-mob-div">
+                                <img class="imgSmall Group-11 img-top " src="/{{directory}}/icones/appel-depuis-etranger/group-9-international.svg" alt="">
+                                <div class="block-div-sp">
+                                    <p class="apel-etr">Appel International</p>
+                                    <span class="sec-appel-etrang">	 {{infos_pass['appel_international']}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-div-sp  div-flex-mob appe  ">
+                            <div class="diss-disp div-block-mob-div">
+                                <img class="imgSmall Group-11 img-top " src="/{{directory}}/icones/appel-depuis-etranger/group-3-sms.svg" alt="">
+                                <div class="block-div-sp">
+                                    <p class="apel-etr">Envoi SMS</p>
+                                    <span class="sec-appel-etrang">{{infos_pass['envoi_sms']}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-div-sp  div-flex-mob appe ">
+                            <div class="diss-disp div-block-mob-div">
+                                <img class="imgSmall Group-11 img-top " src="/{{directory}}/icones/appel-depuis-etranger/group-3-sms.svg" alt="">
+                                <div class="block-div-sp">
+                                    <p class="apel-etr">Data (Ko)</p>
+                                    <span class="sec-appel-etrang">
+                                    	{{infos_pass['data']}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-div-sp  div-flex-mob appe ">
+                            <div class="diss-disp div-block-mob-div">
+                                <img class="imgSmall Group-11 img-top " src="/{{directory}}/icones/appel-depuis-etranger/group-5-map.svg" alt="">
+                                <div class="block-div-sp">
+                                    <p class="apel-etr">Appel local</p>
+                                    <span class="sec-appel-etrang">{{infos_pass['appel_local']}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-div-sp  div-flex-mob appe ">
+                            <div class="diss-disp div-block-mob-div">
+                                <img class="imgSmall Group-11 img-top " src="/{{directory}}/icones/appel-depuis-etranger/group-3-interne.svg" alt="">
+                                <div class="block-div-sp">
+                                    <p class="apel-etr">Réception appel</p>
+                                    <span class="sec-appel-etrang">{{infos_pass['reception_appel']}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-div-sp  div-flex-mob appe  ">
+                            <div class="diss-disp div-block-mob-div">
+                                <img class="imgSmall Group-11 img-top " src="/{{directory}}/icones/appel-depuis-etranger/group-3-sms.svg" alt="">
+                                <div class="block-div-sp">
+                                    <p class="apel-etr">Réception SMS</p>
+                                    <span class="sec-appel-etrang">{{infos_pass['reception_sms']}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if pass['pass_voix'][0]|length == 0 or  pass['pass_data'][0]|length == 0 %}
+							<div class="img-div-space">
+			                    <img class="imgwi illustration-block" src="/{{directory}}/icones/appel-depuis-etranger/illustration-no-pass-01.svg">
+			                    <img class="imgwi illustration-block-1" src="/{{directory}}/icones/appel-depuis-etranger/illustration-no-pass-mob-01.svg">
+			                </div>
+                {% endif %}
+            </div>
+            {% if pass['pass_voix'][0]|length > 0 and  pass['pass_data'][0]|length > 0 %}
+            <div class="card card-pass-voyage">
+                <div class="card-header Rectangle-12">
+                    <div class="etoileOrange-appel-etra mt-1"><img class="imgSmall icone-appel-etr" src="/{{directory}}/icones/ilimix-new-scool-orange.svg " alt=" "></div>
+                    <div class="pass-voyage-width ">
+                        <p class="Pass-Voyagee Les-illimix-Jamono-N">Pass Voyage</p>
+                    </div>
+                </div>
+                <div id="voix-pass" class="passvoix">
+                    <div class="card-body">
+                        <div class="diss-voix">
+                            <p class="Orange-vous-accompag ">Pass voix</p>
+                            <div class="fleche-gauche-droite">
+                                <button type="" class="btn btn-dark btn-fleche mr-2 disabled"><img class="icone-fleche" src="/{{directory}}/icones/appel-depuis-etranger/fleche-gauche.svg " alt=" "></button>
+                                <button type="" class="btn btn-dark btn-fleche next"><img class="icone-fleche " src="/{{directory}}/icones/appel-depuis-etranger/fleche-droite.svg " alt=" "></button>
+                            </div>
+                        </div>
+
+                        <div class="diss-jug four-card-first ">
+                        {% for ps in pass['pass_voix'] %}
+                        	{% set len_voix = ps['appel_voix']|length %}
+								{% for i in 0..len_voix-1 %}
+                            <div class="Rectangle-Copy-pass ">
+                                <div class="diss-ju oval-mob ">
+                                    <div class="div-prix div-prix-padding ">
+                                        <span class="Prix-Copy-pass-voix ">{{ps['prix_voix'][i]}}
+                                        </span>
+                                    </div>
+                                    <div class="icone-text-pass-voix ">
+                                        <div class="diss-disp oval-mob element-padding ">
+                                            <img class="imgSmall img-ape" src="/{{directory}}/icones/appel-depuis-etranger/call-pass.svg " alt=" ">
+                                            <span class="temps-dappel">
+                                            	{{ps['appel_voix'][i]}}
+                                            </span>
+                                        </div>
+                                        <div class="diss-disp oval-mob element-padding ">
+                                            <img class="imgSmall img-ape" src="/{{directory}}/icones/appel-depuis-etranger/orange-messenger-pass.svg " alt=" ">
+                                            <span class="temps-dappel">
+                                            	{{ps['sms_voix'][i]}}
+                                            </span>
+                                        </div>
+                                        <div class="diss-disp oval-mob element-padding ">
+                                            <img class="imgSmall img-ape" src="/{{directory}}/icones/appel-depuis-etranger/clock-pass.svg " alt=" ">
+                                            <span class="temps-dappel">
+                                            	{{ps['valabilite_voix'][i]}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                           {% endfor %}
+                           {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div id="data-pass" class="passdata">
+                    <div class="card-body">
+                        <div class="diss-voix">
+                            <p class="Orange-vous-accompag ">Pass data</p>
+                            <div class="fleche-gauche-droite">
+                                <button type="" class="btn btn-dark btn-fleche mr-2 prev "><img class="icone-fleche" src="/{{directory}}/icones/appel-depuis-etranger/fleche-gauche.svg " alt=" "></button>
+                                <button type="" class="btn btn-dark btn-fleche disabled"><img class="icone-fleche " src="/{{directory}}/icones/appel-depuis-etranger/fleche-droite.svg " alt=" "></button>
+                            </div>
+                        </div>
+                        <div class="diss-jug four-card-second ">
+                        {% for ps in pass['pass_data'] %}
+                        	{% set len_data = ps['connexion_data']|length %}
+                        	{% for i in 0..len_data-1 %}
+                            <div class="Rectangle-Copy-pass ">
+                                <div class="diss-ju oval-mob ">
+                                    <div class="div-prix div-prix-padding-1 ">
+                                        <span class="Prix-Copy-pass-voix ">
+                                        	{{ps['prix_data'][i]}}
+                                        </span>
+                                    </div>
+                                    <div class="icone-text-pass-voix ">
+                                        <div class="diss-disp oval-mob element-padding ">
+                                            <img class="imgSmall img-ape" src="/{{directory}}/icones/appel-depuis-etranger/internet-usage-pass-voix.svg " alt=" ">
+                                            <span class="temps-dappel">{{ps['connexion_data'][i]}}
+                                            </span>
+                                        </div>
+                                        <div class="diss-disp oval-mob element-padding ">
+                                            <img class="imgSmall img-ape" src="/{{directory}}/icones/appel-depuis-etranger/clock-pass.svg " alt=" ">
+                                            <span class="temps-dappel">
+                                            	{{ps['valabilite_data'][i]}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                      {% endfor %}
+                    </div>
+                      <p class="-Souscription-605 sous-dek">Souscription au <span class="orange">#166#</span></span> </p>
+                      <p class="-Souscription-605 sous-mobb">Souscription au <span class="orange">#166# </br></span></span> </p>
+                </div>
+            </div>
+            {% endif %}
+
+        </section>
+       <!-- <section class="secmobile">
+            <h2 class="Orange-vous-accompag">Orange vous accompagne avant votre départ…</h2>
+            <div class="diss-ju">
+                <div class="card card-Mask MASK">
+                    <div class="diss-ju dispa-block-mob">
+                        <div class="witdh-space">
+                            <img class="imgSmall Group-11 oval-desketop" src="/{{directory}}/icones/appel-depuis-etranger/oval-group-40-mask.svg" alt="">
+                            <img class="imgSmall Group-11 oval-mobe" src="/{{directory}}/icones/appel-depuis-etranger/oval-group-40-mask-mob.svg " alt=" ">
+                            <img class="imgSmall Group-11 oval-tab" src="/{{directory}}/icones/appel-depuis-etranger/oval-group-40-mask-tab.svg " alt=" ">
+                        </div>
+                        <div class="witdh-space-text">
+                            <p class="Estimez-votre">Estimez votre consommation de données mobiles </p>
+                        </div>
+                        <div class="witdh-space-btn">
+                            <a href="#" class="btn btn-info">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-Mask MASK-1">
+                    <div class="diss-ju dispa-block-mob">
+                        <div class="witdh-space">
+                            <img class="imgSmall Group-11 oval-desketop" src="/{{directory}}/icones/appel-depuis-etranger/oval-group-63-mask.svg" alt="">
+                            <img class="imgSmall Group-11 oval-mobe" src="/{{directory}}/icones/appel-depuis-etranger/oval-group-63-mask-mob.svg " alt=" ">
+                            <img class="imgSmall Group-11 oval-tab" src="/{{directory}}/icones/appel-depuis-etranger/oval-group-63-mask-tab.svg " alt=" ">
+                        </div>
+                        <div class="witdh-space-text">
+                            <p class="Estimez-votre oval-desketop">Accédez au Salon VIP </br> grâce à Orange Aicha </p>
+                            <p class="Estimez-votre oval-mobee">Accédez </br> au Salon VIP grâce à Orange Aicha </p>
+                        </div>
+                        <div class="witdh-space-btn">
+                            <a href="#" class="btn btn-info">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+        <section class="illimix sec">
+            <!-- version desktop -->
+            <div class="margin-car">
+                <h2 class="Orange-vous-accompag">Orange reste à vos côtés lors de votre séjour.</h2>
+                <div class="diss-ju">
+                    <div class="card-ww div-pb-recte card-ww-600">
+                        <div class="card border-0 card-mv10" id="first-crd-mov">
+                            <div class="diss-ju div-mob-disp ">
+                                <div class="groupe-150">
+                                    <p class="Inscription-eespace-c inscription-client-block-400">Inscription </br> Espace client </p>
+                                    <p class="Inscription-eespace-c inscription-client-block-500">Inscription Espace client </p>
+                                    <button type="button" class="btn btn-primary vdetaillle-2">Voir détails</button>
+                                </div>
+                                <img src="/{{directory}}/icones/appel-depuis-etranger/group-35-client.svg" alt="" class="img-client-desk width-img-client block-img-pass-voix">
+                                <img src="/{{directory}}/icones/appel-depuis-etranger/group-35-client-mob-1.png" alt="" class="img-client-mob ">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ww card-ww-600">
+                        <div class="card border-0 card-mv10 " id="secon-crd-ver">
+                            <div class="diss-ju div-mob-disp ">
+                                <div class="groupe-150">
+                                    <p class="Inscription-eespace-c inscription-client-block-400">Application </br> Orange et Moi</p>
+                                    <p class="Inscription-eespace-c inscription-client-block-500">Suivi de votre consommation </p>
+                                    <button type="button" class="btn btn-primary vdetaillle-2">Voir détails</button>
+                                </div>
+                                <div class="block-img-pass-voix"><img src="/{{directory}}/icones/appel-depuis-etranger/group-3-consomation.svg" alt="" class="img-client-desk width-img-client"></div>
+                                <div class="block-img-pass-voix oval-mobe"><img src="/{{directory}}/icones/appel-depuis-etranger/group-7-mob-1.png" alt="" class=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ww card-ww-600">
+                        <div class="card border-0 card-mv10 " id="secon-crd-verrr">
+                            <div class="diss-ju div-mob-disp ">
+                                <div class="groupe-150">
+                                    <p class="Inscription-eespace-c inscription-client-block-400">Assistance</br> en ligne 24h/24</p>
+                                    <p class="Inscription-eespace-c inscription-client-block-500">Assistance en ligne 24h/24</p>
+                                    <button type="button" class="btn btn-primary vdetaillle-2">Voir détails</button>
+                                </div>
+                                <div class="block-img-pass-voix"><img src="/{{directory}}/icones/appel-depuis-etranger/group-29.svg" alt="" class="img-client-desk width-img-client"></div>
+                                <div class="block-img-pass-voix oval-mobe"><img src="/{{directory}}/icones/appel-depuis-etranger/group-2-mob-1.png" alt="" class=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- fin version version desktop -->
+        </section>
+
+
+    </div>
+
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+    <div class="contentS d-none d-md-block d-sm-block">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-block d-md-none d-sm-none">
+
+        <div class="col-sm-12">
+            <p class="pt-1"></p>
+            <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+        </div>
+        <div class="hide-reverse">
+            <div class="row" style="overflow: hidden">
+                <div class="col-12">
+                    <div class="swiper-container-footer">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="slide1">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="slide2">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="slide3">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                                            </p>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

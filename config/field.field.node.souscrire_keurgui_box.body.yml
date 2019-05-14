@@ -1,0 +1,22 @@
+uuid: e4fc4b5c-8573-476e-8ac6-571e8e5668c9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.souscrire_keurgui_box
+  module:
+    - text
+id: node.souscrire_keurgui_box.body
+field_name: body
+entity_type: node
+bundle: souscrire_keurgui_box
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

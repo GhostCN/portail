@@ -1,0 +1,11 @@
+uuid: 3694bc47-613d-4c6c-81a5-b858148265d1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.banniere_publicitaire
+id: node.banniere_publicitaire
+target_entity_type_id: node
+target_bundle: banniere_publicitaire
+default_langcode: site_default
+language_alterable: false

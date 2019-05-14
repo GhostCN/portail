@@ -1,0 +1,47 @@
+uuid: ddf26445-fb6e-4d85-9612-5a4f2712d565
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.forfait_internet_teranga.field_engagement
+    - field.field.node.forfait_internet_teranga.field_prix_forfait
+    - field.field.node.forfait_internet_teranga.field_validite_du_forfait
+    - node.type.forfait_internet_teranga
+  module:
+    - user
+id: node.forfait_internet_teranga.default
+targetEntityType: node
+bundle: forfait_internet_teranga
+mode: default
+content:
+  field_engagement:
+    weight: 103
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_prix_forfait:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_validite_du_forfait:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 8f8044c7-b0b6-4ed7-9ef7-99a2d5337cb8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.keurgui
+id: node.keurgui
+target_entity_type_id: node
+target_bundle: keurgui
+default_langcode: site_default
+language_alterable: false

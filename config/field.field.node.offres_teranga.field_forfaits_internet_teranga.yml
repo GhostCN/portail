@@ -1,0 +1,28 @@
+uuid: f9d5e84d-7e14-4c07-bcef-616a2cd127bd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_forfaits_internet_teranga
+    - node.type.forfait_internet_teranga
+    - node.type.offres_teranga
+id: node.offres_teranga.field_forfaits_internet_teranga
+field_name: field_forfaits_internet_teranga
+entity_type: node
+bundle: offres_teranga
+label: 'Forfaits Internet Teranga'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      forfait_internet_teranga: forfait_internet_teranga
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

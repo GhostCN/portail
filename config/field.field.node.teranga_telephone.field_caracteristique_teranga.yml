@@ -1,0 +1,28 @@
+uuid: 089ab27a-5a4b-446b-a076-ec3f8b8d4cc9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_caracteristique_teranga
+    - node.type.premium_avec_tel
+    - node.type.teranga_telephone
+id: node.teranga_telephone.field_caracteristique_teranga
+field_name: field_caracteristique_teranga
+entity_type: node
+bundle: teranga_telephone
+label: 'Caractéristique Teranga'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      premium_avec_tel: premium_avec_tel
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

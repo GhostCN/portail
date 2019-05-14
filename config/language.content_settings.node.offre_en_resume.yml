@@ -1,0 +1,11 @@
+uuid: 2b947fef-88ff-4adc-b9f3-220454ede6f9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.offre_en_resume
+id: node.offre_en_resume
+target_entity_type_id: node
+target_bundle: offre_en_resume
+default_langcode: site_default
+language_alterable: false

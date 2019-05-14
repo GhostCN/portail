@@ -1,0 +1,18 @@
+uuid: 94051a98-2f30-42c9-a0cf-ef25940baf90
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_liberty
+id: node.pass_liberty.title
+field_name: title
+entity_type: node
+bundle: pass_liberty
+label: 'Destination Pass'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

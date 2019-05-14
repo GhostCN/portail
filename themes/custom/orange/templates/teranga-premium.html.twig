@@ -1,0 +1,1013 @@
+{{ attach_library('orange/global-teranga-premium-css')}}
+{{ attach_library('orange/global-teranga-premium-js')}}
+
+<div class="contentS">
+    <ul class="sac-nav-ul mb-0">
+        <li class="debutlii">
+            <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/images/liberty/keyboard-arrow-up.svg" alt="" id="fleche">
+        </li>
+        <li class="debutlii d-none d-sm-block">
+            <a href="{{ path('teranga') }}">Nos offres téranga</a><img class="px-2" src="/sites/default/files/images/liberty/keyboard-arrow-up.svg" alt="" id="fleche">
+        </li>
+        <li class="debutlii">
+            <a href="#"> <b> {{content.titre}}  </b></a>
+        </li>
+    </ul>
+</div>
+
+<div class="content-page">
+    <div class="header-bandeau">
+        <img src="/sites/default/files/images/liberty/bandeau.png" class="bnd_desk" alt="">
+        <img src="/sites/default/files/images/bandeau-mobile.png" class="bnd_mobile" alt="">
+    </div>
+
+    <div class="main-content">
+        <div class="contentS">
+            <div class="card card-bandeau">
+                <div>Teranga</div>
+                <div class="active">{{content.sub_title}}</div>
+            </div>
+        </div>
+        <div class="chw-premium">
+            <div class="contentS">
+                <div class="block-ch">
+                    <div class="ch-title">Teranga Premium</div>
+                    <div class="ch">
+                        <div class="color-orange filtreTel" data-filter="true">Avec téléphone</div>
+                        <div><div class="select-orange tel">
+                                <div class="oval"></div>
+                            </div>
+                        </div>
+                        <div class="filtreTel" data-filter="false">Sans téléphone</div>
+                    </div>
+                    <div class="ch">
+                        <div class="color-orange filtreDurr">24 mois</div>
+                        <div><div class="select-orange durr">
+                                <div class="oval"></div>
+                            </div>
+                        </div>
+                        <div class="filtreDurr">12 mois</div>
+                    </div>
+                </div>
+
+                <div class="block-ch-mobile">
+                    <div class="ch-mobile">
+                        <div class="act"><span>Avec téléphone</span> <img src="/sites/default/files/images/premium/drop.svg" alt=""></div>
+
+                        <div class="drop-dow dtel">
+                            Sans téléphone
+                        </div>
+                    </div>
+
+                    <div class="ch-mobile">
+                        <div class="act">24 mois  <img src="/sites/default/files/images/premium/drop.svg" alt=""></div>
+
+                        <div class="drop-dow dmois">
+                            12 mois
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentS">
+            <div class="fl-pre" id="avec-tel">
+                <div class="fl-duree f24">
+
+                    <div class="list-premium">
+                        {% set count = 1 %}
+                        {% for avec_tel in content.offre_avec %}
+                        {% if avec_tel.caracteristique.duree == 24 %}
+
+                        {% if count == 4 %}
+                    </div>
+                    <div class="list-premium">
+                        {% set count = 0 %}
+                        {% endif %}
+
+                        <div class="premium">
+                            <div class="desc-pre">
+
+                                <div class="phone-mobile">
+                                    <div class="phone-img">
+                                        <img src="{{ file_url(avec_tel.image) }}" class="image-In" alt="">
+                                        <img src="/sites/default/files/images/premium/group-14@3x.png" class="support" alt="">
+                                    </div>
+                                </div>
+                                <div class="tarif">
+                                    Tarif
+                                </div>
+                                <div class="title-blc-premium">
+                                    <div class="title-text">{{ avec_tel.caracteristique.titre }}</div>
+                                    <div class="prix">{{ avec_tel.caracteristique.tarif_ht }}</div>
+                                    <div class="title-tax">{{ avec_tel.caracteristique.tarif_ttc }}</div>
+                                </div>
+
+                                <div class="list-oportinities">
+                                    <div class="oportinuty">
+                                        <div>Bonus Orange</div>
+                                        <div>{{ avec_tel.caracteristique.bonus_vers_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>Total positionné</div>
+                                        <div>{{ avec_tel.caracteristique.forfait_postionne }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>Internet mobile</div>
+                                        <div>{{ avec_tel.caracteristique.internet_mobile }}</div>
+                                    </div>
+
+                                    <div class="oportinuty">
+                                        <div>SMS Orange</div>
+                                        <div>{{ avec_tel.caracteristique.sms_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>N° illimité* vers Orange</div>
+                                        <div>{{ avec_tel.caracteristique.illimite_vers_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>{{ avec_tel.caracteristique.autre }}</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+
+                                <div class="separator">
+                                    <div class="trait"></div>
+                                    <div>+</div>
+                                    <div class="trait"></div>
+                                </div>
+
+                                <div class="phone">
+                                    <div class="phone-img">
+                                        <img src="{{ file_url(avec_tel.image) }}" class="image-In" alt="">
+                                        <img src="/sites/default/files/images/premium/group-14@3x.png" class="support" alt="">
+                                    </div>
+                                    <div class="phone-desc">
+                                        <div class="phone-mark color-orange">
+                                            {{ avec_tel.titre }}
+                                        </div>
+
+                                        <div class="list-car-ph">
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Écran : </span> {{ avec_tel.ecran }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Appareil photo : </span> {{ avec_tel.appareil_photo }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Connectivité : </span> {{ avec_tel.connectivite }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Mémoire : </span> {{ avec_tel.memoire }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Poids : </span> {{ avec_tel.poids }}
+                                            </div>
+
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Couleur : </span> {{ avec_tel.couleur }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">IOS : </span> {{ avec_tel.ios }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">RAM : </span> {{ avec_tel.ram }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Batterie : </span> {{ avec_tel.batterie }}
+                                            </div>
+                                        </div>
+
+                                        <div class="restrict-phone">
+                                            <div>* Modification du n° illimité possible une fois par mois</div>
+                                            <div>** Aucune limite de durée d’appels jusqu’à 150 correspondants/mois</div>
+                                            <div>*** Possibilité de changer le smartphone par un autre</div>
+                                        </div>
+
+                                        <button class="btn btn-outline-dark btn-block">Voir les détails</button>
+                                    </div>
+                                </div>
+
+                                <div class="cond-sousc">
+                                    <div>Pour souscrire à Premium, rendez vous en agence</div>
+                                    <a href="" class="btn btn-dark">Trouver une agence</a>
+                                </div>
+
+                                <div class="vdet-mobil">
+                                    <button class="btn btn-outline-dark btn-block">Voir les détails</button>
+                                </div>
+                            </div>
+
+                            <div class="close"><img src="/sites/default/files/images/liberty/close-black.svg" alt=""></div>
+                            <div class="type-pre">{{ avec_tel.caracteristique.titre }}</div>
+
+
+                            <!-- Modal pour mobil -->
+
+                            <div class="md-modal md-effect-1" id="modal-1">
+                                <div class="md-content">
+                                    <div class="title-mob">{{ avec_tel.caracteristique.titre }}</div>
+
+                                    <div class="tarif-modal">
+                                        <div class="ht">{{ avec_tel.caracteristique.tarif_ht }}</div>
+                                        <div class="ttc">{{ avec_tel.caracteristique.tarif_ttc }}</div>
+                                    </div>
+
+                                    <div class="list-oportinities">
+                                        <div class="oportinuty">
+                                            <div>Bonus Orange</div>
+                                            <div>{{ avec_tel.caracteristique.bonus_vers_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>Total positionné</div>
+                                            <div>{{ avec_tel.caracteristique.forfait_postionne }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>Internet mobile</div>
+                                            <div>{{ avec_tel.caracteristique.internet_mobile }}</div>
+                                        </div>
+
+                                        <div class="oportinuty">
+                                            <div>SMS Orange</div>
+                                            <div>{{ avec_tel.caracteristique.sms_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>N° illimité* vers Orange</div>
+                                            <div>{{ avec_tel.caracteristique.illimite_vers_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>{{ avec_tel.caracteristique.autre }}</div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="separator">
+                                        <div class="trait"></div>
+                                        <div>+</div>
+                                        <div class="trait"></div>
+                                    </div>
+
+                                    <div class="mob-phone">
+                                        <div class="mob-img">
+                                            <div class="phone-img">
+                                                <img src="{{ file_url(avec_tel.image) }}" class="image-In" alt="">
+                                                <img src="/sites/default/files/images/premium/group-14@3x.png" class="support" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="mob-desc">
+                                            <div class="mob-desc-tt">
+                                                Orange Rise 51
+                                            </div>
+                                            <div class="list-car-ph">
+                                                <div class="car-ph">
+                                                    Écran : {{ avec_tel.ecran }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    Appareil photo : {{ avec_tel.appareil_photo }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    Connectivité : {{ avec_tel.connectivite }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    Mémoire : {{ avec_tel.memoire }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    Poids : {{ avec_tel.poids }}
+                                                </div>
+
+                                                <div class="car-ph">
+                                                    Couleur : {{ avec_tel.couleur }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    IOS : {{ avec_tel.ios }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    RAM : {{ avec_tel.ram }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    Batterie : {{ avec_tel.batterie }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="restrict-phone">
+                                        <div>• Modification du n° illimité possible une fois par mois</div>
+                                        <div>• Aucune limite de durée d’appels jusqu’à 150 correspondants/mois</div>
+                                        <div>• Possibilité de changer le smartphone par un autre</div>
+                                    </div>
+
+                                    <div class="mob-sousc">
+                                        <div>Pour souscrire à Premium, rendez vous en agence</div>
+                                        <a href="" class="btn btn-dark">Trouver une agence</a>
+                                    </div>
+                                </div>
+
+                                <div class="md-close"><img src="/sites/default/files/images/premium/c.svg" alt=""></div>
+                            </div>
+                        </div>
+
+
+                        {% set count = count + 1 %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="fl-duree f12">
+
+                    <div class="list-premium">
+                        {% set count = 1 %}
+                        {% for avec_tel in content.offre_avec %}
+                        {% if avec_tel.caracteristique.duree == 12 %}
+
+                        {% if count == 4 %}
+                    </div>
+                    <div class="list-premium">
+                        {% set count = 0 %}
+                        {% endif %}
+
+                        <div class="premium">
+                            <div class="desc-pre">
+
+                                <div class="phone-mobile">
+                                    <div class="phone-img">
+                                        <img src="{{ file_url(avec_tel.image) }}" class="image-In" alt="">
+                                        <img src="/sites/default/files/images/premium/group-14@3x.png" class="support" alt="">
+                                    </div>
+                                </div>
+                                <div class="tarif">
+                                    Tarif
+                                </div>
+                                <div class="title-blc-premium">
+                                    <div class="title-text">{{ avec_tel.caracteristique.titre }}</div>
+                                    <div class="prix">{{ avec_tel.caracteristique.tarif_ht }}</div>
+                                    <div class="title-tax">{{ avec_tel.caracteristique.tarif_ttc }}</div>
+                                </div>
+
+                                <div class="list-oportinities">
+                                    <div class="oportinuty">
+                                        <div>Bonus Orange</div>
+                                        <div>{{ avec_tel.caracteristique.bonus_vers_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>Total positionné</div>
+                                        <div>{{ avec_tel.caracteristique.forfait_postionne }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>Internet mobile</div>
+                                        <div>{{ avec_tel.caracteristique.internet_mobile }}</div>
+                                    </div>
+
+                                    <div class="oportinuty">
+                                        <div>SMS Orange</div>
+                                        <div>{{ avec_tel.caracteristique.sms_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>N° illimité* vers Orange</div>
+                                        <div>{{ avec_tel.caracteristique.illimite_vers_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>{{ avec_tel.caracteristique.autre }}</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+
+                                <div class="separator">
+                                    <div class="trait"></div>
+                                    <div>+</div>
+                                    <div class="trait"></div>
+                                </div>
+
+                                <div class="phone">
+                                    <div class="phone-img">
+                                        <img src="{{ file_url(avec_tel.image) }}" class="image-In" alt="">
+                                        <img src="/sites/default/files/images/premium/group-14@3x.png" class="support" alt="">
+                                    </div>
+                                    <div class="phone-desc">
+                                        <div class="phone-mark color-orange">
+                                            {{ avec_tel.titre }}
+                                        </div>
+
+                                        <div class="list-car-ph">
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Écran : </span> {{ avec_tel.ecran }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Appareil photo : </span> {{ avec_tel.appareil_photo }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Connectivité : </span> {{ avec_tel.connectivite }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Mémoire : </span> {{ avec_tel.memoire }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Poids : </span> {{ avec_tel.poids }}
+                                            </div>
+
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Couleur : </span> {{ avec_tel.couleur }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">IOS : </span> {{ avec_tel.ios }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">RAM : </span> {{ avec_tel.ram }}
+                                            </div>
+                                            <div class="car-ph">
+                                                <span class="title-phone-desc">Batterie : </span> {{ avec_tel.batterie }}
+                                            </div>
+                                        </div>
+
+                                        <div class="restrict-phone">
+                                            <div>* Modification du n° illimité possible une fois par mois</div>
+                                            <div>** Aucune limite de durée d’appels jusqu’à 150 correspondants/mois</div>
+                                            <div>*** Possibilité de changer le smartphone par un autre</div>
+                                        </div>
+
+                                        <button class="btn btn-outline-dark btn-block">Voir les détails</button>
+                                    </div>
+                                </div>
+
+                                <div class="cond-sousc">
+                                    <div>Pour souscrire à Premium, rendez vous en agence</div>
+                                    <a href="" class="btn btn-dark">Trouver une agence</a>
+                                </div>
+
+                                <div class="vdet-mobil">
+                                    <button class="btn btn-outline-dark btn-block">Voir les détails</button>
+                                </div>
+                            </div>
+
+                            <div class="close"><img src="/sites/default/files/images/liberty/close-black.svg" alt=""></div>
+                            <div class="type-pre">{{ avec_tel.caracteristique.titre }}</div>
+
+
+                            <!-- Modal pour mobil -->
+
+                            <div class="md-modal md-effect-1" id="modal-1">
+                                <div class="md-content">
+                                    <div class="title-mob">{{ avec_tel.caracteristique.titre }}</div>
+
+                                    <div class="tarif-modal">
+                                        <div class="ht">{{ avec_tel.caracteristique.tarif_ht }}</div>
+                                        <div class="ttc">{{ avec_tel.caracteristique.tarif_ttc }}</div>
+                                    </div>
+
+                                    <div class="list-oportinities">
+                                        <div class="oportinuty">
+                                            <div>Bonus Orange</div>
+                                            <div>{{ avec_tel.caracteristique.bonus_vers_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>Total positionné</div>
+                                            <div>{{ avec_tel.caracteristique.forfait_postionne }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>Internet mobile</div>
+                                            <div>{{ avec_tel.caracteristique.internet_mobile }}</div>
+                                        </div>
+
+                                        <div class="oportinuty">
+                                            <div>SMS Orange</div>
+                                            <div>{{ avec_tel.caracteristique.sms_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>N° illimité* vers Orange</div>
+                                            <div>{{ avec_tel.caracteristique.illimite_vers_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>{{ avec_tel.caracteristique.autre }}</div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="separator">
+                                        <div class="trait"></div>
+                                        <div>+</div>
+                                        <div class="trait"></div>
+                                    </div>
+
+                                    <div class="mob-phone">
+                                        <div class="mob-img">
+                                            <div class="phone-img">
+                                                <img src="{{ file_url(avec_tel.image) }}" class="image-In" alt="">
+                                                <img src="/sites/default/files/images/premium/group-14@3x.png" class="support" alt="">
+                                            </div>
+                                        </div>
+
+                                        <div class="mob-desc">
+                                            <div class="mob-desc-tt">
+                                                Orange Rise 51
+                                            </div>
+                                            <div class="list-car-ph">
+                                                <div class="car-ph">
+                                                    Écran : {{ avec_tel.ecran }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    Appareil photo : {{ avec_tel.appareil_photo }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    Connectivité : {{ avec_tel.connectivite }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    Mémoire : {{ avec_tel.memoire }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    Poids : {{ avec_tel.poids }}
+                                                </div>
+
+                                                <div class="car-ph">
+                                                    Couleur : {{ avec_tel.couleur }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    IOS : {{ avec_tel.ios }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    RAM : {{ avec_tel.ram }}
+                                                </div>
+                                                <div class="car-ph">
+                                                    Batterie : {{ avec_tel.batterie }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="restrict-phone">
+                                        <div>• Modification du n° illimité possible une fois par mois</div>
+                                        <div>• Aucune limite de durée d’appels jusqu’à 150 correspondants/mois</div>
+                                        <div>• Possibilité de changer le smartphone par un autre</div>
+                                    </div>
+
+                                    <div class="mob-sousc">
+                                        <div>Pour souscrire à Premium, rendez vous en agence</div>
+                                        <a href="" class="btn btn-dark">Trouver une agence</a>
+                                    </div>
+                                </div>
+
+                                <div class="md-close"><img src="/sites/default/files/images/premium/c.svg" alt=""></div>
+                            </div>
+                        </div>
+
+
+                        {% set count = count + 1 %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="fl-pre" id="sans-tel">
+                <div class="fl-duree f24">
+                    <div class="list-premium">
+                        {% set count = 1 %}
+                        {% for sans_tel in content.offre_sans %}
+                        {% if sans_tel.duree == 24 %}
+
+                        {% if count == 4 %}
+                        </div>
+                    <div class="list-premium">
+                        {% set count = 0 %}
+                        {% endif %}
+
+                        <div class="premium">
+                            <div class="desc-pre">
+                                <div class="tarif">
+                                    Tarif
+                                </div>
+                                <div class="title-blc-premium">
+                                    <div class="title-text">{{ sans_tel.titre }}</div>
+                                    <div class="prix">{{ sans_tel.tarif_ht }}</div>
+                                    <div class="title-tax">{{ sans_tel.tarif_ttc }}</div>
+                                </div>
+
+                                <div class="list-oportinities">
+                                    <div class="oportinuty">
+                                        <div>Bonus Orange</div>
+                                        <div>{{ sans_tel.bonus_vers_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>Total positionné</div>
+                                        <div>{{ sans_tel.forfait_postionne }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>Internet mobile</div>
+                                        <div>{{ sans_tel.internet_mobile }}</div>
+                                    </div>
+
+                                    <div class="oportinuty">
+                                        <div>SMS Orange</div>
+                                        <div>{{ sans_tel.sms_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>N° illimité* vers Orange</div>
+                                        <div>{{ sans_tel.illimite_vers_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>{{ sans_tel.autre }}</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center det-sans">
+                                    <button class="btn btn-outline-dark">Voir les détails</button>
+                                </div>
+
+                                <div class="restr-sans">
+                                    <div>* Modification du n° illimité possible une fois par mois </div>
+                                    <div>** Aucune limite de durée d’appels jusqu’à 150 correspondants/mois</div>
+                                </div>
+
+                                <div class="cond-sousc">
+                                    <div>Pour souscrire à Premium, rendez vous en agence</div>
+                                    <a href="" class="btn btn-dark">Trouver une agence</a>
+                                </div>
+                            </div>
+
+                            <div class="close"><img src="/sites/default/files/images/liberty/close-black.svg" alt=""></div>
+                            <div class="type-pre">Premium S</div>
+
+                            <!-- Modal pour mobil -->
+
+                            <div class="md-modal md-effect-1" id="modal-1">
+                                <div class="md-content">
+                                    <div class="title-mob">Premium S</div>
+
+                                    <div class="tarif-modal">
+                                        <div class="ht">9 900 F HT</div>
+                                        <div class="ttc">12 266 F TTC</div>
+                                    </div>
+
+                                    <div class="list-oportinities">
+                                        <div class="oportinuty">
+                                            <div>Bonus Orange</div>
+                                            <div>{{ sans_tel.bonus_vers_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>Total positionné</div>
+                                            <div>{{ sans_tel.forfait_postionne }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>Internet mobile</div>
+                                            <div>{{ sans_tel.internet_mobile }}</div>
+                                        </div>
+
+                                        <div class="oportinuty">
+                                            <div>SMS Orange</div>
+                                            <div>{{ sans_tel.sms_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>N° illimité* vers Orange</div>
+                                            <div>{{ sans_tel.illimite_vers_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>{{ sans_tel.autre }}</div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="restrict-phone">
+                                        <div>• Modification du n° illimité possible une fois par mois</div>
+                                        <div>• Aucune limite de durée d’appels jusqu’à 150 correspondants/mois</div>
+                                        <div>• Possibilité de changer le smartphone par un autre</div>
+                                    </div>
+
+                                    <div class="mob-sousc">
+                                        <div>Pour souscrire à Premium, rendez vous en agence</div>
+                                        <a href="" class="btn btn-dark">Trouver une agence</a>
+                                    </div>
+                                </div>
+
+                                <div class="md-close"><img src="/sites/default/files/images/premium/c.svg" alt=""></div>
+                            </div>
+                        </div>
+
+                        {% set count = count + 1 %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="fl-duree f12">
+                    <div class="list-premium">
+                        {% set count = 1 %}
+                        {% for sans_tel in content.offre_sans %}
+                        {% if sans_tel.duree == 12 %}
+
+                        {% if count == 4 %}
+                        </div>
+                    <div class="list-premium">
+                        {% set count = 0 %}
+                        {% endif %}
+
+                        <div class="premium">
+                            <div class="desc-pre">
+                                <div class="tarif">
+                                    Tarif
+                                </div>
+                                <div class="title-blc-premium">
+                                    <div class="title-text">{{ sans_tel.titre }}</div>
+                                    <div class="prix">{{ sans_tel.tarif_ht }}</div>
+                                    <div class="title-tax">{{ sans_tel.tarif_ttc }}</div>
+                                </div>
+
+                                <div class="list-oportinities">
+                                    <div class="oportinuty">
+                                        <div>Bonus Orange</div>
+                                        <div>{{ sans_tel.bonus_vers_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>Total positionné</div>
+                                        <div>{{ sans_tel.forfait_postionne }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>Internet mobile</div>
+                                        <div>{{ sans_tel.internet_mobile }}</div>
+                                    </div>
+
+                                    <div class="oportinuty">
+                                        <div>SMS Orange</div>
+                                        <div>{{ sans_tel.sms_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>N° illimité* vers Orange</div>
+                                        <div>{{ sans_tel.illimite_vers_orange }}</div>
+                                    </div>
+                                    <div class="oportinuty">
+                                        <div>{{ sans_tel.autre }}</div>
+                                        <div></div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center det-sans">
+                                    <button class="btn btn-outline-dark">Voir les détails</button>
+                                </div>
+
+                                <div class="restr-sans">
+                                    <div>* Modification du n° illimité possible une fois par mois </div>
+                                    <div>** Aucune limite de durée d’appels jusqu’à 150 correspondants/mois</div>
+                                </div>
+
+                                <div class="cond-sousc">
+                                    <div>Pour souscrire à Premium, rendez vous en agence</div>
+                                    <a href="" class="btn btn-dark">Trouver une agence</a>
+                                </div>
+                            </div>
+
+                            <div class="close"><img src="/sites/default/files/images/liberty/close-black.svg" alt=""></div>
+                            <div class="type-pre">Premium S</div>
+
+                            <!-- Modal pour mobil -->
+
+                            <div class="md-modal md-effect-1" id="modal-1">
+                                <div class="md-content">
+                                    <div class="title-mob">Premium S</div>
+
+                                    <div class="tarif-modal">
+                                        <div class="ht">9 900 F HT</div>
+                                        <div class="ttc">12 266 F TTC</div>
+                                    </div>
+
+                                    <div class="list-oportinities">
+                                        <div class="oportinuty">
+                                            <div>Bonus Orange</div>
+                                            <div>{{ sans_tel.bonus_vers_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>Total positionné</div>
+                                            <div>{{ sans_tel.forfait_postionne }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>Internet mobile</div>
+                                            <div>{{ sans_tel.internet_mobile }}</div>
+                                        </div>
+
+                                        <div class="oportinuty">
+                                            <div>SMS Orange</div>
+                                            <div>{{ sans_tel.sms_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>N° illimité* vers Orange</div>
+                                            <div>{{ sans_tel.illimite_vers_orange }}</div>
+                                        </div>
+                                        <div class="oportinuty">
+                                            <div>{{ sans_tel.autre }}</div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="restrict-phone">
+                                        <div>• Modification du n° illimité possible une fois par mois</div>
+                                        <div>• Aucune limite de durée d’appels jusqu’à 150 correspondants/mois</div>
+                                        <div>• Possibilité de changer le smartphone par un autre</div>
+                                    </div>
+
+                                    <div class="mob-sousc">
+                                        <div>Pour souscrire à Premium, rendez vous en agence</div>
+                                        <a href="" class="btn btn-dark">Trouver une agence</a>
+                                    </div>
+                                </div>
+
+                                <div class="md-close"><img src="/sites/default/files/images/premium/c.svg" alt=""></div>
+                            </div>
+                        </div>
+
+                        {% set count = count + 1 %}
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-sociaux-liberty">
+                <div class="socio souscr">
+                    <img src="/sites/default/files/images/liberty/group-269.svg" alt="">
+                    <div>Soucrivez à Teranga Premium</div>
+                    <a href="" class="btn btn-inverse btn-dark">Trouver une agence</a>
+                </div>
+                <div class="socio suiv">
+                    <img src="/sites/default/files/images/liberty/group-108.svg" alt="">
+                    <div>Suivez vos factures depuis l’espace client</div>
+                    <a href="" class="btn btn-inverse btn-dark">Se connecter</a>
+                </div>
+            </div>
+
+            <div class="list-sociaux-liberty-mobile">
+                <div class="socio suiv">
+                    <img src="/sites/default/files/images/liberty/group-108-copy-mobile.svg" alt="">
+                    <div class="desc-soc">
+                        <div>Suivez vos factures depuis l’espace client</div>
+                        <a href="" class="btn btn-block btn-inverse btn-dark">Se connecter</a>
+                    </div>
+                </div>
+
+                <div class="socio souscr">
+                    <img src="/sites/default/files/images/liberty/group-269-mobile.svg" alt="">
+                    <div class="desc-soc">
+                        <div>Soucrivez à Teranga Premium</div>
+                        <a href="" class="btn btn-block btn-inverse btn-dark">Trouver une agence</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

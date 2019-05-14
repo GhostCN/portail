@@ -1,0 +1,18 @@
+uuid: 9d5baa58-18b9-4a46-a4fe-75c925032675
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.premium_avec_tel
+id: node.premium_avec_tel.title
+field_name: title
+entity_type: node
+bundle: premium_avec_tel
+label: 'Titre Teranga'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

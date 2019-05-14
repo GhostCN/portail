@@ -1,0 +1,93 @@
+uuid: 5fbabc17-0eb4-4eb5-9e6a-5117caee8023
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.teranga.field_description_teranga
+    - field.field.node.teranga.field_image_teranga
+    - field.field.node.teranga.field_resume_teranga
+    - field.field.node.teranga.field_template_de_page_liberty
+    - field.field.node.teranga.field_template_de_page_premium
+    - image.style.thumbnail
+    - node.type.teranga
+  module:
+    - inline_entity_form
+    - svg_image
+id: node.teranga.default
+targetEntityType: node
+bundle: teranga
+mode: default
+content:
+  field_description_teranga:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_teranga:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_resume_teranga:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_template_de_page_liberty:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_template_de_page_premium:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      collapsible: false
+      collapsed: false
+      allow_new: true
+      allow_existing: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

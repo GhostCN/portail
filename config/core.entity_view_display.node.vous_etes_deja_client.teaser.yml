@@ -1,0 +1,29 @@
+uuid: 753e9e25-0a1b-43e9-8983-09e196c2b7ab
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.vous_etes_deja_client.body
+    - node.type.vous_etes_deja_client
+  module:
+    - text
+    - user
+id: node.vous_etes_deja_client.teaser
+targetEntityType: node
+bundle: vous_etes_deja_client
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

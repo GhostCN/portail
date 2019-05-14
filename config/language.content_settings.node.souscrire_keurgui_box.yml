@@ -1,0 +1,11 @@
+uuid: 882b5e04-3314-491e-9e58-2993e5f16a5c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.souscrire_keurgui_box
+id: node.souscrire_keurgui_box
+target_entity_type_id: node
+target_bundle: souscrire_keurgui_box
+default_langcode: site_default
+language_alterable: false

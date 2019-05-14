@@ -1,0 +1,22 @@
+uuid: d48f7362-5de4-4f64-810d-a79f386eeb64
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.banniere_publicitaire
+id: node.banniere_publicitaire.status
+field_name: status
+entity_type: node
+bundle: banniere_publicitaire
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

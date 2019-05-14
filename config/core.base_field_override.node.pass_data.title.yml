@@ -1,0 +1,18 @@
+uuid: 340aa0dd-5976-48da-b912-46d431fec739
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_data
+id: node.pass_data.title
+field_name: title
+entity_type: node
+bundle: pass_data
+label: 'Prix (300 F)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

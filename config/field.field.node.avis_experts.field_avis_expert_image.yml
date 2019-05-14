@@ -1,0 +1,38 @@
+uuid: b324bdd4-3e30-4cdd-9993-83a401980529
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_avis_expert_image
+    - node.type.avis_experts
+  module:
+    - image
+id: node.avis_experts.field_avis_expert_image
+field_name: field_avis_expert_image
+entity_type: node
+bundle: avis_experts
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

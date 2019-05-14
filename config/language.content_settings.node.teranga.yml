@@ -1,0 +1,11 @@
+uuid: 5aafb063-2645-4747-a3fa-985d2ffabcb8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.teranga
+id: node.teranga
+target_entity_type_id: node
+target_bundle: teranga
+default_langcode: site_default
+language_alterable: false

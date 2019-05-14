@@ -1,0 +1,21 @@
+uuid: bec963db-ffb7-4a48-8734-f121743ce4e9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.orange_sargal
+  module:
+    - user
+id: node.orange_sargal.teaser
+targetEntityType: node
+bundle: orange_sargal
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_faq_os: true
+  field_type_de_cadeau_sargal: true
+  langcode: true

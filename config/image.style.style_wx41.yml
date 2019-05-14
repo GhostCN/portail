@@ -1,0 +1,15 @@
+uuid: e464e92f-f9f0-418a-8976-570451529b90
+langcode: fr
+status: true
+dependencies: {  }
+name: style_wx41
+label: 'style wx41'
+effects:
+  7f44f111-626f-4deb-817f-621cdb974f35:
+    uuid: 7f44f111-626f-4deb-817f-621cdb974f35
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 41
+      upscale: true

@@ -1,0 +1,17 @@
+uuid: 2503fe8e-ed1e-4ebf-81a5-38ab495afccf
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Offres Mobiles'
+type: offre_mobile
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

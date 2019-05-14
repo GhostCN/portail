@@ -1,0 +1,28 @@
+uuid: 2b3828ec-5aa5-47ba-b75f-0e450c4b7906
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_de_cadeau_sargal
+    - node.type.orange_sargal
+    - node.type.type_de_cadeau_sargal
+id: node.orange_sargal.field_type_de_cadeau_sargal
+field_name: field_type_de_cadeau_sargal
+entity_type: node
+bundle: orange_sargal
+label: 'Types de cadeau sargal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      type_de_cadeau_sargal: type_de_cadeau_sargal
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

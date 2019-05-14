@@ -1,0 +1,17 @@
+uuid: 462f9545-95bd-4b85-b302-f264911031c8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Promos et Bons plans'
+type: promo_bon_plan
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

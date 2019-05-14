@@ -1,0 +1,21 @@
+uuid: d12940c9-5935-493a-8236-aedcea0aeeb1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.page_tv_orange
+  module:
+    - user
+id: node.page_tv_orange.teaser
+targetEntityType: node
+bundle: page_tv_orange
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_b: true
+  field_slider_tv: true
+  langcode: true

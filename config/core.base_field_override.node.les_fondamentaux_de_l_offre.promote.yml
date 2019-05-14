@@ -1,0 +1,22 @@
+uuid: ee0f06d5-599a-4ca2-9de7-996f7d7d6615
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.les_fondamentaux_de_l_offre
+id: node.les_fondamentaux_de_l_offre.promote
+field_name: promote
+entity_type: node
+bundle: les_fondamentaux_de_l_offre
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

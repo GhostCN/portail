@@ -1,0 +1,19 @@
+uuid: f24383da-39a8-4e6d-8aa4-abcb9b5d0e79
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_teranga
+    - node.type.teranga
+id: node.teranga.field_description_teranga
+field_name: field_description_teranga
+entity_type: node
+bundle: teranga
+label: 'Description Teranga'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

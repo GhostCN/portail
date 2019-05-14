@@ -1,0 +1,51 @@
+uuid: 761277a3-49c3-48e5-a894-74c379814853
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.bloc_actualite.body
+    - field.field.node.bloc_actualite.field_icone_bloc
+    - image.style.thumbnail
+    - node.type.bloc_actualite
+  module:
+    - svg_image
+    - text
+id: node.bloc_actualite.default
+targetEntityType: node
+bundle: bloc_actualite
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_icone_bloc:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

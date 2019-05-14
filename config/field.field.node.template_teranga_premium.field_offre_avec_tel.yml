@@ -1,0 +1,28 @@
+uuid: 3ccd8b72-c6b0-4d81-a20d-ffc106ea0f92
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_avec_tel
+    - node.type.template_teranga_premium
+    - node.type.teranga_telephone
+id: node.template_teranga_premium.field_offre_avec_tel
+field_name: field_offre_avec_tel
+entity_type: node
+bundle: template_teranga_premium
+label: 'Offre Avec Tel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      teranga_telephone: teranga_telephone
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

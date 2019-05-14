@@ -1,0 +1,11 @@
+uuid: 7a213447-11f7-4a0d-8c88-d7602261d5d4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.avantage_offre
+id: node.avantage_offre
+target_entity_type_id: node
+target_bundle: avantage_offre
+default_langcode: site_default
+language_alterable: false

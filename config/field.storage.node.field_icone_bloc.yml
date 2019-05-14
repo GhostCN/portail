@@ -1,0 +1,30 @@
+uuid: b4257f2f-89e4-4691-9ad5-b6f13627d9d7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+id: node.field_icone_bloc
+field_name: field_icone_bloc
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

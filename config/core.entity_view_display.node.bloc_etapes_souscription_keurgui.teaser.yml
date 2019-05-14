@@ -1,0 +1,30 @@
+uuid: e1e5a75f-950e-4530-a18a-712cbb8f1f37
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.bloc_etapes_souscription_keurgui.body
+    - node.type.bloc_etapes_souscription_keurgui
+  module:
+    - text
+    - user
+id: node.bloc_etapes_souscription_keurgui.teaser
+targetEntityType: node
+bundle: bloc_etapes_souscription_keurgui
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_action_keurgui_box: true
+  langcode: true

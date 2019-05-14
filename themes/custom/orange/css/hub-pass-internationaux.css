@@ -1,0 +1,634 @@
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff");
+}
+
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff");
+}
+
+@media screen and (min-width: 1560px) {
+    .contentA {
+        width: 1360px;
+        margin: auto !important;
+        padding-left: 100px !important;
+        padding-right: 100px !important;
+    }
+    .position-block-landsc {
+        display: none;
+    }
+    .hr-verti {
+        border-right: 2px solid #979797;
+        padding-left: 95px !important;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+    .position-block-landsc {
+        display: none;
+    }
+    .contentA {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.contentA {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+body {
+    background-color: #eeeeee !important;
+}
+
+.debut-boxe {
+    display: flex;
+    list-style: none;
+    margin-left: -37px;
+}
+
+.debutli {
+    margin-left: 12px;
+    font-size: 18px;
+}
+
+.position-block {
+    display: none;
+}
+
+#fleche-boxee {
+    margin-top: -4px;
+    margin-left: 16px;
+}
+
+.Pass-Internationaux-Copy {
+    font-size: 30px;
+    margin-bottom: 40px;
+    padding-left: 1px;
+}
+
+.black-brd {
+    background-color: black;
+    width: 100%;
+    margin-top: -1px;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.black-brdee {
+    background-color: black;
+    width: 100%;
+    margin-top: -6px;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.monu {
+    max-height: 479px;
+    height: 479px;
+}
+
+.text-btne {
+    position: absolute;
+    bottom: 46%;
+    left: 7%;
+    width: 200px;
+}
+
+.appel-etrang {
+    font-size: 30px;
+}
+
+.dec-btn {
+    width: 65%;
+}
+
+.tout-eff {
+    width: 100%;
+}
+
+.displa {
+    display: flex;
+    background-color: #50be87;
+    padding-left: 34px;
+    padding-top: 34px;
+    padding-bottom: 20px;
+    margin-right: 10px;
+    margin-bottom: 37px;
+    margin-top: 38px;
+}
+
+.position-block-landsc {
+    display: none;
+}
+
+.Pour-un-meilleur {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 20px;
+    width: 80%;
+}
+
+.fleche-gauc {
+    width: 42px;
+    margin-top: -2px;
+    max-height: 41px;
+}
+
+.detail-inter-bt {
+    /* margin-left: 38px; */
+    width: 145px;
+    margin-top: -1px;
+    margin-bottom: 9px;
+}
+
+.card-pad-tr {
+    height: 493px;
+}
+
+.sac-nav-ul {
+    padding-bottom: 25px;
+}
+
+.rectangle-12 {
+    background-color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 95px;
+    padding-right: 50px;
+}
+
+.fleche-gauchh {
+    max-height: 110px;
+}
+
+.dispa-rec {
+    display: flex;
+}
+
+.Les-zones-et-tar {
+    font-size: 20px;
+    padding-top: 40px;
+    padding-left: 21px;
+    margin-bottom: 0;
+}
+
+.Decouvv {
+    margin-top: 32px;
+    margin-left: 21px;
+    width: 130px;
+    margin-bottom: 38px;
+}
+
+.roaming-block {
+    margin-bottom: 35px !important;
+}
+
+.hr-verti {
+    border-right: 2px solid #979797;
+    padding-left: 31px;
+}
+
+@media screen and (max-width: 499px) {
+    .contentA {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .roaming-block {
+        margin-bottom: 25px !important;
+        font-size: 20px;
+    }
+    .position-block-landsc {
+        display: none;
+    }
+    .position-block-tbl {
+        display: none;
+    }
+    .position-block {
+        display: block;
+    }
+    .sac-nav-ul {
+        padding-bottom: 10px;
+    }
+    .sac-nav-ul-off {
+        display: flex;
+        list-style: none;
+        margin-left: -39px;
+    }
+    .Pass-Internationaux-Copy {
+        font-size: 20px;
+        padding-left: 1px;
+        padding-top: 13px;
+        margin-bottom: 23px;
+    }
+    .card-pad-tr {
+        padding-right: 0;
+        height: unset;
+    }
+    .tour-effel {
+        margin-top: 15px;
+        width: 100%;
+        margin-bottom: -2px;
+        height: auto;
+    }
+    .appel-etrang {
+        font-size: 20px;
+        margin-bottom: 9px;
+    }
+    .text-btne {
+        bottom: 35%;
+    }
+    .black-brd {
+        bottom: -14px;
+        height: 12px;
+    }
+    .displa {
+        display: block;
+        padding-left: 20px;
+        padding-top: 34px;
+        margin-top: 32px;
+        padding-bottom: 40px;
+        text-align: center;
+        padding-right: 20px;
+        margin-right: unset;
+        margin-bottom: 36px;
+    }
+    .Pour-un-meilleur {
+        font-size: 20px;
+        padding-left: unset;
+        width: 275px;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+    .detail-inter-bt {
+        margin-left: unset;
+        width: 156px;
+        margin-top: -1px;
+        margin-bottom: unset;
+    }
+    .fleche-gauc {
+        display: none;
+    }
+    .deux-bl {
+        display: flex;
+    }
+    .Decouvv {
+        margin-bottom: 0px;
+        margin-top: 8px;
+        margin-left: 21px;
+        width: 116px;
+    }
+    .Les-zones-et-tar {
+        font-size: 16px;
+        padding-top: 0px;
+        padding-left: 21px;
+        margin-bottom: 0;
+    }
+    .text-bt {
+        margin-top: 5px;
+    }
+    .rectangle-12 {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 35px;
+        padding-bottom: 33px;
+    }
+    .fleche-gauchh {
+        width: 159px;
+        height: 110px;
+    }
+    #one-bt {
+        border-bottom: solid 2px #eeeeee;
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        padding-right: 34px;
+        width: 100%
+    }
+    .effel-lande {
+        display: none;
+    }
+    .black-brdeee {
+        background-color: black;
+        margin-top: 2px;
+        margin-right: 0px;
+        height: 12px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1023px) {
+    .contentA {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .roaming-block {
+        font-size: 20px;
+        margin-bottom: 25px !important;
+    }
+    .sac-nav-ul {
+        padding-bottom: 10px;
+    }
+    .sac-nav-ul-off {
+        display: flex;
+        list-style: none;
+        margin-left: -39px;
+    }
+    .card-pad-tr {
+        height: unset;
+    }
+    .Pass-Internationaux-Copy {
+        font-size: 25px;
+        margin-bottom: 25px;
+        padding-left: 1px;
+        padding-top: 10px;
+    }
+    .tour-effel {
+        width: 100%;
+        height: auto;
+        padding-top: 30px;
+        margin-bottom: -0px;
+    }
+    .tour-effele {
+        width: 100%;
+        height: auto;
+        padding-top: 30px;
+        margin-bottom: -0px;
+    }
+    .landscapa-monum {
+        height: auto;
+    }
+    .carde-block-rect {
+        width: 48%;
+    }
+    .position-block-landsc {
+        display: block;
+    }
+    .position-block {
+        display: none;
+    }
+    .position-block-tbl {
+        display: none !important;
+    }
+    .posit {
+        display: flex;
+        justify-content: space-between;
+    }
+    .posit-block {
+        width: 49%;
+    }
+    .effel-land {
+        display: none;
+    }
+    .effel-lande {
+        display: block;
+        margin-top: 25px !important;
+    }
+    .black-brd {
+        height: 14px;
+        margin-top: -8px;
+        position: absolute;
+        bottom: 0px;
+    }
+    .black-brdee {
+        height: 14px;
+        margin-top: 1px;
+        position: absolute;
+        bottom: 0px;
+    }
+    .text-btne {
+        bottom: 40%;
+    }
+    .dec-btn {
+        width: 76%;
+    }
+    .dec-btne {
+        width: 88%;
+    }
+    .fleche-gauc {
+        display: block;
+    }
+    .displa {
+        display: flex;
+        padding-left: 10px;
+        padding-top: 34px;
+        margin-top: 32px;
+        padding-bottom: 20px;
+        text-align: unset;
+        padding-right: 10px;
+        margin-right: unset;
+        margin-bottom: 30px;
+    }
+    .Pour-un-meilleur {
+        font-size: 16px;
+        padding-left: 5px;
+        padding-top: 6px;
+        padding-right: 14px;
+    }
+    .detail-inter-bt {
+        width: 156px;
+        height: 40px;
+    }
+    .fleche-gauc {
+        width: 45px;
+        margin-top: 2px;
+        height: 40px;
+        margin-top: -2px;
+        margin-left: -14px;
+    }
+    .dispp {
+        display: flex;
+    }
+    .fleche-gauchh {
+        width: 108.2px;
+        height: 100px;
+        padding-left: 13px;
+        margin-right: 22px;
+        margin-top: 4px;
+    }
+    .hr-verti {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-left: 10px;
+    }
+    .Les-zones-et-tar {
+        padding-top: 13px;
+        padding-left: 0px;
+        padding-right: 0px;
+        font-size: 16px;
+    }
+    .rectangle-12 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .deux-bl {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+    }
+    .Decouvv {
+        width: 110px;
+        margin-left: 0;
+        margin-top: 5px;
+        margin-bottom: unset;
+    }
+    .divdb {
+        margin-top: 15px;
+    }
+    #voyage-prepare {
+        margin-left: 0px !important;
+        padding-right: 10px;
+    }
+    .appel-etrang {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 980px) and (max-width: 1023px) {
+    .block-14 {
+        display: none !important
+    }
+    .dispp {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 787px) {
+    .rectangle-12 {
+        display: flex !important;
+    }
+}
+
+@media screen and (min-width: 788px) and (max-width: 880px) {
+    .contentA {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+    .roaming-block {
+        font-size: 22px;
+        margin-bottom: 25px !important;
+    }
+    .sac-nav-ul {
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (min-width: 1230px) and (max-width: 1300px) {
+    .contentA {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+    .contentA {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .tour-effel {
+        width: 100%;
+        height: auto;
+    }
+    .displa {
+        display: flex;
+        padding-left: 10px;
+        padding-top: 34px;
+        margin-top: 32px;
+        padding-bottom: 20px;
+        text-align: unset;
+        padding-right: 18px;
+        margin-bottom: 30px;
+    }
+    .detail-inter-bt {
+        width: 156px;
+        height: 40px;
+    }
+    .Pour-un-meilleur {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 20px;
+        width: 100%;
+        padding-top: 3px;
+    }
+    .roaming-block {
+        font-size: 26px;
+        margin-bottom: 25px !important;
+    }
+}
+
+
+/*@media screen and (min-width: 1071px) and (max-width: 1150px) {
+    .contentA {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .detail-inter-bt {
+        width: 156px;
+        height: 40px;
+    }
+    .Pour-un-meilleur {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold;
+        padding-left: 20px;
+        width: 100%;
+        padding-top: 3px;
+    }
+    .displa {
+        display: flex;
+        padding-left: 10px;
+        padding-top: 34px;
+        margin-top: 32px;
+        padding-bottom: 20px;
+        text-align: unset;
+        padding-right: 18px;
+        margin-bottom: 30px;
+    }
+    .black-brd {
+        margin-top: -51px;
+    }
+    .black-brdee {
+        margin-top: -52px;
+    }
+    .rectangle-12 {
+        padding-left: 69px;
+        padding-right: 65px;
+    }
+}
+
+
+/* .Les-zones-et-tar {
+    padding-top: 30px;
+} */
+
+
+/* @media screen and (min-width: 1051px) and (max-width: 1020px) {
+    .contentA {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+} */
+
+
+/* @media screen and (min-width: 1024px) and (max-width: 1050px) {
+    .contentA {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+} */
+
+
+/* @media screen and (min-width: 1024px) and (max-width: 1300px) {
+    .contentA {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+} */

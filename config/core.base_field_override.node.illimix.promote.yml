@@ -1,0 +1,22 @@
+uuid: 3ea963e4-790c-4e4e-a4ca-1a81b5d40645
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.illimix
+id: node.illimix.promote
+field_name: promote
+entity_type: node
+bundle: illimix
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

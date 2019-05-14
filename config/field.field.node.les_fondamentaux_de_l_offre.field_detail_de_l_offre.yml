@@ -1,0 +1,21 @@
+uuid: ad53cf98-ea0f-47b3-8645-fb039ce36ce2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_detail_de_l_offre
+    - node.type.les_fondamentaux_de_l_offre
+  module:
+    - text
+id: node.les_fondamentaux_de_l_offre.field_detail_de_l_offre
+field_name: field_detail_de_l_offre
+entity_type: node
+bundle: les_fondamentaux_de_l_offre
+label: 'Détail de l''offre'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

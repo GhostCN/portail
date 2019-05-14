@@ -1,0 +1,28 @@
+uuid: 39f61511-b2c4-4d02-b1c7-25757402f0d0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_mobile_avantage
+    - node.type.avantage_offre
+    - node.type.offre_mobile
+id: node.offre_mobile.field_offre_mobile_avantage
+field_name: field_offre_mobile_avantage
+entity_type: node
+bundle: offre_mobile
+label: Avantages
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      avantage_offre: avantage_offre
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

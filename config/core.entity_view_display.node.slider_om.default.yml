@@ -1,0 +1,50 @@
+uuid: c75f08a1-ef73-4b99-b77f-c5176701cc98
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.slider_om.field_astuce
+    - field.field.node.slider_om.field_image_slider_om
+    - field.field.node.slider_om.field_lien_decouvrir
+    - node.type.slider_om
+  module:
+    - svg_image
+    - user
+id: node.slider_om.default
+targetEntityType: node
+bundle: slider_om
+mode: default
+content:
+  field_astuce:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_image_slider_om:
+    weight: 102
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_lien_decouvrir:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

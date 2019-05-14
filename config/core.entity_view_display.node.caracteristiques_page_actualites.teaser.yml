@@ -1,0 +1,21 @@
+uuid: 98fd4698-f937-4fc9-92f0-3c19d451205b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.caracteristiques_page_actualites
+  module:
+    - user
+id: node.caracteristiques_page_actualites.teaser
+targetEntityType: node
+bundle: caracteristiques_page_actualites
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_attributs_de_produit: true
+  field_caracteristiques_image: true
+  langcode: true

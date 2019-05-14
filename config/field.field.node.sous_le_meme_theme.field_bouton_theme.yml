@@ -1,0 +1,19 @@
+uuid: b1a3c9a3-ddea-4e86-a5d6-1d69d1b78d80
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bouton_theme
+    - node.type.sous_le_meme_theme
+id: node.sous_le_meme_theme.field_bouton_theme
+field_name: field_bouton_theme
+entity_type: node
+bundle: sous_le_meme_theme
+label: 'Bouton du thème'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

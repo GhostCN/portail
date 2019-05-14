@@ -1,0 +1,27 @@
+uuid: 5bab94a0-d792-4d8a-b48e-ccd61ef4717a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.faq_family.body
+    - node.type.faq_family
+  module:
+    - text
+    - user
+id: node.faq_family.default
+targetEntityType: node
+bundle: faq_family
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

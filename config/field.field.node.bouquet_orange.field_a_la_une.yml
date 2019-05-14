@@ -1,0 +1,21 @@
+uuid: f9b24b70-d403-410d-aebb-0a5261a6399a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_a_la_une
+    - node.type.bouquet_orange
+  module:
+    - options
+id: node.bouquet_orange.field_a_la_une
+field_name: field_a_la_une
+entity_type: node
+bundle: bouquet_orange
+label: 'A la une'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

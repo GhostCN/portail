@@ -1,0 +1,28 @@
+uuid: ff0006dd-e1ea-4f53-8b96-010885514429
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_en_res
+    - node.type.offre_en_resume
+    - node.type.page_home_simple
+id: node.page_home_simple.field_offre_en_res
+field_name: field_offre_en_res
+entity_type: node
+bundle: page_home_simple
+label: 'Offre en résumé'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      offre_en_resume: offre_en_resume
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

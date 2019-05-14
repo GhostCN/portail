@@ -1,0 +1,19 @@
+uuid: a7361d2e-6095-4ef7-a0a7-99510375c09c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pourcentage_bonus
+    - node.type.compte_a_rebours
+id: node.compte_a_rebours.field_pourcentage_bonus
+field_name: field_pourcentage_bonus
+entity_type: node
+bundle: compte_a_rebours
+label: 'Pourcentage Bonus (Ex : Bonus 50% )'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

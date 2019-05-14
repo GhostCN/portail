@@ -1,0 +1,17 @@
+uuid: 99dd07ba-0210-4934-a049-3b3c80532f78
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Les fondamentaux de l''offre'
+type: les_fondamentaux_de_l_offre
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

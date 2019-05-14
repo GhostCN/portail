@@ -1,0 +1,31 @@
+uuid: 197ae863-513d-4290-9e88-b2d010e5562f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.etapes_souscrire.body
+    - node.type.etapes_souscrire
+  module:
+    - text
+    - user
+id: node.etapes_souscrire.teaser
+targetEntityType: node
+bundle: etapes_souscrire
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_action: true
+  field_icons: true
+  langcode: true

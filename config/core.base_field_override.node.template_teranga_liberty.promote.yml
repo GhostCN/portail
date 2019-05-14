@@ -1,0 +1,22 @@
+uuid: c270b250-225c-40c1-9008-5e7f0f3d5d59
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.template_teranga_liberty
+id: node.template_teranga_liberty.promote
+field_name: promote
+entity_type: node
+bundle: template_teranga_liberty
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,847 @@
+@media screen and (min-width: 1460px) {
+    .contentS{
+        width: 1360px !important;
+        margin: auto !important;
+        position: relative;
+    }
+    .header-illimix img{
+      height: auto !important;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .contentS{
+        padding-right: 100px;
+        padding-left: 100px;
+        position: relative;
+    }
+
+    .desc-tabs-txt .media{
+        min-width: 80px !important;
+    }
+
+    .desc-tabs-txt .media:nth-child(2){
+        min-width: 90px !important;
+    }
+
+    .desc-tabs-txt .media:nth-child(4){
+        min-width: 145px !important;
+    }
+
+    .desc-pass .media{
+        min-width: 105px;
+    }
+}
+
+@media screen and (min-width: 1330px) and (max-width: 1355px) {
+
+    .nav-tabs .nav-item:not([class*="active"]) span {
+        padding-right: 35% !important;
+        padding-left: 35% !important;
+    }
+
+    .nav-tabs .nav-item:nth-child(1):not([class*="active"]) span {
+        padding-right: 24% !important;
+        padding-left: 24% !important;
+    }
+
+    .nav-tabs .nav-item:nth-child(3).active {
+        width: 32.85% !important;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1330px) {
+    .contentS{
+        padding-right: 10px;
+        padding-left: 10px;
+        position: relative;
+    }
+
+    .desc-tabs-txt .media{
+        min-width: 70px !important;
+    }
+
+    .desc-pass .media{
+        min-width: 86px;
+    }
+
+    .nav-tabs .nav-item.active{
+        width: 30% !important;
+    }
+
+    .nav-tabs .nav-item:not([class*="active"]) span {
+        padding-right: 33% !important;
+        padding-left: 33% !important;
+    }
+
+    .nav-tabs .nav-item:nth-child(1):not([class*="active"]) span {
+        padding-right: 22% !important;
+        padding-left: 22% !important;
+    }
+
+    .pass-price{
+        font-size: 20px !important;
+    }
+
+    .title-text-pass{
+        font-size: 13px !important;
+    }
+
+    .card-illimix-tabs{
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+    }
+
+    .desc-pass{
+        padding-left: 5px !important;
+    }
+
+    .tabs-content-card{
+        width: 24% !important;
+    }
+
+    .tab-content{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .title-pass{
+        width: 48% !important;
+    }
+
+    .desc-internet-illimix{
+        right: 5% !important;
+        top: 13% !important;
+    }
+
+    .option-illimix .option {
+        width: 30% !important;
+    }
+
+    .sub-text {
+        width: auto !important;
+        bottom: -15px !important;
+    }
+}
+
+body{
+    background-color: #eeeeee;
+    font-size: 16px;
+    font-family: HelvNeueOrange;
+    overflow-x: hidden;
+}
+
+.space50{
+    margin-bottom: 50px;
+}
+
+.space15{
+    margin-bottom: 15px;
+}
+
+.space20{
+    margin-bottom: 20px;
+}
+
+.space40{
+    margin-bottom: 40px;
+}
+
+.space30{
+    margin-bottom: 30px;
+}
+
+.fil-areane{
+    font-size: 18px;
+    color: #666666;
+}
+
+.header-illimix{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.header-illimix img{
+    width: 100%;
+    height: 100;
+}
+
+.desc-hearderI{
+    position: absolute;
+    margin-top: 30px;
+}
+
+.page-block{
+    font-size: 30px;
+    color: #ff7900;
+    font-weight: bold;
+}
+
+.page-titleI{
+    font-size: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+h1.page-titleI{
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+
+.nav-tabs .nav-item{
+    width: 32.86%;
+    /* text-align: center; */
+}
+
+.nav-tabs .nav-item:not([class*="active"]):hover{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.nav-tabs .nav-item:not([class*="active"]){
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-top: 2px;
+}
+
+.nav-tabs .nav-item.active{
+    width: 31%;
+    margin-right: 21px;
+    font-size: 30px;
+    background-color: #eeeeee;
+    padding: 18px;
+    text-align: center;
+}
+
+.nav-tabs .nav-item.active span B{
+    color: #ff7900;
+}
+
+.nav-tabs .nav-item:nth-child(3).active{
+    width: 32.88%;
+    margin-right: 0px;
+}
+
+
+
+.nav-tabs .nav-item:not([class*="active"]) span{
+    font-size: 20px;
+    padding-right: 36%;
+    padding-left: 36%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+.nav-tabs .nav-item:not([class*="active"]) span:hover{
+    background-color: #ff7900;
+}
+
+.nav-tabs .nav-item:nth-child(1):not([class*="active"]) span{
+    padding-right: 24%;
+    padding-left: 24%;
+}
+
+.nav-tabs .nav-item:nth-child(3):not([class*="active"]) span{
+    margin-left: 8px;
+}
+
+.nav-tabs .nav-item:nth-child(2):not([class*="active"]) span{
+    padding-right: 35%;
+    padding-left: 35%;
+}
+
+.tabs-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs-content-card{
+    width: 24%;
+}
+
+.card-illimix-tabs{
+    padding: 15px;
+    background-color: #fff;
+    position: relative;
+}
+
+.title-pass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    border-right: 2px solid #cccccc;
+}
+
+.title-pass B{
+    color: #000000;
+}
+
+.title-text-pass{
+    color: #666666;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.tab-content{
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.pass-price{
+    font-size: 25px;
+    color: #ff7900;
+    font-weight: bold;
+    max-height: 32px;
+}
+
+.sub-text{
+    position: absolute;
+    width: 114px;
+    bottom: 10px;
+    font-size: 9px;
+    color: #8f8f8f;
+    font-weight: normal;
+}
+
+.desc-pass{
+    padding-left: 10px;
+    color: #666666;
+    font-size: 12px;
+}
+
+.desc-pass .media .media-body{
+    margin-top: 0px;
+}
+
+.desc-pass .media{
+    margin-bottom: 10px;
+}
+
+.desc-pass .media:last-child{
+    margin-bottom: 0px;
+}
+
+.desc-tabs-txt{
+    float: right;
+}
+
+.desc-tabs{
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.desc-tabs-txt .media-body{
+    margin-top: -2px;
+}
+
+.desc-pass-lexique{
+    font-size: 16px;
+}
+
+.font20{
+    font-size: 20px;
+}
+
+.font20 img:nth-child(2){
+    margin-right: 10px;
+}
+
+
+.font20 img:nth-child(3){
+    margin-right: 5px;
+}
+
+.img-internet-illimix{
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+}
+
+.desc-internet-illimix{
+    width: 244px;
+    position: absolute;
+    right: 60px;
+    top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.question{
+    font-size: 20px;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.question B{
+    margin-top: 7px;
+}
+
+.bg-white{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.title-option{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2.title-option{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.option-illimix{
+    display: flex;
+    justify-content: space-between;
+}
+
+.option-illimix .option{
+    width: 26%;
+}
+
+.img-605{
+    width: 60px;
+    height: 60px;
+}
+
+.option .media .media-body{
+    margin-top: 10px;
+}
+
+.option .media .media-body B{
+    font-size: 20px;
+}
+
+.option .option-text{
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.25;
+}
+
+.hide-reverse-illimix{
+    display: none;
+}
+
+.show-illimix-only-mobile{
+    display: none;
+}
+
+.media{
+    flex-direction: row;
+}
+
+
+
+@media screen and (min-width: 500px) and (max-width: 1000px){
+    .header-illimix{
+        height: 93px;
+    }
+
+    .pass-mobil-desc .card-illimix-tabs{
+        width: 48%;
+        margin-bottom: 20px;
+    }
+
+    .pass-price{
+        font-size: 30px;
+    }
+
+    .sub-text{
+        width: 154px;
+        bottom: 18px;
+        font-size: 11px;
+    }
+
+    .desc-pass {
+        padding-left: 20px;
+    }
+
+    .desc-internet-illimix{
+        top: 35px;
+        font-size: 16px;
+        width: 175px;
+        height: 57px;
+        right: 20px;
+    }
+
+    .option .media .media-body {
+        margin-top: 15px;
+    }
+
+    .option .media .media-body B{
+        font-size: 16px;
+    }
+
+    .option .media .media-body div{
+        font-size: 14px;
+    }
+
+    .question{
+        padding: 20px;
+    }
+
+    .option-illimix .option {
+        width: 33%;
+    }
+
+    .bg-white{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px){
+    .desc-internet-illimix {
+        top: 17%;
+        font-size: 12px;
+        width: 123px;
+        right: 10px;
+    }
+
+    .question{
+        font-size: 15px;
+    }
+
+    .sub-text{
+        width: 134px;
+        bottom: 20px;
+        font-size: 10.5px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 750px){
+    .desc-internet-illimix {
+        top: 17%;
+        font-size: 14px;
+        width: 145px;
+        right: 10px;
+    }
+
+    .profiter .desc-internet-illimix{
+        width: 150px;
+    }
+
+    .question{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 750px){
+    .option .media .media-body B{
+        font-size: 14px;
+    }
+
+    .img-605{
+        width: 40px;
+        height: 40px;
+    }
+
+    .option .media .media-body {
+        margin-top: 4px;
+    }
+
+    .option .media .media-body div {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 750px){
+    .option .media .media-body B{
+        font-size: 13px;
+    }
+
+    .option .media .media-body div {
+        font-size: 12px;
+    }
+
+    .option-illimix .option:nth-child(1) {
+        width: 30%;
+    }
+
+    .option-illimix .option:nth-child(2) {
+        width: 32%;
+    }
+
+    .option-illimix .option:nth-child(3) {
+        width: 35%;
+    }
+
+    .title-option {
+        font-size: 20px;
+    }
+
+    h2.title-option {
+        font-size: 20px;
+    }
+
+    .question B{
+        margin-top: 9px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 690px){
+    .title-text-pass {
+        font-size: 16px;
+    }
+
+    .pass-price {
+        font-size: 25px;
+    }
+
+    .desc-pass {
+        padding-left: 10px;
+    }
+
+    .pass-mobil-desc .card-illimix-tabs .media-body {
+        font-size: 13px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1000px) {
+
+    .header-illimix img {
+        height: auto;
+    }
+
+    .fil-areane {
+        font-size: 13px;
+    }
+
+    .img-internet-illimix {
+        max-height: unset;
+    }
+
+    .fil{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .desc-hearderI{
+        margin-top: 20px;
+    }
+    .page-block{
+        font-size: 14px;
+    }
+
+    .page-titleI{
+        font-size: 30px;
+        margin-top: -5px;
+    }
+
+    h1.page-titleI {
+        font-size: 30px;
+    }
+
+    .hide-illimix {
+        display: none;
+    }
+
+    .hide-reverse-illimix {
+        display: block;
+    }
+
+    .pass-mobil-header{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 2px solid #000000;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+    }
+
+    .pass-mobil-header .pass-mobil-header-title{
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .pass-mobil-header .pass-mobil-header-title span{
+        color: #ff7900;
+    }
+
+    .pass-mobil-header-pager button:hover{
+        background-color: #ff7900;
+        border-color: #ff7900;
+    }
+
+    .pass-mobil-header-pager button.disabled:hover{
+        background-color: #cccccc;
+        border-color: #cccccc;
+    }
+
+    .pass-mobil-header-pager button img{
+        width: 9px;
+        height: 16px;
+    }
+
+    .pass-mobil-desc{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .pass-mobil-desc .card-illimix-tabs img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .pass-mobil-desc .card-illimix-tabs .media-body{
+        font-size: 14px;
+    }
+
+    .desc-pass .media{
+        margin-bottom: 15px;
+    }
+
+    .title-text-pass{
+        font-size: 17px;
+    }
+
+    .desc-tabs-txt{
+        float: unset;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+
+    .space40{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px){
+    .space40{
+        margin-bottom: 20px;
+    }
+
+    .space30{
+        margin-bottom: 20px;
+    }
+
+    .pass-mobil-desc .card-illimix-tabs{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .question {
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .option-illimix {
+        flex-wrap: wrap;
+    }
+
+    .option-illimix .option {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .option .media .media-body div {
+        font-size: 14px;
+    }
+
+    .option .media .media-body B {
+        font-size: 16px;
+    }
+
+    .option .media .media-body {
+        margin-top: 15px;
+    }
+
+    .bg-white {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .title-option {
+        font-size: 20px;
+    }
+
+    h2.title-option {
+        font-size: 20px;
+    }
+
+    .desc-tabs-txt{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+
+    .desc-tabs-txt .media{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .mr-3{
+        margin-right: 0px !important;
+    }
+
+    .hide-illimix-only-mobile{
+        display: none;
+    }
+
+    .show-illimix-only-mobile{
+        display: block;
+    }
+
+    .font20 B{
+        display: block;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .header-illimix{
+        height: 75px;
+    }
+
+    .desc-hearderI {
+        margin-top: 15px;
+    }
+
+    .desc-internet-illimix {
+        width: 138px;
+        right: 15px;
+        top: 15px;
+        font-size: 15px;
+    }
+
+    .fsuper{
+        margin-bottom: 20px;
+    }
+
+    .desc-tabs-txt .media img{
+        width: 15px;
+        height: 15px;
+    }
+
+    .desc-pass .media {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 480px){
+    .desc-internet-illimix {
+        width: 155px;
+        right: 25px;
+        top: 25px;
+        font-size: 18px;
+    }
+}
+

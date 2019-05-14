@@ -1,0 +1,11 @@
+uuid: 2260137b-b813-4071-9735-c7984c03316e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_internet
+id: node.pass_internet
+target_entity_type_id: node
+target_bundle: pass_internet
+default_langcode: site_default
+language_alterable: false

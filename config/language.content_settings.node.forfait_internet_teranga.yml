@@ -1,0 +1,11 @@
+uuid: d6e7302c-f83c-47e4-96b4-76f859733811
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.forfait_internet_teranga
+id: node.forfait_internet_teranga
+target_entity_type_id: node
+target_bundle: forfait_internet_teranga
+default_langcode: site_default
+language_alterable: false

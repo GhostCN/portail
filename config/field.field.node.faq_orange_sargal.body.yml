@@ -1,0 +1,22 @@
+uuid: d8e5ceb2-7d7f-4b00-a68e-7087fa65d230
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.faq_orange_sargal
+  module:
+    - text
+id: node.faq_orange_sargal.body
+field_name: body
+entity_type: node
+bundle: faq_orange_sargal
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

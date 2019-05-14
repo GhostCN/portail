@@ -1,0 +1,21 @@
+uuid: 1b12f282-3b68-4fed-bf15-0b5032db9733
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_template
+    - node.type.internet_et_fixe
+  module:
+    - options
+id: node.internet_et_fixe.field_template
+field_name: field_template
+entity_type: node
+bundle: internet_et_fixe
+label: Template
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

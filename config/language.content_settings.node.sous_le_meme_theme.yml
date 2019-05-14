@@ -1,0 +1,11 @@
+uuid: a00ecca0-88f2-42f4-aca8-6046a871e21f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.sous_le_meme_theme
+id: node.sous_le_meme_theme
+target_entity_type_id: node
+target_bundle: sous_le_meme_theme
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,11 @@
+uuid: 009a5d4a-61a4-4960-88b6-0916d49ba99d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.vous_etes_deja_client
+id: node.vous_etes_deja_client
+target_entity_type_id: node
+target_bundle: vous_etes_deja_client
+default_langcode: site_default
+language_alterable: false

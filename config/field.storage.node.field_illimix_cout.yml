@@ -1,0 +1,20 @@
+uuid: 7a5d4916-2f33-46c6-a4d5-6bdaf5450b74
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_illimix_cout
+field_name: field_illimix_cout
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 765fb6dd-38a2-4429-8cec-8cd825051ea1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.les_fondamentaux_de_l_offre
+  module:
+    - user
+id: node.les_fondamentaux_de_l_offre.teaser
+targetEntityType: node
+bundle: les_fondamentaux_de_l_offre
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_detail_de_l_offre: true
+  field_icone_offre: true
+  langcode: true

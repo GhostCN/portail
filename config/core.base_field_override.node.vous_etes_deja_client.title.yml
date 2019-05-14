@@ -1,0 +1,18 @@
+uuid: 0ffb0c35-aa0e-45d7-bd92-0c2f005202ee
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.vous_etes_deja_client
+id: node.vous_etes_deja_client.title
+field_name: title
+entity_type: node
+bundle: vous_etes_deja_client
+label: Question
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

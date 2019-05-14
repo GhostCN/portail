@@ -1,0 +1,11 @@
+uuid: 3117d783-dadf-4f90-b3de-e23c95ff7871
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_data_org
+id: node.pass_data_org
+target_entity_type_id: node
+target_bundle: pass_data_org
+default_langcode: site_default
+language_alterable: false

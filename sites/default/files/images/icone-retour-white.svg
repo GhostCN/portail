@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="19px" viewBox="0 0 22 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>icn-menu</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5.71956919,13.5999687 L12.2397596,20.1201591 L10.7866396,21.5732791 L1.5,12.2866396 L10.7866396,3 L12.2397596,4.45312002 L5.71956919,10.9733104 L22.606602,10.9733104 L22.606602,13.5999687 L5.71956919,13.5999687 Z" id="path-1"></path>
+    </defs>
+    <g id="11-Dons-et-Cotisations" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="nav/icons/back-arrow-2" transform="translate(-1.000000, -3.000000)">
+            <g id="m-component/icons/back-arrow-black">
+                <rect id="guide" x="0" y="0" width="24" height="24"></rect>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#FFFFFF" xlink:href="#path-1"></use>
+                <g id="button-style/active-white-fill" mask="url(#mask-2)" fill="#FFFFFF">
+                    <rect id="button/default-outline" x="0" y="0" width="24" height="24"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

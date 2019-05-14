@@ -1,0 +1,92 @@
+uuid: 985ed916-8396-4b97-8e52-f3a944e64bcc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.tarifs_page_fibre.field_etapes_de_deploiement
+    - field.field.node.tarifs_page_fibre.field_faq
+    - field.field.node.tarifs_page_fibre.field_options_bouquet
+    - field.field.node.tarifs_page_fibre.field_options_fibre
+    - field.field.node.tarifs_page_fibre.field_options_internet
+    - field.field.node.tarifs_page_fibre.field_options_telephone
+    - field.field.node.tarifs_page_fibre.field_tarif_fibre
+    - field.field.node.tarifs_page_fibre.field_titre_fibre
+    - node.type.tarifs_page_fibre
+  module:
+    - user
+id: node.tarifs_page_fibre.default
+targetEntityType: node
+bundle: tarifs_page_fibre
+mode: default
+content:
+  field_etapes_de_deploiement:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_faq:
+    weight: 108
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_options_bouquet:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_options_fibre:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_options_internet:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_options_telephone:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tarif_fibre:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_titre_fibre:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

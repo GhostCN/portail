@@ -1,0 +1,11 @@
+uuid: 8b692347-ffec-4099-9d53-db798cad7015
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.orange_sargal
+id: node.orange_sargal
+target_entity_type_id: node
+target_bundle: orange_sargal
+default_langcode: site_default
+language_alterable: false

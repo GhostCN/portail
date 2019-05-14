@@ -1,0 +1,17 @@
+uuid: 1ef7d5a3-53e9-4766-802b-cf86134ef7d3
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Pass Internet'
+type: pass_internet
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,19 @@
+uuid: 73201a36-92d7-4130-9140-f8eced33fbac
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_action_keurgui_box
+    - node.type.bloc_etapes_souscription_keurgui
+id: node.bloc_etapes_souscription_keurgui.field_action_keurgui_box
+field_name: field_action_keurgui_box
+entity_type: node
+bundle: bloc_etapes_souscription_keurgui
+label: 'Action (Ex: Je tape #605#)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

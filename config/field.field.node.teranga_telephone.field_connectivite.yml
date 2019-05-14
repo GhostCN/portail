@@ -1,0 +1,19 @@
+uuid: 9a2933e4-196e-4752-a515-9588b67435bc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_connectivite
+    - node.type.teranga_telephone
+id: node.teranga_telephone.field_connectivite
+field_name: field_connectivite
+entity_type: node
+bundle: teranga_telephone
+label: Connectivité
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

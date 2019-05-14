@@ -1,0 +1,17 @@
+uuid: 53e6a26e-60d3-4e72-a980-8d98f4154a5a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Pass Liberty'
+type: pass_liberty
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

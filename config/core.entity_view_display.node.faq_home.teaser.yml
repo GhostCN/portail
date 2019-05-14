@@ -1,0 +1,29 @@
+uuid: 5f55de16-ade0-47ef-8cee-05ac43b0851c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faq_home.body
+    - node.type.faq_home
+  module:
+    - text
+    - user
+id: node.faq_home.teaser
+targetEntityType: node
+bundle: faq_home
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

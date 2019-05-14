@@ -1,0 +1,18 @@
+uuid: 8f3243b9-9e56-4c94-9b14-0b78a122cacb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.sous_le_meme_theme
+id: node.sous_le_meme_theme.title
+field_name: title
+entity_type: node
+bundle: sous_le_meme_theme
+label: 'Titre du thème'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 0a58813c-4e62-4994-8ca5-d5b4f3007ccc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_validite_du_forfait
+    - node.type.forfait_internet_teranga
+id: node.forfait_internet_teranga.field_validite_du_forfait
+field_name: field_validite_du_forfait
+entity_type: node
+bundle: forfait_internet_teranga
+label: 'Validité du Forfait'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

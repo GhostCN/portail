@@ -1,0 +1,11 @@
+uuid: a63aa44d-2899-4ba2-b54e-4b6b41b45e1d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.faq_fibre
+id: node.faq_fibre
+target_entity_type_id: node
+target_bundle: faq_fibre
+default_langcode: site_default
+language_alterable: false

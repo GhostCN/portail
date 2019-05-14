@@ -1,0 +1,22 @@
+uuid: 58cd6cc8-5fee-4fc9-b2e0-ed881ae180d7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.etapes_souscrire
+  module:
+    - text
+id: node.etapes_souscrire.body
+field_name: body
+entity_type: node
+bundle: etapes_souscrire
+label: Description
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

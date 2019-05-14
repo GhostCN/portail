@@ -1,0 +1,6 @@
+identity: portail
+facility: 128
+format: '!uid||!timestamp|!message|!ip|!type|Portail OSN'
+_core:
+  default_config_hash: vdXLRPZRg35PBykBRRXr6RTql5EJR_fUi2kxyZ8c5m0
+langcode: fr

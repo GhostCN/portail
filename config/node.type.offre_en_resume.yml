@@ -1,0 +1,17 @@
+uuid: 989f78e3-f597-4845-8c6f-f41e84fa6595
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Offre en résumé'
+type: offre_en_resume
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

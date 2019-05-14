@@ -1,0 +1,17 @@
+uuid: 517072e8-fd14-449e-88e9-144196ada385
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Bloc forfait'
+type: bloc_forfait
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

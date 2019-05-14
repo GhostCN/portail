@@ -1,0 +1,17 @@
+uuid: 29f50913-5443-4837-b3a5-941b8ccd4cd8
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Cadeau Sargal'
+type: cadeau_sargal
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

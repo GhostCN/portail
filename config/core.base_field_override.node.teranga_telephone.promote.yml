@@ -1,0 +1,22 @@
+uuid: 373dea16-8cfc-42a6-ac40-36f39432d17d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.teranga_telephone
+id: node.teranga_telephone.promote
+field_name: promote
+entity_type: node
+bundle: teranga_telephone
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

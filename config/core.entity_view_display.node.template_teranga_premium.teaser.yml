@@ -1,0 +1,19 @@
+uuid: bcf50e52-9b16-49c7-bde8-c34d466b500a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.template_teranga_premium
+  module:
+    - user
+id: node.template_teranga_premium.teaser
+targetEntityType: node
+bundle: template_teranga_premium
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

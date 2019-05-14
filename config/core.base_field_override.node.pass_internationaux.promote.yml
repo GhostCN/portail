@@ -1,0 +1,22 @@
+uuid: 83c89625-a64f-45b4-99e5-3575809cec1c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_internationaux
+id: node.pass_internationaux.promote
+field_name: promote
+entity_type: node
+bundle: pass_internationaux
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

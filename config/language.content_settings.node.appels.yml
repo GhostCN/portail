@@ -1,0 +1,11 @@
+uuid: d1d43a9f-548c-42a9-abd2-3e5185ded855
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.appels
+id: node.appels
+target_entity_type_id: node
+target_bundle: appels
+default_langcode: site_default
+language_alterable: false

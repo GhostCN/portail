@@ -1,0 +1,19 @@
+uuid: 51fc23db-5271-4c33-9ced-2f7c380164c3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lien_achat
+    - node.type.page_family
+id: node.page_family.field_lien_achat
+field_name: field_lien_achat
+entity_type: node
+bundle: page_family
+label: 'Lien Achat'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

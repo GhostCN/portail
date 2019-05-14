@@ -1,0 +1,104 @@
+uuid: cab577cd-94f2-48b6-b83f-465ef5059ebd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.offre_mobile.field_offre_mobile_appel_offre
+    - field.field.node.offre_mobile.field_offre_mobile_avantage
+    - field.field.node.offre_mobile.field_offre_mobile_description
+    - field.field.node.offre_mobile.field_offre_mobile_details
+    - field.field.node.offre_mobile.field_offre_mobile_illimix
+    - field.field.node.offre_mobile.field_offre_mobile_image
+    - field.field.node.offre_mobile.field_offre_mobile_prix_appels
+    - field.field.node.offre_mobile.field_offre_mobile_prix_sms
+    - field.field.node.offre_mobile.field_offre_mobile_question
+    - field.field.node.offre_mobile.field_offre_mobile_resume
+    - field.field.node.offre_mobile.field_offre_mobile_sms_offre
+    - field.field.node.offre_mobile.field_url
+    - node.type.offre_mobile
+  module:
+    - user
+id: node.offre_mobile.default
+targetEntityType: node
+bundle: offre_mobile
+mode: default
+content:
+  field_offre_mobile_appel_offre:
+    weight: 104
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_offre_mobile_avantage:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_offre_mobile_illimix:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_offre_mobile_prix_appels:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_offre_mobile_prix_sms:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_offre_mobile_question:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_offre_mobile_sms_offre:
+    weight: 105
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_url:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_offre_mobile_description: true
+  field_offre_mobile_details: true
+  field_offre_mobile_image: true
+  field_offre_mobile_resume: true
+  langcode: true

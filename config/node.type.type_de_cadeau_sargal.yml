@@ -1,0 +1,17 @@
+uuid: c54940a0-b0c9-451d-8a4a-f01c6b3d3607
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Type de cadeau sargal'
+type: type_de_cadeau_sargal
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

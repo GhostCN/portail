@@ -1,0 +1,58 @@
+uuid: 4c1409e7-dfc1-40ee-9194-4a4ee6059c00
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.caracteristiques_page_actualites.field_attributs_de_produit
+    - field.field.node.caracteristiques_page_actualites.field_caracteristiques_image
+    - image.style.thumbnail
+    - node.type.caracteristiques_page_actualites
+  module:
+    - inline_entity_form
+    - svg_image
+id: node.caracteristiques_page_actualites.default
+targetEntityType: node
+bundle: caracteristiques_page_actualites
+mode: default
+content:
+  field_attributs_de_produit:
+    weight: 2
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      override_labels: false
+      collapsible: false
+      collapsed: false
+      allow_existing: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  field_caracteristiques_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

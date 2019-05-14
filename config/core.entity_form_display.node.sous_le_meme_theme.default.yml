@@ -1,0 +1,49 @@
+uuid: 3bd46074-d198-46cb-bd3a-3c570de07ad0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.sous_le_meme_theme.field_bouton_theme
+    - field.field.node.sous_le_meme_theme.field_image_theme
+    - image.style.thumbnail
+    - node.type.sous_le_meme_theme
+  module:
+    - svg_image
+id: node.sous_le_meme_theme.default
+targetEntityType: node
+bundle: sous_le_meme_theme
+mode: default
+content:
+  field_bouton_theme:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_theme:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

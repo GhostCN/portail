@@ -1,0 +1,19 @@
+uuid: 2bd19c4c-627c-42c6-9191-9993c1563620
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_forfait_total_positionne
+    - node.type.premium_avec_tel
+id: node.premium_avec_tel.field_forfait_total_positionne
+field_name: field_forfait_total_positionne
+entity_type: node
+bundle: premium_avec_tel
+label: 'Forfait total positionné'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

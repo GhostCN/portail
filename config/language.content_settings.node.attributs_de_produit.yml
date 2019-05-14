@@ -1,0 +1,11 @@
+uuid: be99254d-1451-4028-bcd3-b299790af57c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.attributs_de_produit
+id: node.attributs_de_produit
+target_entity_type_id: node
+target_bundle: attributs_de_produit
+default_langcode: site_default
+language_alterable: false

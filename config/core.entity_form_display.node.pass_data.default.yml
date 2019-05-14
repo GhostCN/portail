@@ -1,0 +1,55 @@
+uuid: 72f9d9be-252f-4507-a42c-dced46aaf42f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pass_data.field_appel
+    - field.field.node.pass_data.field_sms
+    - field.field.node.pass_data.field_valabilite
+    - node.type.pass_data
+id: node.pass_data.default
+targetEntityType: node
+bundle: pass_data
+mode: default
+content:
+  field_appel:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sms:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_valabilite:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

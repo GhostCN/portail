@@ -1,0 +1,21 @@
+uuid: 691b771f-3c07-4dc9-bb65-6512b7f53a83
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_illimix_duree_appel
+field_name: field_illimix_duree_appel
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

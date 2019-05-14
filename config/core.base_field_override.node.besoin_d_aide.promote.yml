@@ -1,0 +1,22 @@
+uuid: 2dbe736f-773d-4405-85c5-b212eed16651
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.besoin_d_aide
+id: node.besoin_d_aide.promote
+field_name: promote
+entity_type: node
+bundle: besoin_d_aide
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

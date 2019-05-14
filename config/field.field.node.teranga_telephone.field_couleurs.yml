@@ -1,0 +1,19 @@
+uuid: 47a243e1-42ea-4ef9-94ff-0d1853734317
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_couleurs
+    - node.type.teranga_telephone
+id: node.teranga_telephone.field_couleurs
+field_name: field_couleurs
+entity_type: node
+bundle: teranga_telephone
+label: Couleurs
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

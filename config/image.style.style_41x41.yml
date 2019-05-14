@@ -1,0 +1,14 @@
+uuid: 19eb72ef-3e92-4430-92f7-dbf197f42523
+langcode: fr
+status: true
+dependencies: {  }
+name: style_41x41
+label: 'style 41x41'
+effects:
+  839b1292-5191-4b0e-8cb1-5af1bc52a144:
+    uuid: 839b1292-5191-4b0e-8cb1-5af1bc52a144
+    id: image_resize
+    weight: 1
+    data:
+      width: 41
+      height: 41

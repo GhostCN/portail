@@ -1,0 +1,21 @@
+uuid: 662c99e4-96be-4bcb-a180-6de9f395ea3b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slide_titre_principal
+    - node.type.slider
+  module:
+    - text
+id: node.slider.field_slide_titre_principal
+field_name: field_slide_titre_principal
+entity_type: node
+bundle: slider
+label: 'Titre principal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,132 @@
+uuid: 197f6dec-7ae3-4c1a-8192-6ceeb2379453
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.compte_a_rebours.field_date_en_ligne
+    - field.field.node.compte_a_rebours.field_date_fin
+    - field.field.node.compte_a_rebours.field_icone
+    - field.field.node.compte_a_rebours.field_lien_du_bouton
+    - field.field.node.compte_a_rebours.field_pourcentage_bonus
+    - field.field.node.compte_a_rebours.field_prix_bonus
+    - field.field.node.compte_a_rebours.field_texte_banniere
+    - image.style.thumbnail
+    - node.type.compte_a_rebours
+  module:
+    - datetime
+    - path
+    - svg_image
+id: node.compte_a_rebours.default
+targetEntityType: node
+bundle: compte_a_rebours
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date_en_ligne:
+    weight: 12
+    settings:
+      date_order: DMY
+      time_type: '24'
+      increment: 1
+    third_party_settings: {  }
+    type: datetime_datelist
+    region: content
+  field_date_fin:
+    type: datetime_datelist
+    weight: 13
+    region: content
+    settings:
+      date_order: DMY
+      time_type: '24'
+      increment: 1
+    third_party_settings: {  }
+  field_icone:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_lien_du_bouton:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pourcentage_bonus:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_prix_bonus:
+    weight: 10
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  field_texte_banniere: true

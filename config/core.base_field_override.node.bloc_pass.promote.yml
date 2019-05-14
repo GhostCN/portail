@@ -1,0 +1,22 @@
+uuid: e427a116-abc9-4609-ba4a-1bfa187b91b4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bloc_pass
+id: node.bloc_pass.promote
+field_name: promote
+entity_type: node
+bundle: bloc_pass
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

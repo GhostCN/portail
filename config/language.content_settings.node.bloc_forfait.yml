@@ -1,0 +1,11 @@
+uuid: e4929bc7-7e9c-4245-af78-c4112349ff94
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bloc_forfait
+id: node.bloc_forfait
+target_entity_type_id: node
+target_bundle: bloc_forfait
+default_langcode: site_default
+language_alterable: false

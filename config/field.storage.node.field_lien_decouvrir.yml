@@ -1,0 +1,21 @@
+uuid: 48bc7eb2-75db-4998-a490-b71fde4f7d12
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_lien_decouvrir
+field_name: field_lien_decouvrir
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

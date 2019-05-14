@@ -1,0 +1,11 @@
+uuid: d0975f50-081d-4029-9149-14a4042631bd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.orange_money
+id: node.orange_money
+target_entity_type_id: node
+target_bundle: orange_money
+default_langcode: site_default
+language_alterable: false

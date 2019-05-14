@@ -1,0 +1,603 @@
+{{ attach_library('orange/global-internet-fixe-css') }}
+{{ attach_library('orange/global-internet-fixe-js') }}
+<div class="contentS">
+
+            <div class="">
+                <ul class="sac-nav-ul mb-0">
+                    <li class="debutlii">
+                        <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+                    </li>
+                    <li class="debutlii">
+                        <a href="#"> <b>Internet ADSL - Fibre</b></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row ">
+                <div class="col-12 frame">
+                    <div class="card border-0">
+                        <div class="frame-desc">
+                            <div class="text-frame">
+                                <div class="title-frame">
+                                    <h1>Nos offres <span class="color-orange">Fibre</span> et ADSL</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <img src="/sites/default/files/images/internet-fixe/background-header-desktop-internet-fixe.jpg" alt="" class="hide-mobil-internet frame-illustration">
+                        <img src="/sites/default/files/images/internet-fixe/background-header-mobile-internet-fixe.jpg" alt="" class="hide-reverse-internet frame-illustration">
+                        <div class="card-body-internet">
+                            <div class="row column-reverse">
+                                <div class="col-lg-8 col-12 border-space">
+                                  <div class="hide-reverse-internet div-btn-test">
+                                    <button class="btn btn-outline-dark btn-block test-b" id="testDow">Tester mon éligibilité <img src="/sites/default/files/images/home-fibre/keyboard-arrow-down.svg" class="ml-2"></button>
+                                    <button class="btn btn-dark btn-block btn-block test-b" id="testUp">Tester mon éligibilité <img src="/sites/default/files/images/home-fibre/keyboard-arrow-up.svg" class="ml-2"></button>
+                                  </div>
+                                    <div class="test-card-body-internet">
+                                      <div class="row">
+                                        <div class="col-lg-12">
+                                          <div class="title-test-internet">
+                                            <h3>Tester mon éligibilité à la Fibre</h3>
+                                          </div>
+
+                                          <div class="sub-title-test-internet hide-mobil-internet">
+                                            Testez votre éligibilité avec votre numéro de téléphone ou vos coordonnées GPS pour découvrir nos offres Fibre.                                           </div>
+                                        </div>
+                                      </div>
+                                      <form method="post" action="{{ path('test-eligibbilte') }}">
+                                        <div class="spaceb-30"></div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12">
+                                                <div class="mt-select">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <select class="custom-select select-mat border-1" name="type_client" id="inputGroupSelect01" required="required">
+                                                                <option selected="">Type de client <img src="/sites/default/files/images/internet-fixe/asterix.svg" class="img-asterix-internet"></option>
+                                                              <option value="b2c">Particulier</option>
+                                                              <option value="pro">Pro PME-PMI</option>
+                                                              <option value="b2b">Grande Entreprise</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12">
+                                                <div class="">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="space-input-resp"></div>
+                                                            <div class="mat-div" data-toggle="modal" data-target="#exampleModalCenter">
+                                                                <div for="first-name" class="mat-label">Mes coordonnées : <img src="/{{directory}}/icones/internet-fixe/asterix.svg" class="img-asterix-internet"></div>
+                                                                <input type="text" pattern="^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$" class="mat-input" id="first-name" name="code_gps" required="required">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="space60"></div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12">
+                                                <div class="">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="mat-div">
+                                                                <div for="first-name" class="mat-label">N° téléphone fixe : <img src="/{{directory}}/icones/internet-fixe/asterix.svg" class="img-asterix-internet"></div>
+                                                                <input class="mat-input" name="num_client" id="first-name" type="number">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          <input type="hidden" name="test_eligibilite" value="ok">
+                                            <div class="col-lg-6 col-12 button-test">
+                                                <button type="submit" class="btn btn-primary btn-block">Tester</button>
+                                            </div>
+                                        </div>
+                                      </form>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-12">
+                                    <div class="desc-card-text-internet">
+                                        <div class="">
+                                        {% set info = infos|first %}
+                                            <h4 class="color-orange title-desc-test">
+                                                <b>{{info.title}}</b>
+                                            </h4>
+                                            <div class="desc-offre color-grey">
+                                                {{info.description|raw }}
+                                            </div>
+                                            <div class="mb-3"></div>
+                                            <div class="card-text prix-offre">
+                                                <b>{{info.prix}}</b>/{{info.duree}}
+                                            </div>
+                                            <p class="mb-3"></p>
+                                            <div class="mb-2"></div>
+                                            <div>
+                                            {% for option in info.options %}
+                                                <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                    <input class="custom-control-input" checked="" type="checkbox">
+                                                    <label class="custom-control-label label-checkbox">{{option}}</label>
+                                                </div>
+                                            {% endfor %}
+                                            </div>
+
+                                            <div class="mb-4"></div>
+
+                                            <a onclick="dataLayer.push({'event':'click','eventCategory':'Internet et Fixe', 'eventAction':'button_click','eventLabel':'{{ info.title }}'});" href="{{ path('details-offre-home', {'url':info.url}) }}" class="btn btn-primary btn-block">En savoir plus</a>
+                                        {#% endfor %#}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space50"></div>
+
+            <div class="title-block ">
+                <h2>Nos offres internet à la maison.</h2>
+            </div>
+
+            <div class="space20"></div>
+
+            <!-- Format web ici -->
+            <div class="row hide-mobil-internet">
+              {% for info in infos|slice(1, 4) %}
+                <div class="col-lg-3 col-3">
+                    <div class="card border-0 offre-hover-action bg-white border-light">
+                        <a href="{{ path('details-offre-home', {'url':info.url}) }}"><img class="card-img-top card-imgs" src="{{ info.image|image_style('style_280x192') }}" alt="Card image cap"></a>
+                        <div class="card-body">
+                            <div class="card-title">
+                                <a onclick="dataLayer.push({'event':'click','eventCategory':'Internet et Fixe', 'eventAction':'button_click','eventLabel':'{{ info.title }}'});" href="{{ path('details-offre-home', {'url':info.url}) }}"><h4 class="color-orange">
+                                    <b>{{ info.title }}</b>
+                                  </h4></a>
+                                <div class="desc-offre color-grey">
+                                  {{info.description|raw }}
+                                </div>
+
+                            </div>
+                            <div class="card-text prix-offre">
+                                <b>{{info.prix}}</b>/{{info.duree}}
+                            </div>
+                            <p class="mb-3"></p>
+                            {% for option in info.options %}
+                              <div>
+                                  <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                      <input class="custom-control-input" checked="" type="checkbox">
+                                      <label class="custom-control-label label-checkbox">{{ option }}</label>
+                                  </div>
+                              </div>
+                              <div class="mb-2"></div>
+                            {% endfor %}
+                            <!--
+                            <div class="mb-2"></div>
+
+                            <a href="#" class="btn btn-primary btn-block disabled">Souscrire</a>
+                            -->
+                            <hr>
+                            <a onclick="dataLayer.push({'event':'click','eventCategory':'Internet et Fixe', 'eventAction':'button_click','eventLabel':'{{ info.title }}'});" href="{{ path('details-offre-home', {'url':info.url}) }}" class="link-savoir-plus"><b>En savoir plus <i class="fa fa-angle-right"></i></b></a>
+                        </div>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+            <!-- End format web -->
+
+            <!-- Format mobile ici -->
+            <div class="hide-reverse-internet ">
+                    <div class="row" style="overflow: hidden">
+                        <div class="col-12">
+                            <div class="swiper-container-offre-internet swiper-container-horizontal">
+                                <div class="swiper-wrapper" style="transition-duration: 0ms;">
+                                  {% for info in infos|slice(1, 4) %}
+                                    <div class="swiper-slide" id="slide{{ loop.index }}" style="margin-right: 10px;text-align: left;">
+                                        <div class="card border-0 offre-hover-action bg-white border-light">
+                                            <a href="{{ path('details-offre-home', {'url':info.url}) }}"><img class="card-img-top" src="{{ info.image|image_style('style_280x192') }}" alt="Card image cap"></a>
+                                            <div class="card-body">
+                                                <div class="card-title">
+                                                  <a onclick="dataLayer.push({'event':'click','eventCategory':'Internet et Fixe', 'eventAction':'button_click','eventLabel':'{{ info.title }}'});" href="{{ path('details-offre-home', {'url':info.url}) }}">
+                                                      <h4 class="color-orange">
+                                                          <b>{{ info.title }}</b>
+                                                      </h4>
+                                                      <div class="desc-offre color-grey">
+                                                          {{ info.descriptio|raw }}
+                                                      </div>
+                                                  </a>
+
+                                                </div>
+                                                <div class="card-text prix-offre">
+                                                    <b>{{ info.prix }}</b>/{{ info.duree }}
+                                                </div>
+                                                <p class="mb-3"></p>
+                                                {% for option in info.options %}
+                                                  <div>
+                                                      <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                                                          <input class="custom-control-input" checked="" type="checkbox">
+                                                          <label class="custom-control-label label-checkbox">{{ option }}</label>
+                                                      </div>
+                                                  </div>
+                                                  <div class="mb-2"></div>
+                                                {% endfor %}
+                                                <!--
+                                                <div class="mb-2"></div>
+
+                                                <a href="#" class="btn btn-primary btn-block disabled">Souscrire</a>
+                                                -->
+                                                <hr>
+                                                <a onclick="dataLayer.push({'event':'click','eventCategory':'Internet et Fixe', 'eventAction':'button_click','eventLabel':'{{ info.title }}'});" href="{{ path('details-offre-home', {'url':info.url}) }}" class="link-savoir-plus"><b>En savoir plus <i class="fa fa-angle-right"></i></b></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  {% endfor %}
+                                </div>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <!--  End format mobile -->
+
+    {#<div class="space50 hide-mobil-internet"></div>
+
+    <div class="title-block ">
+        <h2 class="hide-mobil-internet">Besoin d’aide pour choisir une offre ?</h2>
+        <h2 class="hide-reverse-internet">Besoin d'aide ?</h2>
+    </div>
+
+    <div class="row ">
+        <div class="col-lg-4 col-12 aide-offre-resp-mb">
+            <div class="bg-green aide-internet">
+                <img src="/sites/default/files/images/internet-fixe/Lancer_le_sumilateur-01.svg" style="width: 118px;" class="img-aide-internet">
+                <div class="desc-aide-internet">
+                    <a href="http://www.tannsajamono.sn/" target="_blank" class="text-white" data-toggle="modal" data-target="#exampleModalCenter-2"><b class="mr-2">Lancer le simulateur</b><img src="/{{directory}}/icones/internet-fixe/keyboard-arrow-right.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12 aide-offre-resp-mb">
+            <div class="bg-purple aide-internet">
+                <img src="/sites/default/files/images/internet-fixe/Parler_a_un_Conseiller.svg" style="width: 118px;" class="img-aide-internet">
+                <div class="desc-aide-internet">
+                   <a href="https://assistance.orange.sn/" class="text-white" target="_blank"> <b class="mr-2">Parler à un conseiller</b><img src="/{{directory}}/icones/internet-fixe/keyboard-arrow-right.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-12">
+            <div class="bg-blueS aide-internet">
+                <img src="/sites/default/files/images/internet-fixe/Trouver_une_Agence-01.svg" style="width: 118px;" class="img-aide-internet">
+                <div class="desc-aide-internet">
+                    <b class="mr-2">Trouver une agence</b><img src="/{{directory}}/icones/internet-fixe/keyboard-arrow-right.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>#}
+
+            <div class="space50"></div>
+
+            <div class="title-block ">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-8 col-11">
+                        <a href="{{ path('tv-orange') }}">
+                          <h2>Découvrez notre bouquet TV</h2>
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-sm-4 col-1 text-right">
+                        <span class="hide-reverse-internet"><a href=""><i class="fa fa-angle-right"></i></a> </span>
+                        <div class="text-right hide-mobil-internet"><a onclick="dataLayer.push({'event':'click','eventCategory':'TV Orange', 'eventAction':'button_click','eventLabel':'TV Orange'});" href="{{ path('tv-orange') }}"><button class="btn btn-outline-dark">Voir tout</button></a> </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-12 bouquet-tv">
+                    <img src="{{file_url(images_bouquet.0.image_principale)}}" alt="" class="bouquet-illustration hide-mobil-internet">
+                    <img src="{{file_url(images_bouquet.0.image_principale)}}" alt="" class="bouquet-illustration  hide-reverse-internet">
+                </div>
+            </div>
+
+            <div class="space20"></div>
+            <div class="row hide-mobil-internet">
+                <div class="col-2">
+                    <div class="card border-0 zoom-part">
+                        <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet1)}}" alt="Card image cap">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card border-0 zoom-part">
+                        <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet2)}}" alt="Card image cap">
+                    </div>
+                </div><div class="col-2">
+                    <div class="card border-0 zoom-part">
+                        <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet3)}}" alt="Card image cap">
+                    </div>
+                </div><div class="col-2">
+                    <div class="card border-0 zoom-part">
+                        <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet4)}}" alt="Card image cap">
+                    </div>
+                </div><div class="col-2">
+                    <div class="card border-0 zoom-part">
+                        <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet5)}}" alt="Card image cap">
+                    </div>
+                </div><div class="col-2">
+                    <div class="card border-0 zoom-part">
+                        <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet6)}}" alt="Card image cap">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Format mobile ici -->
+
+            <div class="hide-reverse-internet ">
+                <div class="row" style="overflow: hidden">
+                    <div class="col-12">
+                        <div class="swiper-container-tv swiper-container-horizontal">
+                            <div class="swiper-wrapper" style="transition-duration: 0ms;">
+                                <div class="swiper-slide" id="slide1">
+                                    <a href="#">
+                                        <div class="card border-0 zoom-part">
+                                            <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet1)}}" alt="Card image cap">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" id="slide2">
+                                    <a href="#">
+                                        <div class="card border-0 zoom-part">
+                                            <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet2)}}" alt="Card image cap">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" id="slide3">
+                                    <a href="#">
+                                        <div class="card border-0 zoom-part">
+                                            <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet3)}}" alt="Card image cap">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" id="slide4">
+                                    <a href="#">
+                                        <div class="card border-0 zoom-part">
+                                            <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet4)}}" alt="Card image cap">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" id="slide5">
+                                    <a href="#">
+                                        <div class="card border-0 zoom-part">
+                                            <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet5)}}" alt="Card image cap">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide" id="slide6">
+                                    <a href="#">
+                                        <div class="card border-0 zoom-part">
+                                            <img class="card-img-top img-TV" src="{{file_url(images_bouquet.0.image_bouquet6)}}" alt="Card image cap">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End format mobile-->
+
+            <div class="space50"></div>
+
+            <div class="hide-mobil-internet">
+                <div class="d-flex flex-row connexion">
+                    <div>
+                        <img class="card-img-top" src="/{{directory}}/icones/internet-fixe/alcatel-one-touch.png" style="width: 380px; height: 225px;">
+                    </div>
+                    <div class="container mx-3">
+                        <div class="space50 sp"></div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="body-urgente">
+                                    <b>Besoin d’une connexion en urgence ?</b>
+                                </div>
+                                <div class="desc-urgente">Rester connecté où que vous soyez
+                                    grâce à nos <span class="color-orange"><b>modems mobile Domino 4G</b></span>
+                                </div>
+                                <button class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModalCenter-2">En savoir plus</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="space50"></div>
+            <div class="title-block ">
+                <b>Vous êtes déjà client ?</b>
+            </div>
+            <div class="space20"></div>
+
+            <div class="row acc">
+            {% set valeur = questions|length %}
+                <div class="col-12 bg-white mrow">
+                    <div class="accordion" id="accordionExample">
+                    {% set key = 1 %}
+                    {% for qst in questions %}
+                        <div class="card backg {% if valeur == key %}border-0{% endif %}" {% if key == 1 %} style="border-top: none;"{% endif %} >
+                            <div class="card-header my-2" id="heading{{key}}">
+                                <h5 class="mb-0">
+                                    <button class="btn-accordeon btn btn-link collapsed backg" type="button" data-toggle="collapse" data-target="#collapse{{key}}S" aria-expanded="{% if key == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{key}}">
+                                            {{qst.question}}
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapse{{key}}S" class="collapse {% if key == 1 %}show{% endif %}" aria-labelledby="heading{{key}}" data-parent="#accordionExample">
+                            <div class="card-body">
+                                 {{qst.reponse|raw}}
+                            </div>
+                            </div>
+                        </div>
+                    {% set key= key + 1 %}
+                    {% endfor %}
+                    </div>
+                </div>
+
+            <div class="space50"></div>
+        </div>
+</div>
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+    <div class="contentS d-none d-md-block d-sm-block">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sous-bloc-footer col-sm-4">
+                <div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                        </div>
+                        <div class="col-sm-10">
+                            <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <p style=" text-align: justify;">
+                                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                            </p>
+                        </div>
+                        <div class="col-lg-2"></div>
+                        <div class="col-sm-10">
+                            <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-block d-md-none d-sm-none">
+
+        <div class="col-sm-12">
+            <p class="pt-1"></p>
+            <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+        </div>
+        <div class="hide-reverse">
+            <div class="row" style="overflow: hidden">
+                <div class="col-12">
+                    <div class="swiper-container-footer">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="slide1">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="slide2">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="slide3">
+                                <div>
+                                    <div class="row">
+                                        <div class="text-left col-sm-2">
+                                            <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                                        </div>
+                                        <div class="col-sm-8 py-2">
+                                            <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-8">
+                                            <p class="text-block-jaune" style=" text-align: justify;">
+                                                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                                            </p>
+                                            </p>
+                                        </div>
+                                        <div class="col-lg-2"></div>
+                                        <div class="col-sm-10 text-left">
+                                            <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ {% include directory ~ '/templates/includes/googlemap-modal.html.twig' %}

@@ -1,0 +1,11 @@
+uuid: efd79580-879d-4fb7-a413-c2a647a18939
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.compte_a_rebours
+id: node.compte_a_rebours
+target_entity_type_id: node
+target_bundle: compte_a_rebours
+default_langcode: site_default
+language_alterable: false

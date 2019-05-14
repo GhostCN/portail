@@ -1,0 +1,29 @@
+uuid: 9d88654c-839a-4736-91af-80abeff3bfd8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faq_orange_sargal.body
+    - node.type.faq_orange_sargal
+  module:
+    - text
+    - user
+id: node.faq_orange_sargal.teaser
+targetEntityType: node
+bundle: faq_orange_sargal
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 0751bfb4-367e-441a-874f-d6cb151d564e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.slider_tv
+  module:
+    - user
+id: node.slider_tv.teaser
+targetEntityType: node
+bundle: slider_tv
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_c: true
+  field_image_slider: true
+  langcode: true

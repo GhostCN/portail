@@ -1,0 +1,99 @@
+uuid: 2f939d65-07ba-44f0-8467-029d942e4abb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.premium_avec_tel.field_autre
+    - field.field.node.premium_avec_tel.field_bonus_vers_orange
+    - field.field.node.premium_avec_tel.field_forfait_24_mois
+    - field.field.node.premium_avec_tel.field_forfait_total_positionne
+    - field.field.node.premium_avec_tel.field_internet_mobile
+    - field.field.node.premium_avec_tel.field_ndeg_illimite_vers_orange
+    - field.field.node.premium_avec_tel.field_sms_orange
+    - field.field.node.premium_avec_tel.field_tarif_ht
+    - field.field.node.premium_avec_tel.field_tarif_ttc
+    - node.type.premium_avec_tel
+  module:
+    - user
+id: node.premium_avec_tel.default
+targetEntityType: node
+bundle: premium_avec_tel
+mode: default
+content:
+  field_autre:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_bonus_vers_orange:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_forfait_24_mois:
+    weight: 8
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_forfait_total_positionne:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_internet_mobile:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ndeg_illimite_vers_orange:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sms_orange:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tarif_ht:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tarif_ttc:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true
+  links: true

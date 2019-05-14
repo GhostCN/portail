@@ -1,0 +1,19 @@
+uuid: 0dbf7d6d-d7a0-4875-904c-80a891f594dc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_volume_pass
+    - node.type.pass_internet
+id: node.pass_internet.field_volume_pass
+field_name: field_volume_pass
+entity_type: node
+bundle: pass_internet
+label: Volume
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

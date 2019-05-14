@@ -1,0 +1,19 @@
+uuid: 5d82b9c7-e082-4784-8ee1-fbea0bf6f9db
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_appel
+    - node.type.pass_data
+id: node.pass_data.field_appel
+field_name: field_appel
+entity_type: node
+bundle: pass_data
+label: 'Appel ( Ex : 5 min )'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

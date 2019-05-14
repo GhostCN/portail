@@ -1,0 +1,28 @@
+uuid: cb108076-2354-482a-88ba-b4a11267ab66
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq
+    - node.type.faq_fibre
+    - node.type.tarifs_page_fibre
+id: node.tarifs_page_fibre.field_faq
+field_name: field_faq
+entity_type: node
+bundle: tarifs_page_fibre
+label: FAQ
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      faq_fibre: faq_fibre
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: d1a2d948-75d8-4a82-aef1-e06b996b196d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autres_prix_des_sms
+    - node.type.pass_liberty
+    - node.type.template_teranga_liberty
+id: node.template_teranga_liberty.field_autres_prix_des_sms
+field_name: field_autres_prix_des_sms
+entity_type: node
+bundle: template_teranga_liberty
+label: 'Autres Prix Des SMS'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      pass_liberty: pass_liberty
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

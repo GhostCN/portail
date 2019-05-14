@@ -1,0 +1,11 @@
+uuid: bd7750a6-b026-43d5-9222-596e7ac1a628
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bouquet_tv
+id: node.bouquet_tv
+target_entity_type_id: node
+target_bundle: bouquet_tv
+default_langcode: site_default
+language_alterable: false

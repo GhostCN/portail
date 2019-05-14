@@ -1,0 +1,19 @@
+uuid: 6b8898ef-a86a-42a3-9df4-ca11d8e4a203
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prix_appels
+    - node.type.page_family
+id: node.page_family.field_prix_appels
+field_name: field_prix_appels
+entity_type: node
+bundle: page_family
+label: 'Prix des appels'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

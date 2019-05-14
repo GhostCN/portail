@@ -1,0 +1,19 @@
+uuid: e0776732-3ca5-4f6c-ba88-6751750aaaad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.enregistrement
+  module:
+    - user
+id: node.enregistrement.teaser
+targetEntityType: node
+bundle: enregistrement
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

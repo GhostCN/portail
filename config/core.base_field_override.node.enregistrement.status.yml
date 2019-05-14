@@ -1,0 +1,22 @@
+uuid: 15eefd59-f409-4e77-82d7-eca1382fe7f4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.enregistrement
+id: node.enregistrement.status
+field_name: status
+entity_type: node
+bundle: enregistrement
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

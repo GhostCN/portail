@@ -1,0 +1,17 @@
+uuid: 191a8267-b451-4b1f-92ec-0a021a55aa92
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Etapes déploiement'
+type: etapes_deploiement
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

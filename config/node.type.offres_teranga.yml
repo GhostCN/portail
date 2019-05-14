@@ -1,0 +1,17 @@
+uuid: 0506dc57-60b5-49e0-b2c8-c1d018e819af
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Offres Téranga'
+type: offres_teranga
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

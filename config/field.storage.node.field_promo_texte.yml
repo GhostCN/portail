@@ -1,0 +1,21 @@
+uuid: 068077e0-8d8f-4156-a6c9-6f1fc4ad4ed3
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_promo_texte
+field_name: field_promo_texte
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

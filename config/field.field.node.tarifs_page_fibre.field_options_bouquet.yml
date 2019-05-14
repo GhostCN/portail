@@ -1,0 +1,19 @@
+uuid: fba90bfe-4c48-45e4-b53a-b58fae984ad7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_options_bouquet
+    - node.type.tarifs_page_fibre
+id: node.tarifs_page_fibre.field_options_bouquet
+field_name: field_options_bouquet
+entity_type: node
+bundle: tarifs_page_fibre
+label: 'Options Bouquet TV Inclus offre'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

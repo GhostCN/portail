@@ -1,0 +1,27 @@
+uuid: 3621d0a2-08d0-408f-a68d-a86aec4d574b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.vous_etes_deja_client.body
+    - node.type.vous_etes_deja_client
+  module:
+    - text
+    - user
+id: node.vous_etes_deja_client.default
+targetEntityType: node
+bundle: vous_etes_deja_client
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

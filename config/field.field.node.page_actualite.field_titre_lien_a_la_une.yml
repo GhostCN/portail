@@ -1,0 +1,19 @@
+uuid: 3137f816-fcf3-4924-9a27-8d169d1a6f10
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titre_lien_a_la_une
+    - node.type.page_actualite
+id: node.page_actualite.field_titre_lien_a_la_une
+field_name: field_titre_lien_a_la_une
+entity_type: node
+bundle: page_actualite
+label: 'Titre lien à la une'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,36 @@
+uuid: f722d5fb-d4ce-4f4a-b294-5cc67308efdf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pass_par_pays_de.field_pass_data
+    - field.field.node.pass_par_pays_de.field_pass_voix
+    - node.type.pass_par_pays_de
+  module:
+    - user
+id: node.pass_par_pays_de.default
+targetEntityType: node
+bundle: pass_par_pays_de
+mode: default
+content:
+  field_pass_data:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_pass_voix:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

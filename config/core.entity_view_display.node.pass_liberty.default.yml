@@ -1,0 +1,27 @@
+uuid: f33ede96-9418-4b08-9b46-093271ddf168
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pass_liberty.field_tarification
+    - node.type.pass_liberty
+  module:
+    - user
+id: node.pass_liberty.default
+targetEntityType: node
+bundle: pass_liberty
+mode: default
+content:
+  field_tarification:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

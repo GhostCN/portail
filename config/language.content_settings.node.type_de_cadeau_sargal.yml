@@ -1,0 +1,11 @@
+uuid: 2113aef5-795f-495f-a502-3c030463bed9
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.type_de_cadeau_sargal
+id: node.type_de_cadeau_sargal
+target_entity_type_id: node
+target_bundle: type_de_cadeau_sargal
+default_langcode: site_default
+language_alterable: false

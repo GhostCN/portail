@@ -1,0 +1,21 @@
+uuid: 846f37d8-cb18-4185-a567-8f1ef4dbc398
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.souscrire_offre_family
+  module:
+    - user
+id: node.souscrire_offre_family.teaser
+targetEntityType: node
+bundle: souscrire_offre_family
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_description_etapes: true
+  field_etape_souscription: true
+  langcode: true

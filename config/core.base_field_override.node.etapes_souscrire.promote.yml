@@ -1,0 +1,22 @@
+uuid: 40acff8b-41a0-4e4c-8608-b3d925ac6e84
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.etapes_souscrire
+id: node.etapes_souscrire.promote
+field_name: promote
+entity_type: node
+bundle: etapes_souscrire
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

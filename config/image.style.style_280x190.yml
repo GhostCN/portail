@@ -1,0 +1,15 @@
+uuid: f93b1e16-a383-4411-b46a-b7c30af9d0d2
+langcode: fr
+status: true
+dependencies: {  }
+name: style_280x190
+label: 'style 280x190'
+effects:
+  664e6a3e-caf1-4f11-ad8c-4eb885360d08:
+    uuid: 664e6a3e-caf1-4f11-ad8c-4eb885360d08
+    id: image_resize
+    weight: 2
+    data:
+      width: 280
+      height: 190
+pipeline: __default__

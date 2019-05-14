@@ -1,0 +1,19 @@
+uuid: 0abc15e7-b135-41a5-90a0-08a5c94cfed1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_type_phone
+    - node.type.page_family
+id: node.page_family.field_type_phone
+field_name: field_type_phone
+entity_type: node
+bundle: page_family
+label: 'Type Phone'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

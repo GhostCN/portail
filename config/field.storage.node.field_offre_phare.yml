@@ -1,0 +1,18 @@
+uuid: a1f62943-bb27-479d-adc1-1c6fdd21f2f4
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_offre_phare
+field_name: field_offre_phare
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

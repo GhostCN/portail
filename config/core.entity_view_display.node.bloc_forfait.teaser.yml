@@ -1,0 +1,23 @@
+uuid: fb749b90-1978-427e-afca-824e6a6ae92f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.bloc_forfait
+  module:
+    - user
+id: node.bloc_forfait.teaser
+targetEntityType: node
+bundle: bloc_forfait
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_credit_telephonique: true
+  field_frais_acces: true
+  field_lien: true
+  field_tarif_forfait: true
+  langcode: true

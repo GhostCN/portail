@@ -1,0 +1,21 @@
+uuid: 1330902a-0e83-458b-918c-675413687e3b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_etapes
+    - node.type.souscrire_offre_family
+  module:
+    - text
+id: node.souscrire_offre_family.field_description_etapes
+field_name: field_description_etapes
+entity_type: node
+bundle: souscrire_offre_family
+label: 'Déscription étapes'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

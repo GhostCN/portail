@@ -1,0 +1,22 @@
+uuid: 7189ee18-1335-4cf0-ab47-2e13684fcf1c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.avis_experts
+  module:
+    - text
+id: node.avis_experts.body
+field_name: body
+entity_type: node
+bundle: avis_experts
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

@@ -1,0 +1,21 @@
+uuid: a45f3ea5-c0c1-4066-9301-d0980b803f27
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_frais_acces
+field_name: field_frais_acces
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

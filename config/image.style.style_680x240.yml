@@ -1,0 +1,15 @@
+uuid: fa3ee7ca-8a8b-47f8-8e7f-e799f0b8149b
+langcode: fr
+status: true
+dependencies: {  }
+name: style_680x240
+label: 'style 680x240'
+effects:
+  809ddcf8-dbfd-4427-8765-bc895b00d1a0:
+    uuid: 809ddcf8-dbfd-4427-8765-bc895b00d1a0
+    id: image_scale
+    weight: 2
+    data:
+      width: 1740
+      height: 720
+      upscale: true

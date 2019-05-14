@@ -1,0 +1,28 @@
+uuid: b893a30e-2982-444b-a067-ff6f46e266da
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq_
+    - node.type.faq_keurgui_box
+    - node.type.page_keurgui_box
+id: node.page_keurgui_box.field_faq_
+field_name: field_faq_
+entity_type: node
+bundle: page_keurgui_box
+label: 'FAQ Keurgui Box'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      faq_keurgui_box: faq_keurgui_box
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

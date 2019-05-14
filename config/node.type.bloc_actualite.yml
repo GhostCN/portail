@@ -1,0 +1,17 @@
+uuid: a06f619d-6a06-43b4-8730-2960bd335514
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Bloc actualité'
+type: bloc_actualite
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,19 @@
+uuid: cf34485e-2ed8-4793-88c7-2a20c35f7842
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titre_bloc_actualite
+    - node.type.page_actualite
+id: node.page_actualite.field_titre_bloc_actualite
+field_name: field_titre_bloc_actualite
+entity_type: node
+bundle: page_actualite
+label: 'Titre Bloc Actualité'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

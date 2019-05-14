@@ -1,0 +1,18 @@
+uuid: 8808b74c-2181-4f34-8d90-ed1ed70ac16a
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.etapes_deploiement
+id: node.etapes_deploiement.title
+field_name: title
+entity_type: node
+bundle: etapes_deploiement
+label: Etape
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

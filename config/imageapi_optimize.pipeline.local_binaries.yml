@@ -1,0 +1,26 @@
+uuid: 4ffc9f40-58d4-4aed-a21b-1fa3606fceee
+langcode: fr
+status: true
+dependencies:
+  module:
+    - imageapi_optimize_binaries
+_core:
+  default_config_hash: GyNzpL_ngI4SI7qB5CWAEDVMoifRrvMHRyFWqYxwees
+name: local_binaries
+label: 'JpegOptim & PngQuant'
+processors:
+  2c1a727a-d7d5-4355-842a-519554d46647:
+    uuid: 2c1a727a-d7d5-4355-842a-519554d46647
+    id: jpegoptim
+    weight: -9
+    data:
+      manual_executable_path: /usr/local/bin/jpegoptim
+      progressive: true
+      quality: 70
+      size: null
+  7645ce49-49f7-4a53-a781-4c7929e7d11c:
+    uuid: 7645ce49-49f7-4a53-a781-4c7929e7d11c
+    id: pngquant
+    weight: -10
+    data:
+      manual_executable_path: /usr/local/bin/pngquant

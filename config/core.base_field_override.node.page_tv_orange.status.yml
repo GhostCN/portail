@@ -1,0 +1,22 @@
+uuid: 44f7e630-d931-48ac-96cf-0ef25a591201
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_tv_orange
+id: node.page_tv_orange.status
+field_name: status
+entity_type: node
+bundle: page_tv_orange
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

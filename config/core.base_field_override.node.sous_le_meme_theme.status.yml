@@ -1,0 +1,22 @@
+uuid: 7eca1e87-10da-4adf-80a9-1da817341bfc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.sous_le_meme_theme
+id: node.sous_le_meme_theme.status
+field_name: status
+entity_type: node
+bundle: sous_le_meme_theme
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

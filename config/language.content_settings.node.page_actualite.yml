@@ -1,0 +1,11 @@
+uuid: 0531fac7-689a-424a-b208-26f1cbacd080
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_actualite
+id: node.page_actualite
+target_entity_type_id: node
+target_bundle: page_actualite
+default_langcode: site_default
+language_alterable: false

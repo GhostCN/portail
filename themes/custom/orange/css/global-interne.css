@@ -1,0 +1,59 @@
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/HelvNeue55_W1G.woff2") format("woff2"), url("../fonts/HelvNeue55_W1G.woff") format("woff");
+}
+
+@font-face {
+    font-family: HelvNeueOrange;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/HelvNeue75_W1G.woff2") format("woff2"), url("../fonts/HelvNeue75_W1G.woff") format("woff");
+}
+
+.modale-widt {
+    width: 580px !important;
+    margin-top: 0px !important;
+}
+
+.modal-con-2 {
+    border-left: 3px solid #fb7900 !important;
+}
+
+.Valable-24h-pour-les-pup {
+    color: #666666;
+    letter-spacing: -0.1px;
+    font-size: 14px;
+}
+
+.disable-btn {
+    color: #fff;
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.disable-btn:hover {
+    color: none !important;
+    cursor: not-allowed !important;
+    background-color: #ccc;
+    border: none;
+    color: white;
+}
+
+
+@media screen and (max-width: 500px){
+  .modale-widt{
+    width: unset !important;
+  }
+}
+
+/*a:hover {
+    color: #a8a6a6;
+    text-decoration: none;
+}
+
+a:focus {
+    color: #a8a6a6;
+    text-decoration: none;
+}*/

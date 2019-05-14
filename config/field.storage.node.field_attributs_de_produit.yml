@@ -1,0 +1,19 @@
+uuid: 17f63cf4-109e-43e0-8f55-5922f2a9ebe6
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_attributs_de_produit
+field_name: field_attributs_de_produit
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 4
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 324c361e-b54b-48a0-abd4-46fcdff78581
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.bloc_etapes_souscription_keurgui
+id: node.bloc_etapes_souscription_keurgui
+target_entity_type_id: node
+target_bundle: bloc_etapes_souscription_keurgui
+default_langcode: site_default
+language_alterable: false

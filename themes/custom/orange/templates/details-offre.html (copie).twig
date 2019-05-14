@@ -1,0 +1,953 @@
+{{ attach_library('orange/global-jamono-css') }}
+<div class="contentS">
+  <section class="">
+    <ul class="sac-nav-ul mb-0">
+      <li class="debutlii">
+        <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" >
+      </li>
+      <li class="debutlii d-none d-sm-block">
+        <a href="{{ path('offres-mobile') }}">Nos offres mobiles</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" >
+      </li>
+      <li class="debutlii dropdown">
+        <a class="nav-link dropdown-toggle dropb " data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><b>{{ title }}</b></a>
+        <div class="dropdown-menu dropdow-menu-prinicepale">
+            {% for offre in offres %}
+              {% if offre.title | lower == 'family' %}
+                <a class="dropdown-item" href="{{ path('offre-family') }}">{{ offre.title }}</a>
+              {% elseif offre.title | lower == 'premium' %}
+                <!--a class="dropdown-item" href="#">{{ offre.title }}</a-->
+              {% elseif offre.title | lower == 'international' %}
+                <a class="dropdown-item" href="{{ path('hub-pass-internationaux') }}">{{ offre.title }}</a>
+              {% else %}
+                <a class="dropdown-item" href="{{ path('details-offre-mobile',{'id': offre.url}) }}">{{ offre.title }}</a>
+              {% endif %}
+            {% endfor %}
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="Group-11 d-none  d-sm-none d-md-none d-lg-block img-height">
+  {% if title == "Jamono Max" %}
+    <img class="imgSmall Group-11" src="/sites/default/files/icones/Bandeau_Page_Jamono_Max_desktop_Low-min.jpg" alt="">
+  {% elseif title == "Jamono New S'Cool" %}
+    <img class="imgSmall Group-11" src="/sites/default/files/icones/Bandeau_Page_Jamono_New_Scool_desktop_Low-min.jpg" alt="">
+  {% elseif title == "Jamono Allo" %}
+    <img class="imgSmall Group-11" src="/sites/default/files/icones/Bandeau_Page_Jamono_Allo_desktop_Low-min.jpg" alt="">
+  {% else %}
+    <img class="imgSmall Group-11" src="/sites/default/files/icones/background-header-jamono-new-scool@2x.png" alt="">
+  {% endif %}
+</div>
+<!-- pour mobile -->
+<div class="Group-11 d-lg-none ">
+    {% if title == "Jamono Max" %}
+  <img class="imgSmall Group-11" src="/sites/default/files/icones/Bandeau_Page_Jamono_Max_Mobile.jpg" alt="">
+    {% elseif title == "Jamono New S'Cool" %}
+  <img class="imgSmall Group-11" src="/sites/default/files/icones/Bandeau_Page_Jamono_New_Scool_Mobile.jpg" alt="">
+    {% elseif title == "Jamono Allo" %}
+  <img class="imgSmall Group-11" src="/sites/default/files/icones/Bandeau_Page_Jamono_Allo_Mobile.jpg" alt="">
+    {% else %}
+  <img class="imgSmall Group-11" src="/sites/default/files/icones/a@2x.png" alt="">
+  {% endif %}
+</div>
+<!-- fin mobile -->
+<div class="titreJamono contentS">
+  <h1 id="jamono">{{ title1 }}</br>
+  <span id="newScool">{{ title2 }}</span></h1>
+</div>
+<div class="contentS deuxcont" id="appel" style="padding: 0 !important;">
+  <section class="sec secmobile">
+    <div class="card border-0 Rectangle-26 block-desktop">
+      <div class="row dispa">
+        <div class="col-lg-6 space">
+          <div class="row dispa">
+            <div class="col-lg-2 px-0 p-img imgSmall block-col">
+              <img class="imgSmall iconee-card" src="/sites/default/files/icones/icones-phone-black-line.svg" alt="">
+            </div>
+            <div class="col-lg-4 block-col">
+              <h4 class=" ">Prix ​​des appels</h4>
+            </div>
+            {% for appel in appels %}
+              <div class="block-col col-lg-6 {% if loop.index > 1 %} offset-lg-6 {% endif %}">
+                <h6>{{ appel.cout_appel }} F / Sec</h6>
+                <p class="Vers-Orange-et-autre">{{ appel.titre_appel }}</p>
+              </div>
+            {% endfor %}
+
+            <div class="col-lg-6 block-col " id="second">
+              <span class="Sece ">{{ appel_offre }} F / Sec</span>
+              <p class="Vers-Orange-et-autre">Vers {{ title }}</p>
+            </div>
+
+          </div>
+        </div>
+        <hr>
+
+        <div class="col-lg-5 space ">
+          <div class="row">
+            <div class="col-lg-2 block-col">
+              <img class="imgSmall iconee-card" src="/sites/default/files/icones/message-black-line.svg">
+            </div>
+            <div class="col-lg-6 block-col">
+              <h4>Prix ​​des SMS</h4>
+            </div>
+
+            <div class="col-lg-7 space2 block-col">
+              <span class="Sece">{{ sms_offre }} F</b>
+              </span>
+              <p class="Vers-Orange-et-autre">Vers {{ title }}</p>
+            </div>
+            {% for s in sms %}
+              <div class="col-lg-5 space2 block-col">
+                <h6 style="padding-top: 2px;">{{ s.cout_sms }} F</h6>
+                <p class="Vers-Orange-et-autre">{{ s.titre_sms }}</p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- version mobiles -->
+    <!-- premiére card c a d carde appel -->
+    <div class="swiper-container-new-plan block-mobile ">
+      <div class="swiper-wrapper mb-0">
+        <div class="swiper-slide">
+          <div class="card border-0  Rectangle-26  widhtmobile ">
+            <div class="row margeblock space">
+              <div class="col-3 collicones">
+                <img class="imgSmall icone-mob" src="/sites/default/files/icones/icones-phone-black-line.svg">
+              </div>
+              <div class="col-9">
+                <h3 class="pda">Prix ​​des appels</h3>
+              </div>
+              {% for appel in appels %}
+                <div class="col-12 ">
+                  <p class="Sec"><b>{{ appel.cout_appel }} F / Sec</b></p>
+                  <p class="Vers-Orange-et-autre">{{ appel.titre_appel }}</p>
+                </div>
+              {% endfor %}
+              <div class="col-12 ">
+                <span class="Sece ">{{ appel_offre }} F / Sec</span>
+                <p class="Vers-Orange-et-autre">Vers {{ title }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fin premiére card -->
+        <!-- début deuxieme card -->
+        <div class="swiper-slide">
+          <div class="card border-0  Rectangle-26 d-block d-lg-none ">
+            <div class="row margeblock space">
+              <div class="col-3 collicones">
+                <img class="imgSmall icone-mob" src="/sites/default/files/icones/message-black-line.svg">
+              </div>
+              <div class="col-9">
+                <h3 class="pda">Prix ​​des SMS</h3>
+              </div>
+
+              {% for s in sms %}
+                <div class="col-12 ">
+                  <p class="Sec"><b>{{ s.cout_sms }} F</b></p>
+                  <p class="Vers-Orange-et-autre">{{ s.titre_sms }}</p>
+                </div>
+              {% endfor %}
+              <div class="col-12 padding-mobile-swiper2 ">
+                <span class="Sece ">{{ sms_offre }} F</span>
+                <p class="Vers-Orange-et-autre">Vers {{ title }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- fin deuxiéme card -->
+
+      </div>
+
+    </div>
+
+    <!-- fin version mobile -->
+
+  </section>
+  <section class="illimix sec">
+    <!-- version desktop -->
+    <div class="card border-0 Rectangle-26 illimix-desktop">
+      <div class=" card-header Rectangle-12">
+        <div class="row">
+          <div class="col-lg-1 col-2 etoileOrange">
+            <img class="imgSmall icone m-1" src="/sites/default/files/icones/ilimix-new-scool-orange.svg">
+          </div>
+          <div class="col-lg-11 col-10">
+            <h2 class="Les-illimix-Jamono-N mb-0 ">Les illimix {{ title }}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row row3 row4" id="row3-3">
+          <div class="col-lg-3 col-w-2">
+          </div>
+          <div class="col-lg-3 col-w-2">
+            <img class="imgSmall icone after" src="/sites/default/files/icones/phone-black.svg">
+          </div>
+          <div class="col-lg-3 col-w-2">
+            <img class="imgSmall icone" src="/sites/default/files/icones/message-black.svg">
+          </div>
+          <div class="col-lg-3 col-w-2">
+            <img class="imgSmall icone" src="/sites/default/files/icones/pass-internet-noir.svg" id="margin-icone">
+          </div>
+        </div>
+
+        {% for illimix in illimixs %}
+          <div class="row row4">
+            <div class="col-lg-3 col-w-2">
+              <h4 class="-FCFA">{{ illimix.cout_illimix }} FCFA</h4>
+            </div>
+            <div class="col-lg-3 col-w-2">
+              <b> <p class="-mine">{{ illimix.duree_appel_illimix }}</p></b>
+              <p class="-min">{{ illimix.validite_illimix }}</p>
+            </div>
+            <div class="col-lg-3 col-w-2">
+              <b> <p class="-mine">{{ illimix.nombre_sms_illimix }}</p></b>
+              <p class="-min">{{ illimix.periode_utilisation_illimix }}</p>
+            </div>
+            <div class="col-lg-3 col-w-2">
+              <b> <p class="-mine ">{{ illimix.volume_data_illimix }} </p></b>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- fin version version desktop -->
+
+    <!-- version mobile -->
+    <div class="contentS" style="padding: 0 !important;">
+      <div class="card border-0 Rectangle-26 illimix-mobile">
+        <div class=" card-header Rectangle-12">
+          <div class="row rowWidth">
+            <div class="col-lg-1 col-2 " id="etoileOrange">
+              <img class="imgSmall icone" src="/sites/default/files/icones/ilimix-new-scool-orange.svg">
+            </div>
+            <div class="col-lg-11 col-10">
+              <h2 class="Les-illimix-Jamono-N ">Les illimix Jamono Max</h2>
+            </div>
+          </div>
+        </div>
+        <div class="card-body pb-0">
+          <div class="row">
+            <div class="col-2" style="padding-top: 48px;">
+              <div class="d-flex flex-column">
+                <div><img class="imgSmall width-ic pb-icone-swiper" src="/sites/default/files/icones/phone-black.svg"></div>
+                <div><img class="imgSmall width-ic pb-icone-swiper" src="/sites/default/files/icones/message-black.svg"></div>
+                <div><img class="imgSmall width-ic" src="/sites/default/files/icones/pass-internet-noir.svg"></div>
+              </div>
+            </div>
+            <div class="col-10">
+              <div class="row">
+                <div class="swiper-container-new-plan d-block d-lg-none">
+                  <div class="swiper-wrapper">
+                    {% for illimix in illimixs %}
+                      <div class="swiper-slide swipe3 mr-0">
+                        <div class="d-flex flex-column">
+                          <div class="pb-1">
+                            <h4 class="-FCFA pl-2">{{ illimix.cout_illimix }} FCFA</h4>
+                          </div>
+                          <div> <b> <p class="-mine mb-0">{{ illimix.duree_appel_illimix }}</p></b>
+                            <p class="-min">{{ illimix.validite_illimix }}</p>
+                          </div>
+                          <div class="pt-1">
+                            <b> <p class="-mine mb-0">{{ illimix.nombre_sms_illimix }}</p></b>
+                            <p class="-min">{{ illimix.periode_utilisation_illimix }}</p>
+                          </div>
+                          <div class="pt-2">
+                            <b> <p class="-mine" style="height: 0;">{{ illimix.volume_data_illimix }}</p></b></div>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- fin version mobile -->
+
+
+
+
+  </section>
+  <section class="passNewScool sece" id="passnewSc">
+    <div class="card border-0 Rectangle-26">
+      <div class=" card-header Rectangle-12">
+        <!-- div row version desktop -->
+        <div class="d-none  d-sm-none d-md-none d-lg-block">
+          <div class="row ">
+            <div class="col-lg-1 col-2 etoileOrange">
+              <img class="imgSmall icone m-1" src="/sites/default/files/icones/pass-internet-orange.svg">
+            </div>
+            <div class="col-lg-11 col-10">
+              <h2 class="Les-illimix-Jamono-N mb-0 ">Les Pass Internet {{ title2 }}</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- fin version desktop -->
+        <!-- div row version mobile -->
+        <div class="row d-lg-none">
+          <div class="col-lg-1 col-2" id="etoileOrange">
+            <img class="imgSmall icone" src="/sites/default/files/icones/pass-internet-orange.svg">
+          </div>
+          <div class="col-lg-11 col-10 d-none  d-sm-none d-md-none d-lg-block">
+            <h4 class="Les-illimix-Jamono-N ">Les illimix {{ title2 }}</h4>
+          </div>
+          <div class="col-lg-11 col-10 d-lg-none">
+            <h4 class="Les-illimix-Jamono-N ">Pass {{ title2 }}</h4>
+          </div>
+        </div>
+        <!-- fin version mobile -->
+      </div>
+      <!-- vresion desktop -->
+      <div class="card-body d-none  d-sm-none d-md-none d-lg-block">
+        <div class="o-tab-container row tabe1 ">
+          <a class="o-tab-heading col-lg-3 pb-0" href="#" id="tab1">Les Pass Jour</a>
+          <div class="o-tab-content show" id="tab-1-content">
+            <div class="row rowspeace pt-2">
+              {% for pass in allpass.jour %}
+              {% set id = 'jour-exampleModalCenter' ~ loop.index %}
+                <div class="col-lg-2 col-6 max {% if loop.index is odd %}card-space{% endif %}">
+               <div class="card card1">
+                <div class="card-body card1-body">
+                  <div class="card-title card1-cardtitle mb-0"> <span class="pass-style"> Pass</span>
+                    <b class="pass-Mo mb-0 ">{{ pass.volume }}</b>
+                  </div>
+                  <b class="color-orange-style F">{{ pass.montant }}F</b>
+                  <hr class="sepa">
+                  <p class="Valable-24h-pour-les mb-0"> <b>{{ pass.restriction }}.</b> Valable 24h</p>
+                </div>
+                {% if pass.info %}
+                  <div class="card-footer card1-footer">
+                    <span class="Go-gratuit">{{ pass.info }}</span>
+                  </div>
+                {% endif %}
+
+            </div>
+                </div>
+              {% endfor %}
+
+            </div>
+            <p class="Valable-30-jours-ds">Valable 1 jour dès souscription</p>
+
+
+          </div>
+          <a class="o-tab-heading col-lg-3" href="#" id="tab2">Les Pass Semaine</a>
+          <div class="o-tab-content" id="tab-2-content">
+
+            <div class="row rowspeace">
+              {% for pass in allpass.semaine %}
+                <div class="col-lg-2 col-6 max {% if loop.index is odd %}card-space{% endif %}">
+            <div class="card card1">
+                <div class="card-body card1-body">
+                  <div class="card-title card1-cardtitle mb-0"> <span class="pass-style"> Pass</span>
+                    <b class="pass-Mo mb-0 ">{{ pass.volume }}</b>
+                  </div>
+                  <b class="color-orange-style F">{{ pass.montant }}F</b>
+                  <hr class="sepa">
+                  <p class="Valable-24h-pour-les mb-0"> <b>{{ pass.restriction }}.</b> Valable 24h</p>
+                </div>
+                {% if pass.info %}
+                  <div class="card-footer card1-footer">
+                    <span class="Go-gratuit">{{ pass.info }}</span>
+                  </div>
+                {% endif %}
+
+            </div>
+
+                </div>
+              {% endfor %}
+
+            </div>
+            <p class="Valable-30-jours-ds">Valable 7 jours dès souscription</p>
+
+          </div>
+
+          <a class="o-tab-heading col-lg-3" href="#" id="tab3">Les Pass Mois</a>
+          <div class="o-tab-content" id="tab-3-content">
+
+            <div class="row rowspeace pt-2">
+              {% for pass in allpass.mois %}
+              <div class="col-lg-2 col-6 max {% if loop.index is odd %}card-space{% endif %}">
+            <div class="card card1">
+                <div class="card-body card1-body">
+                  <div class="card-title card1-cardtitle mb-0"> <span class="pass-style"> Pass</span>
+                    <b class="pass-Mo mb-0 ">{{ pass.volume }}</b>
+                  </div>
+                  <b class="color-orange-style F">{{ pass.montant }}F</b>
+                  <hr class="sepa">
+                  <p class="Valable-24h-pour-les mb-0"> <b>{{ pass.restriction }}.</b> Valable 24h</p>
+                </div>
+                {% if pass.info %}
+                  <div class="card-footer card1-footer">
+                    <span class="Go-gratuit">{{ pass.info }}</span>
+                  </div>
+                {% endif %}
+
+            </div>
+
+              </div>
+              {% endfor %}
+
+            </div>
+            <p class="Valable-30-jours-ds">Valable 1 Mois dès souscription</p>
+
+          </div>
+          <a class="o-tab-heading col-lg-2 col-7" href="#" id="tab4">Autres</a>
+          <div class="o-tab-content" id="tab-3-content">
+
+            <div class="row rowspeace pt-2">
+              {% for pass in allpass.jours %}
+                <div class="col-lg-2 col-6 max {% if loop.index is odd %}card-space{% endif %}">
+            <div class="card card1">
+                <div class="card-body card1-body">
+                  <div class="card-title card1-cardtitle mb-0"> <span class="pass-style"> Pass</span>
+                    <b class="pass-Mo mb-0 ">{{ pass.volume }}</b>
+                  </div>
+                  <b class="color-orange-style F">{{ pass.montant }}F</b>
+                  <hr class="sepa">
+                  <p class="Valable-24h-pour-les mb-0"> <b>{{ pass.restriction }}.</b> Valable 24h</p>
+                </div>
+                {% if pass.info %}
+                  <div class="card-footer card1-footer">
+                    <span class="Go-gratuit">{{ pass.info }}</span>
+                  </div>
+                {% endif %}
+
+            </div>
+
+                </div>
+              {% endfor %}
+
+            </div>
+            <!--p class="Valable-30-jours-ds">Valable 6 H dès souscription</p-->
+
+          </div>
+        </div>
+      </div>
+      <!-- fin version desktop -->
+      <div class="card-body d-block d-lg-none">
+        <div class="accordion" id="accordionExample-6">
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <h5 class="mb-0">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                  Les Pass Jour
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSix" class="collapse show" aria-labelledby="headingSix" data-parent="#accordionExample-6">
+              <div class="card-body mb-0">
+                <div class="row">
+                  {% for pass in allpass.jour %}
+                    <div class="col-6 col-sm-4 mb-2">
+            <div class="card card1">
+                <div class="card-body card1-body">
+                  <div class="card-title card1-cardtitle mb-0"> <span class="pass-style"> Pass</span>
+                    <b class="pass-Mo mb-0 ">{{ pass.volume }}</b>
+                  </div>
+                  <b class="color-orange-style F">{{ pass.montant }}F</b>
+                  <hr class="sepa">
+                  <p class="Valable-24h-pour-les mb-0"> <b>{{ pass.restriction }}.</b> Valable 24h</p>
+                </div>
+                {% if pass.info %}
+                  <div class="card-footer card1-footer">
+                    <span class="Go-gratuit">{{ pass.info }}</span>
+                  </div>
+                {% endif %}
+
+            </div>
+
+                    </div>
+                  {% endfor %}
+                  <p class="Valable-30-jours-ds mb-2 mt-1 ml-1">Valable 1 jour dès souscription</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSeven">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                  Les Pass Semaine
+                </button>
+              </h5>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample-6">
+              <div class="card-body mb-0">
+                <div class="row">
+                  {% for pass in allpass.semaine %}
+                    <div class="col-6 col-sm-4 mb-1">
+            <div class="card card1">
+                <div class="card-body card1-body">
+                  <div class="card-title card1-cardtitle mb-0"> <span class="pass-style"> Pass</span>
+                    <b class="pass-Mo mb-0 ">{{ pass.volume }}</b>
+                  </div>
+                  <b class="color-orange-style F">{{ pass.montant }}F</b>
+                  <hr class="sepa">
+                  <p class="Valable-24h-pour-les mb-0"> <b>{{ pass.restriction }}.</b> Valable 24h</p>
+                </div>
+                {% if pass.info %}
+                  <div class="card-footer card1-footer">
+                    <span class="Go-gratuit">{{ pass.info }}</span>
+                  </div>
+                {% endif %}
+
+            </div>
+
+                    </div>
+                  {% endfor %}
+                  <p class="Valable-30-jours-ds mb-2 mt-1 ml-1">Valable 7 jours dès souscription</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingHeigth">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseHeigth" aria-expanded="false" aria-controls="collapseHeigth">
+                  Les Pass Mois
+                </button>
+              </h5>
+            </div>
+            <div id="collapseHeigth" class="collapse" aria-labelledby="headingHeigth" data-parent="#accordionExample-6">
+              <div class="card-body mb-0">
+                <div class="row">
+                  {% for pass in allpass.mois %}
+                    <div class="col-6 col-sm-4 mb-1">
+            <div class="card card1">
+                <div class="card-body card1-body">
+                  <div class="card-title card1-cardtitle mb-0"> <span class="pass-style"> Pass</span>
+                    <b class="pass-Mo mb-0 ">{{ pass.volume }}</b>
+                  </div>
+                  <b class="color-orange-style F">{{ pass.montant }}F</b>
+                  <hr class="sepa">
+                  <p class="Valable-24h-pour-les mb-0"> <b>{{ pass.restriction }}.</b> Valable 24h</p>
+                </div>
+                {% if pass.info %}
+                  <div class="card-footer card1-footer">
+                    <span class="Go-gratuit">{{ pass.info }}</span>
+                  </div>
+                {% endif %}
+
+            </div>
+
+                    </div>
+                  {% endfor %}
+                  <p class="Valable-30-jours-ds mb-2 mt-1 ml-1">Valable 1 Mois dès souscription</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTen">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                  Autres
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample-6">
+              <div class="card-body mb-0">
+                <div class="row">
+                  {% for pass in allpass.jours %}
+                    <div class="col-6 col-sm-4 mb-1">
+                    <div class="card card1">
+                <div class="card-body card1-body">
+                  <div class="card-title card1-cardtitle mb-0"> <span class="pass-style"> Pass</span>
+                    <b class="pass-Mo mb-0 ">{{ pass.volume }}</b>
+                  </div>
+                  <b class="color-orange-style F">{{ pass.montant }}F</b>
+                  <hr class="sepa">
+                  <p class="Valable-24h-pour-les mb-0"> <b>{{ pass.restriction }}.</b> Valable 24h</p>
+                </div>
+                {% if pass.info %}
+                  <div class="card-footer card1-footer">
+                    <span class="Go-gratuit">{{ pass.info }}</span>
+                  </div>
+                {% endif %}
+
+            </div>
+
+                    </div>
+                  {% endfor %}
+
+                  <!--p class="Valable-30-jours-ds mb-2 mt-1 ml-1">Valable 6 H dès souscription</p-->
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="illimix sec bor secmobile">
+    <h2 class="Promos-et-bons-plans" style="margin-left: 10px; margin-bottom: 10px;">Promos et bons plans {{ title2 }}</h2>
+    <div class="promo-et-bon-desktop">
+      <div class="row ">
+        {% for promo in promos %}
+          <div class="col-lg-4 col-4">
+            <div class="card  border-0" style="width: 100%;">
+              <img class="imgSmall" src="{{ file_url(promo.image) }}" alt="Card image cap">
+              <div class="card-body element-promo">
+                <div class=" p8">
+                  <h4 class="Promo-Puce">{{ promo.title }}</h4>
+                </div>
+                <div class="">
+                  <a href="{{ promo.lien }}" target="_blank" class="decouvrir"><button class="btn btn-warning" type="submit" class="Rectangle-77 "> {{ promo.texte }} </button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+    <!-- promos et bons plans New s'cool version mobile -->
+    <div class="swiper-container-new-plan promo-et-bon-mobile">
+      <div class="swiper-wrapper">
+        {% for promo in promos %}
+          <div class="swiper-slide swipe2">
+            <div class="card shad">
+              <a href="{{ promo.lien }}">
+                <img class="imgSmall" src="{{ file_url(promo.image) }}" alt="Card image cap">
+              </a>
+              <div class="card-body element-promo">
+                <h4 class="Promo-Puce"><a href="{{ promo.lien }}"> {{ promo.title }}</a></h4>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- fin de la version mobile jamono new s'chool  -->
+  </section>
+
+  <section class="avantage  bor sec secmobile">
+    <div class="d-none  d-sm-none d-md-none d-lg-block">
+      <ul class="nav nav-tabs row border-bottom-0 " id="myTab" role="tablist">
+        <li class="nav-item col-lg-6 pr-0">
+          <a class="nav-link active text-center" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+            <h4 class="mb-0 pt-2">Les avantages {{ title2 }}</h4>
+          </a>
+        </li>
+        <li class="nav-item col-lg-6 pl-0">
+          <a class="nav-link text-center" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+            <h4 class="mb-0 pt-2">Comment je deviens {{ title2 }} ?</h4>
+          </a>
+        </li>
+      </ul>
+      <div class="tab-content tab-content-border ml-0 mr-2" id="myTabContent">
+        <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="row blockavantage">
+            {% for avantage in avantages %}
+              <div class="col-lg-6 pb-3">
+                <div class="Tarifs">
+                  <img class="imgSmall" src="{{ file_url(avantage.image_avantage) }}" alt="Card image cap" id="imageLoren">
+                  <b class="Tarifs-rduits-entre">{{ avantage.titre_avantage }}</b>
+                </div>
+                <p class="Lorem-ipsum-dolor-si">{{ avantage.desc_avantage }}</p>
+              </div>
+            {% endfor %}
+          </div>
+
+        </div>
+        <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <div class="row blockavantage">
+            <div class="col-lg-4">
+              <div class="Tarifs">
+                <img class="imgSmall" src="/sites/default/files/icones/605-black.svg" alt="Card image cap" id="image-Option">
+                <div class="option">
+                                        <span>Option 1 :
+                                                <h4>J'utilise Orange et Moi</h4></span>
+                </div>
+              </div>
+              <p class="Lorem-ipsum-d">Je télécharge l'application Orange et Moi si je ne la possède pas, et je me rends dans le menu de gestion de mon profil</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="Tarifs">
+                <img class="imgSmall" src="/sites/default/files/icones/phone-black.svg" alt="Card image cap" id="image-phone-black">
+                <div class="option">
+                                        <span>Option 2 :
+                                                    <h4>Je tape #605#</h4></span>
+                </div>
+              </div>
+              <p class="Lorem-ipsum-d">Sur le clavier de mon téléphone, je saisie le code USSD #605# puis je suis les instructions indiqués à l'écran pour souscrire au profil choisi.</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="Tarifs">
+                <img class="imgSmall" src="/sites/default/files/icones/orange-et-moi-black.svg" alt="Card image cap" id="image-orange-et-moi-black">
+                <div class="option">
+                                        <span>Option 3 :
+                                                        <h4>J'appelle le 605</h4></span>
+                </div>
+              </div>
+              <p class="Lorem-ipsum-d">Sur le clavier de mon téléphone, je compose le 605 et j'appuie sur la touche appel, je suis ensuite les instructions vocales pour souscrire au profil choisi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- version mobile -->
+    <h2 class="Les-avantages-New-S d-block d-lg-none" style="margin-left: 10px; ">Les avantages {{ title2 }}</h2>
+    <div class="d-block d-lg-none mb-2">
+      <div class="row " style="margin: 0 5px 0 5px !important;">
+        {% for avantage in avantages %}
+          <div class="col-6 mb-2">
+            <div class="Rectangle-33 text-center">
+              <div style="padding:5px; position: absolute; top: 50%; transform: translateY(-50%);">
+                <img class="py-2" src="{{ file_url(avantage.image_avantage) }}" alt="Card image cap" id="imageLoren">
+                <b> <p class="Tarifs-rduits">{{ avantage.titre_avantage }}</p></b>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <section class="devenir-new-s'coll-mobile d-block d-lg-none">
+    <!-- pour les avantages Devenir New S’cool ? version mobile -->
+
+    <h2 class="Les-avantages-New-S pl-2">Devenir {{ title2 }} ?</h2>
+    <div class="Rectangle-13 pr-1">
+      <div class="row">
+        <div class="col-12 p-3" style=" display: flex;">
+          <div>
+            <img class="imgSmall" src="/sites/default/files/icones/605-black.svg" alt="" id="icon-devenir-ns">
+          </div>
+          <div class="px-3 mt"> <span class="option-mobile">Option 1 :
+                                        <h4 class="mb-0 pt-1">Je tape #605#</h4></span></div>
+        </div>
+        <div class="col-12 p-3 " style=" display: flex;">
+          <div>
+            <img class="imgSmall" src="/sites/default/files/icones/orange-et-moi-black.svg" alt="" id="icon-devenir-ns-1">
+          </div>
+          <div class="px-3 mt"> <span class="option-mobile">Option 2 :
+                                            <h4 class="mb-0 pt-1">Via l’appli Orange et Moi</h4></span></div>
+        </div>
+        <div class="col-12 p-3" style=" display: flex;">
+          <div>
+            <img class="imgSmall" src="/sites/default/files/icones/phone-black.svg" alt="" id="icon-devenir-ns-2">
+          </div>
+          <div class="mt" style="padding-left: 14px;"> <span class="option-mobile">Option 3 :
+                                                <h4 class="mb-0 pt-1">Je compose le 605</h4></span></div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- fin version mobile -->
+  </section>
+
+
+  <section class="illimix sec">
+    <h2 class="pl-2">Questions fréquentes</h2>
+    <!-- <div class="card border-0 Rectangle-26 Rectangle-26-6"></div> -->
+    <div class="card border-0">
+      <div class="card-body card-acc">
+        <div class="accordion" id="accordionExample-3">
+            {% set valeur = questions|length %}
+            {% set key = 1 %}
+            {% for question in questions %}
+              <div class="card {% if valeur == key %}border-0{% endif %}" {% if key == 1 %} style="border-top: none;"{% endif %}>
+                <div class="card-header my-2" id="heading{{ loop.index }}-3">
+                  <h5 class="mb-0">
+                    <button class="font20 btn-accordeon btn btn-link collapsed backg {% if loop.index > 1 %}collapsed{% endif %}" type="button" data-toggle="collapse" data-target="#collapse{{ loop.index }}-3" aria-expanded="{% if loop.index == 1 %}true{% else %} false{% endif %}" aria-controls="collapse{{ loop.index }}-3">
+                        {{ question.titre_question }}
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapse{{ loop.index }}-3" class="collapse {% if loop.index == 1 %}show{% endif %}" aria-labelledby="heading{{ loop.index }}-3" data-parent="#accordionExample-3">
+                  <div class="card-body">
+                    <div class="card-body"> {{ question.reponse_question | raw }}</div>
+                  </div>
+                </div>
+              </div>
+                {% set key= key + 1 %}
+            {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+
+
+
+
+
+
+<div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+  <div class="contentS d-none d-md-block d-sm-block">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sous-bloc-footer col-sm-4">
+        <div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+            </div>
+            <div class="col-sm-10">
+              <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <p style=" text-align: justify;">
+                Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+              </p>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-sm-10">
+              <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-block d-md-none d-sm-none">
+
+    <div class="col-sm-12">
+      <p class="pt-1"></p>
+      <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+    </div>
+    <div class="hide-reverse">
+      <div class="row" style="overflow: hidden">
+        <div class="col-12">
+          <div class="swiper-container-footer">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" id="slide1">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide2">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" id="slide3">
+                <div>
+                  <div class="row">
+                    <div class="text-left col-sm-2">
+                      <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                    </div>
+                    <div class="col-sm-8 py-2">
+                      <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-8">
+                      <p class="text-block-jaune" style=" text-align: justify;">
+                        Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                      </p>
+                      </p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-sm-10 text-left">
+                      <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

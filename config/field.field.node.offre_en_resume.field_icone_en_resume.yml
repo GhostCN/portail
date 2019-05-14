@@ -1,0 +1,38 @@
+uuid: de7628c7-7b97-46f1-a0db-50c88ff70f59
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_icone_en_resume
+    - node.type.offre_en_resume
+  module:
+    - image
+id: node.offre_en_resume.field_icone_en_resume
+field_name: field_icone_en_resume
+entity_type: node
+bundle: offre_en_resume
+label: Icone
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg svg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

@@ -1,0 +1,17 @@
+uuid: 59b8fcd5-c601-4380-890b-95fe0145db1f
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Bloc comment Souscrire Keurgui Box'
+type: souscrire_keurgui_box
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

@@ -1,0 +1,21 @@
+uuid: bbe9d6f0-8c5c-43bb-a277-bd5bcd4f9ba6
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_window_url
+    - node.type.main_window
+id: node.main_window.field_main_window_url
+field_name: field_main_window_url
+entity_type: node
+bundle: main_window
+label: Url
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: offres-mobile
+default_value_callback: ''
+settings: {  }
+field_type: string

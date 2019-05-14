@@ -1,0 +1,26 @@
+uuid: ad45277d-ea22-4aeb-baf6-a4be95187e63
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.compte_a_rebours
+  module:
+    - user
+id: node.compte_a_rebours.teaser
+targetEntityType: node
+bundle: compte_a_rebours
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_date_en_ligne: true
+  field_date_fin: true
+  field_icone: true
+  field_lien_du_bouton: true
+  field_pourcentage_bonus: true
+  field_prix_bonus: true
+  field_texte_banniere: true
+  langcode: true

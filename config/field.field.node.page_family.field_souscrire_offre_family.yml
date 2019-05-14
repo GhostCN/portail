@@ -1,0 +1,28 @@
+uuid: d2dcc34f-b841-4236-bfba-2d3331d4c191
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_souscrire_offre_family
+    - node.type.page_family
+    - node.type.souscrire_offre_family
+id: node.page_family.field_souscrire_offre_family
+field_name: field_souscrire_offre_family
+entity_type: node
+bundle: page_family
+label: 'Souscrire offre Family'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      souscrire_offre_family: souscrire_offre_family
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

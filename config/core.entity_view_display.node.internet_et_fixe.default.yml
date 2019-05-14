@@ -1,0 +1,89 @@
+uuid: a4f5ac3b-6488-48ac-9379-376262396476
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.internet_et_fixe.body
+    - field.field.node.internet_et_fixe.field_duree
+    - field.field.node.internet_et_fixe.field_image
+    - field.field.node.internet_et_fixe.field_offre_phare
+    - field.field.node.internet_et_fixe.field_options
+    - field.field.node.internet_et_fixe.field_prix
+    - field.field.node.internet_et_fixe.field_template
+    - node.type.internet_et_fixe
+  module:
+    - options
+    - svg_image
+    - text
+    - user
+id: node.internet_et_fixe.default
+targetEntityType: node
+bundle: internet_et_fixe
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_duree:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image:
+    weight: 109
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_offre_phare:
+    weight: 110
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_options:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prix:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_template:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

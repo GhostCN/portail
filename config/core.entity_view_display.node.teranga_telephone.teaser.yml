@@ -1,0 +1,19 @@
+uuid: 9b24b190-dc93-4a0e-932a-0701e85c1f96
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.teranga_telephone
+  module:
+    - user
+id: node.teranga_telephone.teaser
+targetEntityType: node
+bundle: teranga_telephone
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

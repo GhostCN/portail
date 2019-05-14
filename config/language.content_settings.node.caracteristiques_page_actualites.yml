@@ -1,0 +1,11 @@
+uuid: fa83caea-8bf2-4173-86d7-f3b3157fd5b1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.caracteristiques_page_actualites
+id: node.caracteristiques_page_actualites
+target_entity_type_id: node
+target_bundle: caracteristiques_page_actualites
+default_langcode: site_default
+language_alterable: false

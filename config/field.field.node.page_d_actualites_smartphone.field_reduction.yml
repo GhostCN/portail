@@ -1,0 +1,21 @@
+uuid: 7d483e76-0898-461a-bdca-63e9e8d8aec5
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reduction
+    - node.type.page_d_actualites_smartphone
+  module:
+    - text
+id: node.page_d_actualites_smartphone.field_reduction
+field_name: field_reduction
+entity_type: node
+bundle: page_d_actualites_smartphone
+label: Réduction
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

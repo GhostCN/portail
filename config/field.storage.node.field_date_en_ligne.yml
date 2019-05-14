@@ -1,0 +1,20 @@
+uuid: c67d54d5-b89f-4fdb-a1ff-27411c70e405
+langcode: fr
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_date_en_ligne
+field_name: field_date_en_ligne
+entity_type: node
+type: datetime
+settings:
+  datetime_type: datetime
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

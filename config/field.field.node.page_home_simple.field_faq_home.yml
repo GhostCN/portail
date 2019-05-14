@@ -1,0 +1,28 @@
+uuid: 14bfcc9a-0b21-454f-ba4a-0830cf2a8739
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq_home
+    - node.type.faq_home
+    - node.type.page_home_simple
+id: node.page_home_simple.field_faq_home
+field_name: field_faq_home
+entity_type: node
+bundle: page_home_simple
+label: FAQ
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      faq_home: faq_home
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

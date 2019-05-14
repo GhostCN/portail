@@ -1,0 +1,22 @@
+uuid: 857e265d-01d3-43e6-af6b-a70fac254a88
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.souscrire_offre_family
+id: node.souscrire_offre_family.promote
+field_name: promote
+entity_type: node
+bundle: souscrire_offre_family
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

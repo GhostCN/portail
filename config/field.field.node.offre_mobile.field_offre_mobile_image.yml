@@ -1,0 +1,38 @@
+uuid: 91ff585c-7f9d-42fe-976b-b99033c73414
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_offre_mobile_image
+    - node.type.offre_mobile
+  module:
+    - image
+id: node.offre_mobile.field_offre_mobile_image
+field_name: field_offre_mobile_image
+entity_type: node
+bundle: offre_mobile
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

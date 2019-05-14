@@ -1,0 +1,18 @@
+uuid: 4ba1433a-e46a-4d68-a53c-83c643294a24
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_home_simple
+id: node.page_home_simple.title
+field_name: title
+entity_type: node
+bundle: page_home_simple
+label: 'Page Home'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

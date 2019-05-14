@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="409" height="88" viewBox="0 0 409 88">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FDCC00" fill-rule="nonzero" d="M.852 4.291L97.194.927l1.605 45.972-96.342 3.364z"/>
+        <path fill="#4BB4E7" fill-rule="nonzero" d="M93.395 4.292l58.075-2.028 1.605 45.972L95 50.264z"/>
+        <path fill="#50BE87" fill-rule="nonzero" d="M145.465 4.584l91.71-3.202 1.605 45.972-91.71 3.202z"/>
+        <path fill="#A885D8" fill-rule="nonzero" d="M232.852 4.292l83.323-2.91 1.605 45.972-83.323 2.91z"/>
+        <text font-family="HelveticaNeueLTStd-Bd, Helvetica Neue LT Std" font-size="40" font-weight="bold">
+            <tspan x="8" y="40" fill="#000">+ de </tspan> <tspan x="101.64" y="40" fill="#FFF">30 chaines</tspan>  <tspan x="8" y="80" fill="#000"> pour toute la famille</tspan>
+        </text>
+    </g>
+</svg>

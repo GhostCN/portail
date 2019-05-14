@@ -1,0 +1,11 @@
+uuid: 49341e7f-9bb6-431a-906b-969419af5f42
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.faq_home
+id: node.faq_home
+target_entity_type_id: node
+target_bundle: faq_home
+default_langcode: site_default
+language_alterable: false

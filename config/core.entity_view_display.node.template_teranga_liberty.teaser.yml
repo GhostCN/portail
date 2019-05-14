@@ -1,0 +1,19 @@
+uuid: 7bb3120b-577f-4c60-b92d-fd87610b7873
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.template_teranga_liberty
+  module:
+    - user
+id: node.template_teranga_liberty.teaser
+targetEntityType: node
+bundle: template_teranga_liberty
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

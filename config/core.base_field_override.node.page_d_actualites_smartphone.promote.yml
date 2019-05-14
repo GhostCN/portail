@@ -1,0 +1,22 @@
+uuid: 3a6392d4-d24e-46db-bbba-0783ce004edf
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_d_actualites_smartphone
+id: node.page_d_actualites_smartphone.promote
+field_name: promote
+entity_type: node
+bundle: page_d_actualites_smartphone
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 071b7fec-8701-4ac0-af50-3c3c0d1b05e0
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seddo_pass_internet
+    - node.type.page_family
+id: node.page_family.field_seddo_pass_internet
+field_name: field_seddo_pass_internet
+entity_type: node
+bundle: page_family
+label: 'Seddo Pass internet'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

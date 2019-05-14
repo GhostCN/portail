@@ -1,0 +1,19 @@
+uuid: 90d9afd3-f510-43d2-94c2-2bcbe702e0b1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lien_du_bouton
+    - node.type.compte_a_rebours
+id: node.compte_a_rebours.field_lien_du_bouton
+field_name: field_lien_du_bouton
+entity_type: node
+bundle: compte_a_rebours
+label: 'Lien du bouton'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

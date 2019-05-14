@@ -1,0 +1,19 @@
+uuid: 4f7b1370-4d57-447c-a69c-5abc377f89bb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.offres_teranga
+  module:
+    - user
+id: node.offres_teranga.teaser
+targetEntityType: node
+bundle: offres_teranga
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

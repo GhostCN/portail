@@ -1,0 +1,28 @@
+uuid: d7fba6b1-aa71-45aa-b332-dc076e6962e7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.pays.field_chp_pass
+    - node.type.pays
+  module:
+    - user
+id: node.pays.default
+targetEntityType: node
+bundle: pays
+mode: default
+content:
+  field_chp_pass:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_pays_chp: true
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 9d0c09cc-01c7-4bd7-baf5-2abd956802b3
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.sms
+id: node.sms
+target_entity_type_id: node
+target_bundle: sms
+default_langcode: site_default
+language_alterable: false

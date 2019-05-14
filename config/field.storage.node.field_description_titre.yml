@@ -1,0 +1,19 @@
+uuid: 68e08586-3519-4d50-a9d2-0e1b0ad2eac2
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_description_titre
+field_name: field_description_titre
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

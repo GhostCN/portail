@@ -1,0 +1,19 @@
+uuid: a963c941-7618-4ebc-9bda-533d4a103856
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prix
+    - node.type.internet_et_fixe
+id: node.internet_et_fixe.field_prix
+field_name: field_prix
+entity_type: node
+bundle: internet_et_fixe
+label: Prix
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

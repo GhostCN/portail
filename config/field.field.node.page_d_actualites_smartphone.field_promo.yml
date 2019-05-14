@@ -1,0 +1,21 @@
+uuid: 010662e9-3799-4c7c-9cce-6af3f2c6dc60
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo
+    - node.type.page_d_actualites_smartphone
+  module:
+    - text
+id: node.page_d_actualites_smartphone.field_promo
+field_name: field_promo
+entity_type: node
+bundle: page_d_actualites_smartphone
+label: Promo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

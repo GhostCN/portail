@@ -1,0 +1,19 @@
+uuid: 2beb556e-d169-4f34-9e08-79ddd112c316
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ios
+    - node.type.teranga_telephone
+id: node.teranga_telephone.field_ios
+field_name: field_ios
+entity_type: node
+bundle: teranga_telephone
+label: IOS
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

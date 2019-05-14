@@ -1,0 +1,30 @@
+uuid: b8f814da-d439-44cb-a050-cb07529f4907
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.besoin_d_aide.field_help_informations
+    - node.type.besoin_d_aide
+  module:
+    - user
+id: node.besoin_d_aide.teaser
+targetEntityType: node
+bundle: besoin_d_aide
+mode: teaser
+content:
+  field_help_informations:
+    type: string
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

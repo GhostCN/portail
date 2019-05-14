@@ -1,0 +1,117 @@
+uuid: eb9de4d3-b737-4714-8570-cd05a62a58c2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.bouquet_tv.field_image_bouquet_1
+    - field.field.node.bouquet_tv.field_image_bouquet_2
+    - field.field.node.bouquet_tv.field_image_bouquet_3
+    - field.field.node.bouquet_tv.field_image_bouquet_4
+    - field.field.node.bouquet_tv.field_image_bouquet_5
+    - field.field.node.bouquet_tv.field_image_bouquet_6
+    - field.field.node.bouquet_tv.field_image_principale
+    - node.type.bouquet_tv
+  module:
+    - svg_image
+    - user
+id: node.bouquet_tv.default
+targetEntityType: node
+bundle: bouquet_tv
+mode: default
+content:
+  field_image_bouquet_1:
+    weight: 102
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_bouquet_2:
+    weight: 103
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_bouquet_3:
+    weight: 104
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_bouquet_4:
+    weight: 105
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_bouquet_5:
+    weight: 106
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_bouquet_6:
+    weight: 107
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_image_principale:
+    weight: 101
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

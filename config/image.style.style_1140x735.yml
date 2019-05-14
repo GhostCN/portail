@@ -1,0 +1,15 @@
+uuid: 7e8060b5-005b-4cf3-b8a3-cfaedf72bb60
+langcode: fr
+status: true
+dependencies: {  }
+name: style_1140x735
+label: 'style 1140x735'
+effects:
+  b57f1dde-7b68-4de4-a32f-0afcc5daa7e9:
+    uuid: b57f1dde-7b68-4de4-a32f-0afcc5daa7e9
+    id: image_scale
+    weight: 1
+    data:
+      width: 1140
+      height: 735
+      upscale: true

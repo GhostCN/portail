@@ -1,0 +1,6 @@
+name: portail
+type: module
+description: ""
+core: 8.x
+package: Custom
+version: "0.1"

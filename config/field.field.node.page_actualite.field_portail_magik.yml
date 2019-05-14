@@ -1,0 +1,23 @@
+uuid: fe166a15-6d8f-452d-8d4e-12704282b26b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_portail_magik
+    - node.type.page_actualite
+id: node.page_actualite.field_portail_magik
+field_name: field_portail_magik
+entity_type: node
+bundle: page_actualite
+label: 'Portail Magik'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

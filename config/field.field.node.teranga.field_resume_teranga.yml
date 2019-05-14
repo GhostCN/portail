@@ -1,0 +1,19 @@
+uuid: 4c68e0b9-b82f-43cb-a342-2c6badc9bdba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume_teranga
+    - node.type.teranga
+id: node.teranga.field_resume_teranga
+field_name: field_resume_teranga
+entity_type: node
+bundle: teranga
+label: 'Résumé teranga'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

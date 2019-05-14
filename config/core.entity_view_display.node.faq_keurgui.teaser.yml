@@ -1,0 +1,29 @@
+uuid: 1770a26e-317c-4e3c-b7ce-fa4cf4b40d4e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faq_keurgui.body
+    - node.type.faq_keurgui
+  module:
+    - text
+    - user
+id: node.faq_keurgui.teaser
+targetEntityType: node
+bundle: faq_keurgui
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

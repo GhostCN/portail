@@ -1,0 +1,22 @@
+uuid: 9b0e20bd-1f7c-4625-bdc6-a2659b00f52d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.caracteristiques_page_actualites
+id: node.caracteristiques_page_actualites.promote
+field_name: promote
+entity_type: node
+bundle: caracteristiques_page_actualites
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: b03a311a-7b12-44d3-b22d-8572618a398f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.vous_etes_deja_client
+id: node.vous_etes_deja_client.promote
+field_name: promote
+entity_type: node
+bundle: vous_etes_deja_client
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

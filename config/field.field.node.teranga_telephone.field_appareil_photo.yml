@@ -1,0 +1,19 @@
+uuid: 32be2b03-7d0c-497c-83fb-de39ff5f5f62
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_appareil_photo
+    - node.type.teranga_telephone
+id: node.teranga_telephone.field_appareil_photo
+field_name: field_appareil_photo
+entity_type: node
+bundle: teranga_telephone
+label: 'Appareil Photo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

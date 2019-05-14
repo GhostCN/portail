@@ -1,0 +1,18 @@
+uuid: ef5824b5-9117-4b8e-9177-6f9246f9c3bc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.les_fondamentaux_de_l_offre
+id: node.les_fondamentaux_de_l_offre.title
+field_name: title
+entity_type: node
+bundle: les_fondamentaux_de_l_offre
+label: Titre
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

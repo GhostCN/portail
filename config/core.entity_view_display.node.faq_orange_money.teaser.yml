@@ -1,0 +1,29 @@
+uuid: 518d77df-083c-44a1-a055-087057ffcbc1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faq_orange_money.body
+    - node.type.faq_orange_money
+  module:
+    - text
+    - user
+id: node.faq_orange_money.teaser
+targetEntityType: node
+bundle: faq_orange_money
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,11 @@
+uuid: 3972ce0c-8a66-4cbe-9f1d-67a9d21f10d8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.besoin_d_aide
+id: node.besoin_d_aide
+target_entity_type_id: node
+target_bundle: besoin_d_aide
+default_langcode: site_default
+language_alterable: false

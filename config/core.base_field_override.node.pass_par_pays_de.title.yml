@@ -1,0 +1,18 @@
+uuid: 6f081b78-2c66-4133-b4b7-309d8c059c43
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass_par_pays_de
+id: node.pass_par_pays_de.title
+field_name: title
+entity_type: node
+bundle: pass_par_pays_de
+label: 'Pays (Ex : France)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

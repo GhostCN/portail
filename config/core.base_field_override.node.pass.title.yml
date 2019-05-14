@@ -1,0 +1,18 @@
+uuid: f93f5c20-b3f1-454c-9af9-1eeffc1aeb04
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.pass
+id: node.pass.title
+field_name: title
+entity_type: node
+bundle: pass
+label: 'Titre pass (Ex : 5 minutes)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

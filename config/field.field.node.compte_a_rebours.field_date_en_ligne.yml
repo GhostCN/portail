@@ -1,0 +1,24 @@
+uuid: 53b78914-d7ae-4605-aa5f-b2bf4261b831
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_en_ligne
+    - node.type.compte_a_rebours
+  module:
+    - datetime
+id: node.compte_a_rebours.field_date_en_ligne
+field_name: field_date_en_ligne
+entity_type: node
+bundle: compte_a_rebours
+label: 'La date de la mise en ligne'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

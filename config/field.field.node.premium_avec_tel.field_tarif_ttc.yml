@@ -1,0 +1,19 @@
+uuid: c15525ab-3f4d-425c-89f1-d5c4c17d7194
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarif_ttc
+    - node.type.premium_avec_tel
+id: node.premium_avec_tel.field_tarif_ttc
+field_name: field_tarif_ttc
+entity_type: node
+bundle: premium_avec_tel
+label: 'Tarif TTC'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

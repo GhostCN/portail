@@ -1,0 +1,21 @@
+uuid: b80e00fd-317b-4739-938d-e04290aa80da
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_titre
+    - node.type.page_d_actualites_smartphone
+  module:
+    - text
+id: node.page_d_actualites_smartphone.field_description_titre
+field_name: field_description_titre
+entity_type: node
+bundle: page_d_actualites_smartphone
+label: 'Description titre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

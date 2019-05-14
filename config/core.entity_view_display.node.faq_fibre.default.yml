@@ -1,0 +1,27 @@
+uuid: 627a7954-7f4c-4798-909e-14fd780c02ea
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.faq_fibre.body
+    - node.type.faq_fibre
+  module:
+    - text
+    - user
+id: node.faq_fibre.default
+targetEntityType: node
+bundle: faq_fibre
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

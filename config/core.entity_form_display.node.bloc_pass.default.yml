@@ -1,0 +1,45 @@
+uuid: 70c74906-e0a1-4b16-b051-4a9b60aeb4ad
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.bloc_pass.field_duree_validite
+    - field.field.node.bloc_pass.field_tarif_pass
+    - node.type.bloc_pass
+id: node.bloc_pass.default
+targetEntityType: node
+bundle: bloc_pass
+mode: default
+content:
+  field_duree_validite:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tarif_pass:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,0 +1,29 @@
+uuid: 3017ebfe-ea45-4a82-b2ae-404ae703b5a7
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_etapes_de_deploiement
+    - node.type.etapes_deploiement
+    - node.type.tarifs_page_fibre
+id: node.tarifs_page_fibre.field_etapes_de_deploiement
+field_name: field_etapes_de_deploiement
+entity_type: node
+bundle: tarifs_page_fibre
+label: 'Etapes de déploiement'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      etapes_deploiement: etapes_deploiement
+    sort:
+      field: nid
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

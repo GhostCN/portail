@@ -1,0 +1,11 @@
+uuid: f86c9f5e-6a9e-452d-af6a-8fa0bb6f87ba
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.internet_et_fixe
+id: node.internet_et_fixe
+target_entity_type_id: node
+target_bundle: internet_et_fixe
+default_langcode: site_default
+language_alterable: false

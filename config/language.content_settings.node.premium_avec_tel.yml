@@ -1,0 +1,11 @@
+uuid: 2af6911a-fd84-4042-b29a-f66403130333
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.premium_avec_tel
+id: node.premium_avec_tel
+target_entity_type_id: node
+target_bundle: premium_avec_tel
+default_langcode: site_default
+language_alterable: false

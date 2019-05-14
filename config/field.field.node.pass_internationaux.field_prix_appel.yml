@@ -1,0 +1,19 @@
+uuid: 80aaa15c-a316-45dd-b299-06927aa7ef3d
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prix_appel
+    - node.type.pass_internationaux
+id: node.pass_internationaux.field_prix_appel
+field_name: field_prix_appel
+entity_type: node
+bundle: pass_internationaux
+label: 'Prix appel'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+uuid: 8625b487-df58-48d9-a0af-eb7d9c077ff2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_prix_des_appels
+    - node.type.pass_liberty
+    - node.type.template_teranga_liberty
+id: node.template_teranga_liberty.field_prix_des_appels
+field_name: field_prix_des_appels
+entity_type: node
+bundle: template_teranga_liberty
+label: 'Prix des appels'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      pass_liberty: pass_liberty
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

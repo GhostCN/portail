@@ -1,0 +1,22 @@
+uuid: 99a6ea71-2a4b-492a-a4ec-7055def84ed4
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_keurgui_box
+id: node.page_keurgui_box.status
+field_name: status
+entity_type: node
+bundle: page_keurgui_box
+label: Publié
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

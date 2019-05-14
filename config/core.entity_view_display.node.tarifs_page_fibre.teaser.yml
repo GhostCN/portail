@@ -1,0 +1,27 @@
+uuid: a663f00d-47b3-415b-9a3a-ce306a95cdef
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.tarifs_page_fibre
+  module:
+    - user
+id: node.tarifs_page_fibre.teaser
+targetEntityType: node
+bundle: tarifs_page_fibre
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_etapes_de_deploiement: true
+  field_faq: true
+  field_options_bouquet: true
+  field_options_fibre: true
+  field_options_internet: true
+  field_options_telephone: true
+  field_tarif_fibre: true
+  field_titre_fibre: true
+  langcode: true

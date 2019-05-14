@@ -1,0 +1,27 @@
+uuid: 0d71e5a8-40a6-43e0-aabd-7c520956b9fd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.keurgui
+  module:
+    - user
+id: node.keurgui.teaser
+targetEntityType: node
+bundle: keurgui
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_comment_souscrire_k: true
+  field_faq_keurgui: true
+  field_offre_en_resume: true
+  field_option_tel_inclus_k: true
+  field_options_internet_inclus_k: true
+  field_options_keurgui: true
+  field_tarif: true
+  field_titre_internet_keurgui: true
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: 0385aca0-6e9c-41ca-98aa-2f4fdffd179e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarif_internet
+    - node.type.page_home_simple
+id: node.page_home_simple.field_tarif_internet
+field_name: field_tarif_internet
+entity_type: node
+bundle: page_home_simple
+label: 'Tarif internet'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

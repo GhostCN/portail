@@ -1,0 +1,105 @@
+<?php
+
+namespace Drupal\portail\Constante;
+
+/**
+ * Déclaration des constantes
+ */
+class ThemeConstante
+{
+  const THEME = '#theme';
+  const ALLPASS = '#allpass';
+  const LIST_PASS = 'liste_pass';
+  const TV_ORANGE = 'tv_orange';
+  const ORANGE_MONEY = 'orange-money';
+  const ILLIMIX = 'illimix';
+  const TEST_ELIGIBILITE = 'test_eligibilite';
+  const ELIGIBLE_MOB = 'eligible_mob';
+  const NON_ELIGIBLE_MOB = 'non_eligible_mob';
+  const SOUSCRIPTION_MOB = 'souscription_mob';
+  const CONFIRMATION_MOB = 'confirmation_mob';
+  const TEST_ELIGIBILITE_MOB = 'test_eligibilite_mob';
+  const OFFRE_MOBILE = 'offres_mobiles';
+  const INTERNET_FIXE = 'internet_fixe';
+  const OFFRE_INTERNET_FIXE = 'offre_internet_fixe';
+  const OFFRE_HOME_PLUS = 'offre_home_plus';
+  const OFFRE_HOME_FIBRE = 'offre_home_fibre';
+  const OFFRE_KEURGUI_BOX = 'offre_keurgui_box';
+  const JAMONO_NEW_SCOOL = 'jamono_new_scool';
+  const DETAILS_OFFRE = 'details_offre';
+  const OFFRE_FAMILY = 'offre_family';
+  const OFFRES = '#offres';
+  const QUESTIONS = '#questions';
+  const PROMOS = '#promos';
+  const INFOS = '#infos';
+  const ELIGIBLE = '#eligible';
+  const STEP = '#step';
+  const REQUEST_TYPE = '#request_type';
+  const TYPE_CLIENT = '#type_client';
+  const CODE_GPS = '#code_gps';
+  const TITLE = '#title';
+  const TITLE1 = '#title1';
+  const TITLE2 = '#title2';
+  const ERRORS = '#errors';
+  const ILLIMIXS = '#illimixs';
+  const AVANTAGES = '#avantages';
+  const SMS = '#sms';
+  const APPELS = '#appels';
+  const APPEL_OFFRE = '#appel_offre';
+  const SMS_OFFRE = '#sms_offre';
+  const PAGE_CACHE = '#cache';
+  const PAGE_URL_QUERY = 'url.query_args';
+  const PAGE_CONTEXTS = 'contexts';
+  const MAX_AGE = "max-age";
+  const IMAGES_BOUQUET = '#images_bouquet';
+  const TARIFS_FIBRE = '#tarifs_fibre';
+  const OPTIONS_INCLUS = '#options_inclus';
+  const DEPLOIEMENT = '#etapes_deploiement';
+  const FAQ = '#faq';
+  const OFFRE = '#offre';
+  const TARIFS = '#tarifs';
+  const OPTIONS_HHK = '#options';
+  const OFFRE_RESUME = '#offre_resume';
+  const SOUSCRIPTION = '#souscription';
+  const FAQ_HHK = '#faq_hhk';
+  const OFFRE_KEURGUI = "offre_keurgui";
+  const TEMPLATE = "#template";
+  const COMMENT_SOUSCRIRE = "#comment_souscrire";
+  const HUB_PASS_INTERNATIONAUX = 'hub-pass-internationaux';
+  const PASS_INTERNATIONAUX = "pass_internationaux";
+  const INFOS_PASS = '#infos_pass';
+  const PAYS = "#pays";
+  const PASS = "#pass";
+  const TARIFS_FAMILY = '#tarifs_family';
+  const FONDAMENTAUX = "#fondamentaux";
+  const SOUSC_FAMILY = "#sousc_family";
+  const FAQ_FAMILY = "#faq_family";
+  const SLIDER_TV = "#slider_tv";
+  const BOUQUETS_ORANGE = "#bouquets_orange";
+  const APPEL_DEPUIS_ETRANGER = "appel_depuis_etranger";
+  const CONTACT = 'contact';
+  const RECHERCHE = 'recherche';
+  const HEADER = 'menu_header';
+  const FOOTER = 'menu_footer';
+  const FOOTERMENU = '#footermenu';
+  const ITEMS = '#items';
+  const HUB_ACTU = 'hub_actualite';
+  const ORANGE_AICHA = 'orange_aicha';
+  const GOLD_PLATINIUM = 'gold_platinium';
+  const CHP_ACTUALITE = '#chp_actualite';
+  const ACTUALITE = 'actualite';
+  const ACTUALITE_SMARTPHONE = 'actualite_smartphone';
+  const ACTU_VIDEO = 'actu_video';
+  const SMARTPHONE = '#smartphone';
+  const SLIDER_OM = '#slider_om';
+  const CONTENT = '#content';
+  const FAQ_OM = '#faq_om';
+  const FINDAN = 'findan';
+  const SARGAL = 'sargal';
+  const ASSISTANCE = 'assistance';
+  const HUB_TERANGA = 'hub_teranga';
+  const TERANGA_LIBERTY = 'teranga_liberty';
+  const TERANGA_PREMIUM = 'teranga_premium';
+  const FAQ_SARGAL = '#faq_sargal';
+  const CADEAU_SARGAL = '#cadeau_sargal';
+}

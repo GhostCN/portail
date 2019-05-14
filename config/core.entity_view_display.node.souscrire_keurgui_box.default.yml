@@ -1,0 +1,42 @@
+uuid: 5cfc0262-061a-4f9e-b0bd-7444bf645c41
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.souscrire_keurgui_box.body
+    - field.field.node.souscrire_keurgui_box.field_icone_souscription_keurgui
+    - node.type.souscrire_keurgui_box
+  module:
+    - svg_image
+    - text
+    - user
+id: node.souscrire_keurgui_box.default
+targetEntityType: node
+bundle: souscrire_keurgui_box
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_icone_souscription_keurgui:
+    weight: 102
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

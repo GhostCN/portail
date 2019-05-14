@@ -1,0 +1,36 @@
+uuid: 6cf06643-3379-447a-90b6-59eb678c1480
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.offres_teranga.field_forfaits_internet_teranga
+    - field.field.node.offres_teranga.field_offre_teranga
+    - node.type.offres_teranga
+  module:
+    - user
+id: node.offres_teranga.default
+targetEntityType: node
+bundle: offres_teranga
+mode: default
+content:
+  field_forfaits_internet_teranga:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_offre_teranga:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

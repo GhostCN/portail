@@ -1,0 +1,19 @@
+uuid: ccccc605-d76b-405e-90d5-6844503c2061
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_titre_2
+    - node.type.etapes_deploiement
+id: node.etapes_deploiement.field_titre_2
+field_name: field_titre_2
+entity_type: node
+bundle: etapes_deploiement
+label: 'Titre 2'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

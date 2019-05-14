@@ -1,0 +1,39 @@
+uuid: 501b748d-f05c-49a9-9393-5cdb9f4351c1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.faq_home.body
+    - node.type.faq_home
+  module:
+    - text
+id: node.faq_home.default
+targetEntityType: node
+bundle: faq_home
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

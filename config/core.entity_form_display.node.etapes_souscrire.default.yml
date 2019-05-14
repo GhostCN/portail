@@ -1,0 +1,59 @@
+uuid: 7c46ab58-7b2a-4d17-8b33-a01ea5decc6c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.etapes_souscrire.body
+    - field.field.node.etapes_souscrire.field_action
+    - field.field.node.etapes_souscrire.field_icons
+    - image.style.thumbnail
+    - node.type.etapes_souscrire
+  module:
+    - svg_image
+    - text
+id: node.etapes_souscrire.default
+targetEntityType: node
+bundle: etapes_souscrire
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_action:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_icons:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

@@ -1,0 +1,19 @@
+uuid: f09b7fc6-63be-4f5f-98c7-9350d6437eb2
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_appel_local
+    - node.type.zone_pays_orange
+id: node.zone_pays_orange.field_appel_local
+field_name: field_appel_local
+entity_type: node
+bundle: zone_pays_orange
+label: 'Appel local ( Ex : 300 F )'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

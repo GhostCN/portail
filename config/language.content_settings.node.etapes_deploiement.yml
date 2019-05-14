@@ -1,0 +1,11 @@
+uuid: 52e7d503-e18c-4437-b392-0d0547023984
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.etapes_deploiement
+id: node.etapes_deploiement
+target_entity_type_id: node
+target_bundle: etapes_deploiement
+default_langcode: site_default
+language_alterable: false

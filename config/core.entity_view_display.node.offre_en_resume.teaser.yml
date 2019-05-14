@@ -1,0 +1,30 @@
+uuid: a8eb265c-5728-418a-a9e4-a08ae508b745
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.offre_en_resume.body
+    - node.type.offre_en_resume
+  module:
+    - text
+    - user
+id: node.offre_en_resume.teaser
+targetEntityType: node
+bundle: offre_en_resume
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_icone_en_resume: true
+  langcode: true

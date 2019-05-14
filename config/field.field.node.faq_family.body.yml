@@ -1,0 +1,22 @@
+uuid: 225bc380-406e-4010-8536-2aba53b9e05c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.faq_family
+  module:
+    - text
+id: node.faq_family.body
+field_name: body
+entity_type: node
+bundle: faq_family
+label: Réponse
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

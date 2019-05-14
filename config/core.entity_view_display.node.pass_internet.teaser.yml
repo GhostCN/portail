@@ -1,0 +1,29 @@
+uuid: 636b9882-bf78-441a-af1a-7feda5e3fc71
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.pass_internet.field_montant_pass
+    - field.field.node.pass_internet.field_poids_pass
+    - field.field.node.pass_internet.field_validite_pass
+    - field.field.node.pass_internet.field_volume_pass
+    - node.type.pass_internet
+  module:
+    - user
+id: node.pass_internet.teaser
+targetEntityType: node
+bundle: pass_internet
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_montant_pass: true
+  field_poids_pass: true
+  field_validite_pass: true
+  field_volume_pass: true
+  langcode: true

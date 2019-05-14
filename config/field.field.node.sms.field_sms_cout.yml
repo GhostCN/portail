@@ -1,0 +1,23 @@
+uuid: 09391a14-bd57-48e5-b9ce-5cbfcd329262
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sms_cout
+    - node.type.sms
+id: node.sms.field_sms_cout
+field_name: field_sms_cout
+entity_type: node
+bundle: sms
+label: coût
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

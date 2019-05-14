@@ -1,0 +1,660 @@
+{{ attach_library('orange/global-offre-home-css') }}
+
+{{ attach_library('orange/global-home-js') }}
+{% if template == "homep" %}
+   {% set page = "Home +" %}
+{% elseif template == "keurgui" %}
+   {% set page = "Keurgui" %}
+{% else %}
+   {% set page = "Home" %}
+{% endif %}
+<div class="debut contentA">
+  <section class="sect-nav">
+    <ul class="sac-nav-ul mb-0">
+      <li class="debutlii">
+        <a href="/">Accueil</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+      </li>
+      <li class="debutlii d-none d-sm-block">
+        <a href="{{ path('internet-fixe') }}">Internet ADSL - Fibre</a><img class="px-2" src="/sites/default/files/icones/keyboard-arrow-up.svg" alt="" id="fleche">
+      </li>
+      <li class="debutlii">
+        <a href="#"> <b> Offre {{page}} </b></a>
+      </li>
+    </ul>
+  </section>
+</div>
+<div class="Group-111 ">
+  <div class="text-style-of contentA offre-hom ">
+    <h1 class="text-style-1-of color-orange-style">Offre</br>
+    <span class="text-style-2-of mt-0 ">
+      {{page}}</span>
+    </h1>
+  </div>
+
+    {{ attach_library('orange/global-home-js') }}
+    {% if template == "homep" %}
+        <img class="imgSmall Group-7 d-none  d-sm-none d-md-none d-lg-block" src="/sites/default/files/icones/Bandeau_Home_plus_Dekstop.jpg" alt="">
+        <img class="imgSmall Group-7 d-lg-none" src="/sites/default/files/icones/Bandeau_Home_plus_Mobile_604x200.jpg" alt="">
+    {% elseif template == "keurgui" %}
+      <img class="imgSmall Group-7 d-none  d-sm-none d-md-none d-lg-block" src="/sites/default/files/icones/Bandeau_Keurgui_Dekstop.jpg" alt="">
+      <img class="imgSmall Group-7 d-lg-none" src="/sites/default/files/icones/Bandeau_Keurgui_Mobile.jpg" alt="">
+    {% else %}
+      <img class="imgSmall Group-7 d-none  d-sm-none d-md-none d-lg-block" src="/sites/default/files/icones/Bandeau_Home_Dekstop.jpg" alt="">
+      <img class="imgSmall Group-7 d-lg-none" src="/sites/default/files/icones/Bandeau_Home_Mobile.jpg" alt="">
+    {% endif %}
+</div>
+
+<div class="debut">
+  <!--Card version desktop-->
+  <div class="body-Interne contentA">
+    <section class="pdle">
+      <div class="card card-tarifs-of" style="margin-top: -72px;">
+        <div class="row">
+          <div class="col-lg-5 border-action mx">
+            <p class="Internet-Haut-dbit-of">Tarifs et caractéristiques de l’offre </p>
+            <p class="intern"> <b class="Tarifs-et-caractris-text"> {{tarifs.0.titre_internet}}</b></p>
+            <span class="Mois-of"> <b>  {{tarifs.0.tarif_internet}}</b> </span>
+          </div>
+          <div class="col-lg-4 col-spa border-action">
+            {% set icones = { 1: "check-vert.svg" ,  2: "check-violet.svg" , 3: "check-bleu.svg" } %}
+            {% set i=1%}
+            {% set off= "" %}
+            {% set of= "" %}
+            {% set total= tarifs.0.options|length %}
+            {% for option in tarifs.0.options %}
+            {% if i>1 %}
+            {% set off= "case-off" %}
+            {% endif %}
+            <div class="case-of {{off}}">
+              <img class="int-marg" src="/sites/default/files/icones/{{icones[i]}}" alt="">
+            {% if i==total %}
+            {% set of= "case-of" %}
+            {% endif %}
+              <span class="int-of ">{{option}}</span><br/>
+               {% set i = i+1 %}
+            </div>
+            {% endfor %}
+          </div>
+          <div class="col-lg-3">
+            <!--<a class="btn  bt-sous disable-btn" data-toggle="tooltip" data-placement="bottom" title="Ce site est en construction. Contenu indisponible pour le moment. Merci de votre comprehension" href="#" role="button">Souscrire</a>-->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="equipement">
+      <div class="d-none  d-sm-none d-md-none d-lg-block">
+        <h2 class="equipements-inclus-of">Equipements inclus</h2>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card mask-of card-equipe">
+              <div class="card-body">
+                <h1 class="card-title text-col">Internet</h1>
+                <div class="pad-div-body">
+                  {% for option in options.0.options_internet %}
+                  <div class="cas-of pb-2">
+                    <img class="" src="/sites/default/files/icones/check-orange.svg" alt="">
+                    <span class="text-col">{{option}}</span>
+                  </div>
+                  {% endfor %}
+                </div>
+                <img class="img-boxing" id="box-1" src="/sites/default/files/icones/box-2.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card mask-of-1 card-equipe">
+              <div class="card-body">
+                <h1 class="card-title text-col ">Téléphone</h1>
+                <div class="pad-div-body-1">
+                  {% for option in options.0.options_telephone %}
+                  <div class="cas-of pb-2">
+                    <img class="" src="/sites/default/files/icones/check-orange.svg" alt="">
+                    <span class="text-col">{{option}}</span>
+                  </div>
+                  {% endfor %}
+                </div>
+                <img class="img-boxing" id="box-2" src="/sites/default/files/icones/bitmappp.png" alt="">
+              </div>
+            </div>
+          </div>
+          {% if template != 'keurgui'%}
+          <div class="col-lg-4">
+            <div class="card mask-of-2 card-equipe">
+              <div class="card-body">
+                <h1 class="card-title text-col ">Bouquet TV</h1>
+                <div class="pad-div-body">
+                  {% for option in options.0.options_bouquet %}
+                  <div class="cas-of pb-2">
+                    <img class="" src="/sites/default/files/icones/check-orange.svg" alt="">
+                    <span class="text-col">{{option}}</span>
+                  </div>
+                  {% endfor %}
+                </div>
+                <img class="img-boxing" id="box-3" src="/sites/default/files/icones/bitmap.png" alt="">
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      <!--  pour mobile -->
+      <div class="d-lg-none">
+        <h2 class="equipements-inclus-of">Equipements inclus</h2>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide swipe2" style="margin-right: 10px;">
+              <div class="card shad" id="shad1">
+                <h1 class="card-title text-coll pb-3">Internet</h1>
+                {% for option in options.0.options_internet %}
+                <div class="box-mega pb-2">
+                  <img class="" src="/sites/default/files/icones/check-orange.svg" alt="">
+                  <span class="text-col">{{option}}</span>
+                </div>
+                 {% endfor %}
+
+                  <img class="img-boxing box-1-swipe" src="/sites/default/files/icones/box-2--mobe.png" alt="">
+              </div>
+
+            </div>
+            <!--card 1 fini-->
+            <div class="swiper-slide swipe2" style="margin-right: 10px;">
+              <div class="card shad" id="shad2">
+                <h1 class="card-title text-coll pb-3">Téléphone</h1>
+                {% for option in options.0.options_telephone %}
+                <div class="box-mega pb-2">
+                  <img class="" src="/sites/default/files/icones/check-orange.svg" alt="">
+                  <span class="text-col">{{option}}</span>
+                </div>
+                {% endfor %}
+                <img class="img-boxing" id="box-2-swipe" src="/sites/default/files/icones/bitmap-mob@2x.png" alt="">
+              </div>
+            </div>
+             {% if template != 'keurgui'%}
+            <div class="swiper-slide swipe2" style="margin-right: 10px;">
+              <div class="card shad" id="shad3">
+                <h1 class="card-title text-coll pb-3">Bouquet TV</h1>
+                {% for option in options.0.options_bouquet %}
+                <div class="box-mega pb-2">
+                  <img class="" src="/sites/default/files/icones/check-orange.svg" alt="">
+                  <span class="text-col">{{option}}</span>
+                </div>
+                {% endfor %}
+                <img class="img-boxing box-1-swipe" src="/sites/default/files/icones/bitmap-mobe.png" alt="">
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+
+      </div>
+      <!--   fin pour mobile -->
+    </section>
+    {% if template != 'keurgui'%}
+    <section class="decouvre-tvv">
+      <div class="dspp">
+       <h2><a href="{{ path('tv-orange') }}" class="equipements-inclus-of text-dark">Découvrez notre bouquet TV</a></h2>
+        <div class="d-none  d-sm-none d-md-none d-lg-block">
+          <a href="{{ path('tv-orange') }}"><button type="button" class="btn btn-secondary voir-t">Voir tout</button></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+           {% set len = slider_tv[0]['images_slider']|length %}
+          <div class="d-none  d-sm-none d-md-none d-lg-block">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                {% for i in 0..len-1 %}
+                  <li data-target="#carouselExampleIndicators" data-slide-to="{{i}}" {% if i == 0 %}class="active"{% endif %}></li>
+                {% endfor %}
+              </ol>
+              {% set ordre = {0: 'First', 1: 'Second', 2: 'Third', 3: 'Third', 4: 'Fourth'} %}
+              <div class="carousel-inner">
+                {% for i in 0..len-1 %}
+                <div class="carousel-item {% if i == 0 %}active{% endif %}">
+                  <img src="{{file_url(slider_tv[0]['images_slider'][i])}}" class="imgSmall" alt="{{ordre[i]}} slide">
+                </div>
+                {% endfor %}
+              </div>
+              {#<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <img src="/sites/default/files/images/keyboard-arrow-left.svg" class="imgfle" alt="">
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <img src="/sites/default/files/images/keyboard-arrow-right.svg" class="imgfle" alt="">
+              </a>#}
+              <a class="carousel-control-prev d-none d-sm-block carousel-control-S" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <img src="/sites/default/files/images/keyboard-arrow-left.svg" alt="" class="img-nav-slide">
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next d-none d-sm-block carousel-control-S" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <img src="/sites/default/files/images/keyboard-arrow-right.svg" alt="" class="img-nav-slide">
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--pour mobile-->
+        <div class="d-lg-none contentE">
+          <div id="carouselExampleIndicatorsON" class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+              {% for i in 0..len-1 %}
+              <li data-target="#carouselExampleIndicators" data-slide-to="{{i}}" {% if i == 0 %}class="active"{% endif %}></li>
+              {% endfor %}
+            </ol>
+
+            <div class="carousel-inner">
+               {% for i in 0..len-1 %}
+              <div class="carousel-item {% if i == 0 %}active{% endif %}">
+                <img src="{{file_url(slider_tv[0]['images_slider'][i])}}" class="imgSmall" alt="{{ordre[i]}} slide">
+              </div>
+              {% endfor %}
+
+            </div>
+            {#<a class="carousel-control-prev" href="#carouselExampleIndicatorsON" role="button" data-slide="prev">
+              <img src="/sites/default/files/images/keyboard-arrow-left.svg" class="imgfle" alt="">
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicatorsON" role="button" data-slide="next">
+              <img src="/sites/default/files/images/keyboard-arrow-right.svg" class="imgfle" alt="">
+            </a>#}
+
+              <a class="carousel-control-prev d-sm-block carousel-control-S" href="#carouselExampleIndicatorsON" role="button" data-slide="prev">
+                  <img src="/sites/default/files/images/keyboard-arrow-left.svg" alt="" class="img-nav-slide">
+                  <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next d-sm-block carousel-control-S" href="#carouselExampleIndicatorsON" role="button" data-slide="next">
+                  <img src="/sites/default/files/images/keyboard-arrow-right.svg" alt="" class="img-nav-slide">
+                  <span class="sr-only">Next</span>
+              </a>
+          </div>
+        </div>
+
+        <!--fin mobile-->
+
+        <div class="col-lg-6">
+          <div class="d-none  d-sm-none d-md-none d-lg-block">
+            <div class="row">
+               {% for i in 0..5 %}
+              <div class="col-lg-4" style="margin-bottom: 13px;">
+                <img src="{{file_url(bouquets_orange[0]['logo_bouquet'][i])}}" class="imgSmall" alt="">
+              </div>
+              {% endfor %}
+            </div>
+            <div class="rectangle-canal">
+              <p class="vous-canal"><b>Bouquet</b><img src="/sites/default/files/icones/Canal+.svg" class="canal-img" alt=""><span id="bouq"><b>disponible en option payante</b></span> <span class="canal-bouq"><b><span class="glyphicon glyphicon-plus"></span> </b>
+              <img src="/sites/default/files/icones/keyboard-arrow-right-white-home.svg" alt="" id="fleche-cana"> </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--pour mobile-->
+      <div class="d-lg-none">
+        <div class="swiper-container sw-mob">
+          <div class="swiper-wrapper ">
+            {% for i in 0..5 %}
+              <div class="swiper-slide swipe3">
+                <img src="{{file_url(bouquets_orange[0]['logo_bouquet'][i])}}" class="afr" alt="">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="rectangle-canal">
+          <p class="vous-canal">
+              <b>Bouquet</b><span id="bouq"><b>disponible <br> en option payante</b></span>
+              <img src="/sites/default/files/icones/Canal+.svg" class="canal-img" alt="">
+              <img src="/sites/default/files/icones/keyboard-arrow-right-white-home.svg" alt="" id="fleche-cana">
+          </p>
+        </div>
+
+      </div>
+      <!--fin mobile-->
+    </section>
+    {% endif %}
+    <section class="decouvre-tv ">
+      <div class="d-none  d-sm-none d-md-none d-lg-block">
+        <ul class="nav nav-tabs row border-bottom-0 " id="myTab" role="tablist">
+          <li class="nav-item col-lg-6 text-center">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+              <span class="mb-0 offr-resm">L’offre en résumé</span>
+            </a>
+          </li>
+          <li class="nav-item col-lg-6 text-center">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+              <span class="mb-0 offr-resm">Comment souscrire ?</span>
+            </a>
+          </li>
+        </ul>
+        <div class="tab-content tab-content-border ml-0 mr-2" id="myTabContent">
+          <div class="tab-pane fade show active " id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row blockavantage">
+              {% for i in 0..5 %}
+              <div class="col-lg-4  dsp">
+                <div class="groupe171">
+                  <img src="{{file_url(offre_resume['icons'][i])}}" class="" alt="">
+                </div>
+                <div class="text-img">
+                  <p class="une-connexion-st">{{offre_resume['description'][i]|striptags('<strong><b>')|raw}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+          </div>
+          <div class="tab-pane fade " id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="row blockavantage">
+            {% for i in 0..2 %}
+              <div class="col-lg-4">
+                <div class="Tarifs">
+                  <div class="option">
+                  <span>{{souscription['option'][i]}}
+                    <h4>{{souscription['action'][i]}}</h4>
+                  </span>
+                  </div>
+                </div>
+                <p class="Lorem-ipsum-d">{{souscription['description'][i]|striptags('<strong><b>')|raw}}</p>
+              </div>
+              {% endfor %}
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- version mobile -->
+      <h2 class="Les-avantages-New-S d-block d-lg-none">L’offre en résumé</h2>
+      <div class="d-block d-lg-none mb-2">
+        <div class="row ">
+          {% for i in 0..5 %}
+          <div class="col-6 mb-2">
+            <div class="Rectangle-33 text-center">
+              <div style="height: 70%; padding: 10px;">
+                <img class="py-2" src="{{file_url(offre_resume['icons'][i])}}" alt="Card image cap" id="imageLoren">
+              </div>
+              <div style="position: relative; height: 25%;">
+                <div style="position: absolute; top: 50%; transform: translateY(-50%);">
+                  <p class="Tarifs-rduits" style="padding: 0;"> {{offre_resume['description'][i]|striptags('<strong><b>')|raw}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <!-- pour les avantages Devenir New S’cool ? version mobile -->
+      <div class="d-lg-none">
+        <h2 class="Les-avantages-New-S">Comment souscrire ?</h2>
+        <div class="Rectangle-13 pr-1">
+          <div class="row">
+            {% for i in 0..2 %}
+            <div class="col-12 p-3" style=" display: flex;">
+              <div>
+                <img class="imgSmall imag-tp" src="{{file_url(souscription['icons_souscription'][i])}}" alt="" id="icon-devenir-ns">
+              </div>
+              <div class="px-3 mt"> <span class="option-mobile">{{souscription['option'][i]}}
+                 <h4 class="mb-0 pt-1">{{souscription['action'][i]}}</h4></span>
+              </div>
+            </div>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+      <!-- fin version mobile -->
+    </section>
+    <section class="equipement">
+      <div class="d-none d-sm-none d-md-none d-lg-block">
+        <div class="row ">
+          <div class="col-lg-8 col-12">
+            <div class="Group-11 ">
+              <div class="text-style-oof contentB">
+                <span class="text-style-colo-1 color-orange-style">Vous voulez plus de vitesse ?</span>
+                <p class="text-style-color mt-0 ">Passez à la Fibre d’Orange avec des débits qui peuvent atteindre jusqu’à <b class="col-orange"> 50 mégabits</b> à partir de <b class="col-orange"> 34.900 F / Mois</b></p>
+                <div class="bt-test">
+                  <a class="btn btn-primary btn-off" href="{{path('test-eligibbilte')}}" role="button">Testez votre éligibilité</a>
+                </div>
+              </div>
+
+              <img class="imgSmall Group-7" src="/sites/default/files/icones/background-image-blanc@3x.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-4 ">
+            <div class="card om-blue">
+              <div class="dsp ">
+                <img class="double-fleche" src="/sites/default/files/icones/orange-money-black.svg" alt="">
+                <b class="omy">Orange Money</b>
+              </div>
+              <p class="fac-paye">Payer directement vos factures en ligne via Orange Money</p>
+              <div class="">
+                <a class="btn btn-light" href="{{path('orange-money')}}" role="button">Voir détails</a>
+
+              </div>
+              <img class="main-tel" src="/sites/default/files/icones/Orange_Money_desktop.svg" style="width: 190px;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--plus de vitesse version mobile-->
+      <section class="decouvre-tv d-none  d-lg-none">
+        <div class="d-lg-none">
+          <div class="card card-vitesse">
+            <p class="text-style-colo-1"><b> Plus de vitesse ?</b></p>
+            <p class="pas-fib">Passez à la Fibre d’Orange avec des débits qui peuvent atteindre jusqu’à <b class="col-orange"> 50 mégabits</b> à partir de <b class="col-orange"> 34.900 F / Mois</b></p>
+            <a class="btn btn-primary" href="#" role="button">Testez votre éligibilité</a>
+          </div>
+        </div>
+      </section>
+      <!--fin version mobile-->
+      <!--Orange-money blue version mobile-->
+      <div class="om-mob-blue  d-lg-none">
+        <a href="https://play.google.com/store/apps/details?id=com.orange.mobile.orangemoney&hl=fr"  target="_blank" class="row">
+          <div class="col-2">
+            <img class="px-2 pt-1 icn" src="/sites/default/files/icones/orange-money-black.svg" alt="">
+          </div>
+          <div class="col-8">
+            <p class="tl">Télécharger l’application
+              <b class="om-tl">Orange Money</b> </p>
+          </div>
+          <div class="col-2">
+            <img class="main-tel" src="/sites/default/files/icones/Orange_Money_desktop.svg" style="width: 70px;">
+          </div>
+
+        </a>
+
+      </div>
+      <!--fin version mobile-->
+
+    </section>
+    <section class="equipement qs">
+      <h2 class="qsf">Questions fréquentes</h2>
+         <div class="card border-0">
+            {% set valeur = faq_hhk['question']|length %}
+                <div class="card-body card-acc">
+                    <div class="accordion" id="accordionExample">
+                    {% set key = 1 %}
+                    {% for i in 0..valeur-1 %}
+                        <div class="card backg {% if valeur == key %}border-0{% endif %}" {% if key == 1 %} style="border-top: none;"{% endif %} >
+                            <div class="card-header my-2" id="heading{{key}}">
+                                <h5 class="mb-0">
+                                    <button class="btn-accordeon btn pac btn-link collapsed backg font20" type="button" data-toggle="collapse" data-target="#collapse{{key}}S" aria-expanded="{% if key == 1 %}true{% else %}false{% endif %}" aria-controls="collapse{{key}}">
+                                            {{faq_hhk['question'][i]}}
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapse{{key}}S" class="collapse {% if key == 1 %}show{% endif %}" aria-labelledby="heading{{key}}" data-parent="#accordionExample">
+                            <div class="card-body">
+                                  {{faq_hhk['reponse'][i]|raw}}
+                            </div>
+                            </div>
+                        </div>
+                    {% set key= key + 1 %}
+                    {% endfor %}
+                    </div>
+                </div>
+
+            <div class="space50"></div>
+        </div>
+
+    </section>
+
+  </div>
+
+  <!-- footer jaune -->
+  <div class="footer-body" style="background-color:#fdcc00; margin-bottom: -40px; padding-bottom: 30px;">
+    <div class="contentS d-none d-md-block d-sm-block">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="h2" style="font-size: 24px;">Pourquoi choisir Orange ?</h2>
+        </div>
+        <div class="sous-bloc-footer col-sm-4">
+          <div>
+            <div class="row">
+              <div class="col-sm-2">
+                <img class="image-block-jaune-1" src="/sites/default/files/images/black.svg" alt="Generic placeholder image">
+              </div>
+              <div class="col-sm-10">
+                <h5 class="mt-0 mb-1">Un réseau 4G hors-normes</h5>
+              </div>
+              <div class="col-lg-2"></div>
+              <div class="col-sm-10">
+                <p style=" text-align: justify;">
+                  Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                </p>
+              </div>
+              <div class="col-lg-2"></div>
+              <div class="col-sm-10">
+                <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sous-bloc-footer col-sm-4">
+          <div>
+            <div class="row">
+              <div class="col-sm-2">
+                <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+              </div>
+              <div class="col-sm-10">
+                <h5 class="mt-0 mb-1">Assistance en ligne 24h/24</h5>
+              </div>
+              <div class="col-lg-2"></div>
+              <div class="col-sm-10">
+                <p style=" text-align: justify;">
+                  Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.               </p>
+              </div>
+              <div class="col-lg-2"></div>
+              <div class="col-sm-10">
+                <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sous-bloc-footer col-sm-4">
+          <div>
+            <div class="row">
+              <div class="col-sm-2">
+                <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+              </div>
+              <div class="col-sm-10">
+                <h5 class="mt-0 mb-1">Des apps à portée de main</h5>
+              </div>
+              <div class="col-lg-2"></div>
+              <div class="col-sm-10">
+                <p style=" text-align: justify;">
+                  Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                </p>
+              </div>
+              <div class="col-lg-2"></div>
+              <div class="col-sm-10">
+                <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container d-block d-md-none d-sm-none">
+
+      <div class="col-sm-12">
+        <p class="pt-1"></p>
+        <h2 class="h2" style="font-size: 22px;">Pourquoi choisir Orange ?</h2>
+      </div>
+      <div class="hide-reverse">
+        <div class="row" style="overflow: hidden">
+          <div class="col-12">
+            <div class="swiper-container-footer">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" id="slide1">
+                  <div>
+                    <div class="row">
+                      <div class="text-left col-sm-2">
+                        <img class="text-left" src="/sites/default/files/images/flybox.png" alt="Generic placeholder image">
+                      </div>
+                      <div class="col-sm-8 py-2">
+                        <h4 class="mt-0 mb-1 text-left">Un reseau 4G<br>hors norme</h4>
+                      </div>
+                      <div class="col-lg-2"></div>
+                      <div class="col-sm-8">
+                        <p class="text-block-jaune" style=" text-align: justify;">
+                          Avec Orange, profitez de la couverture  réseau la plus étendue du Sénégal avec une qualité optimale. Seul opérateur téléphonique à proposer la 4G+ vous bénéificiez de l'internet mobile le plus rapide du marché.
+                        </p>
+                      </div>
+                      <div class="col-lg-2"></div>
+                      <div class="col-sm-10 text-left">
+                        <a href="http://orangesengage.sn/reseau_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" id="slide2">
+                  <div>
+                    <div class="row">
+                      <div class="text-left col-sm-2">
+                        <img class="image-block-jaune-2" src="/sites/default/files/images/assistance-black.svg" alt="Generic placeholder image">
+                      </div>
+                      <div class="col-sm-8 py-2">
+                        <h4 class="mt-0 mb-1 text-left">Assistance en <br> ligne 24h/24</h4>
+                      </div>
+                      <div class="col-lg-2"></div>
+                      <div class="col-sm-8">
+                        <p class="text-block-jaune" style=" text-align: justify;">
+                          Notre service client est à votre côté pour vous accompagner au quotidien et répondre à vos réclamations. Carte sim bloquée, téléphone volé, problémes de connexion, nous vous apportons une assistance 24H/24 et 7 jours/7.
+                        </p>
+                      </div>
+                      <div class="col-lg-2"></div>
+                      <div class="col-sm-10 text-left">
+                        <a href="http://orangesengage.sn/service_client " target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" id="slide3">
+                  <div>
+                    <div class="row">
+                      <div class="text-left col-sm-2">
+                        <img class="image-block-jaune-3" src="/sites/default/files/images/orange-et-moi-black.svg" alt="Generic placeholder image">
+                      </div>
+                      <div class="col-sm-8 py-2">
+                        <h4 class="mt-0 mb-1 text-left">Des apps à <br> portée de main</h4>
+                      </div>
+                      <div class="col-lg-2"></div>
+                      <div class="col-sm-8">
+                        <p class="text-block-jaune" style=" text-align: justify;">
+                          Nous améliorons votre expérience client en vous proposant des applications utiles à installer dans votre smartphone.
+                        </p>
+                        </p>
+                      </div>
+                      <div class="col-lg-2"></div>
+                      <div class="col-sm-10 text-left">
+                        <a href="http://orangesengage.sn/bancarisation_mobile" target="_blank" class="btn btn-outline-dark">Découvrir</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin footer jaune -->
+</div>

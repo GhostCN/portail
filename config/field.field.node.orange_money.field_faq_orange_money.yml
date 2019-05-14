@@ -1,0 +1,28 @@
+uuid: bd9977fc-a0e0-4f85-bc5b-115f72488503
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_faq_orange_money
+    - node.type.faq_orange_money
+    - node.type.orange_money
+id: node.orange_money.field_faq_orange_money
+field_name: field_faq_orange_money
+entity_type: node
+bundle: orange_money
+label: 'Faq Orange Money'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      faq_orange_money: faq_orange_money
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

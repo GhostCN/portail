@@ -1,0 +1,11 @@
+uuid: a40806c2-710d-445c-818b-e14efdaedbf1
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.template_teranga_premium
+id: node.template_teranga_premium
+target_entity_type_id: node
+target_bundle: template_teranga_premium
+default_langcode: site_default
+language_alterable: false

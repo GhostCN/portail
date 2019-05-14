@@ -1,0 +1,187 @@
+<section class="contentA">
+
+  <div class="card card-sumilateur">
+    <section>
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="nav-item ab1">
+          <a href="#step1" data-lestep="step1" class="nav-link ab nav-link-pr active show a-prec" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+            <span class="cercle-numb active cercle-numb-prec">1</span> <span class="text-numb active text-numb-prec">Test d’éligibilité</span>
+          </a>
+        </li>
+        <li role="presentation" class="nav-item ab1">
+          <a href="#step2" data-lestep="step2" class="nav-link ab nav-link-pr active show a-prec" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+            <span class="cercle-numb active cercle-numb-prec">2</span> <span class="text-numb active text-numb-prec">Résultats Test</span>
+          </a>
+        </li>
+        <li role="presentation" class="nav-item ab1">
+          <a href="#step3" data-lestep="step3" class="nav-link ab nav-link-pr active show a-prec" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+            <span class="cercle-numb active cercle-numb-prec">3</span> <span class="text-numb active text-numb-prec">Formulaire</span>
+          </a>
+        </li>
+        <li role="presentation" class="nav-item ab1">
+          <a href="#complete" data-lestep="step4" class="nav-link ab nav-link-pr active encours" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+            <span class="cercle-numb active">4</span> <span class="text-numb active">Confirmation</span>
+          </a>
+        </li>
+      </ul>
+      <form role="form" method="post">
+        <div class="tab-content">
+          <div class="tab-pane" role="tabpanel" id="step1">
+            <p class="test-para">Testez votre éligibilité avec votre numéro de téléphone afin de découvrir nos offres Fibre.</p>
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="div-selc">
+                  <select class="custom-select custum-select-chos " name="type_client" id="inputGroupSelect01" required>
+                    <option selected="">Type de client :</option>
+                    <option value="b2c">Particulier</option>
+                    <option value="pro">Pro PME-PMI</option>
+                    <option value="b2b">Grande Entreprise</option>
+                  </select>
+                  <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-deb">
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="mat-div ">
+                  <div class="displa"><label for="first-name" class="mat-label text-com">N° téléphone fixe</label> <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-suiv"></div>
+                  <input type="text" class="mat-input" name="num_client" id="N-téléphone-fixe">
+                </div>
+              </div>
+
+              <div class="col-lg-3">
+                <div class="mat-div ">
+                  <div class="displa"> <label for="first-name" class="mat-label text-com">Mes coordonnées GPS</label> <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-suiv"></div>
+                  <input type="text" class="mat-input" name="code_gps" id="Mes-coordonnées-GPS">
+                </div>
+              </div>
+              <input type="hidden" name="test_eligibilite" value="ok">
+
+              <div class="col-lg-3">
+                <li class="list-inline-item">
+                  <button type="button" class="btn info lancer-le next-step efface">Lancer le test</button>
+                </li>
+              </div>
+            </div>
+
+          </div>
+          <div class="tab-pane" role="tabpanel" id="step2">
+            <div class="row row1-1">
+              <div class="col-lg-2">
+                <img class="image-box-lo" src="/sites/default/files/icones/group-6.png" alt="" id="fleche">
+              </div>
+              <div class="col-lg-3 border-action">
+                <p class="elig">Vous êtes éligible !</p>
+                <p class="bnficier">Bénéficiez de l’internet Trés Haut Débit à la maison pour un tarif unique !</p>
+                <span class="orange mois-tr">34 900 F / Mois</span>
+              </div>
+              <div class="col-lg-3 col-inter-nt">
+                <div class="rectangle133">
+                  <img class="" src="/sites/default/files/icones/line.svg" alt="" id="fleche">
+                  <p class="im">Internet 30 Mbits /s</p>
+                </div>
+                <div class="rectangle133">
+                  <img class="" src="/sites/default/files/icones/line.svg" alt="" id="fleche">
+                  <p class="im">Forfait voix 20.000 F offert</p>
+                </div>
+                <div class="rectangle133">
+                  <img class="" src="/sites/default/files/icones/line.svg" alt="" id="fleche">
+                  <p class="im">2 numéros mobiles ilimités</p>
+                </div>
+                <button type="button" class="btn btn-secondary fibre-butt">Voir details Home Fibre</button>
+              </div>
+              <div class="col-lg-3 col-boq">
+                <div class="rectangle133">
+                  <img class="" src="/sites/default/files/icones/line.svg" alt="" id="fleche">
+                  <p class="im">Bouquet TV d’Orange</p>
+                </div>
+                <div class="rectangle133">
+                  <img class="" src="/sites/default/files/icones/line.svg" alt="" id="fleche">
+                  <p class="im">Bouquet Canal en option</p>
+                </div>
+                <button type="submit" class="btn btn-warning fibre-bu next-step">Remplir le formulaire</button>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane step3-formu" role="tabpanel" id="step3">
+            <p class="test-para">Remplissez ce formulaire afin de finaliser votre souscription.</p>
+            <div class="row">
+              <div class="col-lg-6 a-space">
+                <div class="div-selc">
+                  <select class="custom-select custum-select-chos " id="inputGroupSelect01">
+                    <option selected="" class="">Déjà client Orange ?</option>
+                    <option value="">a</option>
+                    <option value="">a</option>
+                    <option value="">a</option>
+                  </select>
+                  <img src="/sites/default/files/icones/asterix.svg" alt="" id="asterix-deb-1">
+                </div>
+              </div>
+
+              <div class="col-lg-6 a-space">
+                <div class="div-selc">
+                  <select class="custom-select custum-select-chos " id="inputGroupSelect01">
+                    <option selected="" class="">Civilité</option>
+                    <option value="">a</option>
+                    <option value="">a</option>
+                    <option value="">a</option>
+                  </select>
+                  <img src="/sites/default/files/icones/asterix.svg" alt="" id="asterix-deb-2">
+                </div>
+              </div>
+              <div class="col-lg-6 a-space">
+                <div class="mat-div ">
+                  <div class="displa"> <label for="first-name" class="mat-label text-com">Nom</label> <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-suiv"></div>
+                  <input type="text" class="mat-input" id="N-téléphone-fixe">
+                </div>
+              </div>
+              <div class="col-lg-6 a-space">
+                <div class="mat-div ">
+                  <div class="displa"> <label for="first-name" class="mat-label text-com">Prénom</label> <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-suiv"></div>
+                  <input type="text" class="mat-input" id="N-téléphone-fixe">
+                </div>
+              </div>
+              <div class="col-lg-6 a-space">
+                <div class="mat-div ">
+                  <div class="displa"> <label for="first-name" class="mat-label text-com">Email</label> <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-suiv"></div>
+                  <input type="text" class="mat-input" id="N-téléphone-fixe">
+                </div>
+              </div>
+              <div class="col-lg-6 a-space">
+                <div class="mat-div ">
+                  <div class="displa"> <label for="first-name" class="mat-label text-com">Téléphone fixe</label> <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-suiv"></div>
+                  <input type="text" class="mat-input" id="N-téléphone-fixe">
+                </div>
+              </div>
+              <div class="col-lg-6 a-space">
+                <div class="mat-div ">
+                  <div class="displa"> <label for="first-name" class="mat-label text-com">Téléphone phone</label> <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-suiv"></div>
+                  <input type="text" class="mat-input" id="N-téléphone-fixe">
+                </div>
+              </div>
+              <div class="col-lg-6 a-space">
+                <div class="mat-div ">
+                  <div class="displa"> <label for="first-name" class="mat-label text-com">Adresse</label> <img src="/sites/default/files/icones/asterix.svg" alt="" class="asterix-suiv"></div>
+                  <input type="text" class="mat-input" id="N-téléphone-fixe">
+                </div>
+              </div>
+              <div class="col-lg-3 offset-lg-9">
+                <button type="button" class="btn btn-warning vali-form next-step">Valider</button>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="tab-pane active" role="tabpanel" id="complete">
+
+            <div class="rectang">
+              <img class="" src="/sites/default/files/icones/group-10.svg" alt="" id="fleche">
+              <p class="Nous-vous-remercions">Nous vous remercions pour votre confiance.</p>
+            </div>
+            <p class="Vous-serez-contact">Vous serez contacté par nos services commerciaux dés que votre zone sera éligible à la fibre. Nous vous tiendrons informé de l’état d’avancement des travaux d'extension. </p>
+
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </form>
+    </section>
+  </div>
+</section>
